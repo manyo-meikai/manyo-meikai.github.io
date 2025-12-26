@@ -38,6 +38,12 @@ ul.toc li h3 {display: inline; font-size: 1em;
 .visually-hidden {position: absolute; width: 1px; height: 1px; padding: 0;
                   margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
                   white-space: nowrap; border: 0;}
+.image-row {white-space: nowrap;} /* 折り返し禁止 → 3つが必ず1行に並ぶ */
+.image-row figure {display: inline-block; /* 横に並べる */
+                   text-align: center;    /* キャプションを中央に */
+                   margin: 0 0px;}        /* 画像間の余白（調整可） */
+.image-row img {height: 100px;            /* 現状のサイズを維持 */
+                width: auto;}             /* アスペクト比維持 */
 </style>
 </head>
 
@@ -94,11 +100,29 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　であることが判明します。<BR>
 </p>
 <BR>
-　<B><span class="visually-hidden">積雪が少ない地域のため、</span>とても珍しい、藤原京から見た雪の日の大和三山</B>　(注) 雪は、本文の解釈とは直接関係しません。<BR>
-　<A HREF ="./images/kaguyama_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/kaguyama_small.jpg" ALT="藤原京から見た雪の日の天香具山" HEIGHT=100 BORDER=0></A>
-<A HREF ="./images/unebiyama_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/unebiyama_small.jpg" ALT="藤原京から見た雪の日の畝傍山" HEIGHT=100 BORDER=0></A>
-<A HREF ="./images/miminasiyama_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/miminasiyama_small.jpg" ALT="藤原京から見た雪の日の耳成山" HEIGHT=100 BORDER=0></A><BR>
-　　　　　　天香具山　　　　　　　　　　　畝傍山　　　　　　　　　　　耳成山<BR>
+<B><span class="visually-hidden">積雪が少ない地域のため、</span>とても珍しい、藤原京から見た雪の日の大和三山</B>　(注) 雪は、本文の解釈とは直接関係しません。<BR>
+<div class="image-row">
+  <figure>
+    <a href="./images/kaguyama_large.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="./images/kaguyama_small.jpg" alt="藤原京から見た雪の日の天香具山">
+    </a>
+    <figcaption>天香具山</figcaption>
+  </figure>
+
+  <figure>
+    <a href="./images/unebiyama_large.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="./images/unebiyama_small.jpg" alt="藤原京から見た雪の日の畝傍山">
+    </a>
+    <figcaption>畝傍山</figcaption>
+  </figure>
+
+  <figure>
+    <a href="./images/miminasiyama_large.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="./images/miminasiyama_small.jpg" alt="藤原京から見た雪の日の耳成山">
+    </a>
+    <figcaption>耳成山</figcaption>
+  </figure>
+</div>
 
 <h3 id="sanzan">・<ruby>中大兄<rp>（</rp><rt>なかのおほえ</rt><rp>）</rp></ruby>の大和三山の歌（巻一・十三～十五）<span class="visually-hidden">巻1-13-15</span></h3>
 <p class="p3">
@@ -116,7 +140,8 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　　　<B>雪の日の『月の誕生石』</B><BR>
 　　　　　<A HREF ="./images/tsukino_tanjouseki_1_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/tsukino_tanjouseki_1_small.jpg" ALT="藤原京から見た雪の日の、天香具山にある『月の誕生石』" HEIGHT=100 BORDER=0></A>
 <A HREF ="./images/tsukino_tanjouseki_2_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/tsukino_tanjouseki_2_small.jpg" ALT="藤原京から見た雪の日の、天香具山にある『月の誕生石』" HEIGHT=100 BORDER=0></A><BR>
-　　　　　論文に書きましたが、天香具山にあり、昔話では、この石から、月の赤ちゃんが産まれました。<BR>
+　　　　　論文に書きましたが、天香具山にあり、<BR>
+　　　　　昔話では、この石から、月の赤ちゃんが産まれました。<BR>
 <BR>
 　　　　　<B>三輪山</B><BR>
 　　　　　<A HREF ="./images/miwayama_1_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/miwayama_1_small.jpg" ALT="箸墓古墳の近くの池から見た三輪山" HEIGHT=100 BORDER=0></A>
