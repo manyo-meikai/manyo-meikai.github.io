@@ -16,12 +16,15 @@ h1, h2, h3 {font-weight: bold; margin-bottom: -0.6em;}
 h1 {font-size: 2.0em; margin-bottom: 0em;} 
 h2 {font-size: 1.5em;} 
 h3 {font-size: 1.2em; margin-left: 1.5em;} 
+h3.h3-fix {margin-top: 0em;}
+
 ruby rt {font-size: 0.6em; line-height: 1;}
 
 .p1, .p2, .p3 {text-indent: 0em; margin-bottom: 1em;}
 .p1 { font-size: 1.2em; margin-left: 1.5em;}
 .p2 { font-size: 1.2em; margin-left: 1.5em;}
 .p3 { font-size: 1.0em; margin-left: 2.5em;}
+p.p3.mt-fix {margin-top: -0.5em;}
 .keyword { font-size: 0.7em; margin-top: -0.2em; margin-bottom: 0em; margin-left: 3em;}
 
 /* 目次 */
@@ -40,32 +43,32 @@ ul.toc li h3 {display: inline; font-size: 1em;
 
 <body>
 
-<h1>『万葉集難訓歌を<span style="color:Red;">明快</span>に解く！』 抜粋</h1>
+<h1 id="title">『万葉集難訓歌を<span style="color:Red;">明快</span>に解く！』 抜粋</h1>
 <p class="p3">
 <A HREF ="index.html"><IMG SRC="./images/omote_hyousi.jpg" ALT="表表紙" HEIGHT=40 BORDER=0> <B>Topページ</B> index.html へ</A><BR>
 </p>
 
 <h2><span class="visually-hidden">書名</span>万葉集難訓歌を明快に解く！</h2>
 
-<h2>目次</h2>
+<h2 id="mokuji">目次</h2>
 <ul class="toc">
-<li>まえがき　・・・・・・・・・・・・・・・・・・・・・・・・・・　3</li>
-<li>各歌の問題点と、解決案の概要　・・・・・・・・・・・・・・・・　4</li>
-<li><span class="visually-hidden">論文タイトル</span>額田王の莫囂圓隣歌の試訓と意訳の提案　　（巻一・　九）・・・・　9
+<li><A HREF="#maegaki">まえがき</A>　・・・・・・・・・・・・・・・・・・・・・・・・・・　3</li>
+<li><A HREF="#kakuuta">各歌の問題点と、解決案の概要</A>　・・・・・・・・・・・・・・・・　4</li>
+<li><span class="visually-hidden">論文タイトル</span><A HREF="#bakugo-honbun">額田王の莫囂圓隣歌の試訓と意訳の提案</A>　　（巻一・　九）・・・・　9
 <p class="keyword">巻1-9 独自解釈 語義検討 表意兼表音文字 歴史と符合 初の全文意訳 有間皇子の昇天</p></li>
-<li><span class="visually-hidden">論文タイトル</span>中大兄の大和三山の歌の別解釈の提案　　　（巻一・十三～十五）・　34
+<li><span class="visually-hidden">論文タイトル</span><A HREF="#sanzan">中大兄の大和三山の歌の別解釈の提案</A>　　　（巻一・十三～十五）・　34
 <p class="keyword">巻1-13-15 独自解釈 歴史と符合 性別論争の解決 左注の問題の解決 たかやま 高山の訓の統一</p></li>
-<li><span class="visually-hidden">論文タイトル</span>額田王と井戸王の三輪山の歌の別解釈の提案（巻一・十七～十九）・　72
+<li><span class="visually-hidden">論文タイトル</span><A HREF="#miwayama">額田王と井戸王の三輪山の歌の別解釈の提案</A>（巻一・十七～十九）・　72
 <p class="keyword">巻1-17-19 独自解釈 唱和 左注の問題を解決</p></li>
-<li><span class="visually-hidden">論文タイトル</span>高市皇子の三諸の歌の試訓と意訳の提案　　（巻二・一五六）・・・　95
+<li><span class="visually-hidden">論文タイトル</span><A HREF="#mimoro">高市皇子の三諸の歌の試訓と意訳の提案</A>　　（巻二・一五六）・・・　95
 <p class="keyword">巻2-156 独自解釈 表意兼表音文字 字義の訓読 十市皇女の自殺</p></li>
-<li><span class="visually-hidden">論文タイトル</span>持統天皇の燃火と向南山の歌の試訓と意訳の提案（一六〇、一六一）　117
+<li><span class="visually-hidden">論文タイトル</span><A HREF="#moyuruhi">持統天皇の燃火と向南山の歌の試訓と意訳の提案</A>（一六〇、一六一）　117
 <p class="keyword">巻2-160-161 独自解釈 天武天皇と草壁皇子の成仏</p></li>
 <li>参考文献　・・・・・・・・・・・・・・・・・・・・・・・・・・　150</li>
 <li>あとがき　・・・・・・・・・・・・・・・・・・・・・・・・・・　156</li>
 </ul>
 
-<h2>まえがき</h2>
+<h2 id="maegaki">まえがき</h2>
 <p class="p2">
 　二〇二五（令和七）年 現在、万葉集には、未解決の難訓歌や、<BR>
 解釈の定まらない歌が、いくつか残されています。本稿は、<BR>
@@ -78,8 +81,8 @@ ul.toc li h3 {display: inline; font-size: 1em;
 「<B>本邦初</B>」の『<B>明快</B>』な『謎解き』を、お楽しみください。<BR>
 </p>
 
-<h2>各歌の問題点と、解決案の概要</h2>
-<h3>・<ruby>額田王<rp>（</rp><rt>ぬかたのおほきみ</rt><rp>）</rp></ruby>の<ruby>莫囂圓隣歌<rp>（</rp><rt>ばくごうえんりんか</rt><rp>）</rp></ruby>（巻一・九）<span class="visually-hidden">巻1-9</span></h3>
+<h2 id="kakuuta">各歌の問題点と、解決案の概要</h2>
+<h3 id="bakugo">・<ruby>額田王<rp>（</rp><rt>ぬかたのおほきみ</rt><rp>）</rp></ruby>の<ruby>莫囂圓隣歌<rp>（</rp><rt>ばくごうえんりんか</rt><rp>）</rp></ruby>（巻一・九）<span class="visually-hidden">巻1-9</span></h3>
 <p class="p3">
 問題：最初の二句『莫囂圓隣之　大相七兄爪湯氣』が難訓で、<BR>
 　　　諸説があり混乱しています。当然、詳細な意訳はありません。<BR>
@@ -97,7 +100,7 @@ ul.toc li h3 {display: inline; font-size: 1em;
 <A HREF ="./images/miminasiyama_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/miminasiyama_small.jpg" ALT="藤原京から見た雪の日の耳成山" HEIGHT=100 BORDER=0></A><BR>
 　　　　　　天香具山　　　　　　　　　　　畝傍山　　　　　　　　　　　耳成山<BR>
 
-<h3>・<ruby>中大兄<rp>（</rp><rt>なかのおほえ</rt><rp>）</rp></ruby>の大和三山の歌（巻一・十三～十五）<span class="visually-hidden">巻1-13-15</span></h3>
+<h3 id="sanzan">・<ruby>中大兄<rp>（</rp><rt>なかのおほえ</rt><rp>）</rp></ruby>の大和三山の歌（巻一・十三～十五）<span class="visually-hidden">巻1-13-15</span></h3>
 <p class="p3">
 問題：三山を男女の色恋に喩え、その性別論争が続いています。<BR>
 　　　また、第二反歌には『反歌に似ず』（似つかわしくない）の<BR>
@@ -119,7 +122,7 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　　　<A HREF ="./images/miwayama_1_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/miwayama_1_small.jpg" ALT="箸墓古墳の近くの池から見た三輪山" HEIGHT=100 BORDER=0></A>
 <A HREF ="./images/miwayama_2_large.jpg" TARGET="_blank" rel="noopener noreferrer"><IMG SRC="./images/miwayama_2_small.jpg" ALT="桜と菜の花が咲く井寺池から見た三輪山" HEIGHT=100 BORDER=0></A><BR>
 　　　　　論文に出てくる、『目に焼き付いている、<ruby>我<rp>（</rp><rt>われ</rt><rp>）</rp></ruby>を<ruby>和<rp>（</rp><rt>やわ</rt><rp>）</rp></ruby>らげる山の姿』です。<BR>
-<h3>・<ruby>額田王<rp>（</rp><rt>ぬかたのおほきみ</rt><rp>）</rp></ruby>と<ruby>井戸王<rp>（</rp><rt>ゐのへのおほきみ</rt><rp>）</rp></ruby>の三輪山の歌（巻一・十七～十九）<span class="visually-hidden">巻1-17-19</span></h3>
+<h3 id="miwayama">・<ruby>額田王<rp>（</rp><rt>ぬかたのおほきみ</rt><rp>）</rp></ruby>と<ruby>井戸王<rp>（</rp><rt>ゐのへのおほきみ</rt><rp>）</rp></ruby>の三輪山の歌（巻一・十七～十九）<span class="visually-hidden">巻1-17-19</span></h3>
 <p class="p3">
 問題：十九番歌の<ruby>和歌<rp>（</rp><rt>わか</rt><rp>）</rp></ruby>（<ruby>唱和<rp>（</rp><rt>しょうわ</rt><rp>）</rp></ruby>する歌、応じる歌、<ruby>和<rp>（</rp><rt>こた</rt><rp>）</rp></ruby>ふる歌）には、<BR>
 　　　『和ふる歌に似ず』（唱和する歌として似つかわしくない）<BR>
@@ -133,7 +136,7 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　三首は陰に「亡き三輪根麻呂を偲ぶ歌」であることを示します。<BR>
 </p>
 
-<h3>・<ruby>高市皇子<rp>（</rp><rt>たけちのみこ</rt><rp>）</rp></ruby>の<ruby>三諸<rp>（</rp><rt>みもろ</rt><rp>）</rp></ruby>の歌（巻二・一五六）<span class="visually-hidden">巻2-156</span></h3>
+<h3 id="mimoro">・<ruby>高市皇子<rp>（</rp><rt>たけちのみこ</rt><rp>）</rp></ruby>の<ruby>三諸<rp>（</rp><rt>みもろ</rt><rp>）</rp></ruby>の歌（巻二・一五六）<span class="visually-hidden">巻2-156</span></h3>
 <p class="p3">
 問題：『已具耳矣　自得見監乍共』が難訓で、諸説があり、<BR>
 　　　混乱しています。当然、詳細な意訳は、ありません。<BR>
@@ -146,7 +149,7 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　「<ruby>慟哭<rp>（</rp><rt>どうこく</rt><rp>）</rp></ruby>の歌」であることが判明します。<BR>
 </p>
 
-<h3>・持統天皇の<ruby>燃火<rp>（</rp><rt>もゆるひ</rt><rp>）</rp></ruby>と<ruby>向南山<rp>（</rp><rt>むきなやま</rt><rp>）</rp></ruby>の歌（巻二・一六〇、一六一）<span class="visually-hidden">巻2-160-161</span></h3>
+<h3 id="moyuruhi">・持統天皇の<ruby>燃火<rp>（</rp><rt>もゆるひ</rt><rp>）</rp></ruby>と<ruby>向南山<rp>（</rp><rt>むきなやま</rt><rp>）</rp></ruby>の歌（巻二・一六〇、一六一）<span class="visually-hidden">巻2-160-161</span></h3>
 <p class="p3">
 問題：『面智男雲』が難訓であり、歌の意味も「火を包んで袋に<BR>
 　　　入れる」で意味不明です。『向南山』にも定訓はありません。<BR>
@@ -159,6 +162,30 @@ ul.toc li h3 {display: inline; font-size: 1em;
 　　　二人の成仏を天皇陵の『雲』（霊）に喩えた、別れの歌です。<BR>
 </p>
 <BR>
+<h2 id="bakugo-honbun"><span class="visually-hidden">論文タイトル</span>額田王の莫囂圓隣歌の試訓と意訳の提案<span class="visually-hidden">の、本文の試し読み</span></h2>
+<BR>
+　　　　　　　　　　　　　　　　　　　　　　　　<B>朝倉 慎一</B><BR>
+<h3 class="h3-fix">一、はじめに</h3>
+<p class="p3">
+　萬葉集の額田王の難訓歌、俗称で、
+<ruby>莫囂圓隣歌<rp>（</rp><rt>ばくごうえんりんか</rt><rp>）</rp></ruby>（巻一・九）は、<BR>
+訓に諸説があり<sup>[武田][ＮＫ]</sup>、まだ、定訓も全文の意訳も無い。<BR>
+本稿は、試訓と、「明確で詳細」な意訳の「全文」を提案する。<BR>
+　本稿は、恣意的な「誤字の仮定」や「義訓」をせず、<BR>
+できるだけ「主観を排除」し、「客観性」を確保する。<BR>
+　難訓部分には、掛詞が使われていることに気が付いた。<BR>
+『<ruby>表意兼表音文字<rp>（</rp><rt>ひょういけんひょうおんもじ</rt><rp>）</rp></ruby>』という掛詞を定義して、導入すると、<BR>
+意訳は、「見事に、明確かつ詳細に」、掛けた意味が通る。<BR>
+「全文」の意味は、「掛詞を展開した全て」という意味である。<BR>
+　題詞『紀の<ruby>温泉<rp>（</rp><rt>ゆ</rt><rp>）</rp></ruby>に<ruby>幸<rp>（</rp><rt>いでま</rt><rp>）</rp></ruby>しし時に、額田王の作れる歌』の通り、<BR>
+<ruby>莫囂圓隣歌<rp>（</rp><rt>ばくごうえんりんか</rt><rp>）</rp></ruby>は、明確に、温泉の『湯気の文脈』になっていて、<BR>
+「<ruby>有間皇子<rp>（</rp><rt>ありまのみこ</rt><rp>）</rp></ruby>の亡き面影を湯気に映して、昇天を思う歌」<BR>
+であることが判明する。<BR>
+<BR>
+（公開は、ここまでです。）<BR>
+<BR>
+</p>
+
 <h2>著者略歴</h2>
 <p class="p3">
 <B>朝倉 慎一</B> (あさくら しんいち)（Shin'ichi Asakura）<BR>
@@ -177,7 +204,7 @@ ul.toc li h3 {display: inline; font-size: 1em;
 2025年：橿原市に移住<BR>
 　　　　　天香具山を『<ruby>嬬<rp>（</rp><rt>つま</rt><rp>）</rp></ruby>』にして暮らしている<BR>
 </p>
-<BR>
+
 <p class="p3">
 <A HREF ="index.html"><IMG SRC="./images/omote_hyousi.jpg" ALT="表表紙" HEIGHT=40 BORDER=0> <B>Topページ</B> index.html へ</A><BR>
 </p>
