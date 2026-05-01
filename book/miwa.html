@@ -1,0 +1,837 @@
+<!--**** begin HTML ********-->
+<!DOCTYPE html>
+<html lang="ja">
+<!--******** begin HEAD ********-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>額田王と井戸王の三輪山の歌の別解釈の提案</title>
+<meta name="keywords" content="万葉集,巻1-17～19,三輪山,三輪根麻呂,額田王,井戸王,隠,似ず">
+<meta name="keywords" content="額田王と井戸王の三輪山の歌（巻一・十七～十九）について、仮説を立てて、別解釈を提案する。和歌の末尾の「勢」は「姿」とすることにより、陽に「山の姿」、陰に「君の姿」と解釈できる。更に「三輪山」を陰に「三輪根麻呂」とする仮説を立てて、陰の偲ぶ文脈を導入すると、長歌・反歌・和歌の三首が、「三輪山（三輪根麻呂）」を忘れ去らない歌として整合する。和歌は、いずれの意味でも唱和しており、『和ふる歌に似ず』の左注が否定される。三首は陰に「亡き三輪根麻呂を偲ぶ歌」として理解でき、左注問題に明確な解決案を提示する。">
+<!--==== begin STYLE ====-->
+<style>
+body {
+  background-color: #F8F8D8;
+  font-family: "Yu Mincho", "游明朝",
+               "Hiragino Mincho ProN", "ヒラギノ明朝 ProN",
+               "Noto Serif JP", serif;
+}
+.kin-aka {
+  color: #D4212F;  /* 金赤 RGB(212, 33, 47) */
+}
+.f0s1 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝0文字下げになる） */
+}
+.f0s2 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝0文字下げになる） */
+}
+.f0s3 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝0文字下げになる） */
+}
+.f1s1 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝1文字下げになる） */
+}
+.f1s2 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝1文字下げになる） */
+}
+.f1s3 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝1文字下げになる） */
+}
+.f1s4 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝1文字下げになる） */
+}
+.f1s5 {  /* 段落 */
+  text-indent: -4em;   /* 最初の行だけ 4 文字戻す（＝1文字下げになる） */
+}
+.f2s2 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝2文字下げになる） */
+}
+.f2s3 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝2文字下げになる） */
+}
+.f2s4 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝2文字下げになる） */
+}
+
+ /* ルビ */
+ruby rt {
+  position: relative;
+  font-size: 0.5em;  /* ルビ  サイズ */
+}
+ruby .copy {     /* ルビ 平文ペースト用 */
+  font-size: 0;  /* コピー用テキストは非表示 */
+}
+
+h1, h2, h3, h4 { font-weight: bold; } 
+h1 { font-size: 1.5em; } 
+h2 { font-size: 1.2em; } 
+h3 { font-size: 1.0em; } 
+h4 { font-size: 1.0em; } 
+p  { font-size: 1.0em; } 
+
+/* 横書き（デフォルト） */
+.horizontal {
+  writing-mode: horizontal-tb;
+  line-height: 1.6;  /* 行間隔 1.6 程度 */
+}
+.horizontal .switcher {
+  position: fixed;
+  writing-mode: horizontal-tb;
+}
+.horizontal .btn-hori { display: block; }
+.horizontal .btn-vert { display: none; }
+.horizontal ruby rt {
+  position: relative;
+  top: 0.3em;  /* 横書き用ルビ位置 */
+  left: 0;
+}
+.horizontal hr.line {
+  width: 30em;
+  height: 1px;
+  background: #000;
+  border: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.horizontal .indent-0 { padding-left: 0em; padding-top: 0em; }
+.horizontal .indent-1 { padding-left: 1em; padding-top: 0em; }
+.horizontal .indent-2 { padding-left: 2em; padding-top: 0em; }
+.horizontal .indent-3 { padding-left: 3em; padding-top: 0em; }
+.horizontal .indent-4 { padding-left: 4em; padding-top: 0em; }
+.horizontal .indent-5 { padding-left: 5em; padding-top: 0em; }
+.horizontal h1 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h2 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h3 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h4 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal p  { margin-top  : 0.2em; margin-bottom: 0.4em; 
+                 margin-right:   0em; margin-left  :   0em; }
+
+/* 縦書き（右から左） */
+.vertical {
+  writing-mode: vertical-rl;
+  overflow-x: auto;
+  overflow-y: hidden;
+  line-height: 1.65;  /* 行間隔 1.6 程度 */
+}
+.vertical .switcher {
+  position: fixed;
+  writing-mode: vertical-rl;
+}
+.vertical .btn-hori { display: none; }
+.vertical .btn-vert { display: block; }
+.vertical :target {
+  scroll-margin-left: 100vw;   /* 右端に寄せる */
+}
+.vertical ruby rt {
+  position: relative;
+  left: 0.1em;  /* 縦書き用ルビ位置 */
+  top: 0;
+}
+.vertical hr.line {
+  width: 1px;
+  height: 30em;
+  background: #000;
+  border: none;
+  margin: 0;
+}
+.vertical .tcy {  /* 縦中横 */
+  writing-mode: horizontal-tb;
+  text-combine-upright: all;
+}
+.vertical .indent-0 { padding-top: 0em; padding-left: 0; }
+.vertical .indent-1 { padding-top: 1em; padding-left: 0; }
+.vertical .indent-2 { padding-top: 2em; padding-left: 0; }
+.vertical .indent-3 { padding-top: 3em; padding-left: 0; }
+.vertical .indent-4 { padding-top: 4em; padding-left: 0; }
+.vertical .indent-5 { padding-top: 5em; padding-left: 0; }
+.vertical h1 { margin-right: 0.8em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h2 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h3 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h4 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical p  { margin-right: 0.2em; margin-left   : 0.4em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical a.url {  /* リンクの下線を表示しない */
+  text-decoration: none;
+}
+
+/* ボタン共通 */
+.popup-btn {
+  position: fixed;
+  z-index: 10000;
+  background: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* ポップアップ共通 */
+.popup-box {
+  position: fixed;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+}
+#miwa-btn     { top:  5px; right:  5px; bottom: auto; left: auto; position: fixed; }
+#miwa-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 23em; }
+#vert-btn     { top: 35px; right:  5px; bottom: auto; left: auto; position: fixed; }
+#vert-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 26em; }
+#hori-btn     { top: 65px; right:  5px; bottom: auto; left: auto; position: fixed; }
+#hori-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 20em; }
+
+#miwa-btn-v   { top:  5px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#miwa-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 25em; }
+#vert-btn-v   { top: 45px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#vert-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 28em; }
+#hori-btn-v   { top: 85px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#hori-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 22em; }
+</style>
+<!--==== end   STYLE ====-->
+<!--==== begin JSON-LD ====-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebSite",
+      "@id": "https://manyo-meikai.github.io/#website",
+      "url": "https://manyo-meikai.github.io/",
+      "name": "万葉集難訓歌を明快に解く！公式サイト",
+      "alternateName": [
+         "Official website of “Clarifying the Difficult Readings in the Man'yōshū“",
+         "万葉集 難訓歌を明快に解く！ 公式サイト"
+      ],
+      "inLanguage": "ja",
+      "publisher": {
+        "@id": "https://manyo-meikai.github.io/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://manyo-meikai.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": [
+        {
+          "@value": "万葉集の難訓歌について、語義分析に基づく試訓と明快な意訳を、体系的に公開する学術サイト。主要な難訓歌の問題点を明確にし、独自の解釈と方法論を提示する。対象は、莫囂圓隣歌、三諸、燃火・向南山、大和三山、三輪山。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "This website systematically presents trial readings and clear interpretive translations of difficult poems in the Man’yōshū, based on semantic analysis. It clarifies the issues found in major difficult poems and offers original interpretations and methodological approaches. The poems examined include the Bakugo Enrin Poem, the Mimoro Poem, the Moyuruhi and Mukinayama Poems, the Yamato Sanzan Poems, and the Miwa Mountain Poems.", 
+          "@language": "en"
+        }
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://manyo-meikai.github.io/book/miwa.html#webpage",
+      "url": "https://manyo-meikai.github.io/book/miwa.html",
+      "name": "額田王と井戸王の三輪山の歌の別解釈の提案",
+      "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
+      "inLanguage": "ja",
+      "description": [
+        {
+          "@value": "額田王と井戸王の三輪山の歌（巻一・十七～十九）について、仮説を立てて、別解釈を提案する。和歌の末尾の「勢」は「姿」とすることにより、陽に「山の姿」、陰に「君の姿」と解釈できる。更に「三輪山」を陰に「三輪根麻呂」とする仮説を立てて、陰の偲ぶ文脈を導入すると、長歌・反歌・和歌の三首が、「三輪山（三輪根麻呂）」を忘れ去らない歌として整合する。和歌は、いずれの意味でも唱和しており、『和ふる歌に似ず』の左注が否定される。三首は陰に「亡き三輪根麻呂を偲ぶ歌」として理解でき、左注問題に明確な解決案を提示する。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "This study proposes an alternative interpretation of the Miwa Mountain poems (Man’yōshū Book 1, Poems 17–19) by Nukata-no-Ōkimi and Inoe-no-Ōkimi, advancing a set of hypotheses. By interpreting the final character se (“勢”) in the waka (concordant poem) aas sugata (“appearance”), the poem can be read as referring overtly to the “appearance of the mountain” and covertly to the “appearance of the beloved.” Furthermore, by hypothesizing that “Miwa Mountain” covertly signifies Miwa-no-Nemaro and introducing a mourning context, the long poem, the response poem, and the waka together constitute a coherent set of three poems that function as songs of remembrance for “Miwa Mountain (Miwa-no-Nemaro).” In this reading, the waka is concordant with both the long poem and the response poem in either sense, thereby invalidating the left-note remark that it is “not fitting as a concordant poem.” The three poems can thus be understood as covert elegies mourning the deceased Miwa-no-Nemaro, offering a clear solution to the long-standing problem posed by the left-note.", 
+          "@language": "en"
+        }
+      ],
+
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "万葉集難訓歌を明快に解く！",
+            "item": "https://manyo-meikai.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "額田王と井戸王の三輪山の歌の別解釈の提案（巻1-17～19）",
+            "item": "https://manyo-meikai.github.io/book/miwa.html"
+          }
+        ]
+      }
+    },
+
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://manyo-meikai.github.io/book/miwa.html",
+      "mainEntityOfPage": {
+        "@id": "https://manyo-meikai.github.io/book/miwa.html"
+      },
+      "headline": [
+        {
+          "@value": "額田王と井戸王の三輪山の歌の別解釈の提案", 
+          "@language": "ja"
+        },
+        {
+          "@value": "A Proposed Alternative Interpretation of the Miwa Mountain Poems by Nukata-no-Ōkimi and Inoe-no-Ōkimi", 
+          "@language": "en"
+        }
+      ],
+      "version": "0.1",
+      "author": { "@id": "https://manyo-meikai.github.io/#person" },
+      "inLanguage": "ja",
+      "copyrightYear": "2025",
+      "copyrightHolder": { "@id": "https://manyo-meikai.github.io/#person" },
+
+      "isPartOf": { "@id": "https://manyo-meikai.github.io/book/#book" },
+      "identifier": "巻1-17～19",
+      "position": 13,
+
+      "isBasedOn": {
+        "@type" : "Book",
+        "name"  : "万葉集 難訓歌を明快に解く！",
+        "author": {
+          "@id": "https://manyo-meikai.github.io/#person"
+        },
+        "isbn": "978-4-434-36742-7",
+        "sameAs": [
+          "https://ci.nii.ac.jp/ncid/BD13589490",
+          "https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427",
+          "https://www.worldcat.org/oclc/1559113879"
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "銀河書籍",
+          "alternateName": "Ginga Shoseki",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "株式会社 星雲社",
+            "alternateName": "Seiunsha"
+          }
+        },
+        "datePublished": "2025-10-21",
+        "copyrightYear": "2025",
+        "copyrightHolder": { "@id": "https://manyo-meikai.github.io/#person" },
+        "bookEdition": "初版 第1刷(First Edition, First Printing)",
+        "inLanguage": "ja",
+        "bookFormat": "https://schema.org/Paperback",
+        "numberOfPages": 160,
+        "offers": {
+          "@type": "Offer",
+          "price": "1000",
+          "priceCurrency": "JPY"
+        },
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "OCLC",
+            "value": "1559113879",
+            "url": "https://www.worldcat.org/oclc/1559113879"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "NCID",
+            "value": "BD13589490",
+            "url": "https://ci.nii.ac.jp/ncid/BD13589490"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "NDL Bibliographic ID",
+            "value": "034340718",
+            "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "NDC",
+            "value": "911.124"
+          }
+        ]
+      },
+
+      "about": [
+        "万葉集", "巻1-17～19", "三輪山", "三輪根麻呂",
+        "額田王", "井戸王", "隠", "似ず"
+      ],
+      "keywords": [
+        "万葉集", "巻1-17～19", "三輪山", "三輪根麻呂",
+        "額田王", "井戸王", "隠", "似ず"
+      ],
+      "abstract": [
+        {
+          "@value": "額田王と井戸王の三輪山の歌（巻一・十七～十九）について、仮説を立てて、別解釈を提案する。和歌の末尾の「勢」は「姿」とすることにより、陽に「山の姿」、陰に「君の姿」と解釈できる。更に「三輪山」を陰に「三輪根麻呂」とする仮説を立てて、陰の偲ぶ文脈を導入すると、長歌・反歌・和歌の三首が、「三輪山（三輪根麻呂）」を忘れ去らない歌として整合する。和歌は、いずれの意味でも唱和しており、『和ふる歌に似ず』の左注が否定される。三首は陰に「亡き三輪根麻呂を偲ぶ歌」として理解でき、左注問題に明確な解決案を提示する。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "This study proposes an alternative interpretation of the Miwa Mountain poems (Man’yōshū Book 1, Poems 17–19) by Nukata-no-Ōkimi and Inoe-no-Ōkimi, advancing a set of hypotheses. By interpreting the final character se (“勢”) in the waka (concordant poem) aas sugata (“appearance”), the poem can be read as referring overtly to the “appearance of the mountain” and covertly to the “appearance of the beloved.” Furthermore, by hypothesizing that “Miwa Mountain” covertly signifies Miwa-no-Nemaro and introducing a mourning context, the long poem, the response poem, and the waka together constitute a coherent set of three poems that function as songs of remembrance for “Miwa Mountain (Miwa-no-Nemaro).” In this reading, the waka is concordant with both the long poem and the response poem in either sense, thereby invalidating the left-note remark that it is “not fitting as a concordant poem.” The three poems can thus be understood as covert elegies mourning the deceased Miwa-no-Nemaro, offering a clear solution to the long-standing problem posed by the left-note.", 
+          "@language": "en"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!--==== end   JSON-LD ====-->
+</head>
+<!--******** end   HEAD ********************************-->
+
+<!--******** begin BODY ********************************-->
+<body class="horizontal">
+<a id="miwa"></a>
+<div><!--  begin 三輪山の歌 ======================-->
+<h1>
+額田王と井戸王の三輪山の歌の別解釈の提案
+</h1>
+<p><!-- -- begin 段落 ---->
+　　　　　　　　　　　　試し読み版：<span class="version tcy"></span><br>
+　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em; font-weight: bold;">朝倉 慎一</span><br>
+</p><!---- end   段落 ---->
+  <div><!-- == begin 章 目次 ==========-->
+<h2>
+目次
+</h2>
+<p id="miwa-source"><!-- -- begin 段落 ---->
+<a href="#miwa_abstract">抄録</a><br>
+<a href="#miwa_1">一、はじめに</a><br>
+<a href="#miwa_2">二、三輪山の歌</a><br>
+<a href="#miwa_3">三、歌への疑問</a><br>
+<a href="#miwa_4">四、先行研究の概観</a><br>
+<a href="#miwa_5">五、仮説の提案</a><br>
+<a href="#miwa_6">六、長歌と反歌の解釈</a><br>
+<a href="#miwa_7">七、和歌の解釈</a><br>
+　　　<a href="#miwa_7_m">●和歌の読み下し文と意訳</a><br>
+<a href="#miwa_8">八、考察</a><br>
+　　<a href="#miwa_8"  >(一)和ふる歌に似ず』の左注の問題の解決</a><br>
+　　<a href="#miwa_8_2">(二)『伝説の文脈』</a><br>
+<a href="#miwa_9">九、まとめ</a><br>
+<a href="#miwa_10">十、終わりに</a><br>
+<a href="#reference">参考文献</a><br>
+<a href="#okuduke"  >奥付</a><br>
+</p><!---- end   段落 ---->
+<!-- 三輪山 目次ボタン 横書き用 -->
+<button id="miwa-btn" class="popup-btn btn-hori" data-target="miwa-popup"><b>目次</b></button>
+<div id="miwa-popup" class="popup-box">
+<b>額田王と井戸王の三輪山の歌の別解釈の提案</b><br>
+<a href="#miwa"><b>目次</b></a><br>
+</div>
+<!-- 三輪山 目次ボタン 縦書き用 -->
+<button id="miwa-btn-v" class="popup-btn btn-vert" data-target="miwa-popup-v"><b>目次</b></button>
+<div id="miwa-popup-v" class="popup-box">
+<b>額田王と井戸王の三輪山の歌の別解釈の提案</b><br>
+<a href="#miwa"><b>目次</b></a><br>
+</div>
+  </div><!--== end   章 目次 ==========-->
+<a id="miwa_abstract"></a>
+  <div><!-- == begin 章 抄録 =========-->
+<br>
+<h2>
+抄録
+</h2>
+<p><!-- -- begin 段落 ---->
+　額田王と井戸王の三輪山の歌（巻一・十七～十九）について、<br>
+仮説を立てて、別解釈を提案する。<br>
+和歌の末尾の「勢」は「姿」とすることにより、<br>
+陽に「山の姿」、陰に「君の姿」と解釈できる。<br>
+更に「三輪山」を陰に「三輪根麻呂」とする仮説を立てて、<br>
+陰の偲ぶ文脈を導入すると、長歌・反歌・和歌の三首が、<br>
+「三輪山（三輪根麻呂）」を忘れ去らない歌として整合する。<br>
+和歌は、いずれの意味でも唱和しており、<br>
+『和ふる歌に似ず』の左注が否定される。<br>
+三首は陰に「亡き三輪根麻呂を偲ぶ歌」として理解でき、<br>
+左注問題に明確な解決案を提示する。<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 抄録 ==========-->
+<br>
+<hr class="line"><!----------3---------4---------5--------->
+<a id="miwa_1"></a>
+  <div><!-- == begin 章 1 はじめに ==========-->
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+<h2>
+一、はじめに
+</h2>
+<p><!-- -- begin 段落 ---->
+　額田王と<!--
+--><ruby>井戸王<rt>ゐのへのおほきみ</rt><span class="copy">(ゐのへのおほきみ)</span></ruby>の<!--
+--><ruby>三輪<rt>みわ</rt><span class="copy">(みわ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->の歌（巻一・十七～十九）について、<br>
+本稿は、歌への疑問を述べ、仮説を立てて、別解釈を提案する。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「<!--
+--><ruby>陽<rt>よう</rt><span class="copy">(よう)</span></ruby>」は字義や<!--
+--><ruby>表<rt>おもて</rt><span class="copy">(おもて)</span></ruby><!--
+-->の意味とし、「<!--
+--><ruby>陰<rt>いん</rt><span class="copy">(いん)</span></ruby>」は比喩や<!--
+--><ruby>裏<rt>うら</rt><span class="copy">(うら)</span></ruby><!--
+-->の意味とする。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　最も重要な提案は、和歌の原文の末尾であり、<br>
+「『<!--
+--><ruby>勢<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』<sup>[古]</sup>は『<!--
+--><ruby>姿<rt>すがた</rt><span class="copy">(すがた)</span></ruby><!--
+-->』。陽に『山の姿』、陰に『<!--
+--><ruby>背<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』で『<!--
+--><ruby>君<rt>きみ</rt><span class="copy">(きみ)</span></ruby>の姿』」。<br>
+　更に、次の仮説を立てて、陰の『<!--
+--><ruby>偲<rt>しの</rt><span class="copy">(しの)</span></ruby><!--
+-->ぶ文脈』を導入する。<br>
+「『三輪山』は、陰に『<!--
+--><ruby>三輪<rt>みわの</rt><span class="copy">(みわの)</span></ruby><!--
+--><ruby>根麻呂<rt>ねまろ</rt><span class="copy">(ねまろ)</span></ruby><!--
+-->』で、井戸王の『<!--
+--><ruby>背<rt>せ</rt><span class="copy">(せ)</span></ruby>』」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　陽（陰）の意訳は、<br>
+　　長歌「三輪山（消息不明の<!--
+--><ruby>三輪<rt>みわの</rt><span class="copy">(みわの)</span></ruby><!--
+--><ruby>根麻呂<rt>ねまろ</rt><span class="copy">(ねまろ)</span></ruby><!--
+-->）を、無情にも、<br>
+　　　　　雲は隠し続ける（私たちは忘れ去る）だろうか？」<br>
+　　反歌「いや、きっと、隠し続け（忘れ去ら）ないだろう」<br>
+　　和歌「目に焼き付いている、我が山（君）の姿よ」<br>
+となる。「忘れ去る対象」は、「三輪山（三輪根麻呂）」の二つ。<br>
+　和歌（唱和する歌）は、「三つの意味」の各々で、明確に<br>
+「唱和している」。つまり、『<!--
+--><ruby>和<rt>こた</rt><span class="copy">(こた)</span></ruby><!--
+-->ふる歌に似ず』（唱和する歌<br>
+として似つかわしくない）の左注が否定され、明確に解決される。
+</p><!---- end   段落 ---->
+  </div><!--== end   章 1 はじめに ==========-->
+<a id="miwa_2"></a>
+  <div><!-- == begin 章 2 三輪山の歌 ==========-->
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+<h2>
+二、三輪山の歌
+</h2>
+  </div><!--== end   章 2 三輪山の歌 ==========-->
+<a id="miwa_3"></a>
+  <div><!-- == begin 章 3 歌への疑問 ==========-->
+<h2>
+三、歌への疑問
+</h2>
+  </div><!--== end   章 3 歌への疑問 ==========-->
+<a id="miwa_4"></a>
+  <div><!-- == begin 章 4 先行研究の概観 ==========-->
+<h2>
+四、先行研究の概観
+</h2>
+  </div><!--== end   章 4 先行研究の概観 ==========-->
+<a id="miwa_5"></a>
+  <div><!-- == begin 章 5 仮説の提案 ==========-->
+<h2>
+五、仮説の提案
+</h2>
+  </div><!--== end   章 5 仮説の提案 ==========-->
+<a id="miwa_6"></a>
+  <div><!-- == begin 章 6 長歌と反歌の解釈 ==========-->
+<h2>
+六、長歌と反歌の解釈
+</h2>
+  </div><!--== end   章 6 長歌と反歌の解釈 ==========-->
+<a id="miwa_7"></a>
+  <div><!-- == begin 章 7 和歌の解釈 ==========-->
+<h2>
+七、和歌の解釈
+</h2>
+<a id="miwa_7_m"></a>
+  </div><!--== end   章 7 和歌の解釈 ==========-->
+<a id="miwa_8"></a>
+  <div><!-- == begin 章 8 考察 ==========-->
+<h2>
+八、考察
+</h2>
+<a id="miwa_8_1"></a>
+<h3>
+(一)『和ふる歌に似ず』の左注の問題の解決
+</h3>
+<a id="miwa_8_2"></a>
+<h3>
+(二)『伝説の文脈』
+</h3>
+  </div><!--== end   章 8 考察 ==========-->
+<a id="miwa_9"></a>
+  <div><!-- == begin 章 9 まとめ ==========-->
+<h2>
+九、まとめ
+</h2>
+  </div><!--== end   章 9 まとめ ==========-->
+<a id="miwa_10"></a>
+  <div><!-- == begin 章 10 終わりに ==========-->
+<h2>
+十、終わりに
+</h2>
+  </div><!--== end   章 10 終わりに ==========-->
+<a id="reference"></a>
+  <div><!-- == begin 章 参考文献 ======================-->
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+<h2>
+【参考文献】
+</h2>
+    <div><!-- ==== begin 節 訳注釈本 ==========-->
+<h3>
+・訳注釈本
+</h3>
+<p>[中西] 中西進『万葉集　全訳注原文付』講談社　　一九七八年</p>
+    </div><!--==== end   節 訳注釈本 ==========-->
+    <div><!-- ==== begin 節 記紀、文選 ==========-->
+<h3>
+・記紀
+</h3>
+<p>[記] 中村<ruby>啓<rt>ひろ</rt><span class="copy">(ひろ)</span></ruby><!--
+--><ruby>信<rt>とし</rt><span class="copy">(とし)</span></ruby><!--
+-->『古事記』角川学芸出版　二〇〇九年<br>
+　　　崇神天皇　美和の大物主神</p>
+<p>[紀] 井上光貞『日本書紀』　　　　　中央公論社　一九八七年<br>
+　　　巻第二十七　天智天皇　斉明七年九月条（<!--
+--><ruby>狭井<rt>さゐの</rt><span class="copy">(さゐの)</span></ruby><!--
+--><ruby>連<rt>むらじ</rt><span class="copy">(むらじ)</span></ruby><!--
+--><ruby>檳榔<rt>あぢまさ</rt><span class="copy">(あぢまさ)</span></ruby>）<br>
+　　　　　　　　　　　　　　天智二年三月条（<!--
+--><ruby>三輪<rt>みわの</rt><span class="copy">(みわの)</span></ruby><!--
+--><ruby>君<rt>きみ</rt><span class="copy">(きみ)</span></ruby><!--
+--><ruby>根麻呂<rt>ねまろ</rt><span class="copy">(ねまろ)</span></ruby>）<br>
+　　　　　　　　　　　　　　天智二年八月条（白村江の戦い）</p>
+    </div><!--==== end   節 記紀、文選 ==========-->
+    <div><!-- ==== begin 節 論文、報告書 ==========-->
+<h3>
+・論文、報告書
+</h3>
+<p>[身崎] 身崎<ruby>壽<rt>ひさし</rt><span class="copy">(ひさし)</span></ruby><!--
+-->「三輪山の歌　｜長歌と反歌と和歌と｜」<br>
+　　　　　稲岡耕二先生還暦記念『日本上代文学論集』<br>
+　　　　　　　　　　　　　　　<ruby>塙<rt>はなわ</rt><span 
+class="copy">(はなわ)</span></ruby>書房　一九九〇年　所収</p>
+    </div><!--==== end   節 論文、報告書 ==========-->
+    <div><!-- ==== begin 節 辞書、事典 ==========-->
+<h3>
+・辞書、事典
+</h3>
+<p>[古] 『全訳古語辞典　第三版』　旺文社</p>
+    </div><!--==== end   節 辞書、事典 ==========-->
+  </div><!--== end   章 参考文献 ======================-->
+<p><!-- -- begin 段落 ---->
+<br>
+　　　　（あさくら　しんいち・天香具山をこよなく愛する者）
+</p><!---- end   段落 ---->
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+<a id="okuduke"></a>
+<hr class="line"><!----------3---------4---------5--------->
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+<br>
+  <div><!-- == begin 章 奥付 ======================-->
+<h2>
+奥付
+</h2>
+    <div><!-- ==== begin 節 論文名 ==========-->
+<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+論文名：<span style="font-size: 1.2em; font-weight: bold;"><!--
+-->額田王と井戸王の三輪山の歌の別解釈の提案</span><br>
+著者　：朝倉 慎一<br>
+所属　：独立研究者<br>
+著作権：© Shin'ichi ASAKURA 2025 All rights reserved.<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 論文名 ==========-->
+    <div><!-- ==== begin 節 バージョン ==========-->
+<h3>
+ＨＴＭＬ版バージョン
+</h3>
+<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+<span class="version tcy"></span>：<span class="tcy">2026</span>年<span 
+class="tcy"> 5</span>月<span class="tcy"> 1</span>日（試し読み版）<br>
+　　　底本から、抜粋、誤記訂正 および 目次と抄録の追加。<br>
+　　　実質的な内容は、底本と ほぼ同じ。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 バージョン ==========-->
+    <div><!-- ==== begin 節 底本 ==========-->
+<h3>
+底本
+</h3>
+<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+書名　：万葉集難訓歌を明快に解く！<br>
+著者　：朝倉慎一<br>
+発行所：銀河書籍、発売元：星雲社<br>
+発行日：<span class="tcy">2025</span>年<span class="tcy">10</span>月<span 
+class="tcy">21</span>日　初版第<span class="tcy">1</span>刷<br>
+© Shin'ichi ASAKURA  2025  Printed in Japan<br>
+ISBN：<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"
+ target="_blank" rel="noopener noreferrer" class="url">978-4-434-36742-7</a> , C0192<br>
+NCID：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
+ target="_blank" rel="noopener noreferrer" class="url">BD13589490</a>（CiNii Books）
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 底本 ==========-->
+<br>
+    <div><!-- ==== begin 節 公式サイト ==========-->
+<h3>
+万葉集難訓歌を明快に解く！ 公式サイト
+</h3>
+<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+<a href ="https://manyo-meikai.github.io/" target="_blank" 
+rel="noopener noreferrer" class="url">https://manyo-meikai.github.io/</a><br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 公式サイト ==========-->
+  </div><!--== end   章 奥付 ======================-->
+</div><!--== end   論文 ===========-->
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+<br>
+<!--==== begin SCRIPT ====-->
+<!-- 目次 ポップアップ -->
+<nav class="switcher">
+  <!-- 横書き用 -->
+  <button id="hori-btn" class="popup-btn btn-hori" data-target="hori-popup">横書</button>
+  <button id="vert-btn" class="popup-btn btn-hori" data-target="vert-popup">縦書</button>
+  <!-- 縦書き用 -->
+  <button id="hori-btn-v" class="popup-btn btn-vert" data-target="hori-popup-v">横書</button>
+  <button id="vert-btn-v" class="popup-btn btn-vert" data-target="vert-popup-v">縦書</button>
+</nav>
+
+<script>
+// 存在する ID だけ安全に複製する関数
+function copyIfExists(sourceId, targetId) {
+  const src = document.getElementById(sourceId);
+  const tgt = document.getElementById(targetId);
+  if (src && tgt) {
+    tgt.appendChild(src.cloneNode(true));
+  }
+}
+
+// 横書きポップアップへコピー
+copyIfExists("toc-source"    , "toc-popup");
+copyIfExists("kakuuta-source", "kaku-popup");
+copyIfExists("bakugo-source" , "baku-popup");
+copyIfExists("sanzan-source" , "sanzan-popup");
+copyIfExists("miwa-source"   , "miwa-popup");
+copyIfExists("mimoro-source" , "mimoro-popup");
+copyIfExists("moyuru-source" , "moyuru-popup");
+
+// 縦書きポップアップへコピー
+copyIfExists("toc-source", "toc-popup-v");
+copyIfExists("kakuuta-source", "kaku-popup-v");
+copyIfExists("bakugo-source", "baku-popup-v");
+copyIfExists("sanzan-source", "sanzan-popup-v");
+copyIfExists("miwa-source", "miwa-popup-v");
+copyIfExists("mimoro-source", "mimoro-popup-v");
+copyIfExists("moyuru-source", "moyuru-popup-v");
+
+document.getElementById("vert-btn").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+document.getElementById("vert-btn-v").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+
+document.getElementById("hori-btn").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+document.getElementById("hori-btn-v").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+
+document.querySelectorAll('.popup-btn').forEach(btn => {
+  btn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    const target = document.getElementById(this.dataset.target);
+
+    // 全ポップアップを閉じる
+    document.querySelectorAll('.popup-box').forEach(box => {
+      box.style.display = "none";
+      box.style.pointerEvents = "none";
+    });
+
+    // 対象だけ開く
+    target.style.display = "block";
+    target.style.pointerEvents = "auto";
+  });
+});
+
+// ポップアップ内クリックは閉じない
+document.querySelectorAll('.popup-box').forEach(box => {
+  box.addEventListener('click', e => e.stopPropagation());
+});
+
+// 画面クリックで閉じる
+document.body.addEventListener('click', () => {
+  document.querySelectorAll('.popup-box').forEach(box => {
+    box.style.display = "none";
+    box.style.pointerEvents = "none";
+  });
+});
+
+// 縦書き時のホイール横スクロール（Ctrl+ホイールは除外）
+window.addEventListener("wheel", function (e) {
+  if (document.body.classList.contains("vertical")) {
+
+    // Ctrl が押されているときはブラウザのズームを優先
+    if (e.ctrlKey) return;
+
+    // 通常の縦スクロールを無効化
+    e.preventDefault();
+
+    // 横スクロールに変換
+    window.scrollBy({
+      left: -e.deltaY * 1.2,
+      behavior: "auto"
+    });
+  }
+}, { passive: false });
+</script>
+<script>
+// バージョン表示
+document.addEventListener("DOMContentLoaded", () => {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  let bookVersion = null;
+  let articleVersion = null;
+
+  scripts.forEach(script => {
+    try {
+      const data = JSON.parse(script.textContent);
+      const graph = data["@graph"];
+      if (!graph) return;
+
+      graph.forEach(item => {
+        if (item["@type"] === "Book" && item.version) {
+          bookVersion = item.version;
+        }
+        if (item["@type"] === "ScholarlyArticle" && item.version) {
+          articleVersion = item.version;
+        }
+      });
+    } catch(e) {}
+  });
+
+  const finalVersion = articleVersion || bookVersion;
+
+  if (finalVersion) {
+    document.querySelectorAll(".version").forEach(el => {
+      el.textContent = finalVersion;
+    });
+  }
+});
+</script>
+<!--==== end   SCRIPT ====-->
+</body>
+<!--******** end BODY ********-->
+</html>
+<!--**** end HTML ********-->
+
