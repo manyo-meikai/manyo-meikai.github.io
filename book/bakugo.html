@@ -272,7 +272,7 @@ p  { font-size: 1.0em; }
 
     {
       "@type": "ScholarlyArticle",
-      "@id": "https://manyo-meikai.github.io/book/bakugo.html",
+      "@id"  : "https://manyo-meikai.github.io/book/bakugo.html",
       "mainEntityOfPage": {
         "@id": "https://manyo-meikai.github.io/book/bakugo.html"
       },
@@ -286,7 +286,7 @@ p  { font-size: 1.0em; }
           "@language": "en"
         }
       ],
-      "version": "0.1",
+      "version": "1.0",
       "author": { "@id": "https://manyo-meikai.github.io/#person" },
       "inLanguage": "ja",
       "copyrightYear": "2025",
@@ -298,6 +298,7 @@ p  { font-size: 1.0em; }
 
       "isBasedOn": {
         "@type" : "Book",
+        "@id"   : "#org-book",
         "name"  : "万葉集 難訓歌を明快に解く！",
         "author": {
           "@id": "https://manyo-meikai.github.io/#person"
@@ -310,11 +311,11 @@ p  { font-size: 1.0em; }
         ],
         "publisher": {
           "@type": "Organization",
-          "name": "銀河書籍",
+          "name" : "銀河書籍",
           "alternateName": "Ginga Shoseki",
           "parentOrganization": {
             "@type": "Organization",
-            "name": "株式会社 星雲社",
+            "name" : "株式会社 星雲社",
             "alternateName": "Seiunsha"
           }
         },
@@ -354,8 +355,56 @@ p  { font-size: 1.0em; }
             "propertyID": "NDC",
             "value": "911.124"
           }
+        ],
+        "hasPart": [
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-kakuuta",
+            "name" : "各歌の問題点と、解決案の概要",
+            "position": 10
+          },
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-bakugo",
+            "name" : "額田王の莫囂圓隣歌の試訓と意訳の提案",
+            "position": 11,
+            "identifier": "巻1-9"
+          },
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-sanzan",
+            "name" : "中大兄の大和三山の歌の別解釈の提案",
+            "position": 12,
+            "identifier": "巻1-13～15"
+          },
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-miwa",
+            "name" : "額田王と井戸王の三輪山の歌の別解釈の提案",
+            "position": 13,
+            "identifier": "巻1-17～19"
+          },
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-mimoro",
+            "name" : "高市皇子の三諸の歌の試訓と意訳の提案",
+            "position": 14,
+            "identifier": "巻2-156"
+          },
+          {
+            "@type": "Chapter",
+            "@id"  : "#org-book-moyuru",
+            "name" : "持統天皇の燃火と向南山の歌の試訓と意訳の提案",
+            "position": 15,
+            "identifier": "巻2-160～161"
+          }
         ]
       },
+
+      "exampleOfWork": [
+        "#org-book-bakugo",
+        "https://manyo-meikai.github.io/book/manyo-meikai.html#bakugo"
+      ],
 
       "about": [
         "万葉集",
@@ -420,17 +469,20 @@ p  { font-size: 1.0em; }
 額田王の莫囂圓隣歌の試訓と意訳の提案
 </h1>
 <p><!-- -- begin 段落 ---->
-　　　　　　　　　　　　試し読み版：<span class="version tcy"></span><br>
-　　　　　　　　　　　　　　　　　　<!--
---><span style="font-size: 1.2em; font-weight: bold;">朝倉 慎一</span><br>
+　　　　　　　　　　　　　　　　<!--
+-->完全公開 ＨＴＭＬ版：<span class="version tcy"></span><br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　　　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
 </p><!---- end   段落 ---->
 <a id="bakugo_mokuji"></a>
-  <div><!-- == begin 章 目次 =========-->
+  <div><!-- == begin 章 【目次】Contents =========-->
 <h2>
-目次
+【目次】Contents
 </h2>
 <p id="bakugo-source"><!---- begin 段落 ---->
-<a href="#bakugo_abstract">抄録</a><br>
+<a href="#bakugo_abstract">【抄録】Abstract</a><br>
 <a href="#bakugo_1">一、はじめに</a><br>
 <a href="#bakugo_2">二、原文の字の正しさ</a><br>
 <a href="#bakugo_3">三、先行研究の概観</a><br>
@@ -441,43 +493,50 @@ p  { font-size: 1.0em; }
 <a href="#bakugo_7">七、考察</a><br>
 <a href="#bakugo_8">八、まとめ</a><br>
 <a href="#bakugo_9">九、終わりに</a><br>
-<a href="#reference">参考文献</a><br>
-<a href="#okuduke"  >奥付</a><br>
+<a href="#bakugo_reference">【参考文献】References</a><br>
+<a href="#bakugo_okuduke"  >【奥付】Colophon</a><br>
+<a href="#original" >【底本】The original printed book</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
 </p><!---- end   段落 ---->
 <!-- 莫囂 目次ボタン 横書き用 -->
 <button id="baku-btn" class="popup-btn btn-hori" 
         data-target="baku-popup"><b>目次</b></button>
 <div id="baku-popup" class="popup-box">
 <b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
-<a href="#bakugo"><b>目次</b></a><br>
+<a href="#bakugo"><b>【目次】Contents</b></a><br>
 </div>
 <!-- 莫囂 目次ボタン 縦書き用 -->
 <button id="baku-btn-v" class="popup-btn btn-vert" 
         data-target="baku-popup-v"><b>目次</b></button>
 <div id="baku-popup-v" class="popup-box">
 <b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
-<a href="#bakugo"><b>目次</b></a><br>
+<a href="#bakugo"><b>【目次】Contents</b></a><br>
 </div>
-  </div><!--== end   章 目次 ==========-->
+  </div><!--== end   章 【目次】Contents ==========-->
 <a id="bakugo_abstract"></a>
-  <div><!-- == begin 章 抄録 =========-->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+  <div><!-- == begin 章 【抄録】Abstract =========-->
 <br>
 <h2>
-抄録
+【抄録】Abstract
 </h2>
 <p><!-- -- begin 段落 ---->
-　万葉集巻一・九の額田王の難訓歌「莫囂圓隣歌」について、<br>
-恣意的な誤字仮定や義訓を排し、辞書に基づく客観的な試訓と全文意訳を提示する。<br>
-難訓部分は「表意兼表音文字」という掛詞的修辞法の導入によって解決した。<br>
-歌全体で明確に意味が通り、題詞に沿う意訳を得ることができた。<br>
-原文の正しさと意訳の妥当性を論証する。
+　万葉集巻一・９の額田王の難訓歌「莫囂圓隣歌」について、<br>
+恣意的な誤字仮定や義訓を排し、辞書に基づく客観的な試訓と<br>
+全文意訳を提示する。難訓部分は「表意兼表音文字」という<br>
+掛詞的修辞法の導入によって解決した。歌全体で明確に意味が<br>
+通り、題詞に沿う意訳を得ることができた。原文の正しさと<br>
+意訳の妥当性を論証する。<br>
 </p><!---- end   段落 ---->
-<br>
-  </div><!--== end   章 抄録 ==========-->
+  </div><!--== end   章 【抄録】Abstract ==========-->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
 <hr class="line"><!----------3---------4---------5--------->
 <a id="bakugo_1"></a>
  <div><!-- == begin 章 1 はじめに ==========-->
-　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次へ</a><br>
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 一、はじめに
 </h2>
@@ -520,199 +579,1273 @@ p  { font-size: 1.0em; }
   </div><!--== end   章 1 はじめに ==========-->
 <a id="bakugo_2"></a>
   <div><!-- == begin 章 2 原文の字の正しさ ==========-->
-　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次へ</a><br>
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 二、原文の字の正しさ
 </h2>
+    <div><!-- ==== begin 節 原文 ==========-->
+<p><!-- -- begin 段落 ---->
+　本稿での原文を挙げる。<sup>[中西]</sup> <!--
+--><ruby>類聚<rt>るいじゅ</rt><span class="copy">(るいじゅ)</span></ruby><!--
+--><ruby>古集<rt>こしゅう</rt><span class="copy">(こしゅう)</span></ruby><!--
+--><sup>[Ｒ]</sup>と一致している。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　①莫囂圓隣之　大相七兄爪湯氣<br>
+　吾瀬子之　射立為兼　五可新何本
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+難訓部分は『莫囂圓隣之　大相七兄爪湯気』である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 原文 ==========-->
+    <div><!-- ==== begin 節 原字を確認 ==========-->
+<p><!-- -- begin 段落 ---->
+　原字を確認しておく。<br>
+　西本願寺本<sup>[西]</sup>では、『湯』が『謁』になっている。<br>
+　<!--
+--><ruby>元暦<rt>げんりゃく</rt><span class="copy">(げんりゃく)</span></ruby><!--
+--><ruby>校本<rt>こうほん</rt><span class="copy">(こうほん)</span></ruby><!--
+--><sup>[元]</sup>では、『莫』が『草』になっていて、<br>
+朱書で『莫』が付されている。<br>
+また、『湯』の<!--
+--><ruby>三水<rt>さんずい</rt><span class="copy">(さんずい)</span></ruby>が<!--
+--><ruby>朱書<rt>しゅしょ</rt><span class="copy">(しゅしょ)</span></ruby>で<!--
+--><ruby>言偏<rt>ごんべん</rt><span class="copy">(ごんべん)</span></ruby>に<!--
+-->上書きされ、<br>
+『瀬之』の間に『子』が朱書で追加されている。<br>
+　どの本でも、『兄』の字体が現代とは少し異なっているが、<br>
+『兄』の異体字である。<sup>[ＯＨ]</sup><br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　整理すると、<br>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　②変動の許容範囲は『莫：草』、『湯：謁』、『子』の有無。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+である。変動幅を持たせておき、検討した後に、原字を決定する。<br>
+これ以外の字が異なっているのは、<br>
+「誤字の仮定に基づく改字」だと考えられる。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 原字を確認 ==========-->
+    <div><!-- ==== begin 節 字が正しい ==========-->
+<p><!-- -- begin 段落 ---->
+　根本的な問題として、字が異なる複数の原文が存在するので、<br>
+「どの字が『本当に』正しいのか」が不明である。<br>
+今まで、各々の先行研究者が正しいと思う原文を用いて、<br>
+あるいは改字をして、各々が正しいと思う試訓を付けてきた。<br>
+その結果が、数十もの試訓の一覧である。<sup>[武田]</sup><sup>[ＮＫ]</sup>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　この混乱を、収拾する方法は、あるのだろうか？<br>
+直接的な証拠には限界があるので、「現実的」な基準案を示す。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　③「原文の字が正しい」とは、<br>
+「字の変動許容範囲②以内で妥当な字を選択し、意訳が<br>
+『客観的』で、『明確かつ詳細』、『題詞に沿う』」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+だと考える。本稿は、これを目指す。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 字が正しい ==========-->
   </div><!--== end   章 2 原文の字の正しさ ==========-->
 <a id="bakugo_3"></a>
   <div><!-- == begin 章 3 先行研究の概観 ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 三、先行研究の概観
 </h2>
+<p><!-- -- begin 段落 ---->
+　先行する諸説を挙げる。本稿での原文①に一致するものと、<br>
+許容範囲②以内のものに限定する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑪<!--
+--><ruby>莫囂圓隣<rt>ゆふづき</rt><span class="copy">(ゆふづき)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大相七兄<rt>かげふみ</rt><span class="copy">(かげふみ)</span></ruby><!--
+--><ruby>爪<rt>て</rt><span class="copy">(て)</span></ruby><!--
+--><ruby>湯氣<rt>たつ</rt><span class="copy">(たつ)</span></ruby>　<!--
+--><ruby>吾<rt>わが</rt><span class="copy">(わが)</span></ruby><!--
+--><ruby>瀬子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+--><ruby>之<rt>が</rt><span class="copy">(が)</span></ruby>　<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><br>
+　<ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->　　　　　　　　　　　　（伊丹末雄）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑫<!--
+--><ruby>莫囂圓隣<rt>ふけひ</rt><span class="copy">(ふけひ)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大相七兄<rt>うらにし</rt><span class="copy">(うらにし)</span></ruby><!--
+--><ruby>爪<rt>つめに</rt><span class="copy">(つめに)</span></ruby><!--
+--><ruby>湯氣<rt>たつ</rt><span class="copy">(たつ)</span></ruby><!--
+-->　吾瀬子之　射立為兼<br>
+　五可新何本　　　　　　　　　　　　　（宮嶋弘）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑬<!--
+--><ruby>莫囂<rt>しづ</rt><span class="copy">(しづ)</span></ruby><!--
+--><ruby>圓<rt>ま</rt><span class="copy">(ま)</span></ruby><!--
+--><ruby>隣<rt>り</rt><span class="copy">(り)</span></ruby><!--
+--><ruby>之<rt>し</rt><span class="copy">(し)</span></ruby>　<!--
+--><ruby>大<rt>おほ</rt><span class="copy">(おほ)</span></ruby><!--
+--><ruby>相<rt>み</rt><span class="copy">(み)</span></ruby><!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>爪<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+--><ruby>湯氣<rt>し</rt><span class="copy">(し)</span></ruby>　<!--
+--><ruby>吾<rt>わが</rt><span class="copy">(わが)</span></ruby><!--
+--><ruby>瀬子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+--><ruby>之<rt>が</rt><span class="copy">(が)</span></ruby>　<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><br>
+　<ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->　　　　　　　　　　　（永井津記夫）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑭<!--
+--><ruby>莫囂<rt>しづ</rt><span class="copy">(しづ)</span></ruby><!--
+--><ruby>圓<rt>ま</rt><span class="copy">(ま)</span></ruby><!--
+--><ruby>隣<rt>り</rt><span class="copy">(り)</span></ruby><!--
+--><ruby>之<rt>し</rt><span class="copy">(し)</span></ruby>　<!--
+--><ruby>大相<rt>かげ</rt><span class="copy">(かげ)</span></ruby><!--
+--><ruby>七<rt>なな</rt><span class="copy">(なな)</span></ruby><!--
+--><ruby>兄<rt>え</rt><span class="copy">(え)</span></ruby><!--
+--><ruby>爪<rt>そ</rt><span class="copy">(そ)</span></ruby><!--
+--><ruby>湯<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby><!--
+--><ruby>氣<rt>け</rt><span class="copy">(け)</span></ruby>　<!--
+--><ruby>吾<rt>わが</rt><span class="copy">(わが)</span></ruby><!--
+--><ruby>瀬子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+--><ruby>之<rt>が</rt><span class="copy">(が)</span></ruby>　<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><br>
+　<ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->　　　　　　　　　　　　（上野正彦）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑮<!--
+--><ruby>莫囂圓隣<rt>ゆふとり</rt><span class="copy">(ゆふとり)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大相七兄<rt>うらなけ</rt><span class="copy">(うらなけ)</span></ruby><!--
+--><ruby>爪<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+--><ruby>湯氣<rt>わき</rt><span class="copy">(わき)</span></ruby><!--
+-->　吾瀬子之　射立為兼<br>
+　五可新何本　　　　　　　　　　　　（阪口　保）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑯<!--
+--><ruby>莫囂圓隣<rt>ゆふつき</rt><span class="copy">(ゆふつき)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大相七兄<rt>あふき</rt><span class="copy">(あふき)</span></ruby><!--
+--><ruby>爪<rt>て</rt><span class="copy">(て)</span></ruby><!--
+--><ruby><span style="font-family: 'Yu Gothic', '游ゴシック', sans-serif; font-weight: 700;">謁</span><rt>とひ</rt><span class="copy">(とひ)</span></ruby><!--
+--><ruby>氣<rt>し</rt><span class="copy">(し)</span></ruby>　<!--
+--><ruby>吾<rt>わが</rt><span class="copy">(わが)</span></ruby><!--
+--><ruby>瀬子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+--><ruby>之<rt>が</rt><span class="copy">(が)</span></ruby>　<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せる</rt><span class="copy">(せる)</span></ruby><!--
+--><ruby>兼<rt>かね</rt><span class="copy">(かね)</span></ruby><br>
+　<ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>あわ</rt><span class="copy">(あわ)</span></ruby><!--
+--><ruby>何<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>本<rt>む</rt><span class="copy">(む)</span></ruby><!--
+-->　　　　　　　　（西本願寺本、仙覚）
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑰<!--
+--><ruby><span style="font-family: 'Yu Gothic', '游ゴシック', sans-serif; font-weight: 700;">草</span>囂圓隣<rt>さかどり</rt><span class="copy">(さかどり)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大<rt>おほ</rt><span class="copy">(おほ)</span></ruby><!--
+--><ruby>相<rt>ふ</rt><span class="copy">(ふ)</span></ruby><!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>兄<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+--><ruby>爪<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+--><ruby>湯<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby><!--
+--><ruby>氣<rt>け</rt><span class="copy">(け)</span></ruby>　<!--
+--><ruby>吾<rt>わが</rt><span class="copy">(わが)</span></ruby><!--
+--><ruby>瀬子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+--><ruby>之<rt>が</rt><span class="copy">(が)</span></ruby>　<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><br>
+　<ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->　　　　　　　　　　　　（粂川定一）
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　たったこれだけである。ここに載らない大半（数十種）が、<br>
+何らかの改字をしているということである。<br>
+「圓→國」、「兄→見」、「七→土」の改字のものが多い。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　先行研究は、試訓は有っても、意訳は「曖昧な大意」だけで<br>
+あり、「明確で詳細」な意訳は、見つけられなかった。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　試訓の大半は「義訓」であり、恣意的な主観が入ってしまう。<br>
+「歌は、『誰かに伝える為』に詠む」ものである。<br>
+平仮名の無い時代で、万葉仮名の漢字だけの表現なのだから、<br>
+「義訓を知らなかったら、すぐに正確には、相手に伝わらない」。<br>
+誰もがすぐに理解できるような、簡単な義訓は許容できても、<br>
+「<ruby>凝<rt>こ</rt><span class="copy">(こ)</span></ruby><!--
+-->った難解な義訓」は「誰にも伝わらない」ので許容できない。<br>
+「試訓⑪～⑰は、振り仮名が無くても、そう読めるだろうか？」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　本稿では、「客観性」を確保するために、「義訓をしない」。<br>
+「訓の音を、漢字の読みに一致させる」という基本に戻り、<br>
+「すぐに伝わる」ようにすることで、解決の活路を開く。
+</p><!---- end   段落 ---->
   </div><!--== end   章 3 先行研究の概観 ==========-->
 <a id="bakugo_4"></a>
   <div><!-- == begin 章 4 通例の試訓と意訳への疑問 ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 四、通例の試訓と意訳への疑問
 </h2>
+<p><!-- -- begin 段落 ---->
+　通例の読み下し文と意訳を挙げる。<sup>[中西]</sup><br>
+難訓部分はそのままである。
+</p><!---- end   段落 ---->
+<p class="f1s4 indent-4"><!---- begin 段落 ---->
+　⑱紀の<!--
+--><ruby>温泉<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby>に<!--
+--><ruby>幸<rt>いでま</rt><span class="copy">(いでま)</span></ruby><!--
+-->しし時に、額田王の作れる歌　 <br>
+莫囂圓隣之　大相七兄爪湯気<br>
+わが<!--
+--><ruby>背子<rt>せこ</rt><span class="copy">(せこ)</span></ruby>が　い<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>たせりけむ　<!--
+--><ruby>厳<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>橿<rt>かし</rt><span class="copy">(かし)</span></ruby>が<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>
+</p><!---- end   段落 ---->
+<p class="f1s4 indent-4"><!---- begin 段落 ---->
+　⑲莫囂圓隣之　大相七兄爪湯気　わがいとしい背の君が　<br>
+お立ちになっていただろう、神聖な橿の木の下。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　そもそも、題詞に『紀の<!--
+--><ruby>温泉<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby>に<!--
+--><ruby>幸<rt>いでま</rt><span class="copy">(いでま)</span></ruby><!--
+-->しし時』とあるのに、<br>
+「なぜ、温泉に関係する意訳に、なっていないのか？」<br>
+前半の難訓部分があるとはいえ、後半部分においても、<br>
+通例の意訳は、温泉とは無関係であり、<br>
+「なぜ、いきなり、『<!--
+--><ruby>厳<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>橿<rt>かし</rt><span class="copy">(かし)</span></ruby>が<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』で『橿の木の下』なのか？」
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　ところで、『射』は、諸説では、ほとんどが接頭語『い』に<br>
+なっている。<sup>[武田]</sup> 他の意味は、無いのだろうか？
+</p><!---- end   段落 ---->
+  </div><!--== end   章 4 通例の試訓と意訳への疑問 ==========-->
+<a id="bakugo_5"></a>
+  <div><!-- == begin 章 5 表意兼表音文字 ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
+<h2>
+五、<!--
+--><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
+--><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
+--><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
+--><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby>
+</h2>
+<p><!-- -- begin 段落 ---->
+　難訓部分は、掛詞になっていることに気が付いた。<br>
+用語を準備しておく。
+</p><!---- end   段落 ---->
+    <div><!-- ==== begin 節 表意兼表音文字の定義 ==========-->
+<h3>
+・『<!--
+--><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
+--><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
+--><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
+--><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby>』の定義
+</h3>
+<p class="f2s2 indent-2"><!---- begin 段落 ---->
+「表音文字（音仮名や訓仮名）であると同時に、字義の羅列<br>
+として意味が通る表意文字でもある、多義を持つ仮名」。<br>
+大抵、表音の読みの語句は、辞書の見出し語に載る語であり、<br>
+表意の字義羅列は、辞書には無い語句となる。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 表意兼表音文字の定義 ==========-->
+    <div><!-- ==== begin 節 難訓の理由 ==========-->
+<h3>
+・難訓の理由
+</h3>
+<p class="f2s2 indent-2"><!---- begin 段落 ---->
+「字義羅列は辞書に無い」のに「意味は理解可能」なので、<br>
+「表音に気が付かない」まま、「字義羅列を『無理』に<br>
+『正音、正訓、義訓』で読もうとしてしまう」ためである。
+</p><!---- end   段落 ---->
+<p class="f0s3 indent-3"><!---- begin 段落 ---->
+　例：『莫囂』は辞書には無い字義羅列だが、<br>
+表意の『<!--
+--><ruby>囂<rt>かしかま</rt><span class="copy">(かしかま)</span></ruby><!--
+-->しくない』の意味が通るため、<br>
+表音の『<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き』に気付かず、<br>
+「<ruby>静<rt>しず</rt><span class="copy">(しず)</span></ruby>」の意味で『<!--
+--><ruby>莫囂<rt>しづ</rt><span class="copy">(しづ)</span></ruby><!--
+-->』の義訓にしてきた。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 難訓の理由 ==========-->
   </div><!--== end   章 5 表意兼表音文字 ==========-->
 <a id="bakugo_6"></a>
   <div><!-- == begin 章 6 試訓と意訳の提案 ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 六、試訓と意訳の提案
 </h2>
+    <div><!-- ==== begin 節 部分ごとに提案 ==========-->
+<p><!-- -- begin 段落 ---->
+　部分ごとに提案していく。<br>
+『表意兼表音文字』に、◎印を付ける。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->』<sup>[字]</sup>は、否定の『な』で、万葉仮名の『<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->』<sup>[Ｅ]</sup>。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>囂<rt>き</rt><span class="copy">(き)</span></ruby><!--
+-->』<sup>[字]</sup>は『<!--
+--><ruby>囂<rt>かしかま</rt><span class="copy">(かしかま)</span></ruby><!--
+-->し』<sup>[古]</sup>、『やかましい』。<br>
+　　呉漢音は『キョウ（ケウ）』<sup>[字]</sup>なので、『き』と読む。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+◎『<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>囂<rt>き</rt><span class="copy">(き)</span></ruby>』の、表意は『<!--
+--><ruby>囂<rt>かしかま</rt><span class="copy">(かしかま)</span></ruby><!--
+-->しくない』、『静かな』。<br>
+　　表音は『<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->き』<sup>[広]</sup>で『死んだ…』。<!--
+--><ruby>文選<rt>もんぜん</rt><span class="copy">(もんぜん)</span></ruby><!--
+--><sup>[文]</sup>に「<!--
+--><ruby>悼<rt>とう</rt><span class="copy">(とう)</span></ruby><!--
+--><ruby>亡<rt>ぼう</rt><span class="copy">(ぼう)</span></ruby><!--
+--><ruby>詩<rt>し</rt><span class="copy">(し)</span></ruby>」があり、<br>
+　　この時代でも『<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->き』の意味は通じたと、推測できる。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>圓<rt>ゑ</rt><span class="copy">(ゑ)</span></ruby><!--
+-->』は『辺り一帯、一円』の『<!--
+--><ruby>円<rt>えん</rt><span class="copy">(えん)</span></ruby><!--
+-->』<sup>[広]</sup>。「えん」の「え」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>隣<rt>り</rt><span class="copy">(り)</span></ruby><!--
+-->』<sup>[字]</sup>は『近隣』。万葉仮名の『<!--
+--><ruby>隣<rt>り</rt><span class="copy">(り)</span></ruby><!--
+-->』<sup>[Ｅ]</sup>。「りん」の「り」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+◎『<!--
+--><ruby>圓隣<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』の、表意は『近隣一帯』。表音は『<!--
+--><ruby>彫<rt>えり</rt><span class="copy">(えり)</span></ruby><!--
+-->』<sup>[広]</sup>（後述）で、<br>
+　　『<!--
+--><ruby>彫<rt>ほ</rt><span class="copy">(ほ)</span></ruby><!--
+-->ったように見える<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby><!--
+-->』。『<!--
+--><ruby>面影<rt>おもかげ</rt><span class="copy">(おもかげ)</span></ruby>の<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby><!--
+-->』と意訳する。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby><!--
+-->』は、格助詞『の』<sup>[古]</sup>で、状態『…の（ような）』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>大<rt>お</rt><span class="copy">(お)</span></ruby><!--
+-->』<sup>[古]</sup>は『大きい』。「おほ」の「お」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>相<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+-->』<sup>[古]</sup>は『<!--
+--><ruby>姿<rt>すがた</rt><span class="copy">(すがた)</span></ruby><!--
+-->』。「さう」の「さ」。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->』は、万葉仮名の『<!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->』<sup>[Ｅ]</sup>。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+◎『<!--
+--><ruby>大<rt>お</rt><span class="copy">(お)</span></ruby><!--
+--><ruby>相<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->』の、表意は『<!--
+--><ruby>大<rt>おほ</rt><span class="copy">(おほ)</span></ruby><!--
+--><ruby>相<rt>さう</rt><span class="copy">(さう)</span></ruby><!--
+-->な』で『大きな姿の』。<br>
+　　表音は『<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+-->』<sup>[古]</sup>で『子供っぽい、未熟な』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』<sup>[古]</sup>は『女性から、夫・愛人・兄・弟などを呼ぶ語』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・仮定：『<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』は、『成人していない<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の<!--
+--><ruby>有間<rt>ありまの</rt><span class="copy">(ありまの)</span></ruby><!--
+--><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby>』とする。<br>
+　　彼は、十九歳で絞首刑にされた。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>爪<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+-->』<sup>[長谷川]</sup>は、上代の格助詞『つ』<sup>[古]</sup>で、『…の』と訳す。（後述）
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>湯<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby><!--
+--><ruby>氣<rt>げ</rt><span class="copy">(げ)</span></ruby><!--
+-->』は、文字通り『<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby><!--
+-->』<sup>[広]</sup>。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>吾<rt>あが</rt><span class="copy">(あが)</span></ruby><!--
+-->』<sup>[古]</sup>は「あが」と読む。上代に多く用いられ、「わ」も同じ<br>
+　　意味の語だが、「あ」は「あが君」など親愛の気持ちを込め<br>
+　　て言い、「わ」は「わが大君」など改まった気持ちで用いた。<sup>[古]</sup><br>
+　　更に、暗に『あり間皇子』も含意できるので、「あ」を使う。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+◎『<!--
+--><ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』<sup>[古]</sup>の、表意は『物事に出あう時節。機会』、表音は『<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>吾<rt>あが</rt><span class="copy">(あが)</span></ruby><!--
+--><ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>子<rt>こ</rt><span class="copy">(こ)</span></ruby><!--
+-->』は、『<!--
+--><ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby>し<!--
+--><ruby>吾<rt>あ</rt><span class="copy">(あ)</span></ruby>が<!--
+--><ruby>兄子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+-->』。『出逢った私の<!--
+--><ruby>愛<rt>いと</rt><span class="copy">(いと)</span></ruby>しい<br>
+　　<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の<!--
+--><ruby>君<rt>きみ</rt><span class="copy">(きみ)</span></ruby><!--
+-->』であるが、文脈に合わせて意訳する。<br>
+　　<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby>『<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>』だったので、『<!--
+--><ruby>兄子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+-->』<sup>[古]</sup>の字を使う。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby><!--
+-->』は、格助詞『の』<sup>[古]</sup>で、意味は主語『…が』。<br>
+　　通例の読みは「が」であるが、口調の良さから「の」と読む。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby>』は、『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+-->す』<sup>[古]</sup>の連用形『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し』で、『<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き、<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby>り』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>し</rt><span class="copy">(し)</span></ruby>』は『<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby><!--
+-->たす』<sup>[古]</sup>の連用形『<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>たし』で『お<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ちになり』。<br>
+　　また、『<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby><!--
+-->つ』<sup>[古]</sup>は『旅立つ』の意味でもある。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><!--
+-->』は、助動詞『けむ』<sup>[古]</sup>で、過去の推量『…ただろう』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby>』は、『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby><!--
+-->たしけむ』で、二重の意味がある。<br>
+　　湯気が『お<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby><!--
+-->ちになられたのだろう』。また、<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の君が、<br>
+　　天に『<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby>り、お<!--
+--><ruby>旅<rt>たび</rt><span class="copy">(たび)</span></ruby><!--
+--><ruby>立<rt>だ</rt><span class="copy">(だ)</span></ruby><!--
+-->ちになられたのだろう』。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby>』は、『<!--
+--><ruby>厳<rt>いつか</rt><span class="copy">(いつか)</span></ruby><!--
+-->し』<sup>[古]</sup>で『<!--
+--><ruby>厳<rt>おごそ</rt><span class="copy">(おごそ)</span></ruby><!--
+-->かで立派だ』なのだが、語源は<br>
+　　「動詞『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+-->く』<sup>[古]</sup>に対応する形容詞」<sup>[古]</sup>なので、辞書には無いが、<br>
+　　『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かし』で『<!--
+--><ruby>汚<rt>けが</rt><span class="copy">(けが)</span></ruby><!--
+-->れを除き、心身を<!--
+--><ruby>清<rt>きよ</rt><span class="copy">(きよ)</span></ruby>めて神に<!--
+--><ruby>仕<rt>つか</rt><span class="copy">(つか)</span></ruby>える様子』<br>
+　　とする。『温泉』と『昇天』の両方に、意味が見事に通る。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+-->』は、格助詞『が』<sup>[古]</sup>で、所属『…の』、かつ感動文の主語。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>』<!--
+--><sup>[古]</sup>は『<!--
+--><ruby>辺<rt>あた</rt><span class="copy">(あた)</span></ruby><!--
+-->り』。温泉の『<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby><!--
+-->』<sup>[広]</sup>で『温泉の<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き出る土地』。<br>
+　　つまり『温泉一帯』で、『<!--
+--><ruby>圓隣<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』に呼応している。<br>
+　　「箱根湯本」から、『<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby><!--
+-->』に気付けた。題詞に沿っている。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+・『<!--
+--><ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』は『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かしが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>』であり、『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby>』、<br>
+　　『<!--
+--><ruby>汚<rt>けが</rt><span class="copy">(けが)</span></ruby><!--
+-->れを除き心身を<!--
+--><ruby>清<rt>きよ</rt><span class="copy">(きよ)</span></ruby>めて神に<!--
+--><ruby>仕<rt>つか</rt><span class="copy">(つか)</span></ruby><!--
+-->える様子！　の温泉一帯』。<br>
+　　辞書的には、『<!--
+--><ruby>厳<rt>いつか</rt><span class="copy">(いつか)</span></ruby>しが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>』で『<!--
+--><ruby>厳<rt>おごそ</rt><span class="copy">(おごそ)</span></ruby>か！　の<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby>』であるが、<br>
+　　『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かしが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』の方が、意味が適切に合致する。<br>
+　　文脈的には『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><!--
+-->』を受け、<br>
+　　文法的には『<!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+-->』によって、感動文になっている。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 部分ごとに提案 ==========-->
 <a id="bakugo_6_m"></a>
     <div><!-- ==== begin 節 ●歌のまとめ =========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h3>
 ●歌のまとめ
 </h3>
-      </div><!--====== end   項 ●歌のまとめ ==========-->
+<p><!-- -- begin 段落 ---->
+　訓付き原文を提案する。自然な読みの訓である。
+</p><!---- end   段落 ---->
+<p class="f1s5 indent-5"><!---- begin 段落 ---->
+　㉑<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>囂<rt>き</rt><span class="copy">(き)</span></ruby><!--
+--><ruby>圓<rt>ゑ</rt><span class="copy">(ゑ)</span></ruby><!--
+--><ruby>隣<rt>り</rt><span class="copy">(り)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>大<rt>お</rt><span class="copy">(お)</span></ruby><!--
+--><ruby>相<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+--><ruby>七<rt>な</rt><span class="copy">(な)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>爪<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>湯<rt>ゆ</rt><span class="copy">(ゆ)</span></ruby><!--
+--><ruby>氣<rt>げ</rt><span class="copy">(げ)</span></ruby>　<br>
+<!--
+--><ruby>吾<rt>あが</rt><span class="copy">(あが)</span></ruby><!--
+--><ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>子<rt>こ</rt><span class="copy">(こ)</span></ruby><!--
+--><ruby>之<rt>の</rt><span class="copy">(の)</span></ruby>　<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby>　<!--
+--><ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+表意（表音）の、読み下し文を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s5 indent-5"><!---- begin 段落 ---->
+　㉒<!--
+--><ruby>莫囂<rt>なき</rt><span class="copy">(なき)</span></ruby>（<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き）<!--
+--><ruby>圓隣<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby>（<!--
+--><ruby>彫<rt>えり</rt><span class="copy">(えり)</span></ruby>）の　<!--
+--><ruby>大<rt>お</rt><span class="copy">(お)</span></ruby><!--
+--><ruby>相<rt>さ</rt><span class="copy">(さ)</span></ruby>な（<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby>）<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>つ<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby>　<br>
+<!--
+--><ruby>吾<rt>あ</rt><span class="copy">(あ)</span></ruby>が<!--
+--><ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby>（<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>）<!--
+--><ruby>子<rt>こ</rt><span class="copy">(こ)</span></ruby>の　<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>たしけむ　<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かしが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+表意だけの、冒頭の難訓部分の意訳を示す。
+</p><!---- end   段落 ---->
+<p class="f1s2 indent-2"><!---- begin 段落 ---->
+　㉓<!--
+--><ruby>囂<rt>かしかま</rt><span class="copy">(かしかま)</span></ruby>しく<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>隣<rt>となり</rt><span class="copy">(となり)</span></ruby>の<!--
+--><ruby>円<rt>えん</rt><span class="copy">(えん)</span></ruby>の　<!--
+--><ruby>大<rt>おほ</rt><span class="copy">(おほ)</span></ruby>き<!--
+--><ruby>相<rt>さう</rt><span class="copy">(さう)</span></ruby>な<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>つ<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby><br>
+　 （静かな近隣一帯の、大きな姿の<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby>よ）
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+表音だけの、冒頭の難訓部分の意訳を示す。
+</p><!---- end   段落 ---->
+<p class="f1s2 indent-2"><!---- begin 段落 ---->
+　㉔<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>彫<rt>えり</rt><span class="copy">(えり)</span></ruby>の　<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>つ<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby><br>
+　 （<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>面影<rt>おもかげ</rt><span class="copy">(おもかげ)</span></ruby>の<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby>がある、<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby>よ）
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+表意兼表音も他も、全てを展開した、読み下し全文を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉕<!--
+--><ruby>囂<rt>かしかま</rt><span class="copy">(かしかま)</span></ruby>しく<!--
+--><ruby>莫<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>隣<rt>となり</rt><span class="copy">(となり)</span></ruby>の<!--
+--><ruby>円<rt>えん</rt><span class="copy">(えん)</span></ruby>、<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>彫<rt>えり</rt><span class="copy">(えり)</span></ruby>の　<!--
+--><ruby>大<rt>おほ</rt><span class="copy">(おほ)</span></ruby>き<!--
+--><ruby>相<rt>さう</rt><span class="copy">(さう)</span></ruby>の<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby>。<br>
+<ruby>瀬<rt>せ</rt><span class="copy">(せ)</span></ruby>し<!--
+--><ruby>吾<rt>あ</rt><span class="copy">(あ)</span></ruby>が<!--
+--><ruby>兄子<rt>せこ</rt><span class="copy">(せこ)</span></ruby>の　<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>たし　<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby>り　<!--
+--><ruby>旅<rt>たび</rt><span class="copy">(たび)</span></ruby><!--
+--><ruby>立<rt>だ</rt><span class="copy">(だ)</span></ruby>たしけむ　<br>
+<ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かしが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+表意兼表音も他も、全てを展開した、意訳全文を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉖静かな近隣一帯の、<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>（<!--
+--><ruby>有間<rt>ありまの</rt><span class="copy">(ありまの)</span></ruby><!--
+--><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby>）の<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>面影<rt>おもかげ</rt><span class="copy">(おもかげ)</span></ruby>の<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby>が<br>
+ある大きな姿の<!--
+--><ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby>よ。私の<!--
+--><ruby>愛<rt>いと</rt><span class="copy">(いと)</span></ruby>しい<!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の君に出逢ったのは、<br>
+（処刑されて、霊が湯気として）お<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ちになり、<br>
+（天に）<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby>り、お<!--
+--><ruby>旅<rt>たび</rt><span class="copy">(たび)</span></ruby><!--
+--><ruby>立<rt>だ</rt><span class="copy">(だ)</span></ruby><!--
+-->ちになられたのでしょう。<br>
+<ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby>よ。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+詳細説明を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉗<!--
+--><ruby>有間<rt>ありまの</rt><span class="copy">(ありまの)</span></ruby><!--
+--><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby>は、<!--
+--><ruby>紀<rt>き</rt><span class="copy">(き)</span></ruby>の（<!--
+--><ruby>牟婁<rt>むろ</rt><span class="copy">(むろ)</span></ruby><!--
+-->）温泉で湯治をした。<sup>[紀]</sup><br>
+病の完治を聞いた<!--
+--><ruby>斉明<rt>さいめい</rt><span class="copy">(さいめい)</span></ruby><!--
+-->天皇は、喜ばれ、行きたくなり、<br>
+額田王と一緒に、紀の温泉に<!--
+--><ruby>行幸<rt>ぎょうこう</rt><span class="copy">(ぎょうこう)</span></ruby><!--
+-->することになった。<br>
+飛鳥に居た有間皇子は、謀反の罪を被せられ、紀の温泉に<br>
+護送され、<!--
+--><ruby>中大兄<rt>なかのおほえの</rt><span class="copy">(なかのおほえの)</span></ruby><!--
+--><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby><!--
+-->に尋問された後、絞首刑にされた。<br>
+額田王は『<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>の有間皇子の<!--
+--><ruby>亡<rt>な</rt><span class="copy">(な)</span></ruby>き<!--
+--><ruby>面影<rt>おもかげ</rt><span class="copy">(おもかげ)</span></ruby>の<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby>がある大きな<br>
+<ruby>湯気<rt>ゆげ</rt><span class="copy">(ゆげ)</span></ruby><!--
+-->』を見た。湯気の『<!--
+--><ruby>吾<rt>あ</rt><span class="copy">(あ)</span></ruby>が<!--
+--><ruby>兄子<rt>せこ</rt><span class="copy">(せこ)</span></ruby><!--
+-->』に『出逢った』理由は、<br>
+霊が湯気として『お<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>き<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby><!--
+-->ちになられたのでしょう』。<br>
+天に『<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby>り、お<!--
+--><ruby>旅<rt>たび</rt><span class="copy">(たび)</span></ruby><!--
+--><ruby>立<rt>だ</rt><span class="copy">(だ)</span></ruby>ちになられたのでしょう』。<br>
+『なんという、（謀反の罪の）<!--
+--><ruby>汚<rt>けが</rt><span class="copy">(けが)</span></ruby>れを除き、心身を<!--
+--><ruby>清<rt>きよ</rt><span class="copy">(きよ)</span></ruby>めて<br>
+神に<ruby>仕<rt>つか</rt><span class="copy">(つか)</span></ruby><!--
+-->える様子！　の温泉一帯であることよ』。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 ●歌のまとめ ==========-->
   </div><!--== end   章 6 試訓と意訳の提案 ==========-->
 <a id="bakugo_7"></a>
   <div><!-- == begin 章 7 考察 ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 七、考察
 </h2>
+<!------------------->
+    <div><!-- ==== begin 節 妥当性 =========-->
+<h3>
+・『<!--
+--><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
+--><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
+--><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
+--><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby>』の妥当性
+</h3>
+<p class="f2s2 indent-2"><!---- begin 段落 ---->
+　表意㉓と表音㉔の「両方とも」、「同一の『湯気の文脈』」と<br>
+して、「明確に意味が通っている」ことが、正しさの根拠である。<br>
+「誤っていたら、同一文脈で、両方の意味は同時には通らない」<br>
+と考えられる。掛詞として、うまく機能していると考えられる。<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 妥当性 =========-->
+    <div><!-- ==== begin 節 難訓原因 =========-->
+<h3>
+・難訓になっていた原因
+</h3>
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『表意兼表音文字』の説明の「難訓の理由」が主原因と考える。<br>
+ここでは説明を繰り返さない。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>彫<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』<sup>[広]</sup>は、普通は『<!--
+--><ruby>彫<rt>ほ</rt><span class="copy">(ほ)</span></ruby>り<!--
+--><ruby>刻<rt>きざ</rt><span class="copy">(きざ)</span></ruby><!--
+-->む』の意なので、まさか、湯気に<br>
+関係するとは思わない。湯気に適用可能な『<!--
+--><ruby>彫<rt>えり</rt><span class="copy">(えり)</span></ruby>』の、<br>
+『<!--
+--><ruby>彫<rt>ほ</rt><span class="copy">(ほ)</span></ruby><!--
+-->ったように見える<!--
+--><ruby>凹凸<rt>おうとつ</rt><span class="copy">(おうとつ)</span></ruby><!--
+-->』の意は、現代辞書<sup>[広]</sup>にのみ有る。<br>
+たとえ古語辞書<sup>[古]</sup>には無くても「『湯気の状態の表現』として、<br>
+『明確に意味が通る』ことが、正しさの根拠」である。<br>
+仏教が伝来したことで、仏像を『<!--
+--><ruby>彫<rt>ほ</rt><span class="copy">(ほ)</span></ruby><!--
+-->る』ことが盛んになり、<br>
+『<!--
+--><ruby>彫<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』の語も有ったのではないか、と推測する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>大<rt>お</rt><span class="copy">(お)</span></ruby><!--
+--><ruby>相<rt>さ</rt><span class="copy">(さ)</span></ruby>な（<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+-->）』は、今まで、指摘されなかった。<br>
+訓読みと音読みが混在するので、気付かれなかったのだろう。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+-->』も、辞書に載っていない。年齢だけの根拠から、<br>
+『有間皇子』だとしているが、見事に意味が通っている。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>爪<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+-->』<sup>[長谷川]</sup>は、通例の万葉仮名には無く、大きな難訓要因であろう。<br>
+稀な使い方ではあるが、「初期訓点資料には存在する」。<br>
+文献[長谷川]が有ったからこそ、意味を通すことができた。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+-->』は、今まで特に意味の無い接頭語『<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby>』で固定されてい<br>
+たが、『湯気の文脈』での『<!--
+--><ruby>湧<rt>わ</rt><span class="copy">(わ)</span></ruby>く、<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ち<!--
+--><ruby>昇<rt>のぼ</rt><span class="copy">(のぼ)</span></ruby><!--
+-->る』がふさわしい。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・通例の『<!--
+--><ruby>射<rt>い</rt><span class="copy">(い)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><!--
+-->』の『せり』は、四段活用の上代の尊敬の<br>
+助動詞『す』<sup>[古]</sup>の已然形『せ』に、存続の助動詞『り』<sup>[古]</sup>の<br>
+連用形『り』が付いたものである。『けむ』は連用形に付く。<br>
+しかし、漢字は『為』だけであり、厳密には『り』は無い。<br>
+七音にするために、『<!--
+--><ruby>為<rt>せり</rt><span class="copy">(せり)</span></ruby><!--
+-->』と読んだと考えられる。<br>
+『す』の連用形は『し』である。『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+-->』と読むことによって、<br>
+七音で『<!--
+--><ruby>射<rt>さし</rt><span class="copy">(さし)</span></ruby><!--
+--><ruby>立<rt>たた</rt><span class="copy">(たた)</span></ruby><!--
+--><ruby>為<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>兼<rt>けむ</rt><span class="copy">(けむ)</span></ruby><!--
+-->』と読むことができ、文法的にも整合する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』は、
+今まで『<!--
+--><ruby>厳<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>橿<rt>かし</rt><span class="copy">(かし)</span></ruby>が<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』が主流の解釈だった。<br>
+意味不明な『神聖な<!--
+--><ruby>橿<rt>かし</rt><span class="copy">(かし)</span></ruby><!--
+-->の木の下』よりも、<br>
+『<!--
+--><ruby>汚<rt>けが</rt><span class="copy">(けが)</span></ruby><!--
+-->れを除き、心身を<!--
+--><ruby>清<rt>きよ</rt><span class="copy">(きよ)</span></ruby>めて、神に<!--
+--><ruby>仕<rt>つか</rt><span class="copy">(つか)</span></ruby><!--
+-->える、温泉一帯』の<br>
+『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby><!--
+-->』の方が、正しいと考える。<br>
+「『謀反の罪』の<!--
+--><ruby>汚<rt>けが</rt><span class="copy">(けが)</span></ruby><!--
+-->れを除く。『温泉』で<!--
+--><ruby>清<rt>きよ</rt><span class="copy">(きよ)</span></ruby>める。<br>
+『昇天』して神に<!--
+--><ruby>仕<rt>つか</rt><span class="copy">(つか)</span></ruby><!--
+-->える」の、三つに見事に合致する。<br>
+更に、『<!--
+--><ruby>圓隣<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』に「呼応」していて、合理的である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 難訓原因 =========-->
+    <div><!-- ==== begin 節 原文の正しさ =========-->
+<h3>
+・原文の字の正しさ
+</h3>
+<p class="f1s1"><!---- begin 段落 ---->
+　意訳全文㉖、詳細㉗は、「歴史と符合」し、「題詞に沿う」、<br>
+温泉の『湯気の文脈』として「明確かつ詳細に意味が通る」。<br>
+また、「妥当な仮定が一つ」なので、「客観的」である。<br>
+　よって、許容範囲②の『草』と『謁』は、意味が通らなく<br>
+なってしまうので除外される。『子』の有無は、第三句を五音に<br>
+するために必要である。これで、原文の字が妥当に選択された。<br>
+　従って、「基準③が満たされる」ので、<br>
+「原文①の字は、正しい」と結論できる。
+</p><!---- end   段落 ---->
+<p class="f1s1"><!---- begin 段落 ---->
+　訓は正しいだろうか？　この歌では、難訓部分に訓を付ける<br>
+ことができたからこそ意訳ができたので、少なくとも、<br>
+「妥当」であると考えられる。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 原文の正しさ =========-->
   </div><!--== end   章 7 考察 ==========-->
 <a id="bakugo_8"></a>
   <div><!-- == begin 章 8 まとめ =========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 八、まとめ
 </h2>
+<!------------------->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・訓付き原文㉑、表意（表音）の読み下し文㉒、難訓部分㉓㉔、<br>
+読み下し全文㉕、意訳全文㉖、詳細説明㉗、を提案する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・恣意的な「誤字の仮定」や「義訓」は無い。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
+--><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
+--><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
+--><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby><!--
+-->』を定義し、難訓を解決した。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>彫<rt>ゑり</rt><span class="copy">(ゑり)</span></ruby><!--
+-->』<sup>[広]</sup>、『<!--
+--><ruby>爪<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+-->』<sup>[長谷川]</sup>、『<!--
+--><ruby>射<rt>さす</rt><span class="copy">(さす)</span></ruby><!--
+-->』<sup>[古]</sup>、『<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』<sup>[古]</sup>など、<br>
+新しい解釈を導入した。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>五<rt>いつ</rt><span class="copy">(いつ)</span></ruby><!--
+--><ruby>可<rt>か</rt><span class="copy">(か)</span></ruby><!--
+--><ruby>新<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>何<rt>が</rt><span class="copy">(が)</span></ruby><!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby><!--
+-->』は『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かしが<!--
+--><ruby>本<rt>もと</rt><span class="copy">(もと)</span></ruby>』で、『<!--
+--><ruby>斎<rt>いつ</rt><span class="copy">(いつ)</span></ruby>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt><span class="copy">(ゆもと)</span></ruby>』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・題詞に沿う『湯気の文脈』で、明確な意訳の「全文」を示した。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・仮定は、「『<!--
+--><ruby>幼<rt>をさな</rt><span class="copy">(をさな)</span></ruby><!--
+--><ruby>兄<rt>せ</rt><span class="copy">(せ)</span></ruby>』は『<!--
+--><ruby>有間<rt>ありまの</rt><span class="copy">(ありまの)</span></ruby><!--
+--><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby>』」のみ。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・有間皇子の亡き面影を湯気に映して、昇天を想う歌である。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+★「客観的」で、「明確に意味が通る」、「題詞に沿う」、<br>
+「内容が適切」、「歴史と符合する」、を根拠として、<br>
+「原文①の字は、正しい。訓付き原文㉑、読み下し文㉒、<br>
+　読み下し全文㉕、意訳全文㉖、詳細説明㉗は、妥当。<br>
+　『<!--
+--><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
+--><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
+--><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
+--><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby><!--
+-->』の掛詞は、妥当。」<br>
+と結論する。
+</p><!---- end   段落 ---->
   </div><!--== end   章 8 まとめ ==========-->
 <a id="bakugo_9"></a>
   <div><!-- == begin 章 9 終わりに ==========-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <h2>
 九、終わりに
 </h2>
+<p><!-- -- begin 段落 ---->
+　莫囂圓隣歌は、千年以上も定訓が無く、詳細な意訳が無かった。<br>
+「客観的」で、「明確かつ詳細」な、試訓と意訳全文を提案し、<br>
+それを根拠にして、「正しい原文」を示した。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　この提案が、萬葉集の解釈に、一石を投じることを切に願う。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+<br>
+　　　　（あさくら　しんいち・天香具山をこよなく愛する者）<br>
+</p><!---- end   段落 ---->
+
   </div><!--== end   章 9 終わりに ===========-->
-　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次へ</a><br>
-<a id="reference"></a>
-  <div><!-- == begin 章 参考文献 ======================-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
+<a id="bakugo_reference"></a>
+  <div><!-- == begin 章 【参考文献】References ======================-->
 <h2>
-【参考文献】
+【参考文献】References
 </h2>
     <div><!-- ==== begin 節 訳注釈本 ==========-->
 <h3>
 ・訳注釈本
 </h3>
-<p>[中西] 中西進『万葉集　全訳注原文付』講談社　　一九七八年</p>
-<p>[武田] 武田祐吉『増訂　萬葉集全註釋』角川書店　一九五六年</p>
-<p>[ＯＨ] <ruby>澤瀉<rt>おもだか</rt><span class="copy">(おもだか)</span></ruby><!--
---><ruby>久<rt>ひさ</rt><span class="copy">(ひさ)</span></ruby><!--
---><ruby>孝<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
--->『萬葉集注釋』中央公論社　一九五七年</p>
+<p>[中西] 中西進 (1978) 『万葉集 全訳注原文付』 講談社</p>
+<p>[武田] 武田祐吉 (1956) 『増訂 萬葉集全註釋』 角川書店</p>
+<p>[ＯＨ] <!--
+--><ruby>澤瀉<rt>おもだか</rt><span class="copy">(おもだか)</span></ruby><!--
+--><ruby>久孝<rt>ひさたか</rt><span class="copy">(ひさたか)</span></ruby><!--
+--> (1957) 『萬葉集注釋』 中央公論社</p>
     </div><!--==== end   節 訳注釈本 ==========-->
     <div><!-- ==== begin 節 原文 ==========-->
 <h3>
 ・原文
 </h3>
-<p>[元] 藤原行成筆『元暦校本万葉集』　二玄社　　　一九九四年</p>
-<p>[西] 『西本願寺本万葉集（普及版）』主婦の友社　一九九三年</p>
-<p>[Ｒ] 上田萬年　『類聚古集』　　　　臨川書店　　一九七四年</p>
+<p>[元] 藤原行成筆 (1994) 『元暦校本万葉集』 二玄社</p>
+<p>[西] 西本願寺本万葉集 (1993) 『普及版』 主婦の友社</p>
+<p>[Ｒ] 上田萬年 (1974) 『類聚古集』 臨川書店</p>
     </div><!--==== end   節 原文  ==========-->
     <div><!-- ==== begin 節 記紀、文選 ==========-->
 <h3>
 ・日本書紀、文選
 </h3>
-<p>[紀] 井上光貞『日本書紀』　　　　　中央公論社　一九八七年<br>
-　　　巻第二十六　斉明三年九月～五年一月条（有間皇子）</p>
-<p>[文] <!--
---><ruby>潘安仁<rt>はんあんじん</rt><span class="copy">(はんあんじん)</span></ruby>「<!--
---><ruby>悼亡<rt>たうばうの</rt><span class="copy">(たうばうの)</span></ruby><!--
---><ruby><rt></rt><span class="copy">(ばうの)</span></ruby><!--
---><ruby>詩<rt>し</rt><span class="copy">(し)</span></ruby><!--
---><ruby>三<rt>さん</rt><span class="copy">(さん)</span></ruby><!--
---><ruby>首<rt>しゅ</rt><span class="copy">(しゅ)</span></ruby>」<br>
-　　内田泉之助・網祐次『文選(詩篇)』明治書院 一九六三年 所収</p>
+<p>[紀] 井上光貞 (1987) 『日本書紀』 中央公論社 <br>
+　　　 巻第二十六　斉明三年九月～五年一月条（有間皇子）</p>
+<p>[文] 内田泉之助・網祐次 (1963) 『文選（詩篇）』 明治書院 <br>
+　　　 <ruby>潘<rt>はん</rt><span class="copy">(はん)</span></ruby><!--
+--><ruby>安<rt>あん</rt><span class="copy">(あん)</span></ruby><!--
+--><ruby>仁<rt>じん</rt><span class="copy">(じん)</span></ruby><!--
+-->『<ruby>悼亡詩<rt>たうばうのし</rt><span class="copy">(たうばうのし)</span></ruby>
+<ruby>三首<rt>さんしゅ</rt><span class="copy">(さんしゅ)</span></ruby>』</p>
     </div><!--==== end   節 記紀、文選 ==========-->
-    <div><!-- ==== begin 節 難訓歌考 書籍 ==========-->
-<h3>[ＮＫ] 難訓歌考 書籍
-</h3>
-<p>[伊] 伊丹<ruby>末<rt>まつ</rt><span class="copy">(まつ)</span></ruby><!--
---><ruby>雄<rt>お</rt><span class="copy">(お)</span></ruby><!--
--->『万葉集難訓考』国書刊行会　一九七〇年</p>
-<p>[間] 間宮厚司『万葉難訓歌の研究』法政大学出版局 二〇〇一年</p>
-<p>[永] 永井<ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
---><ruby>記<rt>ぎ</rt><span class="copy">(ぎ)</span></ruby><!--
---><ruby>夫<rt>お</rt><span class="copy">(お)</span></ruby><!--
--->『万葉難訓歌の解読』和泉書院　一九九二年</p>
-<p>[上] 上野正彦『万葉集難訓歌　一三〇〇年の謎を解く』<br>
-　　　　　　　　　　　　　　　　学芸みらい社　二〇一六年</p>
-<p>[菊] 菊沢<ruby>季<rt>すえ</rt><span class="copy">(すえ)</span></ruby><!--
---><ruby>生<rt>お</rt><span class="copy">(お)</span></ruby><!--
--->『菊沢季生国語学論集』第三巻<br>
-　　 『万葉集難訓歌考（上）』教育出版センター　一九八九年</p>
-    </div><!--==== end   節 難訓歌考 書籍 ==========-->
     <div><!-- ==== begin 節 論文、報告書 ==========-->
 <h3>
 ・論文、報告書
 </h3>
-<p>[長谷川] 長谷川千秋<br>
-　　 　　「「かな」と真仮名の連続と不連続を考えるために」<br>
-　　 内田<ruby>賢<rt>まさ</rt><span class="copy">(まさ)</span></ruby><!--
---><ruby>德<rt>のり</rt><span class="copy">(のり)</span></ruby><!--
--->、乾善彦『万葉仮名と平仮名　その連続・不連続』<br>
-　　　　　　　　　　　　　　　　　三省堂 二〇一九年 所収</p>
+<p class="f0s4 indent-4">[長谷川] 長谷川千秋 (2019) <br>
+「「かな」と真仮名の連続と不連続を考えるために」 <br>
+内田<ruby>賢德<rt>まさのり</rt><span class="copy">(まさのり)</span></ruby><!--
+-->・乾善彦 <br>
+『万葉仮名と平仮名　その連続・不連続』 三省堂</p>
     </div><!--==== end   節 論文、報告書 ==========-->
     <div><!-- ==== begin 節 辞書、事典 ==========-->
 <h3>
 ・辞書、事典
 </h3>
-<p>[Ｅ] 中西進『万葉集事典』講談社　一九八五年</p>
-<p>[広] 『広辞苑　第五版』岩波書店</p>
-<p>[字] 『漢字源』学習研究社</p>
-<p>[古] 『全訳古語辞典　第三版』　旺文社</p>
+<p>[Ｅ] 中西進 (1985) 『万葉集事典』 講談社</p>
+<p>[広] 『広辞苑 第五版』 岩波書店</p>
+<p>[字] 『漢字源』 学習研究社</p>
+<p>[古] 『全訳古語辞典 第三版』 旺文社</p>
     </div><!--==== end   節 辞書、事典 ==========-->
-  </div><!--== end   章 参考文献 ======================-->
-<p><!-- -- begin 段落 ---->
-<br>
-　　　　（あさくら　しんいち・天香具山をこよなく愛する者）<br>
-</p><!---- end   段落 ---->
-　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次へ</a><br>
-<a id="okuduke"></a>
+    <div><!-- ==== begin 節 難訓歌考 書籍 ==========-->
+<h3>
+[ＮＫ] 難訓歌考 書籍
+</h3>
+・伊丹<ruby>末雄<rt>まつお</rt><span class="copy">(まつお)</span></ruby><!--
+--> (1970) 『万葉集難訓考』 国書刊行会<br>
+・間宮厚司 (2001) 『万葉難訓歌の研究』 法政大学出版局<br>
+・永井<ruby>津記夫<rt>つぎお</rt><span class="copy">(つぎお)</span></ruby><!--
+--> (1992) 『万葉難訓歌の解読』 和泉書院<br>
+・上野正彦 (2016) 『万葉集難訓歌　一三〇〇年の謎を解く』 <br>
+　　　　　　　　　　　　　　　　　　　　　学芸みらい社<br>
+・菊沢<ruby>季生<rt>すえお</rt><span class="copy">(すえお)</span></ruby><!--
+--> (1989) 『菊沢季生国語学論集 第三巻 <br>
+　　　　　　　　万葉集難訓歌考（上）』 教育出版センター</p>
+    </div><!--==== end   節 難訓歌考 書籍 ==========-->
+  </div><!--== end   章 【参考文献】References ======================-->
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
+<a id="bakugo_okuduke"></a>
 <hr class="line"><!----------3---------4---------5--------->
 　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
 <hr class="line"><!----------3---------4---------5--------->
 <br>
-  <div><!-- == begin 章 奥付 ======================-->
+  <div><!-- == begin 章 【奥付】Colophon ======================-->
 <h2>
-奥付
+【奥付】Colophon
 </h2>
-    <div><!-- ==== begin 節 ==========-->
-<p class="f1s1 indent-1"><!-- -- begin 段落 論文名 ---->
-論文名：<span style="font-size: 1.2em; font-weight: bold;"><!--
--->額田王の莫囂圓隣歌の試訓と意訳の提案</span><br>
-著者　：朝倉 慎一<br>
-所属　：独立研究者<br>
-著作権：© Shin'ichi ASAKURA 2025 All rights reserved.<br>
-</p><!---- end   段落 論文名 ---->
-    </div><!--==== end   節 論文名 ==========-->
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+論文名： 額田王の莫囂圓隣歌の試訓と意訳の提案<br>
+著者　： 朝倉 慎一<br>
+　　　　 <a href="https://orcid.org/0009-0000-8893-4649" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://orcid.org/0009-0000-8893-4649</a><br>
+　　　　 <a href="https://researchmap.jp/asakura-shinichi" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://researchmap.jp/asakura-shinichi</a><br>
+メール： manyo.meikai+web@gmail.com<br>
+著作権： © Shin'ichi ASAKURA 2025 All rights reserved.<br>
+所属　： 独立研究者<br>
+</p><!---- end   段落 ---->
+
     <div><!-- ==== begin 節 バージョン ==========-->
-<h3>
-ＨＴＭＬ版バージョン
-</h3>
-<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
-<span class="version tcy"></span>：<span class="tcy">2026</span>年<span 
-class="tcy"> 5</span>月<span class="tcy">10</span>日（試し読み版）<br>
-　　　底本から、抜粋、誤記訂正 および 目次と抄録の追加。<br>
-　　　実質的な内容は、底本と ほぼ同じ。
+　<b>ＨＴＭＬ版バージョン</b><br>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+<span class="version tcy"></span> ： <span class="tcy">2026</span>年<span 
+class="tcy"> 5</span>月<span class="tcy">14</span>日（完全公開版）<br>
+</p><!---- end   段落 ---->
+<p class="f5s5 indent-5">
+底本から抜粋。誤記訂正と若干の加筆修正をし、<br>
+目次・抄録・奥付などを追加した改訂版。<br>
+実質的な内容は、底本と ほぼ同じ。<br>
 </p><!---- end   段落 ---->
     </div><!--==== end   節 バージョン ==========-->
-    <div><!-- ==== begin 節 底本 ==========-->
-<h3>
-底本
-</h3>
-<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+  </div><!--== end   章 【奥付】Colophon ======================-->
+<br>
+
+<a id="original"></a>
+  <div><!-- == begin 章 【底本】The original printed book ==========-->
+<h2>
+【底本】The original printed book
+</h2>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
 書名　：万葉集難訓歌を明快に解く！<br>
 著者　：朝倉慎一<br>
-発行所：銀河書籍、発売元：星雲社<br>
+発行所：銀河書籍<br>
+発売元：星雲社<br>
 発行日：<span class="tcy">2025</span>年<span class="tcy">10</span>月<span 
 class="tcy">21</span>日　初版第<span class="tcy">1</span>刷<br>
-© Shin'ichi ASAKURA  2025  Printed in Japan<br>
+著作権：© Shin'ichi ASAKURA  2025  Printed in Japan<br>
 ISBN：<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"
  target="_blank" rel="noopener noreferrer" class="url">978-4-434-36742-7</a> , C0192<br>
 NCID：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
  target="_blank" rel="noopener noreferrer" class="url">BD13589490</a>（CiNii Books）
 </p><!---- end   段落 ---->
-    </div><!--==== end   節 底本 ==========-->
+  </div><!--== end   章 【底本】The original printed book ==========-->
 <br>
-    <div><!-- ==== begin 節 公式サイト ==========-->
-<h3>
-万葉集難訓歌を明快に解く！ 公式サイト
-</h3>
-<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
-<a href ="https://manyo-meikai.github.io/" target="_blank" 
-rel="noopener noreferrer" class="url">https://manyo-meikai.github.io/</a><br>
+
+<a id="coi"></a>
+  <div><!-- == begin 章 【利益相反に関する開示】COI Disclosure ==========-->
+<h2>
+【利益相反に関する開示】COI Disclosure
+</h2>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+本稿は、著者が既に出版した書籍の内容を一部含む。<br>
+著者は当該書籍の販売による収入を得ているが、<br>
+本研究の内容や結論に影響を与えるものではない。<br>
 </p><!---- end   段落 ---->
-    </div><!--==== end   節 公式サイト ==========-->
-  </div><!--== end   章 奥付 ======================-->
-</div><!--== end   論文 ===========-->
-　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次へ</a><br>
+  </div><!--== end   章 【利益相反に関する開示】COI Disclosure ==========-->
+
+</div><!-- end   論文 ===========-->
+
+　　　　　　　　　　　　　　　　　　　<a href="#bakugo">莫囂の目次</a><br>
 <hr class="line"><!----------3---------4---------5--------->
-　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+　　万葉集難訓歌を明快に解く！ 公式サイト<br>
+　　　　<a href="https://manyo-meikai.github.io/"
+                >https://manyo-meikai.github.io/</a><br>
 <hr class="line"><!----------3---------4---------5--------->
+<br>
 <br>
 <!--==== begin SCRIPT ====-->
 <!-- 目次 ポップアップ -->
