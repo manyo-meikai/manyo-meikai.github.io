@@ -54,7 +54,8 @@ https://manyo-meikai.github.io/book/moyuru.html
 ---
 
 # 著者
-朝倉 慎一 (Shin'ichi Asakura)
+朝倉 慎一 (Shin'ichi Asakura)  
+
 https://orcid.org/0009-0000-8893-4649  
 
 https://researchmap.jp/asakura-shinichi  
