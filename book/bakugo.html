@@ -189,6 +189,8 @@ p  { font-size: 1.0em; }
   border: 1px solid #aaa;
   cursor: pointer;
   border-radius: 6px;
+  /* スマホでの消失バグを防ぐため、常に横書きとして扱う */
+  writing-mode: horizontal-tb;
 }
 /* ポップアップ共通 */
 .popup-box {
@@ -201,6 +203,9 @@ p  { font-size: 1.0em; }
   display: none;
   z-index: 9999;
   pointer-events: none;
+  /* メニューも常に横書きにし、スマホの幅からはみ出さないようにする */
+  writing-mode: horizontal-tb;
+  max-width: 90vw;
 }
 #baku-btn     { bottom: 59px; right:  5px; top: auto; left: auto; position: fixed; }
 #baku-popup   { bottom: 10px; right: 45px; top: auto; left: auto; width: 19em; }
@@ -1889,7 +1894,6 @@ NCID：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
 <br>
 <!--==== begin SCRIPT ====-->
 <!-- 目次 ポップアップ -->
-<nav class="switcher">
   <!-- 莫囂 目次ボタン 横書き用 -->
   <button id="baku-btn" class="popup-btn btn-hori" 
           data-target="baku-popup"><b>目次</b></button>
@@ -1912,7 +1916,6 @@ NCID：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
   <!-- 縦書き用 -->
   <button id="hori-btn-v" class="popup-btn btn-vert" data-target="hori-popup-v">横書</button>
   <button id="vert-btn-v" class="popup-btn btn-vert" data-target="vert-popup-v">縦書</button>
-</nav>
 
 <script>
 // 存在する ID だけ安全に複製する関数
