@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <title>【論文公開】中大兄の大和三山の歌の別解釈の提案（巻一・13～15）</title>
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:image" content="https://manyo-meikai.github.io/image/omote_hyousi.jpg"><meta name="keywords" content="万葉集,巻1-13～15,三山,性別,左注,香具山,高山,たかやま,中大兄,天智">
 <meta name="description" content="中大兄の大和三山の歌（巻一・13～15）には、第2反歌の左注問題と、三山の性別問題がある。『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに『整合性』が有る」解決案を、初めて提示する。">
 <link rel="canonical" href="https://manyo-meikai.github.io/book/sanzan.html">
@@ -101,6 +101,7 @@ p  { font-size: 1.0em; }
 }
 .horizontal hr.line {
   width: 30em;
+  max-width: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   height: 1px;
   background: #000;
   border: none;
@@ -148,6 +149,7 @@ p  { font-size: 1.0em; }
 .vertical hr.line {
   width: 1px;
   height: 30em;
+  max-height: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   background: #000;
   border: none;
   margin: 0;
@@ -197,19 +199,19 @@ p  { font-size: 1.0em; }
   z-index: 9999;
   pointer-events: none;
 }
-#sanzan-btn   { top:  5px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#sanzan-popup { top: 10px; right: 65px; bottom: auto; left: auto; width: 22em; }
-#vert-btn     { top: 35px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#vert-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 26em; }
-#hori-btn     { top: 65px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#hori-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 20em; }
+#sanzan-btn   { bottom: 59px; right:  5px; top: auto; left: auto; position: fixed; }
+#sanzan-popup { bottom: 10px; right: 45px; top: auto; left: auto; width: 21em; }
+#vert-btn     { bottom: 32px; right:  5px; top: auto; left: auto; position: fixed; }
+#vert-popup   { bottom: 10px; right: 45px; top: auto; left: auto; width: 26em; }
+#hori-btn     { bottom:  5px; right:  5px; top: auto; left: auto; position: fixed; }
+#hori-popup   { bottom: 10px; right: 45px; top: auto; left: auto; width: 20em; }
 
-#sanzan-btn-v   { top:  5px; left:  5px; bottom: auto; right: auto; position: fixed; }
-#sanzan-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 24em; }
-#vert-btn-v   { top: 45px; left:  5px; bottom: auto; right: auto; position: fixed; }
-#vert-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 28em; }
-#hori-btn-v   { top: 85px; left:  5px; bottom: auto; right: auto; position: fixed; }
-#hori-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 22em; }
+#sanzan-btn-v   { right:  5px; bottom:  5px; top: auto; left: auto; position: fixed; }
+#sanzan-popup-v { right:  5px; bottom: 45px; top: auto; left: auto; height: 20em; }
+#vert-btn-v   { right: 37px; bottom:  5px; top: auto; left: auto; position: fixed; }
+#vert-popup-v { right:  5px; bottom: 45px; top: auto; left: auto; height: 28em; }
+#hori-btn-v   { right: 69px; bottom:  5px; top: auto; left: auto; position: fixed; }
+#hori-popup-v { right:  5px; bottom: 45px; top: auto; left: auto; height: 22em; }
 </style>
 <!--==== end   STYLE ====-->
 <!--==== begin JSON-LD ====-->
@@ -538,7 +540,7 @@ of Naka-no-Ōe’s Poems on the Three Mountains of Yamato
 <a href="#sanzan_reference">【参考文献】References</a><br>
 <a href="#sanzan_okuduke"  >【奥付】Colophon</a><br>
 <a href="#original" >【底本】The original printed book</a><br>
-<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI</a><br>
 </p><!---- end   段落 ---->
 <!-- 三山 目次ボタン 横書き用 -->
 <button id="sanzan-btn" class="popup-btn btn-hori" 
