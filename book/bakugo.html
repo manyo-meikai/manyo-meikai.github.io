@@ -104,6 +104,7 @@ p  { font-size: 1.0em; }
 }
 .horizontal hr.line {
   width: 30em;
+  max-width: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   height: 1px;
   background: #000;
   border: none;
@@ -151,6 +152,7 @@ p  { font-size: 1.0em; }
 .vertical hr.line {
   width: 1px;
   height: 30em;
+  max-height: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   background: #000;
   border: none;
   margin: 0;
@@ -528,20 +530,6 @@ of Nukata-no-Ōkimi’s “Bakugo-enrin-ka”
 <a href="#original" >【底本】The original printed book</a><br>
 <a href="#coi"      >【利益相反に関する開示】COI</a><br>
 </p><!---- end   段落 ---->
-<!-- 莫囂 目次ボタン 横書き用 -->
-<button id="baku-btn" class="popup-btn btn-hori" 
-        data-target="baku-popup"><b>目次</b></button>
-<div id="baku-popup" class="popup-box">
-<b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
-<a href="#bakugo"><b>【目次】Contents</b></a><br>
-</div>
-<!-- 莫囂 目次ボタン 縦書き用 -->
-<button id="baku-btn-v" class="popup-btn btn-vert" 
-        data-target="baku-popup-v"><b>目次</b></button>
-<div id="baku-popup-v" class="popup-box">
-<b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
-<a href="#bakugo"><b>【目次】Contents</b></a><br>
-</div>
   </div><!--== end   章 【目次】Contents ==========-->
 <a id="bakugo_abstract"></a>
 　　　　　　　　　　　　　　　　　　　<!--
@@ -1902,6 +1890,22 @@ NCID：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
 <!--==== begin SCRIPT ====-->
 <!-- 目次 ポップアップ -->
 <nav class="switcher">
+  <!-- 莫囂 目次ボタン 横書き用 -->
+  <button id="baku-btn" class="popup-btn btn-hori" 
+          data-target="baku-popup"><b>目次</b></button>
+  <div id="baku-popup" class="popup-box">
+  <b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
+  <a href="#bakugo"><b>【目次】Contents</b></a><br>
+  </div>
+  
+  <!-- 莫囂 目次ボタン 縦書き用 -->
+  <button id="baku-btn-v" class="popup-btn btn-vert" 
+        data-target="baku-popup-v"><b>目次</b></button>
+  <div id="baku-popup-v" class="popup-box">
+  <b>額田王の莫囂圓隣歌の試訓と意訳の提案</b><br>
+  <a href="#bakugo"><b>【目次】Contents</b></a><br>
+  </div>
+
   <!-- 横書き用 -->
   <button id="hori-btn" class="popup-btn btn-hori" data-target="hori-popup">横書</button>
   <button id="vert-btn" class="popup-btn btn-hori" data-target="vert-popup">縦書</button>
