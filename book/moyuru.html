@@ -5,10 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<title>【試し読み】持統天皇の燃火と向南山の歌の試訓と意訳の提案</title>
+<title>【試し読み】持統天皇の燃火と向南山の歌の試訓と意訳の提案（巻2-160～161）</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:image" content="https://manyo-meikai.github.io/image/omote_hyousi.jpg"><meta name="keywords" content="万葉集,巻2-160～161,燃火,向南山,持統天皇,天武天皇,草壁皇子,陵,雲,難訓">
-<meta name="description" content="持統天皇の難訓歌、燃火の歌（巻二・160）と、向南山の歌（巻二・161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。">
+<meta name="description" content="持統天皇の難訓歌、燃火の歌（巻2-160）と、向南山の歌（巻2-161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。">
 <link rel="canonical" href="https://manyo-meikai.github.io/book/moyuru.html">
 <link rel="icon" href="https://manyo-meikai.github.io/icon/favicon.png" type="image/png">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -101,6 +101,7 @@ p  { font-size: 1.0em; }
 }
 .horizontal hr.line {
   width: 30em;
+  max-width: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   height: 1px;
   background: #000;
   border: none;
@@ -148,6 +149,7 @@ p  { font-size: 1.0em; }
 .vertical hr.line {
   width: 1px;
   height: 30em;
+  max-height: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
   background: #000;
   border: none;
   margin: 0;
@@ -197,12 +199,12 @@ p  { font-size: 1.0em; }
   z-index: 9999;
   pointer-events: none;
 }
-#moyuru-btn   { top:  5px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#moyuru-popup { top: 10px; right: 65px; bottom: auto; left: auto; width: 24em; }
-#vert-btn     { top: 35px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#vert-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 26em; }
-#hori-btn     { top: 65px; right:  5px; bottom: auto; left: auto; position: fixed; }
-#hori-popup   { top: 10px; right: 65px; bottom: auto; left: auto; width: 20em; }
+#moyuru-btn   { top:  3px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#moyuru-popup { top:  3px; right: 45px; bottom: auto; left: auto; width: 24em; }
+#vert-btn     { top: 30px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#vert-popup   { top:  3px; right: 45px; bottom: auto; left: auto; width: 26em; }
+#hori-btn     { top: 57px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#hori-popup   { top:  3px; right: 45px; bottom: auto; left: auto; width: 20em; }
 
 #moyuru-btn-v { top:  5px; left:  5px; bottom: auto; right: auto; position: fixed; }
 #moyuru-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 26em; }
@@ -257,7 +259,7 @@ p  { font-size: 1.0em; }
       "inLanguage": "ja",
       "description": [
         {
-          "@value": "持統天皇の難訓歌、燃火の歌（巻二・160）と、向南山の歌（巻二・161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。", 
+          "@value": "持統天皇の難訓歌、燃火の歌（巻2-160）と、向南山の歌（巻2-161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。", 
           "@language": "ja"
         },
         {
@@ -400,17 +402,57 @@ p  { font-size: 1.0em; }
         ]
       },
 
-      "about": [
-        "万葉集", "巻2-160～161", "燃火", "向南山", 
-        "持統天皇", "天武天皇","草壁皇子", "陵", "雲", "難訓"
+      "exampleOfWork": [
+        { "@id": "#org-book-moyuru" },
+        ( "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#moyuru" }
       ],
+
+      "about": [
+        {
+          "@type": "CreativeWork",
+          "@id": "#org-book-moyuru"
+        },
+        {
+          "@type": "Book",
+          "name": "万葉集"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "巻2-160～161"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "燃火の歌"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "向南山の歌"
+        },
+        {
+          "@type": "Person",
+          "name": "持統天皇"
+        },
+        {
+          "@type": "Person",
+          "name": "天武天皇"
+        },
+        {
+          "@type": "Person",
+          "name": "草壁皇子"
+        },
+        {
+          "@type": "Thing",
+          "name": "難訓"
+        }
+      ],
+
       "keywords": [
         "万葉集", "巻2-160～161", "燃火", "向南山", 
         "持統天皇", "天武天皇","草壁皇子", "陵", "雲", "難訓"
       ],
       "abstract": [
         {
-          "@value": "持統天皇の難訓歌、燃火の歌（巻二・160）と、向南山の歌（巻二・161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。", 
+          "@value": "持統天皇の難訓歌、燃火の歌（巻2-160）と、向南山の歌（巻2-161）について、天武天皇と草壁皇子の成仏を願う歌として、題詞「崩り」に沿う明快な意訳を、初めて提示する。", 
           "@language": "ja"
         },
         {
