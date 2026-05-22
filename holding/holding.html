@@ -21,18 +21,54 @@ body {
                "Noto Serif JP", serif;
 }
 
-h1, h2, h3 {font-weight: bold; margin-bottom: -0.6em;} 
-h1 {font-size: 2.0em; margin-bottom: 0em;} 
-h2 {font-size: 1.5em;} 
-h3 {font-size: 1.2em; margin-left: 1.5em;} 
-h3.h3-fix {margin-top: 0em;}
-ruby rt {font-size: 0.6em; line-height: 1;}
+.f0s1 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝0文字下げになる） */
+}
+.f0s2 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝0文字下げになる） */
+}
+.f0s3 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝0文字下げになる） */
+}
+.f1s1 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝1文字下げになる） */
+}
+.f1s2 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝1文字下げになる） */
+}
+.f1s3 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝1文字下げになる） */
+}
+.f2s2 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝2文字下げになる） */
+}
+.f2s3 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝2文字下げになる） */
+}
+.f2s4 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝2文字下げになる） */
+}
+.indent-0 { padding-left: 0em; padding-top: 0em; }
+.indent-1 { padding-left: 1em; padding-top: 0em; }
+.indent-2 { padding-left: 2em; padding-top: 0em; }
+.indent-3 { padding-left: 3em; padding-top: 0em; }
+.indent-4 { padding-left: 4em; padding-top: 0em; }
+.indent-5 { padding-left: 5em; padding-top: 0em; }
 
-.p1, .p2, .p3 {text-indent: 0em; margin-bottom: 1em;}
-.p1 { font-size: 1.2em; margin-left: 1.5em;}
-.p2 { font-size: 1.2em; margin-left: 1.5em;}
-.p3 { font-size: 1.0em; margin-left: 2.5em;}
+h1, h2, h3 {font-weight: bold; } 
+h1 {font-size: 2.0em; margin-top: 0.5em; margin-bottom: 0.5em; } 
+h2 {font-size: 1.5em; margin-top: 0.7em; margin-bottom: 0.5em; } 
+h3 {font-size: 1.2em; margin-top:   0em; margin-bottom: 0em; } 
+.p3 { font-size: 1.0em; margin-top: -0.2em; margin-bottom: 0.7em; }
 img { border: none; }
+
+.indent2-80 {
+  display: block;      /* text-indent を効かせるために必要 */
+  font-size: 80%;      /* 文字を小さく */
+  text-indent: 1.4em;  /* 行頭を下げる */
+  margin-top: -0.2em;  /* 上の行との間隔を少し詰める */
+  margin-bottom: 0.1em;
+}
 
 .line {
   width: 32em;
@@ -171,31 +207,43 @@ img { border: none; }
 <!--******** begin BODY ********************************-->
 <body class="horizontal">
 <a id="holding"></a>
-<h1>所蔵図書館 一覧 <span style="font-size: 60%">万葉集難訓歌を明快に解く！</span></h1>
+<h1>所蔵図書館 一覧  <span style="font-size: 75%">万葉集難訓歌を明快に解く！</span></h1>
 <hr class="line"><!----------3---------4---------5--------->
 　<A HREF ="https://manyo-meikai.github.io/">公式サイト</A>　　　
 　<A HREF ="https://manyo-meikai.github.io/sitemap-page.html">サイトマップ</A><BR>
 <hr class="line"><!----------3---------4---------5--------->
-<div><!-- ==== begin 所蔵図書館 ==========-->
+<div><!-- == begin 所蔵図書館 ==-->
 <h2>【所蔵図書館】<span style="font-size: 80%">Libraries Holding This Book</span></h2>
-<p>
-<b>・国立国会図書館</b> (National Diet Library, Japan)<br>
-　　<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"><!--
+
+  <div><!-- ==== begin 館 ====-->
+<h3>・国立国会図書館</b> <span style="font-size: 90%">(National Diet Library, Japan)</span></h3>
+<p class="p3 f2s3 indent-3"><!---- begin 段落 ---->
+<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"><!--
           -->https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427</a><br>
-　　　※ 東京本館および関西館の両方に所蔵されています。<br>
+※ 東京本館および関西館の両方に所蔵されています。<br>
 </p>
-<p>
-<b>・奈良女子大学 学術情報センター (附属図書館)</b><br>
-　Nara Women's University  Academic Information Center (Library)<br>
-　　<a href="https://opac.nara-ni.ac.jp/opac/volume/1271474"<!--
-          -->https://opac.nara-ni.ac.jp/opac/volume/1271474</a>
+  </div><!--==== end   館 ====-->
+
+  <div><!-- ==== begin 館 ====-->
+<h3>・奈良女子大学 学術情報センター <span style="font-size: 90%">(附属図書館)</span><br>
+<span class="p3 indent2-80"><!--
+   -->Nara Women's University  Academic Information Center (Library)</span></h3>
+<p class="p3 f2s3 indent-3"><!---- begin 段落 ---->
+<a href="https://opac.nara-ni.ac.jp/opac/volume/1271474"<!--
+      -->https://opac.nara-ni.ac.jp/opac/volume/1271474</a>
 </p>
-<p>
-<b>・高岡市万葉歴史館</b> (TAKAOKA MANYO HISTORICAL MUSEUM)<br>
-　　<a href="https://manreki.opac.jp/opac/Holding_list?rgtn=13070"<!--
-          -->https://manreki.opac.jp/opac/Holding_list?rgtn=13070</a>
+  </div><!--==== end   館 ====-->
+
+  <div><!-- ==== begin 館 ====-->
+<h3>・高岡市万葉歴史館 <span style="font-size: 80%"><!--
+   -->(TAKAOKA MANYO HISTORICAL MUSEUM)</span></h3>
+<p class="p3 f2s3 indent-3"><!---- begin 段落 ---->
+<a href="https://manreki.opac.jp/opac/Holding_list?rgtn=13070"<!--
+      -->https://manreki.opac.jp/opac/Holding_list?rgtn=13070</a>
 </p>
-</div><!--==== end   所蔵図書館 ==========-->
+  </div><!--==== end   館 ====-->
+</div><!--== end   所蔵図書館 ==-->
+<br>
 <hr class="line"><!----------3---------4---------5--------->
 　<A HREF ="#holding">このページの先頭</A>　　
 　<A HREF ="https://manyo-meikai.github.io/">公式サイト</A>　　
