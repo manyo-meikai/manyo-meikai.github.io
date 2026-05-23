@@ -1,0 +1,2139 @@
+<!--**** begin HTML ********-->
+<!DOCTYPE html>
+<html lang="ja">
+<!--******** begin HEAD ********-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>【論文公開】中大兄の大和三山の歌の別解釈の提案（巻1-13～15）</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://manyo-meikai.github.io/image/omote_hyousi.jpg">
+<meta name="keywords" content="万葉集,巻1-13～15,三山,性別,左注,香具山,高山,たかやま,中大兄,天智">
+<meta name="description" content="中大兄の大和三山の歌（巻1-13～15）には、第2反歌の左注問題と、三山の性別問題がある。『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに『整合性』が有る」解決案を、初めて提示する。">
+<link rel="canonical" href="https://manyo-meikai.github.io/book/sanzan.html">
+<link rel="icon" href="https://manyo-meikai.github.io/icon/favicon.png" type="image/png">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+
+<!--==== begin STYLE ====-->
+<style>
+body {
+  background-color: #F8F8D8;
+  font-family: "Yu Mincho", "游明朝",
+               "Hiragino Mincho ProN", "ヒラギノ明朝 ProN",
+               "Noto Serif JP", serif;
+}
+.kin-aka {
+  color: #D4212F;  /* 金赤 RGB(212, 33, 47) */
+}
+.f0s1 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝0文字下げになる） */
+}
+.f0s2 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝0文字下げになる） */
+}
+.f0s3 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝0文字下げになる） */
+}
+.f1s1 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝1文字下げになる） */
+}
+.f1s2 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝1文字下げになる） */
+}
+.f1s3 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝1文字下げになる） */
+}
+.f1s4 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝1文字下げになる） */
+}
+.f1s5 {  /* 段落 */
+  text-indent: -4em;   /* 最初の行だけ 4 文字戻す（＝1文字下げになる） */
+}
+.f2s2 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝2文字下げになる） */
+}
+.f2s3 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝2文字下げになる） */
+}
+.f2s4 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝2文字下げになる） */
+}
+.f3s3 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝3文字下げになる） */
+}
+.f3s4 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝3文字下げになる） */
+}
+.f4s4 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝4文字下げになる） */
+}
+
+ /* ルビ */
+ruby rt {
+  position: relative;
+  font-size: 0.5em;  /* ルビ  サイズ */
+}
+ruby .copy {     /* ルビ 平文ペースト用 */
+  font-size: 0;  /* コピー用テキストは非表示 */
+}
+
+h1, h2, h3, h4 { font-weight: bold; } 
+h1 { font-size: 1.5em; } 
+h2 { font-size: 1.2em; } 
+h3 { font-size: 1.0em; } 
+h4 { font-size: 1.0em; } 
+p  { font-size: 1.0em; } 
+
+/* 横書き（デフォルト） */
+.horizontal {
+  writing-mode: horizontal-tb;
+  line-height: 1.6;  /* 行間隔 1.6 程度 */
+}
+.horizontal .switcher {
+  position: fixed;
+  writing-mode: horizontal-tb;
+}
+.horizontal .btn-hori { display: block; }
+.horizontal .btn-vert { display: none; }
+.horizontal ruby rt {
+  position: relative;
+  top: 0.3em;  /* 横書き用ルビ位置 */
+  left: 0;
+}
+.horizontal hr.line {
+  width: 30em;
+  max-width: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
+  height: 1px;
+  background: #000;
+  border: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.horizontal .indent-0 { padding-left: 0em; padding-top: 0em; }
+.horizontal .indent-1 { padding-left: 1em; padding-top: 0em; }
+.horizontal .indent-2 { padding-left: 2em; padding-top: 0em; }
+.horizontal .indent-3 { padding-left: 3em; padding-top: 0em; }
+.horizontal .indent-4 { padding-left: 4em; padding-top: 0em; }
+.horizontal .indent-5 { padding-left: 5em; padding-top: 0em; }
+.horizontal h1 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h2 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h3 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h4 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal p  { margin-top  : 0.2em; margin-bottom: 0.4em; 
+                 margin-right:   0em; margin-left  :   0em; }
+
+/* 縦書き（右から左） */
+.vertical {
+  writing-mode: vertical-rl;
+  overflow-x: auto;
+  overflow-y: hidden;
+  line-height: 1.65;  /* 行間隔 1.6 程度 */
+}
+.vertical .switcher {
+  position: fixed;
+  writing-mode: vertical-rl;
+}
+.vertical .btn-hori { display: none; }
+.vertical .btn-vert { display: block; }
+.vertical :target {
+  scroll-margin-left: 100vw;   /* 右端に寄せる */
+}
+.vertical ruby rt {
+  position: relative;
+  left: 0.1em;  /* 縦書き用ルビ位置 */
+  top: 0;
+}
+.vertical hr.line {
+  width: 1px;
+  height: 30em;
+  max-height: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
+  background: #000;
+  border: none;
+  margin: 0;
+}
+.vertical .tcy {  /* 縦中横 */
+  writing-mode: horizontal-tb;
+  text-combine-upright: all;
+}
+.vertical .indent-0 { padding-top: 0em; padding-left: 0; }
+.vertical .indent-1 { padding-top: 1em; padding-left: 0; }
+.vertical .indent-2 { padding-top: 2em; padding-left: 0; }
+.vertical .indent-3 { padding-top: 3em; padding-left: 0; }
+.vertical .indent-4 { padding-top: 4em; padding-left: 0; }
+.vertical .indent-5 { padding-top: 5em; padding-left: 0; }
+.vertical h1 { margin-right: 0.8em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h2 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h3 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h4 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical p  { margin-right: 0.2em; margin-left   : 0.4em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical a.url {  /* リンクの下線を表示しない */
+  text-decoration: none;
+}
+
+/* ボタン共通 */
+.popup-btn {
+  position: fixed;
+  z-index: 10000;
+  background: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* ポップアップ共通 */
+.popup-box {
+  position: fixed;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+}
+#sanzan-btn   { top:  3px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#sanzan-popup { top:  3px; right: 45px; bottom: auto; left: auto; width: 22em; }
+#vert-btn     { top: 30px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#vert-popup   { top:  3px; right: 45px; bottom: auto; left: auto; width: 26em; }
+#hori-btn     { top: 57px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#hori-popup   { top:  3px; right: 45px; bottom: auto; left: auto; width: 20em; }
+
+#sanzan-btn-v   { top:  5px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#sanzan-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 24em; }
+#vert-btn-v   { top: 45px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#vert-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 28em; }
+#hori-btn-v   { top: 85px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#hori-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 22em; }
+</style>
+<!--==== end   STYLE ====-->
+<!--==== begin JSON-LD ====-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebSite",
+      "@id": "https://manyo-meikai.github.io/#website",
+      "url": "https://manyo-meikai.github.io/",
+      "name": "万葉集難訓歌を明快に解く！ 公式サイト",
+      "alternateName": [
+         "Official website of 'Clarifying the Difficult Readings in the Man'yōshū'",
+         "万葉集 難訓歌を明快に解く！ 公式サイト"
+      ],
+      "inLanguage": "ja",
+      "publisher": {
+        "@id": "https://manyo-meikai.github.io/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://manyo-meikai.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": [
+        {
+          "@value": "万葉集の難訓歌について、語義分析に基づく試訓と明快な意訳を、体系的に公開する学術サイト。主要な難訓歌の問題点を明確にし、独自の解釈と方法論を提示する。対象は、莫囂圓隣歌、三諸、燃火・向南山、大和三山、三輪山。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "This website systematically presents trial readings and clear interpretive translations of difficult poems in the Man’yōshū, based on semantic analysis. It clarifies the issues found in major difficult poems and offers original interpretations and methodological approaches. The poems examined include the Bakugo Enrin Poem, the Mimoro Poem, the Moyuruhi and Mukinayama Poems, the Yamato Sanzan Poems, and the Miwa Mountain Poems.", 
+          "@language": "en"
+        }
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://manyo-meikai.github.io/book/sanzan.html#webpage",
+      "url": "https://manyo-meikai.github.io/book/sanzan.html",
+      "name": "中大兄の大和三山の歌の別解釈の提案",
+      "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
+      "inLanguage": "ja",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://manyo-meikai.github.io/image/omote_hyousi.jpg"
+      },
+      "description": [
+        {
+          "@value": "中大兄の大和三山の歌（巻1-13～15）には、第2反歌の左注問題と、三山の性別問題がある。『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに『整合性』が有る」解決案を、初めて提示する。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "The Yamato Three Mountains poems by Naka-no-Ōe (Man’yōshū, Volume 1, Poems 13–15) have two problems: the left-note annotation of the second response poem and the issue of the genders of the three mountains. By reading Takayama as takayama rather than kaguyama, this study presents, for the first time, a fully consistent solution.", 
+          "@language": "en"
+        }
+      ]
+    },
+
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://manyo-meikai.github.io/book/sanzan.html",
+      "mainEntityOfPage": {
+        "@id": "https://manyo-meikai.github.io/book/sanzan.html"
+      },
+      "headline": [
+        {
+          "@value": "中大兄の大和三山の歌の別解釈の提案", 
+          "@language": "ja"
+        },
+        {
+          "@value": "A Proposed Alternative Interpretation of Naka-no-Ōe’s Poems on the Three Mountains of Yamato", 
+          "@language": "en"
+        }
+      ],
+      "version": "1.0",
+      "author": { "@id": "https://manyo-meikai.github.io/#person" },
+      "inLanguage": "ja",
+      "copyrightYear": "2025",
+      "copyrightHolder": { "@id": "https://manyo-meikai.github.io/#person" },
+
+      "identifier": "巻1-13～15",
+      "position": 12,
+      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+
+      "isBasedOn":     { "@id": "https://manyo-meikai.github.io/#org-book" },
+      "isPartOf":      { "@id": "https://manyo-meikai.github.io/#org-book-sanzan" },
+      "exampleOfWork": { "@id": "https://manyo-meikai.github.io/#org-book-sanzan" },
+
+      "about": [
+        {
+          "@type": "Book",
+          "name": "万葉集"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "巻1-13～15"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "大和三山の歌"
+        },
+        {
+          "@type": "Person",
+          "name": "中大兄皇子"
+        },
+        {
+          "@type": "Person",
+          "name": "天智天皇"
+        },
+        {
+          "@type": "Thing",
+          "name": "左注"
+        },
+        {
+          "@type": "Thing",
+          "name": "性別"
+        },
+        {
+          "@type": "Thing",
+          "name": "香具山"
+        },
+        {
+          "@type": "Thing",
+          "name": "高山"
+        }
+      ],
+
+      "keywords": [
+        "万葉集","巻1-13～15","三山","性別","左注","香具山",
+        "高山","たかやま","中大兄","天智天皇"
+      ],
+
+      "abstract": [
+        {
+          "@value": "中大兄の大和三山の歌（巻1-13～15）には、第2反歌の左注問題と、三山の性別問題がある。『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに『整合性』が有る」解決案を、初めて提示する。", 
+          "@language": "ja"
+        },
+        {
+          "@value": "The Yamato Three Mountains poems by Naka-no-Ōe (Man’yōshū, Volume 1, Poems 13–15) have two problems: the left-note annotation of the second response poem and the issue of the genders of the three mountains. By reading Takayama as takayama rather than kaguyama, this study presents, for the first time, a fully consistent solution.", 
+          "@language": "en"
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://manyo-meikai.github.io/book/sanzan.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "万葉集難訓歌を明快に解く！",
+          "item": "https://manyo-meikai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "中大兄の大和三山の歌の別解釈の提案（巻1-13～15）",
+          "item": "https://manyo-meikai.github.io/book/sanzan.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!---------- end JSON-LD ---------->
+</head>
+<!--******** end   HEAD ********************************-->
+
+<!--******** begin BODY ********************************-->
+<body class="horizontal">
+<a id="sanzan"></a>
+<div><!--  begin 大和三山 ===========-->
+<h1>
+中大兄の大和三山の歌の別解釈の提案
+</h1>
+<h2>
+A Proposed Alternative Interpretation <br>
+of Naka-no-Ōe’s Poems on the Three Mountains of Yamato
+</h2>
+<p><!-- -- begin 段落 ---->
+　　　　　　　　　　　　　　　<!--
+-->完全公開 ＨＴＭＬ版：<span class="version tcy"></span><br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
+</p><!---- end   段落 ---->
+<a id="sanzan_mokuji"></a>
+  <div><!-- == begin 章 【目次】Contents =========-->
+<h2>
+【目次】Contents
+</h2>
+<p id="sanzan-source"><!---- begin 段落 ---->
+<a href="#sanzan_abstract">【抄録】Abstract</a><br>
+<a href="#sanzan_1">一、はじめに</a><br>
+<a href="#sanzan_2">二、大和三山の性別</a><br>
+<a href="#sanzan_3">三、通例の読み下し文の問題点</a><br>
+<a href="#sanzan_4">四、先行研究の概観</a><br>
+<a href="#sanzan_5">五、大和三山の長歌の解釈</a><br>
+　　　<a href="#sanzan_5_m">●長歌の読み下し文と意訳</a><br>
+　　　<a href="#sanzan_5_y">●長歌の要点</a><br>
+<a href="#sanzan_6">六、第一反歌の解釈</a><br>
+　　　<a href="#sanzan_6_m">●第一反歌の読み下し文と意訳</a><br>
+　　　<a href="#sanzan_6_y">●第一反歌の要点</a><br>
+<a href="#sanzan_7">七、第二反歌の解釈</a><br>
+　　　<a href="#sanzan_7_i">●第二反歌の意訳</a><br>
+　　　<a href="#sanzan_7_k">●第二反歌の読み下し文</a><br>
+　　　<a href="#sanzan_7_y">●第二反歌の要点</a><br>
+<a href="#sanzan_8">八、三首の関係、萬葉集全体、三山の性別</a><br>
+<a href="#sanzan_9">九、考察</a><br>
+<a href="#sanzan_10">十、まとめ</a><br>
+<a href="#sanzan_11">十一、終わりに</a><br>
+<a href="#sanzan_reference">【参考文献】References</a><br>
+<a href="#sanzan_okuduke"  >【奥付】Colophon</a><br>
+<a href="#original" >【底本】The original printed book</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
+</p><!---- end   段落 ---->
+<!-- 三山 目次ボタン 横書き用 -->
+<button id="sanzan-btn" class="popup-btn btn-hori" 
+        data-target="sanzan-popup"><b>目次</b></button>
+<div id="sanzan-popup" class="popup-box">
+<b>中大兄の大和三山の歌の別解釈の提案</b><br>
+<a href="#sanzan"><b>【目次】Contents</b></a><br>
+</div>
+<!-- 三山 目次ボタン 縦書き用 -->
+<button id="sanzan-btn-v" class="popup-btn btn-vert" 
+        data-target="sanzan-popup-v"><b>目次</b></button>
+<div id="sanzan-popup-v" class="popup-box">
+<b>中大兄の大和三山の歌の別解釈の提案</b><br>
+<a href="#sanzan"><b>【目次】Contents</b></a><br>
+</div>
+  </div><!--== end   章 【目次】Contents ==========-->
+<a id="sanzan_abstract"></a>
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+  <div><!-- == begin 章 【抄録】Abstract =========-->
+<br>
+<h2>
+【抄録】Abstract
+</h2>
+<p><!-- -- begin 段落 ---->
+　中大兄の大和三山の歌（巻一・十三～十五）について、<br>
+別解釈を提案する。<br>
+「原文を尊重」し、『高山』を『かぐやま』ではなく<br>
+『たかやま』と読むことによって、<br>
+「長歌は、陽に妻を、陰に天皇を争う歌」、<br>
+「第一反歌は称制の歌、第二反歌は即位の歌」<br>
+だと導かれる。三首は<br>
+「天智天皇の『皇位争覇』の物語」の関係にあり、<br>
+左注「反歌に似ず」が否定され、問題が解決される。<br>
+これを根拠として、<br>
+「香具山は女、畝傍山と耳成山は男」と結論づける。<br>
+長年の三山の性別論争に終止符を打つことが可能な、<br>
+「全てに『整合性』が有る」解決案を提示する。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+This study proposes an alternative interpretation of <br>
+Naka-no-Ōe’s poems on the Three Mountains of Yamato <br>
+(Man’yōshū Volume 1, Poems 13–15). <br>
+By “respecting the original text” and reading Takayama <br>
+as takayama rather than kaguyama, the long poem can be <br>
+understood as expressing an overt contest for the wife <br>
+and a covert contest for the emperor, while the first <br>
+response poem corresponds to the period of regency <br>
+and the second to enthronement. <br>
+The three poems thus form a coherent narrative concerning <br>
+Emperor Tenji’s struggle for imperial succession, <br>
+which invalidates the left-note remark that <br>
+the second response poem is “not fitting as a response poem” <br>
+and resolves the long-standing interpretive problem. <br>
+On this basis, the study concludes that Mount Kagu is female, <br>
+whereas Mount Unebi and Mount Miminashi are male. <br>
+This proposal offers a fully consistent solution capable of <br>
+bringing an end to the long-running debate over the gender <br>
+of the Three Mountains.<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 【抄録】Abstract ==========-->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+<a id="sanzan_1"></a>
+  <div><!-- == begin 章 1 はじめに ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+一、はじめに
+</h2>
+<p><!-- -- begin 段落 ---->
+　萬葉集の<!--
+--><ruby>中大兄<rt>なかのおほえ</rt><span class="copy">(なかのおほえ)</span></ruby><!--
+-->の大和三山の歌（巻一・十三～十五）について、<br>
+本稿は、三山の性別を歌以外の状況証拠から考察した後に、<br>
+通例の問題点を指摘し、それを解決する為に、別解釈を提案する。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　提案解釈は「原文を尊重」し、『高山』を、『かぐやま』ではなく、<br>
+素直に『たかやま』と読む。そこから「全て」が導かれる。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　「<!--
+--><ruby>陽<rt>よう</rt><span class="copy">(よう)</span></ruby><!--
+-->」は字義や<!--
+--><ruby>表<rt>おもて</rt><span class="copy">(おもて)</span></ruby><!--
+-->の意味とし、「<!--
+--><ruby>陰<rt>いん</rt><span class="copy">(いん)</span></ruby><!--
+-->」は比喩や<!--
+--><ruby>裏<rt>うら</rt><span class="copy">(うら)</span></ruby><!--
+-->の意味とする。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　「『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』は、陰に『天香具山を伴った天皇』」であり、<br>
+「三山の長歌は、陽に妻を、陰に天皇を争う歌」であると、<br>
+「論理的に導出」する。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　更に、今まで意味不明だった反歌に、明確な意味が通る解釈、<br>
+「第一反歌は称制の歌、第二反歌は即位の歌」が得られ、<br>
+「天智天皇の『<!--
+--><ruby>皇位<rt>こうい</rt><span class="copy">(こうい)</span></ruby><!--
+--><ruby>争覇<rt>そうは</rt><span class="copy">(そうは)</span></ruby><!--
+-->』の物語」という明確な関係が判明する。<br>
+すなわち、『反歌に似ず』（反歌として似つかわしくない）の<br>
+左注が否定され、明確に解決される。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　これらの強力な根拠をもって、三山の性別は、<br>
+「香具山は女、畝傍山は男、耳成山も男」と結論する。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　歴史と符合する明確な歌の解釈、長歌と反歌の明確な関係、<br>
+三山の性別、および萬葉集全体での『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』の読み下しの統一の、<br>
+「全てに『整合性』が有る結論」を得る。<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 1 はじめに ==========-->
+<a id="sanzan_2"></a>
+  <div><!-- == begin 章 2 大和三山の性別 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+二、大和三山の性別
+</h2>
+<p><!-- -- begin 段落 ---->
+　三山の性別は、歌だけでは判別できず、諸説がある。<!--
+--><sup>[上野]</sup><sup>[大浜]</sup><br>
+しかし、「実際に山に登ってみれば、一目瞭然」である。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　まず、香具山は女性である。証拠は、『月の誕生石』の存在である。<br>
+昔話では、この石から月の赤ちゃんが産まれたのである。<br>
+また、香具山は、火山ではなく、穏やかで優しい山だ。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉛「『月の誕生石』のある香具山は女性」だと断定できる。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　次に、耳成山であるが、畝傍山も耳成山も太古の火山であり、<br>
+ゴツゴツした岩が多く、男らしい山である。畝傍山が雄々しい<br>
+男ならば、同じ火山として耳成山も男だと考えるのが自然である。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　たったこれだけでは証拠不十分、と言われてしまいそうだが、<br>
+「実際に登ったこともない山を、男女の<!--
+--><ruby>喩<rt>たと</rt><span class="copy">(たと)</span></ruby><!--
+-->えに使うだろうか？」<br>
+　中大兄は実際に登って、大和三山がどんな山なのかを実感して<br>
+いたと考えられる。よって、次の説を支持する。<br>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉜「香具山は女、畝傍山は男、耳成山も男」<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 2 大和三山の性別 ==========-->
+<a id="sanzan_3"></a>
+  <div><!-- == begin 章 3 通例の読み下し文の問題点 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+三、通例の読み下し文の問題点
+</h2>
+    <div><!-- ==== begin 節 通例の原文 =========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　長歌（巻一・十三）の、原文を挙げる。<sup>[中西]</sup>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　①高山波　雲根火雄男志等　耳梨與　相諍競伎　<br>
+神代従　如此尒有良之　古昔母　然尒有許曽　<br>
+虚蝉毛　嬬乎　相挌良思吉<br>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+通例の読み下し文を挙げる。<sup>[中西]</sup>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　②<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>は　<!--
+--><ruby>畝火<rt>うねび</rt><span class="copy">(うねび)</span></ruby>ををしと　<!--
+--><ruby>耳梨<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby>と　<!--
+--><ruby>相<rt>あひ</rt><span class="copy">(あひ)</span></ruby>あらそひき　<br>
+<ruby>神代<rt>かみよ</rt><span class="copy">(かみよ)</span></ruby><!--
+-->より　かくにあるらし　<!--
+--><ruby>古昔<rt>いにしへ</rt><span class="copy">(いにしへ)</span></ruby><!--
+-->も　<!--
+--><ruby>然<rt>しか</rt><span class="copy">(しか)</span></ruby><!--
+-->にあれこそ　<br>
+うつせみも　<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->を　あらそふらしき
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 通例の原文 =========-->
+    <div><!-- ==== begin 節 通例の問題点 =========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　問題にしたいのは、原文①の『高山波』である。<br>
+『<!--
+--><ruby>雲根火<rt>うねび</rt><span class="copy">(うねび)</span></ruby>』と『<!--
+--><ruby>耳梨<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby><!--
+-->』は、漢字と読みが一致し、明示されている。<br>
+三山の歌なので、残りは香具山しかない。<br>
+だから、①の『高山』が、②では『<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』になっている。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「本当に『高山』を『<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読み下してよいのだろうか？」<br>
+　舒明天皇が天香具山に登って国見をした歌（巻一・二）の<br>
+原文には、はっきり『天乃香具山』と書かれている。<br>
+　父親が明記したのに、子の中大兄は、<br>
+「なぜ、わざわざ、『高山』に変える必要があったのか？」<br>
+「単純な『香具山』以上の意味があるからこそ、<br>
+　　　　　　　　　敢えて『高山』と詠んだ」と考えられる。<br>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　ひょっとしたら、千年以上も昔からずっと、</p>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　③「<!--
+--><ruby>雲根火<rt>うねび</rt><span class="copy">(うねび)</span></ruby>と<!--
+--><ruby>耳梨<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby><!--
+-->は明示されている。三山の歌なので、<br>
+　『当然』、<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->も明示されている『<!--
+--><ruby>筈<rt>はず</rt><span class="copy">(はず)</span></ruby>』だ」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+という「先入観」が有ったのではなかろうか？<br>
+　先入観③を持って、原文①を読むと、どうしても、<br>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　③亜種「『高山』は『かぐやま』と読む『<!--
+--><ruby>筈<rt>はず</rt><span class="copy">(はず)</span></ruby>』だ」
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+と思ってしまう。この「先入観」こそが、<br>
+「『高山』に『かぐやま』の訓が付けられた原因」と考えられる。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 通例の問題点 =========-->
+    <div><!-- ==== begin 節 高山の統一 =========-->
+<p><!-- -- begin 段落 ---->
+　萬葉集には、原文に『高山』が出てくる歌が全部で二十首ある<br>
+が、読み下しが『<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』なのは、中大兄の二首だけである。<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　例外的に、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　<!--
+--><ruby>我<rt>わ</rt><span class="copy">(わ)</span></ruby>が<!--
+--><ruby>故<rt>ゆゑ</rt><span class="copy">(ゆゑ)</span></ruby>に<!--
+--><ruby>言<rt>い</rt><span class="copy">(い)</span></ruby>はれし<!--
+--><ruby>妹<rt>いも</rt><span class="copy">(いも)</span></ruby>は<!--
+--><ruby>高<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>の<!--
+--><ruby>峰<rt>みね</rt><span class="copy">(みね)</span></ruby>の<!--
+--><ruby>朝<rt>あさ</rt><span class="copy">(あさ)</span></ruby><!--
+--><ruby>霧<rt>ぎり</rt><span class="copy">(ぎり)</span></ruby><!--
+--><ruby>過<rt>す</rt><span class="copy">(す)</span></ruby>ぎにけむかも<br>
+　　　　　　　　　　　　　　　　　（巻十一・二四五五）
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+がある<sup>[中西]</sup>が、考慮に入れない。『<!--
+--><ruby>高<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読む根拠が曖昧であり、<br>
+他の本で『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読んでいるものが多数を占めるため、である。<br>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+<p><!-- -- begin 段落 ---->
+　中大兄の二首の『高山』を、原文のまま『たかやま』と読む<br>
+ならば、萬葉集全体での読み下しが『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』で統一される。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 高山の統一 =========-->
+  </div><!--== end   章 3 通例の読み下し文の問題点 ==========-->
+<a id="sanzan_4"></a>
+  <div><!-- == begin 章 4 先行研究の概観 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+四、先行研究の概観
+</h2>
+    <div><!-- ==== begin 節 原文の高山の読み ==========-->
+<h3>
+・原文の『高山』の読み
+</h3>
+<p><!-- -- begin 段落 ---->
+　<!--
+--><ruby>類聚<rt>るいじゅ</rt><span class="copy">(るいじゅ)</span></ruby><!--
+--><ruby>古集<rt>こしゅう</rt><span class="copy">(こしゅう)</span></ruby><!--
+--><sup>[Ｒ]</sup>は、反歌の本文に、『たかやま』とある。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　<!--
+--><ruby>元暦<rt>げんりゃく</rt><span class="copy">(げんりゃく)</span></ruby><!--
+--><ruby>校本<rt>こうほん</rt><span class="copy">(こうほん)</span></ruby><!--
+--><sup>[元]</sup>は、反歌の本文に『たかやま』とあり、<br>
+長歌の「高」の右に、消えかかった古い朱書の「タカ」がある。<br>
+更に、その古い朱書の右に、新しい朱書で「カク」がある。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　西本願寺本<sup>[西]</sup>では、「高」の右に、消えかかった「カク」がある。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　古くは『たかやま』と読み、後に『かぐやま』と読むように<br>
+なったことがわかる。<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 原文の高山の読み ==========-->
+    <div><!-- ==== begin 節 たかやま先行研究 ==========-->
+<h3>
+・『たかやま』を用いた先行研究
+</h3>
+<p><!-- -- begin 段落 ---->
+　ほぼ全ての文献が、<br>
+「『高山』を『かぐやま』と読むことが前提」になっている。<br>
+「『たかやま』と読んでいる文献は、『見つけられなかった』」。<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 たかやま先行研究 ==========-->
+  </div><!--== end   章 4 先行研究の概観 ==========-->
+
+<a id="sanzan_5"></a>
+  <div><!-- == begin 章 5 長歌の解釈 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+五、大和三山の長歌の解釈
+</h2>
+    <div><!-- ==== begin 節 別解釈 開始 ==========-->
+<p><!-- -- begin 段落 ---->
+　前述の性別㉜を前提にして、三山の歌の別解釈を提案していく。<br>
+提案の焦点は『高山波』である。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　「先入観」を排除する為に、既存の読み下しや注釈を<br>
+鵜呑みにしないで、「原文の漢字を重視」する姿勢で臨む。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　まずは、『たかやま』と読むことから始めてみよう。<br>
+そうすると「『高山』は『香具山』ではない」と仮定できるが、<br>
+表面的には、歌から香具山が居なくなってしまう。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　だが、三山の歌なので、雲根火と耳梨が争っているとすれば、<br>
+『<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->』は確実に『香具山』を指している。<br>
+「香具山は、表面的には居なくても、間接的には居る」状況だ。<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 別解釈 開始 ==========-->
+    <div><!-- ==== begin 節 部分ごとに提案 ==========-->
+<p><!-- -- begin 段落 ---->
+　部分ごとに提案していく。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『高山』は、原文のまま、素直に『たかやま』と読み、<br>
+意味も素直に『高い山』とする。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・香具山は、明示されていない。<br>
+間接的に『<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->』と表現されているだけである。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>神代<rt>かみよ</rt><span class="copy">(かみよ)</span></ruby>の文脈』と、『<!--
+--><ruby>現世<rt>うつしよ</rt><span class="copy">(うつしよ)</span></ruby><!--
+-->の文脈』の、二重の文脈がある。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『高い』の意味は、<br>
+神代の文脈では『山の標高が高くて男らしい』であり、<br>
+現世の文脈では『<!--
+--><ruby>位<rt>くらい</rt><span class="copy">(くらい)</span></ruby><!--
+-->が高くて権力が強い』である。<br>
+また、『<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->』との関係から、『妻の夫としてふさわしい<br>
+強さを持つ』という意味も込められている。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>波<rt>は</rt><span class="copy">(は)</span></ruby><!--
+-->』は、題目の係助詞『は』<sup>[古]</sup>で、『…について』と意訳する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+--><ruby>波<rt>は</rt><span class="copy">(は)</span></ruby><!--
+-->』は『高い山について』であり、耳梨との対立比較も<br>
+考慮すると、『どちらが、より高い山か、について』になる。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>雄<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>男<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>志<rt>し</rt><span class="copy">(し)</span></ruby>』は、『<!--
+--><ruby>雄<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>男<rt>を</rt><span class="copy">(を)</span></ruby>し』だが、『<!--
+--><ruby>志<rt>し</rt><span class="copy">(し)</span></ruby>』には『<!--
+--><ruby>志<rt>こころざし</rt><span class="copy">(こころざし)</span></ruby><!--
+-->』の意がある。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>等<rt>と</rt><span class="copy">(と)</span></ruby><!--
+-->』は引用の格助詞『と』<sup>[古]</sup>で、『…と主張して』と意訳する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>雲<rt>う</rt><span class="copy">(う)</span></ruby><!--
+--><ruby>根<rt>ね</rt><span class="copy">(ね)</span></ruby><!--
+--><ruby>火<rt>び</rt><span class="copy">(び)</span></ruby><!--
+--><ruby>雄<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>男<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>志<rt>し</rt><span class="copy">(し)</span></ruby><!--
+--><ruby>等<rt>と</rt><span class="copy">(と)</span></ruby><!--
+-->』は、『畝傍が男らしいと主張して』になる。<br>
+主語の『が』は原文では省略。『<!--
+--><ruby>志<rt>こころざし</rt><span class="copy">(こころざし)</span></ruby><!--
+-->』なので『主張』になる。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 部分ごとに提案 ==========-->
+<a id="sanzan_5_m"></a>
+    <div><!-- ==== begin 節 ●長歌の読み下し文と意訳 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●長歌の読み下し文と意訳<br>
+</h3>
+<p><!-- -- begin 段落 ---->
+　提案をまとめる。<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+読み下し文は、次のように、『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読む。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　④<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>は　<!--
+--><ruby>畝火<rt>うねび</rt><span class="copy">(うねび)</span></ruby><!--
+--><ruby>雄<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>男<rt>を</rt><span class="copy">(を)</span></ruby><!--
+--><ruby>志<rt>し</rt><span class="copy">(し)</span></ruby>と　<!--
+--><ruby>耳梨<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby>と　<!--
+--><ruby>相<rt>あひ</rt><span class="copy">(あひ)</span></ruby>あらそひき<br>
+<ruby>神代<rt>かみよ</rt><span class="copy">(かみよ)</span></ruby><!--
+-->より　かくにあるらし　<!--
+--><ruby>古昔<rt>いにしへ</rt><span class="copy">(いにしへ)</span></ruby><!--
+-->も　<!--
+--><ruby>然<rt>しか</rt><span class="copy">(しか)</span></ruby>にあれこそ<br>
+うつせみも　<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->を　あらそふらしき
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+陽の『<!--
+--><ruby>神代<rt>かみよ</rt><span class="copy">(かみよ)</span></ruby>＋<!--
+--><ruby>現世<rt>うつしよ</rt><span class="copy">(うつしよ)</span></ruby><!--
+-->の文脈』の意訳を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑤どちらが（香具山を妻にする夫としてふさわしい）高い山<br>
+なのか、について、畝傍山が「自分の方が、標高が高くて<br>
+男らしい」と主張して、耳成山と相争った。<br>
+神代からこうだったらしい。昔からそうだったからこそ、<br>
+現世でも、（皇族の男たちは権力や地位によって）<br>
+愛しい人を妻にしようと争うのだろう。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+この冒頭部分を、現世の文脈で意訳すると、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑥どちらが或る人を妻にする夫としてふさわしい高い地位の<br>
+人物なのか、について、強い方の者が「自分の方が位が高<br>
+くて権力が強い」と主張して、弱い方の者と相争っている。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+になる。これは、「妻を争うことは、権力を争うことに等しい」<br>
+と言っている。これを踏まえて、意訳⑤に、<br>
+「（皇族の男たちは権力や地位によって）」を追加挿入している。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　天香具山は、古来から天孫降臨に関係する『神聖』な山として<br>
+特別視されている。香具山という『妻』を争っているのは表向き<br>
+であり、本当は香具山に備わる『神聖さ』を得ようと争っている。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　つまり、『高山』は、『神聖』な天香具山を手に入れることで<br>
+得られる『<!--
+--><ruby>位<rt>くらい</rt><span class="copy">(くらい)</span></ruby><!--
+-->が高い』呼称ということになる。<br>
+中大兄の場合、それは『天皇』を意味している。ゆえに、<br>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑦『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』は、陽に『高い山』、<br>
+　　　　　　陰に『天香具山を伴った天皇』
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+になる。これが前述の「単純な『香具山』以上の意味」であり、<br>
+『舒明天皇の国見の歌』を踏まえていると考えられる。そして、<br>
+両方の意味を表わす為には、『たかやま』と読む必要があり、<br>
+「読み下しは『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』でなくてはならない」と結論する。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　この長歌を詠んだのは、天智天皇になる以前の中大兄である。<br>
+「畝傍山が<!--
+--><ruby>中大兄<rt>なかのおほえ</rt><span class="copy">(なかのおほえ)</span></ruby><!--
+-->で、耳成山が<!--
+--><ruby>大海人<rt>おほあま</rt><span class="copy">(おほあま)</span></ruby><!--
+-->」と仮定すると、<br>
+陰の『<!--
+--><ruby>現世<rt>うつしよ</rt><span class="copy">(うつしよ)</span></ruby><!--
+-->かつ天皇争いの文脈』の、冒頭の真の意訳は、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑧どちらが神聖な天香具山を手に入れるにふさわしい天皇<br>
+なのか、について、中大兄が「自分の方が、<!--
+--><ruby>位<rt>くらい</rt><span class="copy">(くらい)</span></ruby>が高くて<br>
+権力が強い」と主張して、大海人と相争っている。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+になる。非常に「歴史と符合」する解釈に<!--
+--><ruby>辿<rt>たど</rt><span class="copy">(たど)</span></ruby><!--
+-->り着いた。これは、<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「神聖な天香具山を争うことは、天皇を争うことに等しい」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+と言っている。ゆえに、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑨三山の長歌は、陽に妻を、陰に天皇を争う歌
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+だと結論する。これは、「論理的に導かれた」結論である。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 ●長歌の読み下し文と意訳 ==========-->
+<a id="sanzan_5_y"></a>
+    <div><!-- ==== begin 節 ●長歌の要点 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●長歌の要点
+</h3>
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『神代の文脈』と、『現世の文脈』の、二重の文脈がある。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・読み下し文④、陽の意訳⑤、天皇争いの意訳⑧、を提案する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+⑦『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』は、陽に『高い山』、陰に『天香具山を伴った天皇』<br>
+を意味する。『舒明天皇の国見の歌』を踏まえている。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・二つの意味なので、読み下しは『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』でなくてはならない。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・香具山は、明示されていない。間接的に『<!--
+--><ruby>嬬<rt>つま</rt><span class="copy">(つま)</span></ruby><!--
+-->』と表現される<br>
+ことによって、陰に『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』の中に組み込まれている。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・陰の冒頭の意訳⑧は、「歴史と符合」する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+⑨三山の長歌は、陽に妻を、陰に天皇を争う歌である。<br>
+神聖な天香具山を争うという比喩を使って表現している。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・設定は「『<!--
+--><ruby>波<rt>は</rt><span class="copy">(は)</span></ruby>』は題目、『<!--
+--><ruby>等<rt>と</rt><span class="copy">(と)</span></ruby>』<!--
+-->は引用、主語の助詞は省略」。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・仮定は「畝傍山が中大兄で、耳成山が大海人」のみ。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・「論理的に導かれた」結論である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 ●長歌の要点 ==========-->
+  </div><!--== end   章 5 長歌の解釈 ==========-->
+
+<a id="sanzan_6"></a>
+  <div><!-- == begin 章 6 第一反歌の解釈 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+六、第一反歌の解釈
+</h2>
+    <div><!-- ==== begin 節 通例の第一反歌 ==========-->
+<p><!-- -- begin 段落 ---->
+　長歌が天皇争いの歌であるならば、反歌はその決着の歌である、<br>
+と予想される。簡単な結論を、先に述べておくと、<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「第一反歌は称制の歌、第二反歌は即位の歌」である。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　第一反歌（巻一・十四）の、原文と通例の読み下し文を挙げる。<sup>[中西]</sup>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑪高山与　耳梨山与　相之時　立見尒来之　伊奈美國波良
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑫<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>と　<!--
+--><ruby>耳成<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>と　あひし<!--
+--><ruby>時<rt>とき</rt><span class="copy">(とき)</span></ruby>　<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ちて<!--
+--><ruby>見<rt>み</rt><span class="copy">(み)</span></ruby>に<!--
+--><ruby>来<rt>こ</rt><span class="copy">(こ)</span></ruby>し<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 通例の第一反歌 ==========-->
+<a id="sanzan_6_m"></a>
+    <div><!-- ==== begin 節 ●第一反歌の読み下し文と意訳 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●第一反歌の読み下し文と意訳<br>
+</h3>
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　第一反歌の読み下し文は、長歌の結論を受けて、『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』にする。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑬<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>と　<!--
+--><ruby>耳梨<rt>みみなし</rt><span class="copy">(みみなし)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>と　あひし<!--
+--><ruby>時<rt>とき</rt><span class="copy">(とき)</span></ruby>　<!--
+--><ruby>立<rt>た</rt><span class="copy">(た)</span></ruby>ちて<!--
+--><ruby>見<rt>み</rt><span class="copy">(み)</span></ruby>に<!--
+--><ruby>来<rt>こ</rt><span class="copy">(こ)</span></ruby>し　<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+<p><!-- -- begin 段落 ---->
+　反歌にも、神代の文脈と、現世の文脈の、二重の文脈がある。<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+陽の『神代の文脈』での意訳は、播磨国風土記を考慮する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑭<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->と耳成山とが争った時、<!--
+--><ruby>出雲<rt>いづも</rt><span class="copy">(いづも)</span></ruby>の<!--
+--><ruby>阿菩<rt>あぼ</rt><span class="copy">(あぼ)</span></ruby>の大神が、<br>
+立ち上がって仲裁に来たが、旅の途中の<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby>まで<br>
+来たとき、争いは『<!--
+--><ruby>早々<rt>そうそう</rt><span class="copy">(そうそう)</span></ruby>に<!--
+--><ruby>無事<rt>ぶじ</rt><span class="copy">(ぶじ)</span></ruby><!--
+-->に』決着してしまった。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+陰の『現世の文脈』での意訳を、『称制の文脈』として提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　⑮天智称制と大海人は、天皇になる権力争いをしていたが、<br>
+有力者が仲裁をしに来て顕在化することなく、<br>
+<ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby><!--
+-->の伝承のように『早々に無事に』、<br>
+中大兄が称制になることで決着した。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 ●第一反歌の読み下し文と意訳 ==========-->
+    <div><!-- ==== begin 節 第一反歌の説明 ==========-->
+<p><!-- -- begin 段落 ---->
+　この反歌は、百済救援のため、九州への往路か帰路の途中、<br>
+印南国原（兵庫県）辺りの、船上で詠んだことも考えられるが、<br>
+天皇争いの決着ではないので、否定する。
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　印南国原の場所自体は重要ではなく、『早々に無事に』が重要<br>
+と考える。『<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby><!--
+-->』は、『早々に無事に』を想起させる為の、<br>
+単なる『伝承キーワード』に過ぎない、と考える。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　斉明天皇が崩御した斉明七年（六六一年）<sup>[紀]</sup>、中大兄が<br>
+『早々に無事に』称制になった状況は、九州にて、百済救援の<br>
+ための、戦いの真っ最中であり、<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「中大兄と大海人が、権力争いをしている場合では、なかった」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+ということであろう。<br>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+<p><!-- -- begin 段落 ---->
+　神代の文脈⑭では状況が曖昧であるが、現世の文脈⑮では天皇<br>
+争いの状況を明確に説明できる。長歌に対する明確な反歌として、<br>
+確かに意味が通る解釈になっている。<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　ところで、中大兄は『畝傍山』であるが、『高山』と詠まれて<br>
+いる。第一反歌は、「<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby>に<!--
+--><ruby>成<rt>な</rt><span class="copy">(な)</span></ruby><!--
+-->った後」に詠まれたからであり、<br>
+「争いの結果」を示している。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「『畝傍山』は、耳成山よりも『高い山』という決着になり、<br>
+『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』つまり『天香具山を伴った天皇（称制）』に成った」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+ということである。この変化は、『高山』を単純な『香具山』と<br>
+考えていたら、絶対に導けない解釈である。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+<p><!-- -- begin 段落 ---->
+　『高山』は、『畝傍山』と『天香具山を伴った天皇』の両方を<br>
+指すことになった。ゆえに、『高山』を、単独で『香具山』とか<br>
+『畝傍山』とか、明示して書くことはできない。<br>
+つまり、『高山』を『<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読み下してはならない。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 第一反歌の説明 ==========-->
+<a id="sanzan_6_y"></a>
+    <div><!-- ==== begin 節 ●第一反歌の要点 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●第一反歌の要点<br>
+</h3>
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・読み下し文⑬、神代の意訳⑭、現世の称制の意訳⑮を提案する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『畝傍山』の中大兄が、『早々に無事に』、<br>
+『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』つまり『称制』に成った時の歌である。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『高山』は、反歌では『畝傍山』も含まれているので、<br>
+『<!--
+--><ruby>香具<rt>かぐ</rt><span class="copy">(かぐ)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読み下してはならない。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby><!--
+-->』は、『早々に無事に』を想起させる為の、<br>
+『伝承キーワード』と考える。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・天皇争いの長歌に対して、称制という決着の歌であり、<br>
+明確な反歌になっている。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 ●第一反歌の要点 ==========-->
+  </div><!--== end   章 6 第一反歌の解釈 ==========-->
+
+<a id="sanzan_7"></a>
+  <div><!-- == begin 章 7 第二反歌の解釈 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+七、第二反歌の解釈
+</h2>
+    <div><!-- ==== begin 節 通例の第二反歌 ==========-->
+<p><!-- -- begin 段落 ---->
+　第二反歌（巻一・十五）の、原文と通例の読み下し文を挙げる。<sup>[中西]</sup>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉑渡津海乃　豊旗雲尒　伊理比沙之　今夜乃月夜　清明己曽
+</p><!---- end   段落 ---->
+<p class="f1s5 indent-5"><!---- begin 段落 ---->
+　㉒わたつみの　<!--
+--><ruby>豊旗<rt>とよはた</rt><span class="copy">(とよはた)</span></ruby><!--
+--><ruby>雲<rt>ぐも</rt><span class="copy">(ぐも)</span></ruby>に　<!--
+--><ruby>入<rt>いり</rt><span class="copy">(いり)</span></ruby><!--
+--><ruby>日<rt>ひ</rt><span class="copy">(ひ)</span></ruby><!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し<br>
+　<!--
+--><ruby>今夜<rt>こよひ</rt><span class="copy">(こよひ)</span></ruby>の<!--
+--><ruby>月夜<rt>つくよ</rt><span class="copy">(つくよ)</span></ruby>　<!--
+--><ruby>清<rt>さや</rt><span class="copy">(さや)</span></ruby><!--
+-->けかりこそ
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+『反歌に似ず』の左注がある。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 通例の第二反歌 ==========-->
+    <div><!-- ==== begin 節 第二反歌の説明 ==========-->
+<p><!-- -- begin 段落 ---->
+　まず、第二反歌も、神代の文脈と、現世の文脈の、二重の文脈<br>
+があるのか、と考えると、現世の文脈のみであると考えられる。<br>
+山の名前が全く無く、神代の文脈を見つけられない。だから、<br>
+反歌としての意味が不明で、左注が付けられたのであろう。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　長歌と第一反歌の文脈の流れから推測すると、第二反歌も<br>
+現世の文脈で解釈すれば、天皇争いに関係すると予想される。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　『現世の文脈』は更に分かれて、陽の『情景の文脈』と、<br>
+陰の『即位の文脈』の、二重の文脈になっている。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　長歌と第一反歌の現世の文脈を知らないと、第二反歌の即位の<br>
+文脈は出て来ない。だから今まで意味不明だったのである。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 第二反歌の説明 ==========-->
+    <div><!-- ==== begin 節 部分ごとに意訳 ==========-->
+<p><!-- -- begin 段落 ---->
+　部分ごとに意訳していく。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+-->』<sup>[古]</sup>は『港』。『海』は『政治の舞台』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby><!--
+-->』は、『港（と行先の港との間）を渡る海』であり、<br>
+『港を出発して、これから渡っていく先の海』、<br>
+『即位を起点として、これから渡っていく先の政治舞台』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>豊旗<rt>とよはた</rt><span class="copy">(とよはた)</span></ruby><!--
+-->』は『豊かにたなびく』で、『<!--
+--><ruby>吉<rt>きっ</rt><span class="copy">(きっ)</span></ruby><!--
+--><ruby>兆<rt>ちょう</rt><span class="copy">(ちょう)</span></ruby>、<!--
+--><ruby>幸<rt>さい</rt><span class="copy">(さい)</span></ruby><!--
+--><ruby>先<rt>さき</rt><span class="copy">(さき)</span></ruby><!--
+-->が良い』。<br>
+『雲』は、『先を見通せない障害』。<br>
+『<!--
+--><ruby>豊旗<rt>とよはた</rt><span class="copy">(とよはた)</span></ruby><!--
+--><ruby>雲<rt>ぐも</rt><span class="copy">(ぐも)</span></ruby><!--
+-->』は『見通しが立つような軽微な障害』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>日<rt>ひ</rt><span class="copy">(ひ)</span></ruby>』は、『<!--
+--><ruby>火<rt>ひ</rt><span class="copy">(ひ)</span></ruby><!--
+-->』の比喩で『争い』。<br>
+『<!--
+--><ruby>入<rt>いり</rt><span class="copy">(いり)</span></ruby><!--
+--><ruby>日<rt>ひ</rt><span class="copy">(ひ)</span></ruby><!--
+-->』は『夕陽、落日』で、『完全には日が沈んでおらず、<br>
+まだ少し残っているが、やがて沈むことは明白』。<br>
+つまり、『争いは、まだ少し残っているが、やがて終わる<br>
+見通しが立っている』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby><!--
+-->し』は『照らす対象（雲）に、影響を及ぼしている』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>今夜<rt>こよひ</rt><span class="copy">(こよひ)</span></ruby><!--
+-->』は、落日の後に訪れる『将来の状況』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『<!--
+--><ruby>月夜<rt>つくよ</rt><span class="copy">(つくよ)</span></ruby><!--
+-->』は、『どんな月夜になるのかは分からないが、<br>
+豊旗雲だったから、月が出ることは見通している』。<br>
+つまり、『ある程度は、先が良いことを見通している』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『清』は『清らか、澄みきっている、はっきり明瞭』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『明』は『明るくする』。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『こそ』は、終助詞の希求『…てほしい』。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 部分ごとに意訳 ==========-->
+<a id="sanzan_7_i"></a>
+    <div><!-- ==== begin 節 ●第二反歌の意訳 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●第二反歌の意訳<br>
+</h3>
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　陽の『情景の文脈』での意訳を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉓港を出発して、これから渡っていく先の海には、<!--
+--><ruby>幸<rt>さい</rt><span class="copy">(さい)</span></ruby><!--
+--><ruby>先<rt>さき</rt><span class="copy">(さき)</span></ruby>の<br>
+良さそうな雲がたなびいており、夕陽に照らされている。<br>
+まもなく日が沈む。今夜は月が出そうだ。<br>
+月夜よ、（この先の航路を）はっきりと明るくしてほしい。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+陰の『即位の文脈』での意訳を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉔即位を出発点として、これから渡っていく先の<br>
+政治の舞台には、ちょっとした障害があって、<br>
+争いの影響がまだ少し残っているが、やがて終わるだろう。<br>
+ある程度は先が良いのが見えているが、<br>
+（将来の見通しを）はっきりと明るくしてほしい。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 ●第二反歌の意訳 ==========-->
+    <div><!-- ==== begin 節 第二反歌の説明 ==========-->
+<p><!-- -- begin 段落 ---->
+　天智天皇の即位当時の、<br>
+『ちょっとした障害、争いが、やがて終わる』を、<br>
+大海人に当てはめると『東宮、大皇弟』に相当する。<sup>[紀]</sup>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　もう一つの意味があり、白村江の戦いの後の、<br>
+『防衛体制の完成』を指している。天智三年～六年に、<br>
+多くの築城があり、天智七年（六六八年）に即位している。<sup>[紀]</sup><br>
+日本書紀の築城の記述は、即位を境にして、全く無くなる。<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　陰の意訳㉔の意味は、<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+「防衛体制に<!--
+--><ruby>目処<rt>めど</rt><span class="copy">(めど)</span></ruby><!--
+-->がついたので即位した。明るい将来を望む」<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+ということだと考える。「史実と無矛盾」な解釈である。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 第二反歌の説明 ==========-->
+<a id="sanzan_7_k"></a>
+    <div><!-- ==== begin 節 ●第二反歌の読み下し文 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●第二反歌の読み下し文<br>
+</h3>
+<p><!-- -- begin 段落 ---->
+　『清明己曽』の四文字には多くの諸説<sup>[武田]</sup><sup>[山口]</sup><!--
+-->があり、定説は無い。<br>
+意訳㉓㉔を踏まえ、『明』の字の意味を前面に出したい。そこで、<br>
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+読み下し文を提案する。
+</p><!---- end   段落 ---->
+<p class="f1s5 indent-5"><!---- begin 段落 ---->
+　㉕<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby>の　<!--
+--><ruby>豊旗<rt>とよはた</rt><span class="copy">(とよはた)</span></ruby><!--
+--><ruby>雲<rt>ぐも</rt><span class="copy">(ぐも)</span></ruby>に　<!--
+--><ruby>入<rt>いり</rt><span class="copy">(いり)</span></ruby><!--
+--><ruby>日<rt>ひ</rt><span class="copy">(ひ)</span></ruby><!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し<br>
+　<!--
+--><ruby>今夜<rt>こよひ</rt><span class="copy">(こよひ)</span></ruby>の<!--
+--><ruby>月夜<rt>つくよ</rt><span class="copy">(つくよ)</span></ruby>　<!--
+--><ruby>清<rt>さや</rt><span class="copy">(さや)</span></ruby>に<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby>かしこそ
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 ●第二反歌の読み下し文 ==========-->
+    <div><!-- ==== begin 節 読み下し文の説明 ==========-->
+      <div><!-- ====== begin 項 ==========-->
+<p><!-- -- begin 段落 ---->
+　『<!--
+--><ruby>清<rt>さや</rt><span class="copy">(さや)</span></ruby><!--
+-->に』<sup>[古]</sup>は、副詞で『はっきりと』。<br>
+『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby>かし』は、他動詞『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby>かす』<!--
+--><sup>[古]</sup>の連用形で、『…を明るくし』。<br>
+紛らわしいが、形容詞の『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby>かし』<!--
+--><sup>[古]</sup>ではない。<br>
+『こそ』<sup>[古]</sup>は、終助詞『…てほしい』で、「動詞の連用形に付く」。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　まとめると、<br>
+『<!--
+--><ruby>清<rt>さやに</rt><span class="copy">(さやに)</span></ruby><!--
+--><ruby>明<rt>あかし</rt><span class="copy">(あかし)</span></ruby><!--
+--><ruby>己曽<rt>こそ</rt><span class="copy">(こそ)</span></ruby><!--
+-->』は、「はっきりと、…を明るくし、てほしい」で、<br>
+「副詞『<!--
+--><ruby>清<rt>さや</rt><span class="copy">(さや)</span></ruby><!--
+-->に』、他動詞『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+-->かす』の連用形、終助詞『こそ』」<br>
+という、文法的に正しい並びになっている。<br>
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+<p><!-- -- begin 段落 ---->
+　『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+-->かす』の目的語は、明示されていないが、暗黙に『月夜』<br>
+自身であると共に、冒頭の『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby><!--
+-->』に呼応することによって、<br>
+『この先の航路』や『将来の見通し』であることがわかる。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 読み下し文の説明 ==========-->
+<a id="sanzan_7_y"></a>
+    <div><!-- ==== begin 節 ●第二反歌の要点 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h3>
+●第二反歌の要点<br>
+</h3>
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・『現世の文脈』の中で、陽の『情景の文脈』と、<br>
+陰の『即位の文脈』の、二重の文脈がある。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・読み下し文㉕、情景の意訳㉓、即位の意訳㉔、を提案する。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・天智天皇の即位当時の歌であり、<br>
+政治的な見通しが明るくなることを願った歌である。
+</p><!---- end   段落 ---->
+      <div><!-- ====== begin 項 ==========-->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・天皇争いの長歌と、称制の第一反歌に対する、最終決着として<br>
+の即位の歌であり、明確な反歌になっている。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　つまり、<br>
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉝『反歌に似ず』の左注が否定され、明確に解決される。
+</p><!---- end   段落 ---->
+      </div><!--====== end   項 ==========-->
+    </div><!--==== end   節 ●第二反歌の要点 ==========-->
+  </div><!--== end   章 7 ==========-->
+
+<a id="sanzan_8"></a>
+  <div><!-- == begin 章 8 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+八、三首の関係、萬葉集全体、三山の性別
+</h2>
+    <div><!-- ==== begin 節 三首の関係 ==========-->
+<p><!-- -- begin 段落 ---->
+　大和三山の長歌と、二つの反歌の意味が、全て<!--
+--><ruby>繋<rt>つな</rt><span class="copy">(つな)</span></ruby>がった。<br>
+長歌は中大兄の頃の天皇争い、第一反歌は称制当時の決着、<br>
+第二反歌は即位当時の希望、すなわち、三首は、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉞「天智天皇の『<!--
+--><ruby>皇位<rt>こうい</rt><span class="copy">(こうい)</span></ruby><!--
+--><ruby>争覇<rt>そうは</rt><span class="copy">(そうは)</span></ruby><!--
+-->』の物語」である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 三首の関係 ==========-->
+    <div><!-- ==== begin 節 高山の統一 ==========-->
+<p><!-- -- begin 段落 ---->
+　原文を尊重し、『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』と読み下すことによって、<br>
+読み下しが異例だった中大兄の二首が修正されて、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㉟萬葉集全体での『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』の読み下しが統一される。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 高山の統一 ==========-->
+    <div><!-- ==== begin 節 性別と整合性の結論 ==========-->
+<p><!-- -- begin 段落 ---->
+　ここまでの成果は、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㊱歴史と符合する明確な歌の解釈の導出。<br>
+長歌と反歌の明確な関係の導出、すなわち左注問題の解決。<br>
+萬葉集全体での『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』の読み下しの統一。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+である。強力な成果㊱を根拠とし、性別の傍証㉛も加えて、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㊲「前提としていた三山の性別㉜は、正しい」
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+と結論する。よって、
+</p><!---- end   段落 ---->
+<p class="f1s3 indent-3"><!---- begin 段落 ---->
+　㊳「全てに『整合性』が有る結論」を導き出せた。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 性別と整合性の結論 ==========-->
+  </div><!--== end   章 8 ==========-->
+
+<a id="sanzan_9"></a>
+  <div><!-- == begin 章 9 ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+九、考察
+</h2>
+    <div><!-- ==== begin 節 導出の根拠 ==========-->
+<h3>
+・導出の根拠
+</h3>
+<p><!-- -- begin 段落 ---->
+　長歌の意訳⑤⑧は、「仮定が一つ」で、「論理的に導出」され、<br>
+「歴史と符合する」ことから、「長歌の解釈は正しい」と考える。<br>
+結論⑦⑨が、二つの反歌の解釈の基盤になっている。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　第一反歌は、結論⑦から『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』は「天智称制」であり、<br>
+結論⑨の『天皇争いの文脈』に合致する。『早々に無事に』と<br>
+「決着」から、『即位』ではなく、『称制』の歌だと判断した。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　第二反歌は「比喩」を使わないと、『情景の文脈』だけであり、<br>
+永遠に『反歌に似ず』のままなので、問題を解決できない。<br>
+「比喩」を根拠とした『即位の文脈』ではあるが、陽と陰の対応<br>
+を明確に示し、「史実と無矛盾」によって、根拠を補強している。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 導出の根拠 ==========-->
+    <div><!-- ==== begin 節 三山の対立構図 ==========-->
+<h3>
+・三山の対立構図
+</h3>
+<p><!-- -- begin 段落 ---->
+　従来の「香具山」を用いた解釈では、『<!--
+--><ruby>波<rt>は</rt><span class="copy">(は)</span></ruby>』は主語の助詞<br>
+『は』であり、長歌は「香具山が主語」になっているので、<br>
+従来の対立構図は「香具山　対　耳成」になっている。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　提案解釈の長歌は「畝傍山が主語」になっている。対立構図は、<br>
+長歌（反歌）で「（香具山を得た）畝傍　対　耳成」である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 三山の対立構図 ==========-->
+    <div><!-- ==== begin 節 三山の性別 ==========-->
+<h3>
+・三山の性別
+</h3>
+<p><!-- -- begin 段落 ---->
+　性別がどうであれ、その説が正しいと結論するための根拠は、<br>
+まず、「意訳の意味が通る」ことである。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　従来は、語句の意味と意訳を示すに<ruby>留<rt>とど</rt><!--
+--><span class="copy">(とど)</span></ruby>まっていた。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　提案は、「明確で詳細」な意訳を示した。それだけではなく、<br>
+更に、傍証㉛と、強力な成果㊱を加えて、結論㊲を出している。<br>
+従来の諸説と比べて、「圧倒的に強力」な根拠である。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 三山の性別 ==========-->
+    <div><!-- ==== begin 節 印南国原 ==========-->
+<h3>
+・『<!--
+--><ruby>印南<rt>いなみ</rt><span class="copy">(いなみ)</span></ruby><!--
+--><ruby>国原<rt>くにはら</rt><span class="copy">(くにはら)</span></ruby>』
+</h3>
+<p><!-- -- begin 段落 ---->
+　今まで、その場所を特定しようと努力してきた。<br>
+提案では、天皇争いの観点から、『早々に無事に』を想起させる<br>
+ための『伝承キーワード』とした。それで特に矛盾は生じないし、<br>
+簡潔である。また、一貫した『天皇争いの文脈』を維持するには、<br>
+そう考えざるを得ない。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 印南国原 ==========-->
+    <div><!-- ==== begin 節 渡津海 ==========-->
+<h3>
+・『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby>』
+</h3>
+<p><!-- -- begin 段落 ---->
+　解釈の成否に関わる、重要なキーワードになっている。<br>
+「わたつみ」の字には、<br>
+「渡津海、海神、海若、綿津海、方便海、和多都美、和多都民」<br>
+がある。従来、『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby>』は、『<!--
+--><ruby>海神<rt>わたつみ</rt><span class="copy">(わたつみ)</span></ruby><!--
+-->』の解釈が主流であった。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+しかし、「字が異なれば、意味も異なる」と考える。<br>
+『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby><!--
+-->』の字が使われているのは、この歌だけであり、素直に、<br>
+「意味が明確な字義」の『港を渡る海』を採用する。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 渡津海 ==========-->
+    <div><!-- ==== begin 節 射し ==========-->
+<h3>
+・『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し』
+</h3>
+<p><!-- -- begin 段落 ---->
+　『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し』か『<!--
+--><ruby>見<rt>み</rt><span class="copy">(み)</span></ruby>し』か、<!--
+-->の議論があるが、<sup>[伊藤]</sup><sup>[山口]</sup><br>
+提案では、陰の文脈の意味が通るように、『<!--
+--><ruby>射<rt>さ</rt><span class="copy">(さ)</span></ruby>し』を使う。<br>
+「日（争い）が、雲（障害）に、射し（影響を与え）ている」<br>
+とする。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 射し ==========-->
+    <div><!-- ==== begin 節 清明己曽 ==========-->
+<h3>
+・『清明己曽』
+</h3>
+<p><!-- -- begin 段落 ---->
+　今までは、形容詞『<!--
+--><ruby>清<rt>さや</rt><span class="copy">(さや)</span></ruby><!--
+-->けし』<sup>[古]</sup>や、<br>
+自動詞『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+-->かる』<sup>[古]</sup>、『<!--
+--><ruby>明<rt>て</rt><span class="copy">(て)</span></ruby>る（<!--
+--><ruby>照<rt>て</rt><span class="copy">(て)</span></ruby><!--
+-->る）』などが用いられた。<sup>[武田]</sup><sup>[山口]</sup><br>
+形容詞『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+-->かし』<sup>[古]</sup>の連用形『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby><!--
+-->かく』を用いた試訓もあるが、<br>
+『こそ』は文法的に形容詞には付かないので、問題視されてきた。<sup>[武田]</sup><br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　提案の『<!--
+--><ruby>清<rt>さやに</rt><span class="copy">(さやに)</span></ruby><!--
+--><ruby>明<rt>あかし</rt><span class="copy">(あかし)</span></ruby><!--
+--><ruby>己曽<rt>こそ</rt><span class="copy">(こそ)</span></ruby>』は、他動詞『<!--
+--><ruby>明<rt>あ</rt><span class="copy">(あ)</span></ruby>かす』を用いており、<br>
+文法的な問題は、回避されている。<br>
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　ここでも『<!--
+--><ruby>渡<rt>わた</rt><span class="copy">(わた)</span></ruby><!--
+--><ruby>津<rt>つ</rt><span class="copy">(つ)</span></ruby><!--
+--><ruby>海<rt>み</rt><span class="copy">(み)</span></ruby><!--
+-->』が重要であり、省略されている目的語を、<br>
+呼応させることによって指し示し、省略を補っている。
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 清明己曽 ==========-->
+  </div><!--== end   章 9 ==========-->
+<a id="sanzan_10"></a>
+  <div><!-- == begin 章 10 まとめ ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+十、まとめ
+</h2>
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㊱歴史と符合する明確な解釈を導出した。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+・長歌と反歌の明確な関係を導出した。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㉞「天智天皇の『皇位争覇』の物語」である。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㉝『反歌に似ず』の左注が否定され、明確に解決された。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㉟萬葉集全体での『<!--
+--><ruby>高<rt>たか</rt><span class="copy">(たか)</span></ruby><!--
+--><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+-->』の読み下しが統一される。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㉜三山の性別は「香具山は女、畝傍山は男、耳成山も男」。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+㊳「全てに『整合性』が有る結論」を得た。
+</p><!---- end   段落 ---->
+<p class="f0s2 indent-2"><!---- begin 段落 ---->
+★全ては、「原文を尊重」して、『高山』を、『かぐやま』では<br>
+なく、『たかやま』と読むことによって、導き出される。
+</p><!---- end   段落 ---->
+  </div><!--== end   章 10 まとめ ==========-->
+<a id="sanzan_11"></a>
+  <div><!-- == begin 章 11 終わりに ==========-->
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<h2>
+十一、終わりに
+</h2>
+<p><!-- -- begin 段落 ---->
+　『高山』を『たかやま』と読むことによって、<br>
+「全てに『整合性』が有る結論」を導き出すことができ、<br>
+左注の問題と、三山の性別問題の、「明確」な解決案を提示した。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+　長年にわたり、三山の性別論争が続いてきたが、もしも本稿の<br>
+提案が妥当ならば、この論争に終止符を打つことになるだろう。
+</p><!---- end   段落 ---->
+<br>
+<p><!-- -- begin 段落 ---->
+<b>謝辞</b><br>
+　執筆の機会と助言を、天香具山から<!--
+--><ruby>賜<rt>たまわ</rt><span class="copy">(たまわ)</span></ruby>った。<br>
+神聖で優しい山に、心から深く感謝致す。
+</p><!---- end   段落 ---->
+<p><!-- -- begin 段落 ---->
+<br>
+　　　　（あさくら　しんいち・天香具山をこよなく愛する者）<br>
+<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 11 終わりに ==========-->
+
+<a id="sanzan_reference"></a>
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+  <div><!-- == begin 章 【参考文献】References ======================-->
+<h2>
+【参考文献】References
+</h2>
+    <div><!-- ==== begin 節 訳注釈本 ==========-->
+<h3>
+・訳注釈本
+</h3>
+<p>[中西] 中西進 (1978) 『万葉集　全訳注原文付』 講談社</p>
+<p>[武田] 武田祐吉 (1956) 『増訂　萬葉集全註釋』 角川書店</p>
+    </div><!--==== end   節 訳注釈本 ==========-->
+    <div><!-- ==== begin 節 原文 ==========-->
+<h3>
+・原文
+</h3>
+<p>[元] 藤原行成筆 (1994) 『元暦校本万葉集』 二玄社</p>
+<p>[西] 西本願寺本万葉集 (1993) 『普及版』 主婦の友社</p>
+<p>[Ｒ] 上田萬年 (1974) 『類聚古集』 臨川書店</p>
+    </div><!--==== end   節 原文  ==========-->
+    <div><!-- ==== begin 節 記紀、文選 ==========-->
+<h3>
+・日本書紀
+</h3>
+<p>[紀] 井上光貞 (1987) 『日本書紀』 中央公論社<br>
+　　　巻第二十七　天智天皇　斉明七年七月（斉明崩御、称制）<br>
+　　　　　　　　　　　　　　天智二年八月条（白村江の戦い）<br>
+　　　　　　　　　天智三年～天智六年十一月（各所の築城）<br>
+　　　　　　　　　天智七年一月条（即位）、五月条（大皇弟）<br>
+　　　巻第二十八　天武天皇　天智元年　　　　（東宮）</p>
+    </div><!--==== end   節 記紀、文選 ==========-->
+    <div><!-- ==== begin 節 書籍 ==========-->
+<h3>
+・書籍
+</h3>
+<p>[上野] 上野誠 (2008) 『大和三山の古代』 講談社</p>
+<p>[大浜] 大浜厳比古 (1979) 『新萬葉考』 大地</p>
+    </div><!--==== end   節 書籍 ==========-->
+    <div><!-- ==== begin 節 論文、報告書 ==========-->
+<h3>
+・論文、報告書
+</h3>
+<p>[伊藤] 伊藤<!--
+--><ruby>博<rt>はく</rt><span class="copy">(はく)</span></ruby> (1999) <!--
+-->「豊旗雲に入日さし」 <br>
+　　 　　『萬葉』第百七十一号 　萬葉学会</p>
+<p>[山口] 山口佳紀 (2002) 「「わたつみの豊旗雲に」の歌の解釈」 <br>
+　　 　　『萬葉』第百八十号 　萬葉学会</p>
+    </div><!--==== end   節 論文、報告書 ==========-->
+    <div><!-- ==== begin 節 辞書、事典 ==========-->
+<h3>
+・辞書、事典
+</h3>
+<p>[古] 『全訳古語辞典 　第三版』 旺文社</p>
+    </div><!--==== end   節 辞書、事典 ==========-->
+  </div><!--== end   章 【参考文献】References ======================-->
+
+<a id="sanzan_okuduke"></a>
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+<br>
+  <div><!-- == begin 章 【奥付】Colophon ======================-->
+<h2>
+【奥付】Colophon
+</h2>
+    <div><!-- ==== begin 節 ==========-->
+<p class="f1s1 indent-1"><!-- -- begin 段落 ---->
+論文名： 中大兄の大和三山の歌の別解釈の提案<br>
+著者　： 朝倉 慎一<br>
+　　　　 <a href="https://orcid.org/0009-0000-8893-4649" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://orcid.org/0009-0000-8893-4649</a><br>
+　　　　 <a href="https://researchmap.jp/asakura-shinichi" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://researchmap.jp/asakura-shinichi</a><br>
+メール  ： manyo.meikai+web@gmail.com<br>
+著作権： © Shin'ichi ASAKURA 2025 All rights reserved.<br>
+所属　： 独立研究者<br>
+</p><!---- end   段落 ---->
+
+    <div><!-- ==== begin 節 バージョン ==========-->
+　<b>ＨＴＭＬ版バージョン</b><br>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+<span class="version tcy"></span> ： <span class="tcy">2026</span>年<span 
+class="tcy"> 5</span>月<span class="tcy">23</span>日（完全公開版）<br>
+</p><!---- end   段落 ---->
+<p class="f5s5 indent-5">
+底本から抜粋。誤記訂正と若干の加筆修正をし、<br>
+目次・抄録・奥付などを追加した改訂版。<br>
+実質的な内容は、底本と ほぼ同じ。<br>
+本稿は、現在Jxivにてプレプリントとして<br>
+投稿・審査中の論文のHTML版。<br>
+正式なDOIが発行され次第、情報を更新予定。<br>
+</p><!---- end   段落 ---->
+    </div><!--==== end   節 バージョン ==========-->
+  </div><!--== end   章 【奥付】Colophon ======================-->
+
+<a id="original"></a>
+<br>
+  <div><!-- == begin 章 【底本】The original printed book ==========-->
+<h2>
+【底本】The original printed book
+</h2>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+書名　：<span style="font-size: 120%"><b>万葉集難訓歌を<!--
+--><span class="kin-aka">明快</span>に解く！</b></span><br>
+発行日：<span class="tcy">2025</span>年<span class="tcy">10</span>月<span 
+class="tcy">21</span>日　初版第<span class="tcy">1</span>刷発行<br>
+著者　：朝倉慎一<br>
+発売元：星雲社<br>
+発行所：銀河書籍<br>
+印刷所：有限会社ニシダ印刷製本<br>
+著作権：© Shin'ichi ASAKURA  2025  Printed in Japan<br>
+ISBN ：<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"
+ target="_blank" rel="noopener noreferrer" class="url">978-4-434-36742-7</a> , C0192<br>
+NCID ：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
+ target="_blank" rel="noopener noreferrer" class="url">BD13589490</a>（CiNii Books）
+</p><!---- end   段落 ---->
+<img src="https://manyo-meikai.github.io/image/omote_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の表表紙" height=300 border=0>
+<img src="https://manyo-meikai.github.io/image/se_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の背表紙" height=300 border=0 loading="lazy">
+<img src="https://manyo-meikai.github.io/image/ura_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の裏表紙" height=300 border=0 loading="lazy"><br>
+  </div><!--== end   章 【底本】The original printed book ==========-->
+
+<a id="coi"></a>
+<br>
+  <div><!-- == begin 章 【利益相反に関する開示】COI Disclosure ==========-->
+<h2>
+【利益相反に関する開示】COI Disclosure
+</h2>
+<p class="f2s2 indent-2"><!-- -- begin 段落 ---->
+本稿は、著者が既に出版した書籍の内容を一部含む。<br>
+著者は当該書籍の販売による収入を得ているが、<br>
+本研究の内容や結論に影響を与えるものではない。<br>
+</p><!---- end   段落 ---->
+  </div><!--== end   章 【利益相反に関する開示】COI Disclosure ==========-->
+
+</div><!-- end   論文 ===========-->
+
+　　　　　　　　　　　　　　　　　<a href="#sanzan">大和三山の目次</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+　　万葉集難訓歌を明快に解く！ 公式サイト<br>
+　　　　<a href="https://manyo-meikai.github.io/" class="url"
+                >https://manyo-meikai.github.io/</a><br>
+<hr class="line"><!----------3---------4---------5--------->
+<br>
+<!--==== begin SCRIPT ====-->
+<!-- 目次 ポップアップ -->
+<nav class="switcher">
+  <!-- 横書き用 -->
+  <button id="hori-btn" class="popup-btn btn-hori" data-target="hori-popup">横書</button>
+  <button id="vert-btn" class="popup-btn btn-hori" data-target="vert-popup">縦書</button>
+  <!-- 縦書き用 -->
+  <button id="hori-btn-v" class="popup-btn btn-vert" data-target="hori-popup-v">横書</button>
+  <button id="vert-btn-v" class="popup-btn btn-vert" data-target="vert-popup-v">縦書</button>
+</nav>
+
+<script>
+// 存在する ID だけ安全に複製する関数
+function copyIfExists(sourceId, targetId) {
+  const src = document.getElementById(sourceId);
+  const tgt = document.getElementById(targetId);
+  if (src && tgt) {
+    tgt.appendChild(src.cloneNode(true));
+  }
+}
+
+// 横書きポップアップへコピー
+copyIfExists("toc-source"    , "toc-popup");
+copyIfExists("kakuuta-source", "kaku-popup");
+copyIfExists("bakugo-source" , "baku-popup");
+copyIfExists("sanzan-source" , "sanzan-popup");
+copyIfExists("miwa-source"   , "miwa-popup");
+copyIfExists("mimoro-source" , "mimoro-popup");
+copyIfExists("moyuru-source" , "moyuru-popup");
+
+// 縦書きポップアップへコピー
+copyIfExists("toc-source", "toc-popup-v");
+copyIfExists("kakuuta-source", "kaku-popup-v");
+copyIfExists("bakugo-source", "baku-popup-v");
+copyIfExists("sanzan-source", "sanzan-popup-v");
+copyIfExists("miwa-source", "miwa-popup-v");
+copyIfExists("mimoro-source", "mimoro-popup-v");
+copyIfExists("moyuru-source", "moyuru-popup-v");
+
+document.getElementById("vert-btn").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+document.getElementById("vert-btn-v").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+
+document.getElementById("hori-btn").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+document.getElementById("hori-btn-v").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+
+document.querySelectorAll('.popup-btn').forEach(btn => {
+  btn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    const target = document.getElementById(this.dataset.target);
+
+    // 全ポップアップを閉じる
+    document.querySelectorAll('.popup-box').forEach(box => {
+      box.style.display = "none";
+      box.style.pointerEvents = "none";
+    });
+
+    // 対象だけ開く
+    target.style.display = "block";
+    target.style.pointerEvents = "auto";
+  });
+});
+
+// ポップアップ内クリックは閉じない
+document.querySelectorAll('.popup-box').forEach(box => {
+  box.addEventListener('click', e => e.stopPropagation());
+});
+
+// 画面クリックで閉じる
+document.body.addEventListener('click', () => {
+  document.querySelectorAll('.popup-box').forEach(box => {
+    box.style.display = "none";
+    box.style.pointerEvents = "none";
+  });
+});
+
+// 縦書き時のホイール横スクロール（Ctrl+ホイールは除外）
+window.addEventListener("wheel", function (e) {
+  if (document.body.classList.contains("vertical")) {
+
+    // Ctrl が押されているときはブラウザのズームを優先
+    if (e.ctrlKey) return;
+
+    // 通常の縦スクロールを無効化
+    e.preventDefault();
+
+    // 横スクロールに変換
+    window.scrollBy({
+      left: -e.deltaY * 1.2,
+      behavior: "auto"
+    });
+  }
+}, { passive: false });
+</script>
+<script>
+// バージョン表示
+document.addEventListener("DOMContentLoaded", () => {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  let bookVersion = null;
+  let articleVersion = null;
+
+  scripts.forEach(script => {
+    try {
+      const data = JSON.parse(script.textContent);
+      const graph = data["@graph"];
+      if (!graph) return;
+
+      graph.forEach(item => {
+        if (item["@type"] === "Book" && item.version) {
+          bookVersion = item.version;
+        }
+        if (item["@type"] === "ScholarlyArticle" && item.version) {
+          articleVersion = item.version;
+        }
+      });
+    } catch(e) {}
+  });
+
+  const finalVersion = articleVersion || bookVersion;
+
+  if (finalVersion) {
+    document.querySelectorAll(".version").forEach(el => {
+      el.textContent = finalVersion;
+    });
+  }
+});
+</script>
+<!--==== end   SCRIPT ====-->
+</body>
+<!--******** end BODY ********-->
+</html>
+<!--**** end HTML ********-->
+
