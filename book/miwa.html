@@ -73,8 +73,13 @@ ruby rt {
   position: relative;
   font-size: 0.5em;  /* ルビ  サイズ */
 }
-ruby .copy {     /* ルビ 平文ペースト用 */
+.copy {  /* ルビ 平文ペースト用 */
   font-size: 0;  /* コピー用テキストは非表示 */
+  user-select: text;
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 { font-weight: bold; } 
@@ -376,7 +381,7 @@ p  { font-size: 1.0em; }
 <!--******** begin BODY ********************************-->
 <body class="horizontal">
 <a id="miwa"></a>
-<div><!--  begin 三輪山の歌 ======================-->
+  <div><!-- == begin 論文 額田王と井戸王の三輪山の歌の別解釈の提案 ========-->
 <h1>
 額田王と井戸王の三輪山の歌の別解釈の提案
 </h1>
@@ -385,18 +390,22 @@ A Proposed Alternative Interpretation <br>
 of the Miwa Mountain Poems <br>
 by Nukata-no-Ōkimi and Inoe-no-Ōkimi
 </h2>
-<p><!-- -- begin 段落 ---->
-　　　　　　　　　　　　試し読み版：<span class="version tcy"></span><br>
-　　　　　　　　　　　　　　　　　　<!--
---><span style="font-size: 1.2em; font-weight: bold;">朝倉 慎一</span><br>
-</p><!---- end   段落 ---->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　<!--
+-->試し読み版：<span class="version tcy"></span><br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
+</p><!--== end   段落 ==-->
 
-  <div><!-- == begin 章 目次 ==========-->
+<a id="miwa_mokuji"></a>
+    <div><!-- ==== begin 章 【目次】Contents ========-->
 <h2>
-目次
+【目次】Contents
 </h2>
-<p id="miwa-source"><!-- -- begin 段落 ---->
-<a href="#miwa_abstract">抄録</a><br>
+<p id="miwa-source"><!-- == begin 段落 ==-->
+<a href="#miwa_abstract">【抄録】Abstract</a><br>
 <a href="#miwa_1">一、はじめに</a><br>
 <a href="#miwa_2">二、三輪山の歌</a><br>
 <a href="#miwa_3">三、歌への疑問</a><br>
@@ -410,24 +419,29 @@ by Nukata-no-Ōkimi and Inoe-no-Ōkimi
 　　<a href="#miwa_8_2">(二)『伝説の文脈』</a><br>
 <a href="#miwa_9">九、まとめ</a><br>
 <a href="#miwa_10">十、終わりに</a><br>
-<a href="#reference">参考文献</a><br>
-<a href="#okuduke"  >奥付</a><br>
-</p><!---- end   段落 ---->
+<a href="#miwa_reference">【参考文献】References</a><br>
+<a href="#miwa_okuduke"  >【奥付】Colophon</a><br>
+<a href="#original"      >【底本】The original printed book</a><br>
+<a href="#coi"           >【利益相反に関する開示】COI Disclosure</a><br>
+</p><!--== end   段落 ==-->
 <!-- 三輪山 目次ボタン 横書き用 -->
 <button id="miwa-btn" class="popup-btn btn-hori" data-target="miwa-popup"><b>目次</b></button>
 <div id="miwa-popup" class="popup-box">
 <b>額田王と井戸王の三輪山の歌の別解釈の提案</b><br>
-<a href="#miwa"><b>目次</b></a><br>
+<a href="#miwa"><b>【目次】Contents</b></a><br>
 </div>
 <!-- 三輪山 目次ボタン 縦書き用 -->
 <button id="miwa-btn-v" class="popup-btn btn-vert" data-target="miwa-popup-v"><b>目次</b></button>
 <div id="miwa-popup-v" class="popup-box">
 <b>額田王と井戸王の三輪山の歌の別解釈の提案</b><br>
-<a href="#miwa"><b>目次</b></a><br>
+<a href="#miwa"><b>【目次】Contents</b></a><br>
 </div>
-  </div><!--== end   章 目次 ==========-->
+    </div><!--==== end   章 【目次】Contents ========-->
 
 <a id="miwa_abstract"></a>
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
 <br>
     <div><!-- ==== begin 章 【抄録】Abstract ========-->
 <h2>
@@ -454,67 +468,92 @@ The three poems then cohere as memorial poems for Miwa-no-Nemaro. <br>
 This study offers a clear solution to the left-note problem.
 </p><!--== end   段落 ==-->
     </div><!--==== end   章 【抄録】Abstract ========-->
-<br>
-<hr class="line"><!----------3---------4---------5--------->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
+
 <a id="miwa_1"></a>
-  <div><!-- == begin 章 1 はじめに ==========-->
-　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
+　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次</a><br>
+    <div><!-- ==== begin 章 1 はじめに ========-->
 <h2>
 一、はじめに
 </h2>
-<p><!-- -- begin 段落 ---->
+<p><!-- == begin 段落 ==-->
 　額田王と<!--
---><ruby>井戸王<rt>ゐのへのおほきみ</rt><span class="copy">(ゐのへのおほきみ)</span></ruby>の<!--
---><ruby>三輪<rt>みわ</rt><span class="copy">(みわ)</span></ruby><!--
---><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+--><ruby>井戸王<rt>ゐのへのおほきみ</rt><!--
+--><span class="copy" aria-hidden="true">(ゐのへのおほきみ)</span></ruby>の<!--
+--><ruby>三輪<rt>みわ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわ)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
 -->の歌（巻一・十七～十九）について、<br>
 本稿は、歌への疑問を述べ、仮説を立てて、別解釈を提案する。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 「<!--
---><ruby>陽<rt>よう</rt><span class="copy">(よう)</span></ruby>」は字義や<!--
---><ruby>表<rt>おもて</rt><span class="copy">(おもて)</span></ruby><!--
+--><ruby>陽<rt>よう</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(よう)</span>」は字義や<!--
+--><ruby>表<rt>おもて</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おもて)</span><!--
 -->の意味とし、「<!--
---><ruby>陰<rt>いん</rt><span class="copy">(いん)</span></ruby>」は比喩や<!--
---><ruby>裏<rt>うら</rt><span class="copy">(うら)</span></ruby><!--
+--><ruby>陰<rt>いん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(いん)</span>」は比喩や<!--
+--><ruby>裏<rt>うら</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(うら)</span><!--
 -->の意味とする。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　最も重要な提案は、和歌の原文の末尾であり、<br>
 「『<!--
---><ruby>勢<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>勢<rt>せ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(せ)</span><!--
 -->』<sup>[古]</sup>は『<!--
---><ruby>姿<rt>すがた</rt><span class="copy">(すがた)</span></ruby><!--
+--><ruby>姿<rt>すがた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(すがた)</span><!--
 -->』。陽に『山の姿』、陰に『<!--
---><ruby>背<rt>せ</rt><span class="copy">(せ)</span></ruby><!--
+--><ruby>背<rt>せ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(せ)</span><!--
 -->』で『<!--
---><ruby>君<rt>きみ</rt><span class="copy">(きみ)</span></ruby>の姿』」。<br>
+--><ruby>君<rt>きみ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(きみ)</span>の姿』」。<br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　更に、次の仮説を立てて、陰の『<!--
---><ruby>偲<rt>しの</rt><span class="copy">(しの)</span></ruby><!--
+--><ruby>偲<rt>しの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しの)</span><!--
 -->ぶ文脈』を導入する。<br>
 「『三輪山』は、陰に『<!--
---><ruby>三輪<rt>みわの</rt><span class="copy">(みわの)</span></ruby><!--
---><ruby>根麻呂<rt>ねまろ</rt><span class="copy">(ねまろ)</span></ruby><!--
+--><ruby>三輪<rt>みわの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわの)</span><!--
+--><ruby>根麻呂<rt>ねまろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ねまろ)</span><!--
 -->』で、井戸王の『<!--
---><ruby>背<rt>せ</rt><span class="copy">(せ)</span></ruby>』」。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+--><ruby>背<rt>せ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(せ)</span>』」。
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　陽（陰）の意訳は、<br>
 　　長歌「三輪山（消息不明の<!--
---><ruby>三輪<rt>みわの</rt><span class="copy">(みわの)</span></ruby><!--
---><ruby>根麻呂<rt>ねまろ</rt><span class="copy">(ねまろ)</span></ruby><!--
+--><ruby>三輪<rt>みわの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわの)</span><!--
+--><ruby>根麻呂<rt>ねまろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ねまろ)</span><!--
 -->）を、無情にも、<br>
 　　　　　雲は隠し続ける（私たちは忘れ去る）だろうか？」<br>
 　　反歌「いや、きっと、隠し続け（忘れ去ら）ないだろう」<br>
 　　和歌「目に焼き付いている、我が山（君）の姿よ」<br>
 となる。「忘れ去る対象」は、「三輪山（三輪根麻呂）」の二つ。<br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　和歌（唱和する歌）は、「三つの意味」の各々で、明確に<br>
 「唱和している」。つまり、『<!--
---><ruby>和<rt>こた</rt><span class="copy">(こた)</span></ruby><!--
+--><ruby>和<rt>こた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(こた)</span><!--
 -->ふる歌に似ず』（唱和する歌<br>
 として似つかわしくない）の左注が否定され、明確に解決される。
-</p><!---- end   段落 ---->
-  </div><!--== end   章 1 はじめに ==========-->
+</p><!--== end   段落 ==-->
+    </div><!--==== end   章 1 はじめに ========-->
+
 <a id="miwa_2"></a>
   <div><!-- == begin 章 2 三輪山の歌 ==========-->
 　　　　　　　　　　　　　　　　　　<a href="#miwa">三輪山の目次へ</a><br>
@@ -656,7 +695,7 @@ class="copy">(はなわ)</span></ruby>書房　一九九〇年　所収</p>
 </h3>
 <p class="f1s1 indent-1"><!-- -- begin 段落 ---->
 <span class="version tcy"></span>：<span class="tcy">2026</span>年<span 
-class="tcy"> 5</span>月<span class="tcy">22</span>日（試し読み版）<br>
+class="tcy"> 5</span>月<span class="tcy">25</span>日（試し読み版）<br>
 　　　底本から、抜粋、誤記訂正 および 目次と抄録の追加。<br>
 　　　実質的な内容は、底本と ほぼ同じ。
 </p><!---- end   段落 ---->

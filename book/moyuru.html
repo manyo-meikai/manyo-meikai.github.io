@@ -73,8 +73,13 @@ ruby rt {
   position: relative;
   font-size: 0.5em;  /* ルビ  サイズ */
 }
-ruby .copy {     /* ルビ 平文ペースト用 */
+.copy {  /* ルビ 平文ペースト用 */
   font-size: 0;  /* コピー用テキストは非表示 */
+  user-select: text;
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 { font-weight: bold; } 
@@ -380,7 +385,7 @@ p  { font-size: 1.0em; }
 <!--******** begin BODY ********************************-->
 <body class="horizontal">
 <a id="moyuru"></a>
-<div><!--  begin 燃火と向南山の歌 ======================-->
+  <div><!-- == begin 論文 持統天皇の燃火と向南山の歌の試訓と意訳の提案 ========-->
 <h1>
 持統天皇の燃火と向南山の歌の試訓と意訳の提案
 </h1>
@@ -388,19 +393,23 @@ p  { font-size: 1.0em; }
 A Proposed Trial Reading and Interpretation <br>
 of Empress Jitō’s Poems of Moyuruhi and Mukinayama
 </h2>
-<p><!-- -- begin 段落 ---->
-　　　　　　　　　　　　試し読み版：<span class="version tcy"></span><br>
-　　　　　　　　　　　　　　　　　　<!--
---><span style="font-size: 1.2em; font-weight: bold;">朝倉 慎一</span><br>
-</p><!---- end   段落 ---->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　　　　<!--
+-->試し読み版：<span class="version tcy"></span><br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
+</p><!--== end   段落 ==-->
+
 <a id="moyuru_mokuji"></a>
-  <div><!-- == begin 章 目次 ==========-->
+    <div><!-- ==== begin 章 【目次】Contents ========-->
 <h2>
-目次
+【目次】Contents
 </h2>
-</p><!---- end   段落 ---->
-<p id="moyuru-source"><!-- -- begin 段落 ---->
-<a href="#moyuru_abstract">抄録</a><br>
+</p><!--== end   段落 ==-->
+<p id="moyuru-source"><!-- == begin 段落 ==-->
+<a href="#moyuru_abstract">【抄録】Abstract</a><br>
 <a href="#moyuru_1">一、はじめに</a><br>
 <a href="#moyuru_2">二、原文の字の正しさ</a><br>
 <a href="#moyuru_3">三、先行研究の概観</a><br>
@@ -418,26 +427,31 @@ of Empress Jitō’s Poems of Moyuruhi and Mukinayama
 　　<a href="#moyuru_9_2">（二）向南山の歌</a><br>
 　　<a href="#moyuru_9_3">（三）全体的に</a><br>
 <a href="#moyuru_10">十、終わりに</a><br>
-<a href="#reference">参考文献</a><br>
-<a href="#okuduke"  >奥付</a><br>
-</p><!---- end   段落 ---->
+<a href="#moyuru_reference">【参考文献】References</a><br>
+<a href="#moyuru_okuduke"  >【奥付】Colophon</a><br>
+<a href="#original" >【底本】The original printed book</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
+</p><!--== end   段落 ==-->
 <!-- 燃火 目次ボタン 横書き用 -->
 <button id="moyuru-btn" class="popup-btn btn-hori" 
         data-target="moyuru-popup"><b>目次</b></button>
 <div id="moyuru-popup" class="popup-box">
 <b>持統天皇の燃火と向南山の歌の試訓と意訳の提案</b><br>
-<a href="#moyuru"><b>目次</b></a><br>
+<a href="#moyuru"><b>【目次】Contents</b></a><br>
 </div>
 <!-- 燃火 目次ボタン 縦書き用 -->
 <button id="moyuru-btn-v" class="popup-btn btn-vert" 
         data-target="moyuru-popup-v"><b>目次</b></button>
 <div id="moyuru-popup-v" class="popup-box">
 <b>持統天皇の燃火と向南山の歌の試訓と意訳の提案</b><br>
-<a href="#moyuru"><b>目次</b></a><br>
+<a href="#moyuru"><b>【目次】Contents</b></a><br>
 </div>
-  </div><!--== end   章 目次 ==========-->
+    </div><!--==== end   章 【目次】Contents ========-->
 
 <a id="moyuru_abstract"></a>
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
 <br>
     <div><!-- ==== begin 章 【抄録】Abstract ========-->
 <h2>
@@ -472,54 +486,73 @@ comparing their enlightenment to the clouds rising <br>
 from their two imperial mausoleums.
 </p><!--== end   段落 ==-->
     </div><!--==== end   章 【抄録】Abstract ========-->
-<br>
-<hr class="line"><!----------3---------4---------5--------->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
+
 <a id="moyuru_1"></a>
-  <div><!-- == begin 章 1 はじめに ==========-->
-　　　　　　　　　　　　　　　　　<a href="#moyuru">燃火、向南の目次へ</a><br>
+　　　　　　　　　　　　　　　　　<a href="#moyuru">燃火、向南の目次</a><br>
+    <div><!-- ==== begin 章 1 はじめに ========-->
 <h2>
 一、はじめに
 </h2>
-<p><!-- -- begin 段落 ---->
+<p><!-- == begin 段落 ==-->
 　持統天皇の難訓歌、仮称で、<!--
---><ruby>燃<rt>もゆる</rt><span class="copy">(もゆる)</span></ruby><!--
---><ruby>火<rt>ひ</rt><span class="copy">(ひ)</span></ruby>の歌（巻二・一六〇）と、<br>
-<ruby>向<rt>むき</rt><span class="copy">(むき)</span></ruby><!--
---><ruby>南<rt>な</rt><span class="copy">(な)</span></ruby><!--
---><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+--><ruby>燃<rt>もゆる</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もゆる)</span><!--
+--><ruby>火<rt>ひ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひ)</span>の歌（巻二・一六〇）と、<br>
+<ruby>向<rt>むき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むき)</span><!--
+--><ruby>南<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
 -->の歌（巻二・一六一）は、訓に諸説があり<sup>[武田]</sup><sup>[ＮＫ]</sup>、<br>
 今も定訓は無く、詳細な意訳はまだ無い。<br>
 本稿は、試訓と、「明確で詳細」な意訳を提案する。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　本稿は、恣意的な「誤字の仮定」や「義訓」をしない。しかし<br>
 一方で、語句の仮定が多いので、仮定をする場合には明言する。<br>
 仮定には、根拠を示すことによって妥当性を与え、できるだけ<br>
 「主観を排除」し、「客観性」を確保する。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　二つの歌は、どちらも、『天皇陵』を舞台にして、<br>
 題詞『<!--
---><ruby>崩<rt>かむあが</rt><span class="copy">(かむあが)</span></ruby>り』に沿った『<!--
---><ruby>成仏<rt>じょうぶつ</rt><span class="copy">(じょうぶつ)</span></ruby><!--
+--><ruby>崩<rt>かむあが</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(かむあが)</span>り』に沿った『<!--
+--><ruby>成仏<rt>じょうぶつ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(じょうぶつ)</span><!--
 -->の文脈』になっている。<br>
 　<!--
---><ruby>燃<rt>もゆる</rt><span class="copy">(もゆる)</span></ruby><!--
---><ruby>火<rt>ひ</rt><span class="copy">(ひ)</span></ruby>の歌は、<!--
---><ruby>八角<rt>はっかく</rt><span class="copy">(はっかく)</span></ruby><!--
---><ruby>墳<rt>ふん</rt><span class="copy">(ふん)</span></ruby><!--
+--><ruby>燃<rt>もゆる</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もゆる)</span><!--
+--><ruby>火<rt>ひ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひ)</span>の歌は、<!--
+--><ruby>八角<rt>はっかく</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はっかく)</span><!--
+--><ruby>墳<rt>ふん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ふん)</span><!--
 -->に眠る天武天皇の成仏を願った歌であり、<br>
-<ruby>向<rt>むき</rt><span class="copy">(むき)</span></ruby><!--
---><ruby>南<rt>な</rt><span class="copy">(な)</span></ruby><!--
---><ruby>山<rt>やま</rt><span class="copy">(やま)</span></ruby><!--
+<ruby>向<rt>むき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むき)</span><!--
+--><ruby>南<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
 -->の歌は、天武天皇を『星』に、草壁皇子を『月』に<!--
---><ruby>喩<rt>たと</rt><span class="copy">(たと)</span></ruby>え、<br>
+--><ruby>喩<rt>たと</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たと)</span>え、<br>
 二人の成仏を二つの<!--
---><ruby>陵<rt>みささぎ</rt><span class="copy">(みささぎ)</span></ruby><!--
+--><ruby>陵<rt>みささぎ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みささぎ)</span><!--
 -->の『雲』に喩えた「別れの歌」であること<br>
 が判明する。
-</p><!---- end   段落 ---->
-  </div><!--== end   章 1 はじめに ==========-->
+</p><!--== end   段落 ==-->
+    </div><!--==== end   章 1 はじめに ========-->
+
 <a id="moyuru_2"></a>
   <div><!-- == begin 章 2 原文の字の正しさ ==========-->
 　　　　　　　　　　　　　　　　　<a href="#moyuru">燃火、向南の目次へ</a><br>
@@ -717,7 +750,7 @@ rel="noopener noreferrer">https://hdl.handle.net/20.500.14094/D1000824</a></p>
 </h3>
 <p class="f1s1 indent-1"><!-- -- begin 段落 ---->
 <span class="version tcy"></span>：<span class="tcy">2026</span>年<span 
-class="tcy"> 5</span>月<span class="tcy">22</span>日（試し読み版）<br>
+class="tcy"> 5</span>月<span class="tcy">25</span>日（試し読み版）<br>
 　　　底本から、抜粋、誤記訂正 および 目次と抄録の追加。<br>
 　　　実質的な内容は、底本と ほぼ同じ。
 </p><!---- end   段落 ---->

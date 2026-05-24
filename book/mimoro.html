@@ -73,8 +73,13 @@ ruby rt {
   position: relative;
   font-size: 0.5em;  /* ルビ  サイズ */
 }
-ruby .copy {     /* ルビ 平文ペースト用 */
+.copy {  /* ルビ 平文ペースト用 */
   font-size: 0;  /* コピー用テキストは非表示 */
+  user-select: text;
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 { font-weight: bold; } 
@@ -379,7 +384,7 @@ p  { font-size: 1.0em; }
 <!--******** begin BODY ********************************-->
 <body class="horizontal">
 <a id="mimoro"></a>
-<div><!--  begin 三諸の歌 ======================-->
+  <div><!-- == begin 論文 高市皇子の三諸の歌の試訓と意訳の提案 ========-->
 <h1>
 高市皇子の三諸の歌の試訓と意訳の提案
 </h1>
@@ -387,19 +392,22 @@ p  { font-size: 1.0em; }
 A Proposed Trial Reading and Interpretation <br>
 of Prince Takechi’s Mimoro Poem
 </h2>
-<p><!-- -- begin 段落 ---->
-　　　　　　　　　　　　試し読み版：<span class="version tcy"></span><br>
-　　　　　　　　　　　　　　　　　　<!--
---><span style="font-size: 1.2em; font-weight: bold;">朝倉 慎一</span><br>
-</p><!---- end   段落 ---->
-</p><!---- end   段落 ---->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　　　　<!--
+-->試し読み版：<span class="version tcy"></span><br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
+</p><!--== end   段落 ==-->
+
 <a id="mimoro_mokuji"></a>
-  <div><!-- == begin 章 目次 ==========-->
+    <div><!-- ==== begin 章 【目次】Contents ========-->
 <h2>
-目次
+【目次】Contents
 </h2>
-<p id="mimoro-source"><!-- -- begin 段落 ---->
-<a href="#mimoro_abstract">抄録</a><br>
+<p id="mimoro-source"><!-- == begin 段落 ==-->
+<a href="#mimoro_abstract">【抄録】Abstract</a><br>
 <a href="#mimoro_1">一、はじめに</a><br>
 <a href="#mimoro_2">二、原文の字の正しさ</a><br>
 <a href="#mimoro_3">三、先行研究の概観</a><br>
@@ -410,24 +418,29 @@ of Prince Takechi’s Mimoro Poem
 <a href="#mimoro_7">七、考察</a><br>
 <a href="#mimoro_8">八、まとめ</a><br>
 <a href="#mimoro_9">九、終わりに</a><br>
-<a href="#reference">参考文献</a><br>
-<a href="#okuduke"  >奥付</a><br>
-</p><!---- end   段落 ---->
+<a href="#mimoro_reference">【参考文献】References</a><br>
+<a href="#mimoro_okuduke"  >【奥付】Colophon</a><br>
+<a href="#original" >【底本】The original printed book</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
+</p><!--== end   段落 ==-->
 <!-- 三諸 目次ボタン 横書き用 -->
 <button id="mimoro-btn" class="popup-btn btn-hori" data-target="mimoro-popup"><b>目次</b></button>
 <div id="mimoro-popup" class="popup-box">
 <b>高市皇子の三諸の歌の試訓と意訳の提案</b><br>
-<a href="#mimoro"><b>目次</b></a><br>
+<a href="#mimoro"><b>【目次】Contents</b></a><br>
 </div>
 <!-- 三諸 目次ボタン 縦書き用 -->
 <button id="mimoro-btn-v" class="popup-btn btn-vert" data-target="mimoro-popup-v"><b>目次</b></button>
 <div id="mimoro-popup-v" class="popup-box">
 <b>高市皇子の三諸の歌の試訓と意訳の提案</b><br>
-<a href="#mimoro"><b>目次</b></a><br>
+<a href="#mimoro"><b>【目次】Contents</b></a><br>
 </div>
-  </div><!--== end   章 目次 ==========-->
+    </div><!--==== end   章 【目次】Contents ========-->
 
 <a id="mimoro_abstract"></a>
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
 <br>
     <div><!-- ==== begin 章 【抄録】Abstract ========-->
 <h2>
@@ -467,51 +480,67 @@ This analysis reveals that the Mimoro poem is a <br>
 that it implicitly suggests the suicide of Princess Tōchi.<br>
 </p><!--== end   段落 ==-->
     </div><!--==== end   章 【抄録】Abstract ========-->
-<br>
-<hr class="line"><!----------3---------4---------5--------->
+　　　　　　　　　　　　　　　　　　　<!--
+--><a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr class="line"><!--========3=========4=========5=========6-->
+
 <a id="mimoro_1"></a>
-  <div><!-- == begin 章 1 はじめに ==========-->
-　　　　　　　　　　　　　　　　　　　<a href="#mimoro">三諸の目次へ</a><br>
+　　　　　　　　　　　　　　　　　　　<a href="#mimoro">三諸の目次</a><br>
+    <div><!-- ==== begin 章 1 はじめに ========-->
 <h2>
 一、はじめに
 </h2>
-<p><!-- -- begin 段落 ---->
+<p><!-- == begin 段落 ==-->
 　<!--
---><ruby>高市<rt>たけちの</rt><span class="copy">(たけちの)</span></ruby><!--
---><ruby>皇子<rt>みこ</rt><span class="copy">(みこ)</span></ruby>の難訓歌、仮称で、<!--
---><ruby>三諸<rt>みもろ</rt><span class="copy">(みもろ)</span></ruby><!--
+--><ruby>高市<rt>たけちの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たけちの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みこ)</span>の難訓歌、仮称で、<!--
+--><ruby>三諸<rt>みもろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みもろ)</span><!--
 -->の歌（巻二・一五六）は、<br>
 訓に諸説があり<sup>[武田]</sup><sup>[ＮＫ]</sup>、まだ、定訓も、詳細な意訳も無い。<br>
 本稿は、試訓と、「明確で詳細」な意訳の「全文」を提案する。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　本稿は、恣意的な「義訓」をしない。「誤字の仮定」は『<!--
---><ruby>己<rt>き</rt><span class="copy">(き)</span></ruby>』<br>
+--><ruby>己<rt>き</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(き)</span>』<br>
 で、妥当な理由で採用する。できるだけ「客観性」を確保する。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　最初に、「字義の訓読」を提示する。非常に「状況に適切」な<br>
 訓読文ではあるが、五七調で読むには、訓が多過ぎる。そこで、<br>
 『<!--
---><ruby>表意<rt>ひょうい</rt><span class="copy">(ひょうい)</span></ruby><!--
---><ruby>兼<rt>けん</rt><span class="copy">(けん)</span></ruby><!--
---><ruby>表音<rt>ひょうおん</rt><span class="copy">(ひょうおん)</span></ruby><!--
---><ruby>文字<rt>もじ</rt><span class="copy">(もじ)</span></ruby>』という掛詞を定義して、導入すると、<br>
+--><ruby>表意<rt>ひょうい</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もじ)</span>』という掛詞を定義して、導入すると、<br>
 訓読の全てを包含したまま、五七調で読めるようになると共に、<br>
 意訳は「明確かつ詳細」に、「驚異的」な「多重」の意味が通る。<br>
 「全文」の意味は、「掛詞を展開した全て」という意味である。
-</p><!---- end   段落 ---->
-<p><!-- -- begin 段落 ---->
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
 　三諸の歌は、題詞『<!--
---><ruby>十市<rt>とをち</rt><span class="copy">(とをち)</span></ruby>の<!--
---><ruby>皇女<rt>ひめみこ</rt><span class="copy">(ひめみこ)</span></ruby>の<!--
---><ruby>薨<rt>かむさ</rt><span class="copy">(かむさ)</span></ruby>りたまひし時』に沿って、<br>
-「<ruby>慟哭<rt>どうこく</rt><span class="copy">(どうこく)</span></ruby>の歌」であり、<br>
+--><ruby>十市<rt>とをち</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(とをち)</span>の<!--
+--><ruby>皇女<rt>ひめみこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひめみこ)</span>の<!--
+--><ruby>薨<rt>かむさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(かむさ)</span>りたまひし時』に沿って、<br>
+「<ruby>慟哭<rt>どうこく</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(どうこく)</span>の歌」であり、<br>
 「十市皇女の自殺を<!--
---><ruby>示唆<rt>しさ</rt><span class="copy">(しさ)</span></ruby><!--
+--><ruby>示唆<rt>しさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しさ)</span><!--
 -->している」ことが判明する。
-</p><!---- end   段落 ---->
-  </div><!--== end   章 1 はじめに ==========-->
+</p><!--== end   段落 ==-->
+    </div><!--==== end   章 1 はじめに ========-->
+
 <a id="mimoro_2"></a>
   <div><!-- == begin 章 2 原文の字の正しさ ==========-->
 　　　　　　　　　　　　　　　　　　　<a href="#mimoro">三諸の目次へ</a><br>
@@ -650,7 +679,7 @@ that it implicitly suggests the suicide of Princess Tōchi.<br>
 </h3>
 <p class="f1s1 indent-1"><!-- -- begin 段落 ---->
 <span class="version tcy"></span>：<span class="tcy">2026</span>年<span 
-class="tcy"> 5</span>月<span class="tcy">22</span>日（試し読み版）<br>
+class="tcy"> 5</span>月<span class="tcy">25</span>日（試し読み版）<br>
 　　　底本から、抜粋、誤記訂正 および 目次と抄録の追加。<br>
 　　　実質的な内容は、底本と ほぼ同じ。
 </p><!---- end   段落 ---->
