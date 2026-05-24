@@ -73,8 +73,13 @@ ruby rt {
   position: relative;
   font-size: 0.5em;  /* ルビ  サイズ */
 }
-ruby .copy {     /* ルビ 平文ペースト用 */
+.copy {  /* ルビ 平文ペースト用 */
   font-size: 0;  /* コピー用テキストは非表示 */
+  user-select: text;
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 { font-weight: bold; } 
@@ -280,9 +285,7 @@ p  { font-size: 1.0em; }
       "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#webpage",
       "name": "万葉集難訓歌を明快に解く！",
       "url": "https://manyo-meikai.github.io/book/manyo-meikai.html",
-      "mainEntityOfPage": {
-        "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#book"
-      },
+      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
       "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
       "inLanguage": "ja",
       "author": { "@id": "https://manyo-meikai.github.io/#person" },
@@ -2070,36 +2073,7 @@ class="copy">(はなわ)</span></ruby>書房　一九九〇年　所収</p>
 <h2>
 【著者略歴】Author Biography
 </h2>
-<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
-<span style="font-size: 1.2em; font-weight: bold;"><!--
---><ruby>朝倉<rt>あさくら</rt></ruby><!--
---><span class="copy" aria-hidden="true">(あさくら)</span> <!--
---><ruby>慎一<rt>しんいち</rt></ruby><!--
---><span class="copy" aria-hidden="true">(しんいち)</span><!--
---></span>（Shin’ichi Asakura）<br>
-　<a href ="https://orcid.org/0009-0000-8893-4649" target="_blank" 
-rel="noopener noreferrer" class="url">https://orcid.org/0009-0000-8893-4649</a><br>
-　<a href ="https://researchmap.jp/asakura-shinichi" target="_blank" 
-rel="noopener noreferrer" class="url">https://researchmap.jp/asakura-shinichi</a><br>
-</p><!--== end   段落 ==-->
-<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
-<span class="tcy">1964</span>年：広島県呉市 生まれ<br>
-<span class="tcy">1987</span>年：東京都立大学 工学部 電気工学科 卒業<br>
-　　　　藤倉電線(株)（現 (株)フジクラ）入社<br>
-　　　　　電子回路の設計、超電導の研究に従事<br>
-<span class="tcy">1990</span>頃：初めて明日香に行き、香具山に登った<br>
-<span class="tcy">2004</span>年：奈良先端科学技術大学院大学<br>
-　　　　　物質創成科学研究科 複雑系解析学講座<br>
-　　　　　　前期博士課程 修了<br>
-　　(株)インタープロジェクト (現 テクノプロ)入社<br>
-　　　　　　電子回路の設計に従事<br>
-<span class="tcy">2010</span>代：香具山 , 明日香 , 三輪に、頻繁に通った。<br>
-　　　　『トランジスタ技術』誌に投稿記事<br>
-<span class="tcy">2025</span>年：橿原市に移住<br>
-　　　　天香具山を『<!--
---><ruby>嬬<rt>つま</rt></ruby><!--
---><span class="copy" aria-hidden="true">(つま)</span>』にして暮らしている
-</p><!--== end   段落 ==-->
+<br>
   </div><!--== end   章 【著者略歴】Author Biography ========-->
 <br>
 
