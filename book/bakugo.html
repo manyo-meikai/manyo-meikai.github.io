@@ -76,9 +76,14 @@ ruby rt {
   position: relative;
   font-size: 0.5em;  /* ルビ  サイズ */
 }
-ruby .copy {     /* ルビ 平文ペースト用 */
+.copy {  /* ルビ 平文ペースト用 */
   font-size: 0;  /* コピー用テキストは非表示 */
   user-select: text;
+  aria-hidden="true";
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 { font-weight: bold; } 
@@ -481,8 +486,8 @@ and the validity of the proposed interpretation.<br>
 </h2>
 <p><!-- -- begin 段落 ---->
 　萬葉集の額田王の難訓歌、俗称で、<!--
---><ruby>莫囂圓隣歌<rt>ばくごうえんりんか</rt><span 
-         class="copy">(ばくごうえんりんか)</span></ruby>（巻一・九）は、<br>
+--><ruby>莫囂圓隣歌<rt>ばくごうえんりんか</rt></ruby><!--
+--><span class="copy">(ばくごうえんりんか)</span>（巻一・九）は、<br>
 訓に諸説<sup>[武田]</sup><sup>[ＮＫ]</sup>があり、まだ、定訓も全文の意訳も無い。<br>
 本稿は、試訓と、「明確で詳細」な意訳の「全文」を提案する。<br>
 </p><!---- end   段落 ---->
@@ -493,25 +498,24 @@ and the validity of the proposed interpretation.<br>
 <p><!-- -- begin 段落 ---->
 　難訓部分には、掛詞が使われていることに気が付いた。<br>
 『<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span><!--
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span><!--
 -->』という掛詞を定義して、導入すると、<br>
 意訳は、「見事に、明確かつ詳細に」、掛けた意味が通る。<br>
 「全文」の意味は、「掛詞を展開した全て」という意味である。<br>
 </p><!---- end   段落 ---->
 <p><!-- -- begin 段落 ---->
 　題詞『紀の<!--
---><ruby>温泉<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span>に<!--
---><ruby>幸<rt>いでま</rt></ruby><span class="copy" aria-hidden="true">(いでま)</span><!--
+--><ruby>温泉<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span>に<!--
+--><ruby>幸<rt>いでま</rt></ruby><span class="copy">(いでま)</span><!--
 -->しし時に、額田王の作れる歌』の通り、<br>
-<ruby>莫囂圓隣歌<rt>ばくごうえんりんか</rt><span 
-      class="copy">(ばくごうえんりんか)</span></ruby><!--
+<ruby>莫囂圓隣歌<rt>ばくごうえんりんか</rt></ruby><span class="copy">(ばくごうえんりんか)</span><!--
 -->は、明確に、温泉の『湯気の文脈』になっていて、<br>
 「<!--
---><ruby>有間<rt>ありまの</rt></ruby><span class="copy" aria-hidden="true">(ありまの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span><!--
+--><ruby>有間<rt>ありまの</rt></ruby><span class="copy">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span><!--
 -->の亡き面影を湯気に映して、昇天を想う歌」<br>
 であることが判明する。
 </p><!---- end   段落 ---->
@@ -526,8 +530,8 @@ and the validity of the proposed interpretation.<br>
       <div><!-- ====== begin 節 原文 ========-->
 <p><!-- -- begin 段落 ---->
 　本稿での原文を挙げる。<sup>[中西]</sup> <!--
---><ruby>類聚<rt>るいじゅ</rt></ruby><span class="copy" aria-hidden="true">(るいじゅ)</span><!--
---><ruby>古集<rt>こしゅう</rt></ruby><span class="copy" aria-hidden="true">(こしゅう)</span><!--
+--><ruby>類聚<rt>るいじゅ</rt></ruby><span class="copy">(るいじゅ)</span><!--
+--><ruby>古集<rt>こしゅう</rt></ruby><span class="copy">(こしゅう)</span><!--
 --><sup>[Ｒ]</sup>と一致している。
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
@@ -547,14 +551,14 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p><!-- -- begin 段落 ---->
 　<!--
---><ruby>元暦<rt>げんりゃく</rt></ruby><span class="copy" aria-hidden="true">(げんりゃく)</span><!--
---><ruby>校本<rt>こうほん</rt></ruby><span class="copy" aria-hidden="true">(こうほん)</span><!--
+--><ruby>元暦<rt>げんりゃく</rt></ruby><span class="copy">(げんりゃく)</span><!--
+--><ruby>校本<rt>こうほん</rt></ruby><span class="copy">(こうほん)</span><!--
 --><sup>[元]</sup>では、『莫』が『草』になっていて、<br>
 朱書で『莫』が付されている。<br>
 また、『湯』の<!--
---><ruby>三水<rt>さんずい</rt></ruby><span class="copy" aria-hidden="true">(さんずい)</span>が<!--
---><ruby>朱書<rt>しゅしょ</rt></ruby><span class="copy" aria-hidden="true">(しゅしょ)</span>で<!--
---><ruby>言偏<rt>ごんべん</rt></ruby><span class="copy" aria-hidden="true">(ごんべん)</span>に<!--
+--><ruby>三水<rt>さんずい</rt></ruby><span class="copy">(さんずい)</span>が<!--
+--><ruby>朱書<rt>しゅしょ</rt></ruby><span class="copy">(しゅしょ)</span>で<!--
+--><ruby>言偏<rt>ごんべん</rt></ruby><span class="copy">(ごんべん)</span>に<!--
 -->上書きされ、<br>
 『瀬之』の間に『子』が朱書で追加されている。<br>
 </p><!---- end   段落 ---->
@@ -610,142 +614,145 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑪<!--
---><ruby>莫囂圓隣<rt>ゆふづき</rt></ruby><span class="copy" aria-hidden="true">(ゆふづき)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大相七兄<rt>かげふみ</rt></ruby><span class="copy" aria-hidden="true">(かげふみ)</span><!--
---><ruby>爪<rt>て</rt></ruby><span class="copy" aria-hidden="true">(て)</span><!--
---><ruby>湯氣<rt>たつ</rt></ruby><span class="copy" aria-hidden="true">(たつ)</span>　<!--
---><ruby>吾<rt>わが</rt></ruby><span class="copy" aria-hidden="true">(わが)</span><!--
---><ruby>瀬子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
---><ruby>之<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span>　<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><br>
-　<ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>莫囂圓隣<rt>ゆふづき</rt></ruby><span class="copy">(ゆふづき)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大相七兄<rt>かげふみ</rt></ruby><span class="copy">(かげふみ)</span><!--
+--><ruby>爪<rt>て</rt></ruby><span class="copy">(て)</span><!--
+--><ruby>湯氣<rt>たつ</rt></ruby><span class="copy">(たつ)</span>　<!--
+--><ruby>吾<rt>わが</rt></ruby><span class="copy">(わが)</span><!--
+--><ruby>瀬子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
+--><ruby>之<rt>が</rt></ruby><span class="copy">(が)</span>　<!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><br>
+　<ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->　　　　　　　　　　　　（伊丹末雄）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑫<!--
---><ruby>莫囂圓隣<rt>ふけひ</rt></ruby><span class="copy" aria-hidden="true">(ふけひ)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大相七兄<rt>うらにし</rt></ruby><span class="copy" aria-hidden="true">(うらにし)</span><!--
---><ruby>爪<rt>つめに</rt></ruby><span class="copy" aria-hidden="true">(つめに)</span><!--
---><ruby>湯氣<rt>たつ</rt></ruby><span class="copy" aria-hidden="true">(たつ)</span><!--
+--><ruby>莫囂圓隣<rt>ふけひ</rt></ruby><span class="copy">(ふけひ)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大相七兄<rt>うらにし</rt></ruby><span class="copy">(うらにし)</span><!--
+--><ruby>爪<rt>つめに</rt></ruby><span class="copy">(つめに)</span><!--
+--><ruby>湯氣<rt>たつ</rt></ruby><span class="copy">(たつ)</span><!--
 -->　吾瀬子之　射立為兼<br>
 　五可新何本　　　　　　　　　　　　　（宮嶋弘）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑬<!--
---><ruby>莫囂<rt>しづ</rt></ruby><span class="copy" aria-hidden="true">(しづ)</span><!--
---><ruby>圓<rt>ま</rt></ruby><span class="copy" aria-hidden="true">(ま)</span><!--
---><ruby>隣<rt>り</rt></ruby><span class="copy" aria-hidden="true">(り)</span><!--
---><ruby>之<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>　<!--
---><ruby>大<rt>おほ</rt></ruby><span class="copy" aria-hidden="true">(おほ)</span><!--
---><ruby>相<rt>み</rt></ruby><span class="copy" aria-hidden="true">(み)</span><!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
---><ruby>爪<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
---><ruby>湯氣<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>　<!--
---><ruby>吾<rt>わが</rt></ruby><span class="copy" aria-hidden="true">(わが)</span><!--
---><ruby>瀬子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
---><ruby>之<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span>　<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><br>
-　<ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>莫囂<rt>しづ</rt></ruby><span class="copy">(しづ)</span><!--
+--><ruby>圓<rt>ま</rt></ruby><span class="copy">(ま)</span><!--
+--><ruby>隣<rt>り</rt></ruby><span class="copy">(り)</span><!--
+--><ruby>之<rt>し</rt></ruby><span class="copy">(し)</span>　<!--
+--><ruby>大<rt>おほ</rt></ruby><span class="copy">(おほ)</span><!--
+--><ruby>相<rt>み</rt></ruby><span class="copy">(み)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
+--><ruby>爪<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
+--><ruby>湯氣<rt>し</rt></ruby><span class="copy">(し)</span>　<!--
+--><ruby>吾<rt>わが</rt></ruby><span class="copy">(わが)</span><!--
+--><ruby>瀬子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
+--><ruby>之<rt>が</rt></ruby><span class="copy">(が)</span>　<!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><br>
+　<ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->　　　　　　　　　　　（永井津記夫）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑭<!--
---><ruby>莫囂<rt>しづ</rt></ruby><span class="copy" aria-hidden="true">(しづ)</span><!--
---><ruby>圓<rt>ま</rt></ruby><span class="copy" aria-hidden="true">(ま)</span><!--
---><ruby>隣<rt>り</rt></ruby><span class="copy" aria-hidden="true">(り)</span><!--
---><ruby>之<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>　<!--
---><ruby>大相<rt>かげ</rt></ruby><span class="copy" aria-hidden="true">(かげ)</span><!--
---><ruby>七<rt>なな</rt></ruby><span class="copy" aria-hidden="true">(なな)</span><!--
---><ruby>兄<rt>え</rt></ruby><span class="copy" aria-hidden="true">(え)</span><!--
---><ruby>爪<rt>そ</rt></ruby><span class="copy" aria-hidden="true">(そ)</span><!--
---><ruby>湯<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span><!--
---><ruby>氣<rt>け</rt></ruby><span class="copy" aria-hidden="true">(け)</span>　<!--
---><ruby>吾<rt>わが</rt></ruby><span class="copy" aria-hidden="true">(わが)</span><!--
---><ruby>瀬子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
---><ruby>之<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span>　<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><br>
-　<ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>莫囂<rt>しづ</rt></ruby><span class="copy">(しづ)</span><!--
+--><ruby>圓<rt>ま</rt></ruby><span class="copy">(ま)</span><!--
+--><ruby>隣<rt>り</rt></ruby><span class="copy">(り)</span><!--
+--><ruby>之<rt>し</rt></ruby><span class="copy">(し)</span>　<!--
+--><ruby>大相<rt>かげ</rt></ruby><span class="copy">(かげ)</span><!--
+--><ruby>七<rt>なな</rt></ruby><span class="copy">(なな)</span><!--
+--><ruby>兄<rt>え</rt></ruby><span class="copy">(え)</span><!--
+--><ruby>爪<rt>そ</rt></ruby><span class="copy">(そ)</span><!--
+--><ruby>湯<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span><!--
+--><ruby>氣<rt>け</rt></ruby><span class="copy">(け)</span>　<!--
+--><ruby>吾<rt>わが</rt></ruby><span class="copy">(わが)</span><!--
+--><ruby>瀬子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
+--><ruby>之<rt>が</rt></ruby><span class="copy">(が)</span>　<!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><br>
+　<ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->　　　　　　　　　　　　（上野正彦）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑮<!--
---><ruby>莫囂圓隣<rt>ゆふとり</rt></ruby><span class="copy" aria-hidden="true">(ゆふとり)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大相七兄<rt>うらなけ</rt></ruby><span class="copy" aria-hidden="true">(うらなけ)</span><!--
---><ruby>爪<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
---><ruby>湯氣<rt>わき</rt></ruby><span class="copy" aria-hidden="true">(わき)</span><!--
+--><ruby>莫囂圓隣<rt>ゆふとり</rt></ruby><span class="copy">(ゆふとり)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大相七兄<rt>うらなけ</rt></ruby><span class="copy">(うらなけ)</span><!--
+--><ruby>爪<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
+--><ruby>湯氣<rt>わき</rt></ruby><span class="copy">(わき)</span><!--
 -->　吾瀬子之　射立為兼<br>
 　五可新何本　　　　　　　　　　　　（阪口　保）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑯<!--
---><ruby>莫囂圓隣<rt>ゆふつき</rt></ruby><span class="copy" aria-hidden="true">(ゆふつき)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大相七兄<rt>あふき</rt></ruby><span class="copy" aria-hidden="true">(あふき)</span><!--
---><ruby>爪<rt>て</rt></ruby><span class="copy" aria-hidden="true">(て)</span><!--
---><ruby><span style="font-family: 'Yu Gothic', '游ゴシック', sans-serif; font-weight: 700;">謁</span><rt>とひ</rt><span class="copy" aria-hidden="true">(とひ)</span></ruby><!--
---><ruby>氣<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>　<!--
---><ruby>吾<rt>わが</rt></ruby><span class="copy" aria-hidden="true">(わが)</span><!--
---><ruby>瀬子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
---><ruby>之<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span>　<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せる</rt></ruby><span class="copy" aria-hidden="true">(せる)</span><!--
---><ruby>兼<rt>かね</rt></ruby><span class="copy" aria-hidden="true">(かね)</span><br>
-　<ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>あわ</rt></ruby><span class="copy" aria-hidden="true">(あわ)</span><!--
---><ruby>何<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>本<rt>む</rt></ruby><span class="copy" aria-hidden="true">(む)</span><!--
+--><ruby>莫囂圓隣<rt>ゆふつき</rt></ruby><span class="copy">(ゆふつき)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大相七兄<rt>あふき</rt></ruby><span class="copy">(あふき)</span><!--
+--><ruby>爪<rt>て</rt></ruby><span class="copy">(て)</span><!--
+--><ruby><rb class="kanji-alt">謁</rb><rt>とひ</rt></ruby><!--
+--><span class="copy">(とひ)</span><!--
+--><ruby>氣<rt>し</rt></ruby><span class="copy">(し)</span>　<!--
+--><ruby>吾<rt>わが</rt></ruby><span class="copy">(わが)</span><!--
+--><ruby>瀬子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
+--><ruby>之<rt>が</rt></ruby><span class="copy">(が)</span>　<!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せる</rt></ruby><span class="copy">(せる)</span><!--
+--><ruby>兼<rt>かね</rt></ruby><span class="copy">(かね)</span><br>
+　<ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>あわ</rt></ruby><span class="copy">(あわ)</span><!--
+--><ruby>何<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>本<rt>む</rt></ruby><span class="copy">(む)</span><!--
 -->　　　　　　　　（西本願寺本、仙覚）
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　⑰<!--
---><ruby><span style="font-family: 'Yu Gothic', '游ゴシック', sans-serif; font-weight: 700;">草</span>囂圓隣<rt>さかどり</rt><span class="copy" aria-hidden="true">(さかどり)</span></ruby><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大<rt>おほ</rt></ruby><span class="copy" aria-hidden="true">(おほ)</span><!--
---><ruby>相<rt>ふ</rt></ruby><span class="copy" aria-hidden="true">(ふ)</span><!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>兄<rt>あ</rt></ruby><span class="copy" aria-hidden="true">(あ)</span><!--
---><ruby>爪<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
---><ruby>湯<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span><!--
---><ruby>氣<rt>け</rt></ruby><span class="copy" aria-hidden="true">(け)</span>　<!--
---><ruby>吾<rt>わが</rt></ruby><span class="copy" aria-hidden="true">(わが)</span><!--
---><ruby>瀬子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
---><ruby>之<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span>　<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><br>
-　<ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby><rb class="kanji-alt">草</rb><rt>さ</rt></ruby><!--
+--><ruby>囂圓隣<rt>かどり</rt></ruby><!--
+--><span class="copy">(さかどり)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大<rt>おほ</rt></ruby><span class="copy">(おほ)</span><!--
+--><ruby>相<rt>ふ</rt></ruby><span class="copy">(ふ)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>兄<rt>あ</rt></ruby><span class="copy">(あ)</span><!--
+--><ruby>爪<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
+--><ruby>湯<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span><!--
+--><ruby>氣<rt>け</rt></ruby><span class="copy">(け)</span>　<!--
+--><ruby>吾<rt>わが</rt></ruby><span class="copy">(わが)</span><!--
+--><ruby>瀬子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
+--><ruby>之<rt>が</rt></ruby><span class="copy">(が)</span>　<!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><br>
+　<ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->　　　　　　　　　　　　（粂川定一）
 </p><!---- end   段落 ---->
       </div><!--====== end   節 先行例 ========-->
@@ -765,7 +772,7 @@ and the validity of the proposed interpretation.<br>
 平仮名の無い時代で、万葉仮名の漢字だけの表現なのだから、<br>
 「義訓を知らなかったら、すぐに正確には、相手に伝わらない」。<br>
 誰もがすぐに理解できるような、簡単な義訓は許容できても、<br>
-「<ruby>凝<rt>こ</rt></ruby><span class="copy" aria-hidden="true">(こ)</span><!--
+「<ruby>凝<rt>こ</rt></ruby><span class="copy">(こ)</span><!--
 -->った難解な義訓」は「誰にも伝わらない」ので許容できない。<br>
 「試訓⑪～⑰は、振り仮名が無くても、そう読めるだろうか？」<br>
 </p><!---- end   段落 ---->
@@ -790,16 +797,16 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s4 indent-4"><!---- begin 段落 ---->
 　⑱紀の<!--
---><ruby>温泉<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span>に<!--
---><ruby>幸<rt>いでま</rt></ruby><span class="copy" aria-hidden="true">(いでま)</span><!--
+--><ruby>温泉<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span>に<!--
+--><ruby>幸<rt>いでま</rt></ruby><span class="copy">(いでま)</span><!--
 -->しし時に、額田王の作れる歌　 <br>
 莫囂圓隣之　大相七兄爪湯気<br>
 わが<!--
---><ruby>背子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span>が　い<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>たせりけむ　<!--
---><ruby>厳<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>橿<rt>かし</rt></ruby><span class="copy" aria-hidden="true">(かし)</span>が<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>
+--><ruby>背子<rt>せこ</rt></ruby><span class="copy">(せこ)</span>が　い<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>たせりけむ　<!--
+--><ruby>厳<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>橿<rt>かし</rt></ruby><span class="copy">(かし)</span>が<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>
 </p><!---- end   段落 ---->
 <p class="f1s4 indent-4"><!---- begin 段落 ---->
 　⑲莫囂圓隣之　大相七兄爪湯気　わがいとしい背の君が　<br>
@@ -809,16 +816,16 @@ and the validity of the proposed interpretation.<br>
       <div><!-- ====== begin 節 考察 ========-->
 <p><!-- -- begin 段落 ---->
 　そもそも、題詞に『紀の<!--
---><ruby>温泉<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span>に<!--
---><ruby>幸<rt>いでま</rt></ruby><span class="copy" aria-hidden="true">(いでま)</span><!--
+--><ruby>温泉<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span>に<!--
+--><ruby>幸<rt>いでま</rt></ruby><span class="copy">(いでま)</span><!--
 -->しし時』とあるのに、<br>
 「なぜ、温泉に関係する意訳に、なっていないのか？」<br>
 前半の難訓部分があるとはいえ、後半部分においても、<br>
 通例の意訳は、温泉とは無関係であり、<br>
 「なぜ、いきなり、『<!--
---><ruby>厳<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>橿<rt>かし</rt></ruby><span class="copy" aria-hidden="true">(かし)</span>が<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>厳<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>橿<rt>かし</rt></ruby><span class="copy">(かし)</span>が<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』で『橿の木の下』なのか？」
 </p><!---- end   段落 ---->
 <p><!-- -- begin 段落 ---->
@@ -833,10 +840,10 @@ and the validity of the proposed interpretation.<br>
     <div><!-- ==== begin 章 5 表意兼表音文字 ========-->
 <h2>
 五、<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span>
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span>
 </h2>
 <p><!-- -- begin 段落 ---->
 　難訓部分は、掛詞になっていることに気が付いた。<br>
@@ -845,10 +852,10 @@ and the validity of the proposed interpretation.<br>
       <div><!-- ====== begin 節 表意兼表音文字の定義 ========-->
 <h3>
 ・『<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span>』の定義
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span>』の定義
 </h3>
 <p class="f2s2 indent-2"><!---- begin 段落 ---->
 「表音文字（音仮名や訓仮名）であると同時に、字義の羅列<br>
@@ -871,12 +878,12 @@ and the validity of the proposed interpretation.<br>
 <p class="f0s3 indent-3"><!---- begin 段落 ---->
 　例：『莫囂』は辞書には無い字義羅列だが、<br>
 表意の『<!--
---><ruby>囂<rt>かしかま</rt></ruby><span class="copy" aria-hidden="true">(かしかま)</span><!--
+--><ruby>囂<rt>かしかま</rt></ruby><span class="copy">(かしかま)</span><!--
 -->しくない』の意味が通るため、<br>
 表音の『<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き』に気付かず、<br>
-「<ruby>静<rt>しず</rt></ruby><span class="copy" aria-hidden="true">(しず)</span>」の意味で『<!--
---><ruby>莫囂<rt>しづ</rt></ruby><span class="copy" aria-hidden="true">(しづ)</span><!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き』に気付かず、<br>
+「<ruby>静<rt>しず</rt></ruby><span class="copy">(しず)</span>」の意味で『<!--
+--><ruby>莫囂<rt>しづ</rt></ruby><span class="copy">(しづ)</span><!--
 -->』の義訓にしてきた。
 </p><!---- end   段落 ---->
       </div><!--====== end   節 難訓の理由 ========-->
@@ -895,134 +902,134 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->』<sup>[字]</sup>は、否定の『な』で、万葉仮名の『<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->』<sup>[Ｅ]</sup>。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>囂<rt>き</rt></ruby><span class="copy" aria-hidden="true">(き)</span><!--
+--><ruby>囂<rt>き</rt></ruby><span class="copy">(き)</span><!--
 -->』<sup>[字]</sup>は『<!--
---><ruby>囂<rt>かしかま</rt></ruby><span class="copy" aria-hidden="true">(かしかま)</span><!--
+--><ruby>囂<rt>かしかま</rt></ruby><span class="copy">(かしかま)</span><!--
 -->し』<sup>[古]</sup>、『やかましい』。<br>
 呉漢音は『キョウ（ケウ）』<sup>[字]</sup>なので、『き』と読む。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ◎『<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>囂<rt>き</rt></ruby><span class="copy" aria-hidden="true">(き)</span>』の、表意は『<!--
---><ruby>囂<rt>かしかま</rt></ruby><span class="copy" aria-hidden="true">(かしかま)</span><!--
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>囂<rt>き</rt></ruby><span class="copy">(き)</span>』の、表意は『<!--
+--><ruby>囂<rt>かしかま</rt></ruby><span class="copy">(かしかま)</span><!--
 -->しくない』、『静かな』。<br>
 表音は『<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->き』<sup>[広]</sup>で『死んだ…』。<!--
---><ruby>文選<rt>もんぜん</rt></ruby><span class="copy" aria-hidden="true">(もんぜん)</span><!--
+--><ruby>文選<rt>もんぜん</rt></ruby><span class="copy">(もんぜん)</span><!--
 --><sup>[文]</sup>に「<!--
---><ruby>悼<rt>とう</rt></ruby><span class="copy" aria-hidden="true">(とう)</span><!--
---><ruby>亡<rt>ぼう</rt></ruby><span class="copy" aria-hidden="true">(ぼう)</span><!--
---><ruby>詩<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>」があり、<br>
+--><ruby>悼<rt>とう</rt></ruby><span class="copy">(とう)</span><!--
+--><ruby>亡<rt>ぼう</rt></ruby><span class="copy">(ぼう)</span><!--
+--><ruby>詩<rt>し</rt></ruby><span class="copy">(し)</span>」があり、<br>
 この時代でも『<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->き』の意味は通じたと、推測できる。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>圓<rt>ゑ</rt></ruby><span class="copy" aria-hidden="true">(ゑ)</span><!--
+--><ruby>圓<rt>ゑ</rt></ruby><span class="copy">(ゑ)</span><!--
 -->』は『辺り一帯、一円』の『<!--
---><ruby>円<rt>えん</rt></ruby><span class="copy" aria-hidden="true">(えん)</span><!--
+--><ruby>円<rt>えん</rt></ruby><span class="copy">(えん)</span><!--
 -->』<sup>[広]</sup>。「えん」の「え」。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>隣<rt>り</rt></ruby><span class="copy" aria-hidden="true">(り)</span><!--
+--><ruby>隣<rt>り</rt></ruby><span class="copy">(り)</span><!--
 -->』<sup>[字]</sup>は『近隣』。万葉仮名の『<!--
---><ruby>隣<rt>り</rt></ruby><span class="copy" aria-hidden="true">(り)</span><!--
+--><ruby>隣<rt>り</rt></ruby><span class="copy">(り)</span><!--
 -->』<sup>[Ｅ]</sup>。「りん」の「り」。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ◎『<!--
---><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』の、表意は『近隣一帯』。表音は『<!--
---><ruby>彫<rt>えり</rt></ruby><span class="copy" aria-hidden="true">(えり)</span><!--
+--><ruby>彫<rt>えり</rt></ruby><span class="copy">(えり)</span><!--
 -->』<sup>[広]</sup>（後述）で、<br>
 『<!--
---><ruby>彫<rt>ほ</rt></ruby><span class="copy" aria-hidden="true">(ほ)</span><!--
+--><ruby>彫<rt>ほ</rt></ruby><span class="copy">(ほ)</span><!--
 -->ったように見える<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span><!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span><!--
 -->』。『<!--
---><ruby>面影<rt>おもかげ</rt></ruby><span class="copy" aria-hidden="true">(おもかげ)</span>の<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span><!--
+--><ruby>面影<rt>おもかげ</rt></ruby><span class="copy">(おもかげ)</span>の<!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span><!--
 -->』と意訳する。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span><!--
 -->』は、格助詞『の』<sup>[古]</sup>で、状態『…の（ような）』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>大<rt>お</rt></ruby><span class="copy" aria-hidden="true">(お)</span><!--
+--><ruby>大<rt>お</rt></ruby><span class="copy">(お)</span><!--
 -->』<sup>[古]</sup>は『大きい』。「おほ」の「お」。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>相<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
+--><ruby>相<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
 -->』<sup>[古]</sup>は『<!--
---><ruby>姿<rt>すがた</rt></ruby><span class="copy" aria-hidden="true">(すがた)</span><!--
+--><ruby>姿<rt>すがた</rt></ruby><span class="copy">(すがた)</span><!--
 -->』。「さう」の「さ」。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->』は、万葉仮名の『<!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->』<sup>[Ｅ]</sup>。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ◎『<!--
---><ruby>大<rt>お</rt></ruby><span class="copy" aria-hidden="true">(お)</span><!--
---><ruby>相<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>大<rt>お</rt></ruby><span class="copy">(お)</span><!--
+--><ruby>相<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
 -->』の、表意は『<!--
---><ruby>大<rt>おほ</rt></ruby><span class="copy" aria-hidden="true">(おほ)</span><!--
---><ruby>相<rt>さう</rt></ruby><span class="copy" aria-hidden="true">(さう)</span><!--
+--><ruby>大<rt>おほ</rt></ruby><span class="copy">(おほ)</span><!--
+--><ruby>相<rt>さう</rt></ruby><span class="copy">(さう)</span><!--
 -->な』で『大きな姿の』。<br>
 表音は『<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
 -->』<sup>[古]</sup>で『子供っぽい、未熟な』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
 -->』<sup>[古]</sup>は『女性から、夫・愛人・兄・弟などを呼ぶ語』。
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 <p><!-- -- begin 段落 ---->
 ・仮定：『<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
 -->』は、『成人していない<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の<!--
---><ruby>有間<rt>ありまの</rt></ruby><span class="copy" aria-hidden="true">(ありまの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span>』とする。<br>
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の<!--
+--><ruby>有間<rt>ありまの</rt></ruby><span class="copy">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span>』とする。<br>
 彼は、十九歳で絞首刑にされた。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>爪<rt>つ</rt></ruby><span class="copy" aria-hidden="true">(つ)</span><!--
+--><ruby>爪<rt>つ</rt></ruby><span class="copy">(つ)</span><!--
 -->』<sup>[長谷川]</sup>は、上代の格助詞『つ』<sup>[古]</sup>で、『…の』と訳す。（後述）
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>湯<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span><!--
---><ruby>氣<rt>げ</rt></ruby><span class="copy" aria-hidden="true">(げ)</span><!--
+--><ruby>湯<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span><!--
+--><ruby>氣<rt>げ</rt></ruby><span class="copy">(げ)</span><!--
 -->』は、文字通り『<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span><!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span><!--
 -->』<sup>[広]</sup>。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>吾<rt>あが</rt></ruby><span class="copy" aria-hidden="true">(あが)</span><!--
+--><ruby>吾<rt>あが</rt></ruby><span class="copy">(あが)</span><!--
 -->』<sup>[古]</sup>は「あが」と読む。上代に多く用いられ、「わ」も同じ<br>
 意味の語だが、「あ」は「あが君」など親愛の気持ちを込め<br>
 て言い、「わ」は「わが大君」など改まった気持ちで用いた。<sup>[古]</sup><br>
@@ -1030,161 +1037,161 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ◎『<!--
---><ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
+--><ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
 -->』<sup>[古]</sup>の、表意は『物事に出あう時節。機会』、表音は『<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>』。
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>吾<rt>あが</rt></ruby><span class="copy" aria-hidden="true">(あが)</span><!--
---><ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
---><ruby>子<rt>こ</rt></ruby><span class="copy" aria-hidden="true">(こ)</span><!--
+--><ruby>吾<rt>あが</rt></ruby><span class="copy">(あが)</span><!--
+--><ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
+--><ruby>子<rt>こ</rt></ruby><span class="copy">(こ)</span><!--
 -->』は、『<!--
---><ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>し<!--
---><ruby>吾<rt>あ</rt></ruby><span class="copy" aria-hidden="true">(あ)</span>が<!--
---><ruby>兄子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
+--><ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span>し<!--
+--><ruby>吾<rt>あ</rt></ruby><span class="copy">(あ)</span>が<!--
+--><ruby>兄子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
 -->』。『出逢った私の<!--
---><ruby>愛<rt>いと</rt></ruby><span class="copy" aria-hidden="true">(いと)</span>しい<br>
+--><ruby>愛<rt>いと</rt></ruby><span class="copy">(いと)</span>しい<br>
 <!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の<!--
---><ruby>君<rt>きみ</rt></ruby><span class="copy" aria-hidden="true">(きみ)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の<!--
+--><ruby>君<rt>きみ</rt></ruby><span class="copy">(きみ)</span><!--
 -->』であるが、文脈に合わせて意訳する。<br>
 <!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span>『<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>』だったので、『<!--
---><ruby>兄子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span>『<!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>』だったので、『<!--
+--><ruby>兄子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
 -->』<sup>[古]</sup>の字を使う。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span><!--
 -->』は、格助詞『の』<sup>[古]</sup>で、意味は主語『…が』。<br>
 通例の読みは「が」であるが、口調の良さから「の」と読む。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span>』は、『<!--
---><ruby>射<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span>』は、『<!--
+--><ruby>射<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
 -->す』<sup>[古]</sup>の連用形『<!--
---><ruby>射<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span>し』で、『<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き、<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span>り』。
+--><ruby>射<rt>さ</rt></ruby><span class="copy">(さ)</span>し』で、『<!--
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き、<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span>り』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>』は『<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>し</rt></ruby><span class="copy">(し)</span>』は『<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span><!--
 -->たす』<sup>[古]</sup>の連用形『<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>たし』で『お<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ちになり』。<br>
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>たし』で『お<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ちになり』。<br>
 また、『<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span><!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span><!--
 -->つ』<sup>[古]</sup>は『旅立つ』の意味でもある。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><!--
 -->』は、助動詞『けむ』<sup>[古]</sup>で、過去の推量『…ただろう』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span>』は、『<!--
---><ruby>射<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span>し<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span>』は、『<!--
+--><ruby>射<rt>さ</rt></ruby><span class="copy">(さ)</span>し<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span><!--
 -->たしけむ』で、二重の意味がある。<br>
 湯気が『お<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span><!--
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span><!--
 -->ちになられたのだろう』。また、<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の君が、<br>
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の君が、<br>
 天に『<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span>り、お<!--
---><ruby>旅<rt>たび</rt></ruby><span class="copy" aria-hidden="true">(たび)</span><!--
---><ruby>立<rt>だ</rt></ruby><span class="copy" aria-hidden="true">(だ)</span><!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span>り、お<!--
+--><ruby>旅<rt>たび</rt></ruby><span class="copy">(たび)</span><!--
+--><ruby>立<rt>だ</rt></ruby><span class="copy">(だ)</span><!--
 -->ちになられたのだろう』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span>』は、『<!--
---><ruby>厳<rt>いつか</rt></ruby><span class="copy" aria-hidden="true">(いつか)</span><!--
+--><ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span>』は、『<!--
+--><ruby>厳<rt>いつか</rt></ruby><span class="copy">(いつか)</span><!--
 -->し』<sup>[古]</sup>で『<!--
---><ruby>厳<rt>おごそ</rt></ruby><span class="copy" aria-hidden="true">(おごそ)</span><!--
+--><ruby>厳<rt>おごそ</rt></ruby><span class="copy">(おごそ)</span><!--
 -->かで立派だ』なのだが、語源は<br>
 「動詞『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
 -->く』<sup>[古]</sup>に対応する形容詞」<sup>[古]</sup>なので、辞書には無いが、<br>
 『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かし』で『<!--
---><ruby>汚<rt>けが</rt></ruby><span class="copy" aria-hidden="true">(けが)</span><!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かし』で『<!--
+--><ruby>汚<rt>けが</rt></ruby><span class="copy">(けが)</span><!--
 -->れを除き、心身を<!--
---><ruby>清<rt>きよ</rt></ruby><span class="copy" aria-hidden="true">(きよ)</span>めて神に<!--
---><ruby>仕<rt>つか</rt></ruby><span class="copy" aria-hidden="true">(つか)</span>える様子』<br>
+--><ruby>清<rt>きよ</rt></ruby><span class="copy">(きよ)</span>めて神に<!--
+--><ruby>仕<rt>つか</rt></ruby><span class="copy">(つか)</span>える様子』<br>
 とする。『温泉』と『昇天』の両方に、意味が見事に通る。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
 -->』は、格助詞『が』<sup>[古]</sup>で、所属『…の』、かつ感動文の主語。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>』<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>』<!--
 --><sup>[古]</sup>は『<!--
---><ruby>辺<rt>あた</rt></ruby><span class="copy" aria-hidden="true">(あた)</span><!--
+--><ruby>辺<rt>あた</rt></ruby><span class="copy">(あた)</span><!--
 -->り』。温泉の『<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span><!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span><!--
 -->』<sup>[広]</sup>で『温泉の<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き出る土地』。<br>
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き出る土地』。<br>
 つまり『温泉一帯』で、『<!--
---><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』に呼応している。<br>
 「箱根湯本」から、『<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span><!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span><!--
 -->』に気付けた。題詞に沿っている。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』は『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かしが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>』であり、『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かし！　の<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span>』、<br>
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かしが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>』であり、『<!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span>』、<br>
 『<!--
---><ruby>汚<rt>けが</rt></ruby><span class="copy" aria-hidden="true">(けが)</span><!--
+--><ruby>汚<rt>けが</rt></ruby><span class="copy">(けが)</span><!--
 -->れを除き心身を<!--
---><ruby>清<rt>きよ</rt></ruby><span class="copy" aria-hidden="true">(きよ)</span>めて神に<!--
---><ruby>仕<rt>つか</rt></ruby><span class="copy" aria-hidden="true">(つか)</span><!--
+--><ruby>清<rt>きよ</rt></ruby><span class="copy">(きよ)</span>めて神に<!--
+--><ruby>仕<rt>つか</rt></ruby><span class="copy">(つか)</span><!--
 -->える様子！　の温泉一帯』。<br>
 辞書的には、『<!--
---><ruby>厳<rt>いつか</rt></ruby><span class="copy" aria-hidden="true">(いつか)</span>しが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>』で『<!--
---><ruby>厳<rt>おごそ</rt></ruby><span class="copy" aria-hidden="true">(おごそ)</span>か！　の<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span>』であるが、<br>
+--><ruby>厳<rt>いつか</rt></ruby><span class="copy">(いつか)</span>しが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>』で『<!--
+--><ruby>厳<rt>おごそ</rt></ruby><span class="copy">(おごそ)</span>か！　の<!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span>』であるが、<br>
 『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かしが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かしが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』の方が、意味が適切に合致する。<br>
 文脈的には『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><!--
 -->』を受け、<br>
 文法的には『<!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
 -->』によって、感動文になっている。
 </p><!---- end   段落 ---->
       </div><!--====== end   節 部分ごとに提案 ========-->
@@ -1201,32 +1208,32 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s5 indent-5"><!---- begin 段落 ---->
 　㉑<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>囂<rt>き</rt></ruby><span class="copy" aria-hidden="true">(き)</span><!--
---><ruby>圓<rt>ゑ</rt></ruby><span class="copy" aria-hidden="true">(ゑ)</span><!--
---><ruby>隣<rt>り</rt></ruby><span class="copy" aria-hidden="true">(り)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>大<rt>お</rt></ruby><span class="copy" aria-hidden="true">(お)</span><!--
---><ruby>相<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span><!--
---><ruby>七<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
---><ruby>爪<rt>つ</rt></ruby><span class="copy" aria-hidden="true">(つ)</span><!--
---><ruby>湯<rt>ゆ</rt></ruby><span class="copy" aria-hidden="true">(ゆ)</span><!--
---><ruby>氣<rt>げ</rt></ruby><span class="copy" aria-hidden="true">(げ)</span>　<br>
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>囂<rt>き</rt></ruby><span class="copy">(き)</span><!--
+--><ruby>圓<rt>ゑ</rt></ruby><span class="copy">(ゑ)</span><!--
+--><ruby>隣<rt>り</rt></ruby><span class="copy">(り)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>大<rt>お</rt></ruby><span class="copy">(お)</span><!--
+--><ruby>相<rt>さ</rt></ruby><span class="copy">(さ)</span><!--
+--><ruby>七<rt>な</rt></ruby><span class="copy">(な)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
+--><ruby>爪<rt>つ</rt></ruby><span class="copy">(つ)</span><!--
+--><ruby>湯<rt>ゆ</rt></ruby><span class="copy">(ゆ)</span><!--
+--><ruby>氣<rt>げ</rt></ruby><span class="copy">(げ)</span>　<br>
 <!--
---><ruby>吾<rt>あが</rt></ruby><span class="copy" aria-hidden="true">(あが)</span><!--
---><ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
---><ruby>子<rt>こ</rt></ruby><span class="copy" aria-hidden="true">(こ)</span><!--
---><ruby>之<rt>の</rt></ruby><span class="copy" aria-hidden="true">(の)</span>　<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span>　<!--
---><ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>
+--><ruby>吾<rt>あが</rt></ruby><span class="copy">(あが)</span><!--
+--><ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
+--><ruby>子<rt>こ</rt></ruby><span class="copy">(こ)</span><!--
+--><ruby>之<rt>の</rt></ruby><span class="copy">(の)</span>　<!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span>　<!--
+--><ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1235,24 +1242,24 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s5 indent-5"><!---- begin 段落 ---->
 　㉒<!--
---><ruby>莫囂<rt>なき</rt></ruby><span class="copy" aria-hidden="true">(なき)</span>（<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き）<!--
---><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span>（<!--
---><ruby>彫<rt>えり</rt></ruby><span class="copy" aria-hidden="true">(えり)</span>）の　<!--
---><ruby>大<rt>お</rt></ruby><span class="copy" aria-hidden="true">(お)</span><!--
---><ruby>相<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span>な（<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span>）<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>つ<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span>　<br>
+--><ruby>莫囂<rt>なき</rt></ruby><span class="copy">(なき)</span>（<!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き）<!--
+--><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span>（<!--
+--><ruby>彫<rt>えり</rt></ruby><span class="copy">(えり)</span>）の　<!--
+--><ruby>大<rt>お</rt></ruby><span class="copy">(お)</span><!--
+--><ruby>相<rt>さ</rt></ruby><span class="copy">(さ)</span>な（<!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span>）<!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>つ<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span>　<br>
 <!--
---><ruby>吾<rt>あ</rt></ruby><span class="copy" aria-hidden="true">(あ)</span>が<!--
---><ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>（<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>）<!--
---><ruby>子<rt>こ</rt></ruby><span class="copy" aria-hidden="true">(こ)</span>の　<!--
---><ruby>射<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span>し<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>たしけむ　<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かしが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>
+--><ruby>吾<rt>あ</rt></ruby><span class="copy">(あ)</span>が<!--
+--><ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span>（<!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>）<!--
+--><ruby>子<rt>こ</rt></ruby><span class="copy">(こ)</span>の　<!--
+--><ruby>射<rt>さ</rt></ruby><span class="copy">(さ)</span>し<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>たしけむ　<!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かしが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1261,17 +1268,17 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s2 indent-2"><!---- begin 段落 ---->
 　㉓<!--
---><ruby>囂<rt>かしかま</rt></ruby><span class="copy" aria-hidden="true">(かしかま)</span>しく<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>隣<rt>となり</rt></ruby><span class="copy" aria-hidden="true">(となり)</span>の<!--
---><ruby>円<rt>えん</rt></ruby><span class="copy" aria-hidden="true">(えん)</span>の　<!--
---><ruby>大<rt>おほ</rt></ruby><span class="copy" aria-hidden="true">(おほ)</span>き<!--
---><ruby>相<rt>さう</rt></ruby><span class="copy" aria-hidden="true">(さう)</span>な<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>つ<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span><br>
+--><ruby>囂<rt>かしかま</rt></ruby><span class="copy">(かしかま)</span>しく<!--
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>隣<rt>となり</rt></ruby><span class="copy">(となり)</span>の<!--
+--><ruby>円<rt>えん</rt></ruby><span class="copy">(えん)</span>の　<!--
+--><ruby>大<rt>おほ</rt></ruby><span class="copy">(おほ)</span>き<!--
+--><ruby>相<rt>さう</rt></ruby><span class="copy">(さう)</span>な<!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>つ<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span><br>
 　 （静かな近隣一帯の、大きな姿の<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span>よ）
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span>よ）
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1280,18 +1287,18 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s2 indent-2"><!---- begin 段落 ---->
 　㉔<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>彫<rt>えり</rt></ruby><span class="copy" aria-hidden="true">(えり)</span>の　<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>つ<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span><br>
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>彫<rt>えり</rt></ruby><span class="copy">(えり)</span>の　<!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>つ<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span><br>
 　 （<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>面影<rt>おもかげ</rt></ruby><span class="copy" aria-hidden="true">(おもかげ)</span>の<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span>がある、<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span>よ）
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>面影<rt>おもかげ</rt></ruby><span class="copy">(おもかげ)</span>の<!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span>がある、<!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span>よ）
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1300,28 +1307,28 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　㉕<!--
---><ruby>囂<rt>かしかま</rt></ruby><span class="copy" aria-hidden="true">(かしかま)</span>しく<!--
---><ruby>莫<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>隣<rt>となり</rt></ruby><span class="copy" aria-hidden="true">(となり)</span>の<!--
---><ruby>円<rt>えん</rt></ruby><span class="copy" aria-hidden="true">(えん)</span>、<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>彫<rt>えり</rt></ruby><span class="copy" aria-hidden="true">(えり)</span>の　<!--
---><ruby>大<rt>おほ</rt></ruby><span class="copy" aria-hidden="true">(おほ)</span>き<!--
---><ruby>相<rt>さう</rt></ruby><span class="copy" aria-hidden="true">(さう)</span>の<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span>。<br>
-<ruby>瀬<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>し<!--
---><ruby>吾<rt>あ</rt></ruby><span class="copy" aria-hidden="true">(あ)</span>が<!--
---><ruby>兄子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span>の　<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>たし　<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span>り　<!--
---><ruby>旅<rt>たび</rt></ruby><span class="copy" aria-hidden="true">(たび)</span><!--
---><ruby>立<rt>だ</rt></ruby><span class="copy" aria-hidden="true">(だ)</span>たしけむ　<br>
-<ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かしが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>。
+--><ruby>囂<rt>かしかま</rt></ruby><span class="copy">(かしかま)</span>しく<!--
+--><ruby>莫<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>隣<rt>となり</rt></ruby><span class="copy">(となり)</span>の<!--
+--><ruby>円<rt>えん</rt></ruby><span class="copy">(えん)</span>、<!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の<!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>彫<rt>えり</rt></ruby><span class="copy">(えり)</span>の　<!--
+--><ruby>大<rt>おほ</rt></ruby><span class="copy">(おほ)</span>き<!--
+--><ruby>相<rt>さう</rt></ruby><span class="copy">(さう)</span>の<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span>。<br>
+<ruby>瀬<rt>せ</rt></ruby><span class="copy">(せ)</span>し<!--
+--><ruby>吾<rt>あ</rt></ruby><span class="copy">(あ)</span>が<!--
+--><ruby>兄子<rt>せこ</rt></ruby><span class="copy">(せこ)</span>の　<!--
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>たし　<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span>り　<!--
+--><ruby>旅<rt>たび</rt></ruby><span class="copy">(たび)</span><!--
+--><ruby>立<rt>だ</rt></ruby><span class="copy">(だ)</span>たしけむ　<br>
+<ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かしが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>。
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1330,28 +1337,28 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　㉖静かな近隣一帯の、<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>（<!--
---><ruby>有間<rt>ありまの</rt></ruby><span class="copy" aria-hidden="true">(ありまの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span>）の<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>面影<rt>おもかげ</rt></ruby><span class="copy" aria-hidden="true">(おもかげ)</span>の<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span>が<br>
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>（<!--
+--><ruby>有間<rt>ありまの</rt></ruby><span class="copy">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span>）の<!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>面影<rt>おもかげ</rt></ruby><span class="copy">(おもかげ)</span>の<!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span>が<br>
 ある大きな姿の<!--
---><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span>よ。私の<!--
---><ruby>愛<rt>いと</rt></ruby><span class="copy" aria-hidden="true">(いと)</span>しい<!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の君に出逢ったのは、<br>
+--><ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span>よ。私の<!--
+--><ruby>愛<rt>いと</rt></ruby><span class="copy">(いと)</span>しい<!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の君に出逢ったのは、<br>
 （処刑されて、霊が湯気として）お<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ちになり、<br>
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ちになり、<br>
 （天に）<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span>り、お<!--
---><ruby>旅<rt>たび</rt></ruby><span class="copy" aria-hidden="true">(たび)</span><!--
---><ruby>立<rt>だ</rt></ruby><span class="copy" aria-hidden="true">(だ)</span><!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span>り、お<!--
+--><ruby>旅<rt>たび</rt></ruby><span class="copy">(たび)</span><!--
+--><ruby>立<rt>だ</rt></ruby><span class="copy">(だ)</span><!--
 -->ちになられたのでしょう。<br>
-<ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かし！　の<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span>よ。
+<ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span>よ。
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
         <div><!-- ======== begin 項 ========-->
@@ -1360,46 +1367,46 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f1s3 indent-3"><!---- begin 段落 ---->
 　㉗<!--
---><ruby>有間<rt>ありまの</rt></ruby><span class="copy" aria-hidden="true">(ありまの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span>は、<!--
---><ruby>紀<rt>き</rt></ruby><span class="copy" aria-hidden="true">(き)</span>の（<!--
---><ruby>牟婁<rt>むろ</rt></ruby><span class="copy" aria-hidden="true">(むろ)</span><!--
+--><ruby>有間<rt>ありまの</rt></ruby><span class="copy">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span>は、<!--
+--><ruby>紀<rt>き</rt></ruby><span class="copy">(き)</span>の（<!--
+--><ruby>牟婁<rt>むろ</rt></ruby><span class="copy">(むろ)</span><!--
 -->）温泉で湯治をした。<sup>[紀]</sup><br>
 病の完治を聞いた<!--
---><ruby>斉明<rt>さいめい</rt></ruby><span class="copy" aria-hidden="true">(さいめい)</span><!--
+--><ruby>斉明<rt>さいめい</rt></ruby><span class="copy">(さいめい)</span><!--
 -->天皇は、喜ばれ、行きたくなり、<br>
 額田王と一緒に、紀の温泉に<!--
---><ruby>行幸<rt>ぎょうこう</rt></ruby><span class="copy" aria-hidden="true">(ぎょうこう)</span><!--
+--><ruby>行幸<rt>ぎょうこう</rt></ruby><span class="copy">(ぎょうこう)</span><!--
 -->することになった。<br>
 飛鳥に居た有間皇子は、謀反の罪を被せられ、紀の温泉に<br>
 護送され、<!--
---><ruby>中大兄<rt>なかのおほえの</rt></ruby><span class="copy" aria-hidden="true">(なかのおほえの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span><!--
+--><ruby>中大兄<rt>なかのおほえの</rt></ruby><span class="copy">(なかのおほえの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span><!--
 -->に尋問された後、絞首刑にされた。<br>
 額田王は『<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>の有間皇子の<!--
---><ruby>亡<rt>な</rt></ruby><span class="copy" aria-hidden="true">(な)</span>き<!--
---><ruby>面影<rt>おもかげ</rt></ruby><span class="copy" aria-hidden="true">(おもかげ)</span>の<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span>がある大きな<br>
-<ruby>湯気<rt>ゆげ</rt></ruby><span class="copy" aria-hidden="true">(ゆげ)</span><!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>の有間皇子の<!--
+--><ruby>亡<rt>な</rt></ruby><span class="copy">(な)</span>き<!--
+--><ruby>面影<rt>おもかげ</rt></ruby><span class="copy">(おもかげ)</span>の<!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span>がある大きな<br>
+<ruby>湯気<rt>ゆげ</rt></ruby><span class="copy">(ゆげ)</span><!--
 -->』を見た。湯気の『<!--
---><ruby>吾<rt>あ</rt></ruby><span class="copy" aria-hidden="true">(あ)</span>が<!--
---><ruby>兄子<rt>せこ</rt></ruby><span class="copy" aria-hidden="true">(せこ)</span><!--
+--><ruby>吾<rt>あ</rt></ruby><span class="copy">(あ)</span>が<!--
+--><ruby>兄子<rt>せこ</rt></ruby><span class="copy">(せこ)</span><!--
 -->』に『出逢った』理由は、<br>
 霊が湯気として『お<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>き<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span><!--
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>き<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span><!--
 -->ちになられたのでしょう』。<br>
 天に『<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span>り、お<!--
---><ruby>旅<rt>たび</rt></ruby><span class="copy" aria-hidden="true">(たび)</span><!--
---><ruby>立<rt>だ</rt></ruby><span class="copy" aria-hidden="true">(だ)</span>ちになられたのでしょう』。<br>
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span>り、お<!--
+--><ruby>旅<rt>たび</rt></ruby><span class="copy">(たび)</span><!--
+--><ruby>立<rt>だ</rt></ruby><span class="copy">(だ)</span>ちになられたのでしょう』。<br>
 『なんという、（謀反の罪の）<!--
---><ruby>汚<rt>けが</rt></ruby><span class="copy" aria-hidden="true">(けが)</span>れを除き、心身を<!--
---><ruby>清<rt>きよ</rt></ruby><span class="copy" aria-hidden="true">(きよ)</span>めて<br>
-神に<ruby>仕<rt>つか</rt></ruby><span class="copy" aria-hidden="true">(つか)</span><!--
+--><ruby>汚<rt>けが</rt></ruby><span class="copy">(けが)</span>れを除き、心身を<!--
+--><ruby>清<rt>きよ</rt></ruby><span class="copy">(きよ)</span>めて<br>
+神に<ruby>仕<rt>つか</rt></ruby><span class="copy">(つか)</span><!--
 -->える様子！　の温泉一帯であることよ』。
 </p><!---- end   段落 ---->
         </div><!--======== end   項 ========-->
@@ -1416,10 +1423,10 @@ and the validity of the proposed interpretation.<br>
       <div><!-- ====== begin 節 妥当性 ========-->
 <h3>
 ・『<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span>』の妥当性
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span>』の妥当性
 </h3>
 <p class="f2s2 indent-2"><!---- begin 段落 ---->
 　表意㉓と表音㉔の「両方とも」、「同一の『湯気の文脈』」と<br>
@@ -1438,118 +1445,118 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>彫<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>彫<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』<sup>[広]</sup>は、普通は『<!--
---><ruby>彫<rt>ほ</rt></ruby><span class="copy" aria-hidden="true">(ほ)</span>り<!--
---><ruby>刻<rt>きざ</rt></ruby><span class="copy" aria-hidden="true">(きざ)</span><!--
+--><ruby>彫<rt>ほ</rt></ruby><span class="copy">(ほ)</span>り<!--
+--><ruby>刻<rt>きざ</rt></ruby><span class="copy">(きざ)</span><!--
 -->む』の意なので、まさか、湯気に<br>
 関係するとは思わない。湯気に適用可能な『<!--
---><ruby>彫<rt>えり</rt></ruby><span class="copy" aria-hidden="true">(えり)</span>』の、<br>
+--><ruby>彫<rt>えり</rt></ruby><span class="copy">(えり)</span>』の、<br>
 『<!--
---><ruby>彫<rt>ほ</rt></ruby><span class="copy" aria-hidden="true">(ほ)</span><!--
+--><ruby>彫<rt>ほ</rt></ruby><span class="copy">(ほ)</span><!--
 -->ったように見える<!--
---><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy" aria-hidden="true">(おうとつ)</span><!--
+--><ruby>凹凸<rt>おうとつ</rt></ruby><span class="copy">(おうとつ)</span><!--
 -->』の意は、現代辞書<sup>[広]</sup>にのみ有る。<br>
 たとえ古語辞書<sup>[古]</sup>には無くても「『湯気の状態の表現』として、<br>
 『明確に意味が通る』ことが、正しさの根拠」である。<br>
 仏教が伝来したことで、仏像を『<!--
---><ruby>彫<rt>ほ</rt></ruby><span class="copy" aria-hidden="true">(ほ)</span><!--
+--><ruby>彫<rt>ほ</rt></ruby><span class="copy">(ほ)</span><!--
 -->る』ことが盛んになり、<br>
 『<!--
---><ruby>彫<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>彫<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』の語も有ったのではないか、と推測する。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>大<rt>お</rt></ruby><span class="copy" aria-hidden="true">(お)</span><!--
---><ruby>相<rt>さ</rt></ruby><span class="copy" aria-hidden="true">(さ)</span>な（<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
+--><ruby>大<rt>お</rt></ruby><span class="copy">(お)</span><!--
+--><ruby>相<rt>さ</rt></ruby><span class="copy">(さ)</span>な（<!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
 -->）』は、今まで、指摘されなかった。<br>
 訓読みと音読みが混在するので、気付かれなかったのだろう。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span><!--
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span><!--
 -->』も、辞書に載っていない。年齢だけの根拠から、<br>
 『有間皇子』だとしているが、見事に意味が通っている。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>爪<rt>つ</rt></ruby><span class="copy" aria-hidden="true">(つ)</span><!--
+--><ruby>爪<rt>つ</rt></ruby><span class="copy">(つ)</span><!--
 -->』<sup>[長谷川]</sup>は、通例の万葉仮名には無く、大きな難訓要因であろう。<br>
 稀な使い方ではあるが、「初期訓点資料には存在する」。<br>
 文献[長谷川]が有ったからこそ、意味を通すことができた。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
 -->』は、今まで特に意味の無い接頭語『<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span>』で固定されてい<br>
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span>』で固定されてい<br>
 たが、『湯気の文脈』での『<!--
---><ruby>湧<rt>わ</rt></ruby><span class="copy" aria-hidden="true">(わ)</span>く、<!--
---><ruby>立<rt>た</rt></ruby><span class="copy" aria-hidden="true">(た)</span>ち<!--
---><ruby>昇<rt>のぼ</rt></ruby><span class="copy" aria-hidden="true">(のぼ)</span><!--
+--><ruby>湧<rt>わ</rt></ruby><span class="copy">(わ)</span>く、<!--
+--><ruby>立<rt>た</rt></ruby><span class="copy">(た)</span>ち<!--
+--><ruby>昇<rt>のぼ</rt></ruby><span class="copy">(のぼ)</span><!--
 -->る』がふさわしい。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・通例の『<!--
---><ruby>射<rt>い</rt></ruby><span class="copy" aria-hidden="true">(い)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><!--
+--><ruby>射<rt>い</rt></ruby><span class="copy">(い)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><!--
 -->』の『せり』は、四段活用の上代の尊敬の<br>
 助動詞『す』<sup>[古]</sup>の已然形『せ』に、存続の助動詞『り』<sup>[古]</sup>の<br>
 連用形『り』が付いたものである。『けむ』は連用形に付く。<br>
 しかし、漢字は『為』だけであり、厳密には『り』は無い。<br>
 七音にするために、『<!--
---><ruby>為<rt>せり</rt></ruby><span class="copy" aria-hidden="true">(せり)</span><!--
+--><ruby>為<rt>せり</rt></ruby><span class="copy">(せり)</span><!--
 -->』と読んだと考えられる。<br>
 『す』の連用形は『し』である。『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
 -->』と読むことによって、<br>
 七音で『<!--
---><ruby>射<rt>さし</rt></ruby><span class="copy" aria-hidden="true">(さし)</span><!--
---><ruby>立<rt>たた</rt></ruby><span class="copy" aria-hidden="true">(たた)</span><!--
---><ruby>為<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>兼<rt>けむ</rt></ruby><span class="copy" aria-hidden="true">(けむ)</span><!--
+--><ruby>射<rt>さし</rt></ruby><span class="copy">(さし)</span><!--
+--><ruby>立<rt>たた</rt></ruby><span class="copy">(たた)</span><!--
+--><ruby>為<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>兼<rt>けむ</rt></ruby><span class="copy">(けむ)</span><!--
 -->』と読むことができ、文法的にも整合する。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』は、
 今まで『<!--
---><ruby>厳<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>橿<rt>かし</rt></ruby><span class="copy" aria-hidden="true">(かし)</span>が<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>厳<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>橿<rt>かし</rt></ruby><span class="copy">(かし)</span>が<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』が主流の解釈だった。<br>
 意味不明な『神聖な<!--
---><ruby>橿<rt>かし</rt></ruby><span class="copy" aria-hidden="true">(かし)</span><!--
+--><ruby>橿<rt>かし</rt></ruby><span class="copy">(かし)</span><!--
 -->の木の下』よりも、<br>
 『<!--
---><ruby>汚<rt>けが</rt></ruby><span class="copy" aria-hidden="true">(けが)</span><!--
+--><ruby>汚<rt>けが</rt></ruby><span class="copy">(けが)</span><!--
 -->れを除き、心身を<!--
---><ruby>清<rt>きよ</rt></ruby><span class="copy" aria-hidden="true">(きよ)</span>めて、神に<!--
---><ruby>仕<rt>つか</rt></ruby><span class="copy" aria-hidden="true">(つか)</span><!--
+--><ruby>清<rt>きよ</rt></ruby><span class="copy">(きよ)</span>めて、神に<!--
+--><ruby>仕<rt>つか</rt></ruby><span class="copy">(つか)</span><!--
 -->える、温泉一帯』の<br>
 『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かし！　の<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span><!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span><!--
 -->』の方が、正しいと考える。<br>
 「『謀反の罪』の<!--
---><ruby>汚<rt>けが</rt></ruby><span class="copy" aria-hidden="true">(けが)</span><!--
+--><ruby>汚<rt>けが</rt></ruby><span class="copy">(けが)</span><!--
 -->れを除く。『温泉』で<!--
---><ruby>清<rt>きよ</rt></ruby><span class="copy" aria-hidden="true">(きよ)</span>める。<br>
+--><ruby>清<rt>きよ</rt></ruby><span class="copy">(きよ)</span>める。<br>
 『昇天』して神に<!--
---><ruby>仕<rt>つか</rt></ruby><span class="copy" aria-hidden="true">(つか)</span><!--
+--><ruby>仕<rt>つか</rt></ruby><span class="copy">(つか)</span><!--
 -->える」の、三つに見事に合致する。<br>
 更に、『<!--
---><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>圓隣<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』に「呼応」していて、合理的である。
 </p><!---- end   段落 ---->
       </div><!--====== end   節 難訓原因 ========-->
@@ -1590,46 +1597,46 @@ and the validity of the proposed interpretation.<br>
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span><!--
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span><!--
 -->』を定義し、難訓を解決した。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>彫<rt>ゑり</rt></ruby><span class="copy" aria-hidden="true">(ゑり)</span><!--
+--><ruby>彫<rt>ゑり</rt></ruby><span class="copy">(ゑり)</span><!--
 -->』<sup>[広]</sup>、『<!--
---><ruby>爪<rt>つ</rt></ruby><span class="copy" aria-hidden="true">(つ)</span><!--
+--><ruby>爪<rt>つ</rt></ruby><span class="copy">(つ)</span><!--
 -->』<sup>[長谷川]</sup>、『<!--
---><ruby>射<rt>さす</rt></ruby><span class="copy" aria-hidden="true">(さす)</span><!--
+--><ruby>射<rt>さす</rt></ruby><span class="copy">(さす)</span><!--
 -->』<sup>[古]</sup>、『<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』<sup>[古]</sup>など、<br>
 新しい解釈を導入した。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・『<!--
---><ruby>五<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span><!--
---><ruby>可<rt>か</rt></ruby><span class="copy" aria-hidden="true">(か)</span><!--
---><ruby>新<rt>し</rt></ruby><span class="copy" aria-hidden="true">(し)</span><!--
---><ruby>何<rt>が</rt></ruby><span class="copy" aria-hidden="true">(が)</span><!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span><!--
+--><ruby>五<rt>いつ</rt></ruby><span class="copy">(いつ)</span><!--
+--><ruby>可<rt>か</rt></ruby><span class="copy">(か)</span><!--
+--><ruby>新<rt>し</rt></ruby><span class="copy">(し)</span><!--
+--><ruby>何<rt>が</rt></ruby><span class="copy">(が)</span><!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span><!--
 -->』は『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かしが<!--
---><ruby>本<rt>もと</rt></ruby><span class="copy" aria-hidden="true">(もと)</span>』で、『<!--
---><ruby>斎<rt>いつ</rt></ruby><span class="copy" aria-hidden="true">(いつ)</span>かし！　の<!--
---><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy" aria-hidden="true">(ゆもと)</span>』。
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かしが<!--
+--><ruby>本<rt>もと</rt></ruby><span class="copy">(もと)</span>』で、『<!--
+--><ruby>斎<rt>いつ</rt></ruby><span class="copy">(いつ)</span>かし！　の<!--
+--><ruby>湯本<rt>ゆもと</rt></ruby><span class="copy">(ゆもと)</span>』。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・題詞に沿う『湯気の文脈』で、明確な意訳の「全文」を示した。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・仮定は、「『<!--
---><ruby>幼<rt>をさな</rt></ruby><span class="copy" aria-hidden="true">(をさな)</span><!--
---><ruby>兄<rt>せ</rt></ruby><span class="copy" aria-hidden="true">(せ)</span>』は『<!--
---><ruby>有間<rt>ありまの</rt></ruby><span class="copy" aria-hidden="true">(ありまの)</span><!--
---><ruby>皇子<rt>みこ</rt></ruby><span class="copy" aria-hidden="true">(みこ)</span>』」のみ。
+--><ruby>幼<rt>をさな</rt></ruby><span class="copy">(をさな)</span><!--
+--><ruby>兄<rt>せ</rt></ruby><span class="copy">(せ)</span>』は『<!--
+--><ruby>有間<rt>ありまの</rt></ruby><span class="copy">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><span class="copy">(みこ)</span>』」のみ。
 </p><!---- end   段落 ---->
 <p class="f0s2 indent-2"><!---- begin 段落 ---->
 ・有間皇子の亡き面影を湯気に映して、昇天を想う歌である。
@@ -1640,10 +1647,10 @@ and the validity of the proposed interpretation.<br>
 「原文①の字は、正しい。訓付き原文㉑、読み下し文㉒、<br>
 　読み下し全文㉕、意訳全文㉖、詳細説明㉗は、妥当。<br>
 　『<!--
---><ruby>表意<rt>ひょうい</rt></ruby><span class="copy" aria-hidden="true">(ひょうい)</span><!--
---><ruby>兼<rt>けん</rt></ruby><span class="copy" aria-hidden="true">(けん)</span><!--
---><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
---><ruby>文字<rt>もじ</rt></ruby><span class="copy" aria-hidden="true">(もじ)</span><!--
+--><ruby>表意<rt>ひょうい</rt></ruby><span class="copy">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><span class="copy">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><span class="copy">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><span class="copy">(もじ)</span><!--
 -->』の掛詞は、妥当。」<br>
 と結論する。
 </p><!---- end   段落 ---->
@@ -1683,8 +1690,8 @@ and the validity of the proposed interpretation.<br>
 <p>[中西] 中西進 (1978) 『万葉集 全訳注原文付』 講談社</p>
 <p>[武田] 武田祐吉 (1956) 『増訂 萬葉集全註釋』 角川書店</p>
 <p>[ＯＨ] <!--
---><ruby>澤瀉<rt>おもだか</rt></ruby><span class="copy" aria-hidden="true">(おもだか)</span><!--
---><ruby>久孝<rt>ひさたか</rt></ruby><span class="copy" aria-hidden="true">(ひさたか)</span><!--
+--><ruby>澤瀉<rt>おもだか</rt></ruby><span class="copy">(おもだか)</span><!--
+--><ruby>久孝<rt>ひさたか</rt></ruby><span class="copy">(ひさたか)</span><!--
 --> (1957) 『萬葉集注釋』 中央公論社</p>
       </div><!--====== end   節 訳注釈本 ========-->
       <div><!-- ====== begin 節 原文 ========-->
@@ -1702,11 +1709,11 @@ and the validity of the proposed interpretation.<br>
 <p>[紀] 井上光貞 (1987) 『日本書紀』 中央公論社 <br>
 　　　 巻第二十六　斉明三年九月～五年一月条（有間皇子）</p>
 <p>[文] 内田泉之助・網祐次 (1963) 『文選（詩篇）』 明治書院 <br>
-　　　 <ruby>潘<rt>はん</rt></ruby><span class="copy" aria-hidden="true">(はん)</span><!--
---><ruby>安<rt>あん</rt></ruby><span class="copy" aria-hidden="true">(あん)</span><!--
---><ruby>仁<rt>じん</rt></ruby><span class="copy" aria-hidden="true">(じん)</span><!--
--->『<ruby>悼亡詩<rt>たうばうのし</rt></ruby><span class="copy" aria-hidden="true">(たうばうのし)</span>
-<ruby>三首<rt>さんしゅ</rt></ruby><span class="copy" aria-hidden="true">(さんしゅ)</span>』</p>
+　　　 <ruby>潘<rt>はん</rt></ruby><span class="copy">(はん)</span><!--
+--><ruby>安<rt>あん</rt></ruby><span class="copy">(あん)</span><!--
+--><ruby>仁<rt>じん</rt></ruby><span class="copy">(じん)</span><!--
+-->『<ruby>悼亡詩<rt>たうばうのし</rt></ruby><span class="copy">(たうばうのし)</span>
+<ruby>三首<rt>さんしゅ</rt></ruby><span class="copy">(さんしゅ)</span>』</p>
       </div><!--====== end   節 記紀、文選 ========-->
       <div><!-- ====== begin 節 論文、報告書 ========-->
 <h3>
@@ -1714,7 +1721,7 @@ and the validity of the proposed interpretation.<br>
 </h3>
 <p class="f0s4 indent-4">[長谷川] 長谷川千秋 (2019) <br>
 「「かな」と真仮名の連続と不連続を考えるために」 <br>
-内田<ruby>賢德<rt>まさのり</rt></ruby><span class="copy" aria-hidden="true">(まさのり)</span><!--
+内田<ruby>賢德<rt>まさのり</rt></ruby><span class="copy">(まさのり)</span><!--
 -->・乾善彦 <br>
 『万葉仮名と平仮名　その連続・不連続』 三省堂</p>
       </div><!--====== end   節 論文、報告書 ========-->
@@ -1731,14 +1738,14 @@ and the validity of the proposed interpretation.<br>
 <h3>
 [ＮＫ] 難訓歌考 書籍
 </h3>
-・伊丹<ruby>末雄<rt>まつお</rt></ruby><span class="copy" aria-hidden="true">(まつお)</span><!--
+・伊丹<ruby>末雄<rt>まつお</rt></ruby><span class="copy">(まつお)</span><!--
 --> (1970) 『万葉集難訓考』 国書刊行会<br>
 ・間宮厚司 (2001) 『万葉難訓歌の研究』 法政大学出版局<br>
-・永井<ruby>津記夫<rt>つぎお</rt></ruby><span class="copy" aria-hidden="true">(つぎお)</span><!--
+・永井<ruby>津記夫<rt>つぎお</rt></ruby><span class="copy">(つぎお)</span><!--
 --> (1992) 『万葉難訓歌の解読』 和泉書院<br>
 ・上野正彦 (2016) 『万葉集難訓歌　一三〇〇年の謎を解く』 <br>
 　　　　　　　　　　　　　　　　　　　　　学芸みらい社<br>
-・菊沢<ruby>季生<rt>すえお</rt></ruby><span class="copy" aria-hidden="true">(すえお)</span><!--
+・菊沢<ruby>季生<rt>すえお</rt></ruby><span class="copy">(すえお)</span><!--
 --> (1989) 『菊沢季生国語学論集 第三巻 <br>
 　　　　　　　　万葉集難訓歌考（上）』 教育出版センター</p>
       </div><!--====== end   節 難訓歌考 書籍 ========-->
