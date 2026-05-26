@@ -1,0 +1,1378 @@
+<!--**** begin HTML ********-->
+<!DOCTYPE html>
+<html lang="ja">
+<!--******** begin HEAD ********-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>【試し読み】万葉集難訓歌を明快に解く！</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://manyo-meikai.github.io/image/omote_hyousi.jpg">
+<meta name="keywords" content="万葉集,額田王,高市皇子,井戸王,中大兄,天智天皇,天武天皇,持統天皇,十市皇女,有間皇子,草壁皇子,三輪根麻呂,莫囂圓隣歌,三山,三輪山,三諸,燃火,向南山,高山,たかやま,隠,雲,左注,似ず,性別,難訓,香具山,表意,表音,陵">
+<meta name="description" content="本HTML版は、紙の書籍『万葉集難訓歌を明快に解く！』（ISBN: 978-4-434-36742-7）を底本とし、誤記訂正および若干の加筆修正を施した改訂版です。内容構成は原書に準拠しつつ、Web公開に適した形式へ再編集しています。">
+<link rel="canonical" href="https://manyo-meikai.github.io/book/manyo-meikai.html">
+<link rel="icon" href="https://manyo-meikai.github.io/icon/favicon.png" type="image/png">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+
+<!--==== begin STYLE ====-->
+<style>
+body {
+  background-color: #F8F8D8;
+  font-family: "Yu Mincho", "游明朝",
+               "Hiragino Mincho ProN", "ヒラギノ明朝 ProN",
+               "Noto Serif JP", serif;
+}
+.kin-aka {
+  color: #D4212F;  /* 金赤 RGB(212, 33, 47) */
+}
+.f0s1 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝0文字下げになる） */
+}
+.f0s2 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝0文字下げになる） */
+}
+.f0s3 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝0文字下げになる） */
+}
+.f1s1 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝1文字下げになる） */
+}
+.f1s2 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝1文字下げになる） */
+}
+.f1s3 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝1文字下げになる） */
+}
+.f1s4 {  /* 段落 */
+  text-indent: -3em;   /* 最初の行だけ 3 文字戻す（＝1文字下げになる） */
+}
+.f1s5 {  /* 段落 */
+  text-indent: -4em;   /* 最初の行だけ 4 文字戻す（＝1文字下げになる） */
+}
+.f2s2 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝2文字下げになる） */
+}
+.f2s3 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝2文字下げになる） */
+}
+.f2s4 {  /* 段落 */
+  text-indent: -2em;   /* 最初の行だけ 2 文字戻す（＝2文字下げになる） */
+}
+.f3s3 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝3文字下げになる） */
+}
+.f3s4 {  /* 段落 */
+  text-indent: -1em;   /* 最初の行だけ 1 文字戻す（＝3文字下げになる） */
+}
+.f4s4 {  /* 段落 */
+  text-indent:  0em;   /* 最初の行だけ 0 文字戻す（＝4文字下げになる） */
+}
+
+ /* ルビ */
+ruby rt {
+  position: relative;
+  font-size: 0.5em;  /* ルビ  サイズ */
+}
+.copy {  /* ルビ 平文ペースト用 */
+  font-size: 0;  /* コピー用テキストは非表示 */
+  user-select: text;
+}
+.kanji-alt {
+  font-family: 'Yu Gothic', '游ゴシック', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4 { font-weight: bold; } 
+h1 { font-size: 1.8em; } 
+h2 { font-size: 1.5em; } 
+h3 { font-size: 1.2em; } 
+h4 { font-size: 1.0em; } 
+p  { font-size: 1.0em; } 
+
+/* 横書き（デフォルト） */
+.horizontal {
+  writing-mode: horizontal-tb;
+  line-height: 1.6;  /* 行間隔 1.6 程度 */
+}
+.horizontal .switcher {
+  position: fixed;
+  writing-mode: horizontal-tb;
+}
+.horizontal .btn-hori { display: block; }
+.horizontal .btn-vert { display: none; }
+.horizontal ruby rt {
+  position: relative;
+  top: 0.3em;  /* 横書き用ルビ位置 */
+  left: 0;
+}
+.horizontal hr.line {
+  width: 30em;
+  max-width: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
+  height: 1px;
+  background: #000;
+  border: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.horizontal .indent-0 { padding-left: 0em; padding-top: 0em; }
+.horizontal .indent-1 { padding-left: 1em; padding-top: 0em; }
+.horizontal .indent-2 { padding-left: 2em; padding-top: 0em; }
+.horizontal .indent-3 { padding-left: 3em; padding-top: 0em; }
+.horizontal .indent-4 { padding-left: 4em; padding-top: 0em; }
+.horizontal .indent-5 { padding-left: 5em; padding-top: 0em; }
+.horizontal h1 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h2 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h3 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal h4 { margin-top  : 0.2em; margin-bottom: 0.0em; 
+                 margin-right:   0em; margin-left  :   0em; }
+.horizontal p  { margin-top  : 0.2em; margin-bottom: 0.4em; 
+                 margin-right:   0em; margin-left  :   0em; }
+
+/* 縦書き（右から左） */
+.vertical {
+  writing-mode: vertical-rl;
+  overflow-x: auto;
+  overflow-y: hidden;
+  line-height: 1.65;  /* 行間隔 1.6 程度 */
+}
+.vertical .switcher {
+  position: fixed;
+  writing-mode: vertical-rl;
+}
+.vertical .btn-hori { display: none; }
+.vertical .btn-vert { display: block; }
+.vertical :target {
+  scroll-margin-left: 100vw;   /* 右端に寄せる */
+}
+.vertical ruby rt {
+  position: relative;
+  left: 0.1em;  /* 縦書き用ルビ位置 */
+  top: 0;
+}
+.vertical hr.line {
+  width: 1px;
+  height: 30em;
+  max-height: 100%; /* スマホの画面幅を超えてはみ出るのを防ぐ */
+  background: #000;
+  border: none;
+  margin: 0;
+}
+.vertical .tcy {  /* 縦中横 */
+  writing-mode: horizontal-tb;
+  text-combine-upright: all;
+}
+.vertical .indent-0 { padding-top: 0em; padding-left: 0; }
+.vertical .indent-1 { padding-top: 1em; padding-left: 0; }
+.vertical .indent-2 { padding-top: 2em; padding-left: 0; }
+.vertical .indent-3 { padding-top: 3em; padding-left: 0; }
+.vertical .indent-4 { padding-top: 4em; padding-left: 0; }
+.vertical .indent-5 { padding-top: 5em; padding-left: 0; }
+.vertical h1 { margin-right: 0.8em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h2 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h3 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical h4 { margin-right: 0.2em; margin-left   : 0.0em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical p  { margin-right: 0.2em; margin-left   : 0.4em; 
+               margin-top  : 0.0em; margin-bottom :   0em; }
+.vertical a.url {  /* リンクの下線を表示しない */
+  text-decoration: none;
+}
+
+/* ボタン共通 */
+.popup-btn {
+  position: fixed;
+  z-index: 10000;
+  background: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* ポップアップ共通 */
+.popup-box {
+  position: fixed;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+}
+#toc-btn      { top:  3px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#toc-popup    { top:  5px; right: 45px; bottom: auto; left: auto; width: 28em; }
+#kaku-btn     { top: 30px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#kaku-popup   { top:  5px; right: 45px; bottom: auto; left: auto; width: 27em; }
+#baku-btn     { top: 57px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#baku-popup   { top:  5px; right: 45px; bottom: auto; left: auto; width: 20em; }
+#sanzan-btn   { top: 84px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#sanzan-popup { top:  5px; right: 45px; bottom: auto; left: auto; width: 21em; }
+#miwa-btn     { top:111px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#miwa-popup   { top:  5px; right: 45px; bottom: auto; left: auto; width: 23em; }
+#mimoro-btn   { top:138px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#mimoro-popup { top:  5px; right: 45px; bottom: auto; left: auto; width: 20em; }
+#moyuru-btn   { top:165px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#moyuru-popup { top:  5px; right: 45px; bottom: auto; left: auto; width: 24em; }
+#vert-btn     { top:192px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#vert-popup   { top:  5px; right: 45px; bottom: auto; left: auto; width: 24em; }
+#hori-btn     { top:219px; right:  3px; bottom: auto; left: auto; position: fixed; }
+#hori-popup   { top:  5px; right: 45px; bottom: auto; left: auto; width: 24em; }
+
+#toc-btn-v      { top:  5px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#toc-popup-v    { top:  5px; left: 45px; bottom: auto; right: auto; height: 28em; }
+#kaku-btn-v     { top: 45px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#kaku-popup-v   { top:  5px; left: 45px; bottom: auto; right: auto; height: 27em; }
+#baku-btn-v     { top: 85px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#baku-popup-v   { top:  5px; left: 45px; bottom: auto; right: auto; height: 22em; }
+#sanzan-btn-v   { top:125px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#sanzan-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 23em; }
+#miwa-btn-v     { top:165px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#miwa-popup-v   { top:  5px; left: 45px; bottom: auto; right: auto; height: 25em; }
+#mimoro-btn-v   { top:205px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#mimoro-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 22em; }
+#moyuru-btn-v   { top:245px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#moyuru-popup-v { top:  5px; left: 45px; bottom: auto; right: auto; height: 26em; }
+#vert-btn-v     { top:285px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#vert-popup-v   { top:  5px; left: 45px; bottom: auto; right: auto; height: 26em; }
+#hori-btn-v     { top:325px; left:  5px; bottom: auto; right: auto; position: fixed; }
+#hori-popup-v   { top:  5px; left: 45px; bottom: auto; right: auto; height: 26em; }
+</style>
+<!--==== end   STYLE ====-->
+<!--==== begin JSON-LD ====-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebSite",
+      "@id": "https://manyo-meikai.github.io/#website",
+      "url": "https://manyo-meikai.github.io/",
+      "name": "万葉集難訓歌を明快に解く！ 公式サイト"
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#webpage",
+      "name": "万葉集難訓歌を明快に解く！",
+      "url": "https://manyo-meikai.github.io/book/manyo-meikai.html",
+      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+      "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
+      "inLanguage": "ja",
+      "author": { "@id": "https://manyo-meikai.github.io/#person" },
+      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+      "description": "万葉集の難訓歌について、辞書に基づく客観的な試訓と意訳を明快に解き明かす書籍。"
+    },
+
+    {
+      "@type": "Book",
+      "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#book",
+      "name": "万葉集難訓歌を明快に解く！",
+      "author": {
+        "@id": "https://manyo-meikai.github.io/#person"
+      },
+      "version": "0.1",
+      "url": "https://manyo-meikai.github.io/book/manyo-meikai.html",
+      "inLanguage"   : "ja",
+      "description"  : "本HTML版は、紙の書籍『万葉集難訓歌を明快に解く！』（ISBN: 978-4-434-36742-7）を底本とし、誤記訂正および若干の加筆修正を施した改訂版です。内容構成は原書に準拠しつつ、Web公開に適した形式へ再編集しています。",
+      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+
+      "isBasedOn":     { "@id": "https://manyo-meikai.github.io/#org-book" },
+      "isPartOf":      { "@id": "https://manyo-meikai.github.io/#org-book" },
+      "exampleOfWork": { "@id": "https://manyo-meikai.github.io/#org-book" },
+
+      "about": [
+        { "@id": "https://manyo-meikai.github.io/#org-book" }
+      ],
+
+      "hasPart": [
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#kakuuta",
+          "name" : "各歌の問題点と、解決案の概要",
+          "isPartOf":      { "@id": "https://manyo-meikai.github.io/#org-book-kakuuta" },
+          "position": 10,
+          "abstract": "収録している5つの論文について、問題点と解決案の簡単なまとめ。"
+        },
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#bakugo",
+          "name" : "額田王の莫囂圓隣歌の試訓と意訳の提案",
+          "isPartOf": { "@id": "https://manyo-meikai.github.io/#org-book-bakugo" },
+          "position": 11,
+          "identifier": "巻1-9",
+          "about": ["莫囂圓隣歌", "額田王", "万葉集", "難訓"],
+          "keywords": ["万葉集", "難訓", "莫囂圓隣歌", "額田王"],
+          "abstract": "万葉集 巻1-9の額田王の難訓歌「莫囂圓隣歌」について、辞書に基づく客観的な試訓と全文意訳を提示する。"
+        },
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#sanzan",
+          "name" : "中大兄の大和三山の歌の別解釈の提案",
+          "isPartOf": { "@id": "https://manyo-meikai.github.io/#org-book-sanzan" },
+          "position": 12,
+          "identifier": "巻1-13～15",
+          "about": ["大和三山", "中大兄", "香具山", "畝傍山", "耳成山", "高山", "左注", "性別"],
+          "keywords": ["大和三山", "中大兄", "香具山", "高山", "たかやま", "左注", "性別"],
+          "abstract": "万葉集 巻1-13〜15の大和三山歌について、左注問題と性別問題の明確な解決案を提示する。"
+        },
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#miwa",
+          "name" : "額田王と井戸王の三輪山の歌の別解釈の提案",
+          "isPartOf": { "@id": "https://manyo-meikai.github.io/#org-book-miwa" },
+          "position": 13,
+          "identifier": "巻1-17～19",
+          "about": ["三輪山", "三輪根麻呂", "額田王", "難訓"],
+          "keywords": ["三輪山", "三輪根麻呂", "万葉集", "難訓"],
+          "abstract": "万葉集 巻1-17〜19の三輪山歌について、「三輪根麻呂」仮説によって、3首が整合的に解釈できることを示す。"
+        },
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#mimoro",
+          "name" : "高市皇子の三諸の歌の試訓と意訳の提案",
+          "isPartOf": { "@id": "https://manyo-meikai.github.io/#org-book-mimoro" },
+          "position": 14,
+          "identifier": "巻2-156",
+          "about": ["三諸", "高市皇子", "十市皇女", "難訓"],
+          "keywords": ["三諸", "高市皇子", "十市皇女", "自殺"],
+          "abstract": "万葉集 巻2-156の三諸の歌について、字義の訓読を示し、表意兼表音文字の導入により、十市皇女の死を暗示する歌として、整合的に解釈する。"
+        },
+        {
+          "@type": "Chapter",
+          "@id"  : "https://manyo-meikai.github.io/book/manyo-meikai.html#moyuru",
+          "name" : "持統天皇の燃火と向南山の歌の試訓と意訳の提案",
+          "isPartOf": { "@id": "https://manyo-meikai.github.io/#org-book-moyuru" },
+          "position": 15,
+          "identifier": "巻2-160～161",
+          "about": ["燃火", "向南山", "持統天皇", "天武天皇", "難訓"],
+          "keywords": ["燃火", "向南山", "持統天皇", "天武天皇", "難訓", "八角墳"],
+          "abstract": "万葉集 巻2-160〜161の燃火・向南山の歌について、天武天皇と草壁皇子への鎮魂歌として解釈する。"
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://manyo-meikai.github.io/book/manyo-meikai.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "トップ",
+          "item": "https://manyo-meikai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "書籍一覧",
+          "item": "https://manyo-meikai.github.io/book/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "書籍",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "額田王の莫囂圓隣歌の試訓と意訳の提案",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html#bakugo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "中大兄の大和三山の歌の別解釈の提案",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html#sanzan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "額田王と井戸王の三輪山の歌の別解釈の提案",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html#miwa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "高市皇子の三諸の歌の試訓と意訳の提案",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html#mimoro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "持統天皇の燃火と向南山の歌の試訓と意訳の提案",
+          "item": "https://manyo-meikai.github.io/book/manyo-meikai.html#moyuru"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!--==== end JSON-LD ====-->
+</head>
+<!--******** end   HEAD ********************************-->
+
+<!--******** begin BODY ********************************-->
+<body class="horizontal">
+<a id="top"></a>
+<div><!-- begin 全 書籍本文 ================-->
+  <div><!-- == begin 章 書名 ========-->
+<h1>
+万葉集難訓歌を<span class="kin-aka">明快</span>に解く！
+</h1>
+<h2>
+Clarifying the Difficult Readings of the Man'yōshū
+</h2>
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　<!--
+-->試し読み版：<span class="version tcy"></span><br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　　　　　　　　　　　　　　　　<!--
+--><span style="font-size: 1.2em;"><b>朝倉 慎一</b></span>
+</p><!--== end   段落 ==-->
+  </div><!--== end   章 書名 ========-->
+<br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　公式サイト（<a href="https://manyo-meikai.github.io/" class="url"
+                      >https://manyo-meikai.github.io/</a>）<br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 【総目次】General Contents ========-->
+<h2>
+【総目次】General Contents
+</h2>
+<p id="toc-source"><!-- == begin 段落 ==-->
+<a href="#maegaki">まえがき</a><br>
+<a href="#kakuuta">各歌の問題点と、解決案の概要</a><br>
+<a href="#bakugo" >額田王の莫囂圓隣歌の試訓と意訳の提案　　（巻一・　九）</a><br>
+<a href="#sanzan" >中大兄の大和三山の歌の別解釈の提案　　　（巻一・十三）</a><br>
+<a href="#miwa"   >額田王と井戸王の三輪山の歌の別解釈の提案（巻一・十七）</a><br>
+<a href="#mimoro" >高市皇子の三諸の歌の試訓と意訳の提案　（巻二・一五六）</a><br>
+<a href="#moyuru" >持統天皇の燃火と向南山の歌の試訓と意訳の提案（一六〇）</a><br>
+<a href="#reference">【参考文献】References</a><br>
+<a href="#atogaki"  >あとがき</a><br>
+<a href="#ryakureki">【著者略歴】Author Biography</a><br>
+<a href="#okuduke"  >【奥付】Colophon</a><br>
+<a href="#original" >【底本】The original printed book</a><br>
+<a href="#coi"      >【利益相反に関する開示】COI Disclosure</a><br>
+</p><!--== end   段落 ==-->
+<!-- 総目次ボタン 横書き用 -->
+<button id="toc-btn" class="popup-btn btn-hori" data-target="toc-popup"><b>目次</b></button>
+<div id="toc-popup" class="popup-box">
+<b>万葉集難訓歌を<span class="kin-aka">明快</span>に解く！</b><br>
+<a href="#top">【総目次】General Contents</a><br>
+</div>
+<!-- 総目次ボタン 縦書き用 -->
+<button id="toc-btn-v" class="popup-btn btn-vert" data-target="toc-popup-v"><b>目次</b></button>
+<div id="toc-popup-v" class="popup-box">
+  <b>万葉集難訓歌を<span class="kin-aka">明快</span>に解く！</b><br>
+<a href="#top">【総目次】General Contents</a><br>
+</div>
+  </div><!--== end   章 【総目次】General Contents ========-->
+<br>
+
+<a id="maegaki"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 まえがき ========-->
+<h2>
+まえがき
+</h2>
+<p><!-- == begin 段落 ==-->
+　二〇二五（令和七）年 現在、万葉集には、未解決の難訓歌や、<br>
+解釈の定まらない歌が、いくつか残されています。本稿は、<br>
+千三百年以上も未解決だった謎の、『<b><span class="kin-aka">明快</span></b><!--
+-->』な解決案を示します。<br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　従来の曖昧な大意の解釈とは異なり、<br>
+本稿は、『辞書を基盤』にして『客観性』を確保しており、<br>
+『簡潔』なのに『具体的』で、『明確』かつ『詳細』、<br>
+『歴史と符合』するので、『説得力』のある解釈になっています。<br>
+</p><!--== end   段落 ==-->
+<p><!-- == begin 段落 ==-->
+　各稿の詳細は、独立した論文形式になっています。<br>
+「<b>本邦初</b>」の『<b><span class="kin-aka">明快</span></b><!--
+-->』な『謎解き』を、お楽しみください。
+</p><!--== end   段落 ==-->
+  </div><!--== end   章 まえがき ========-->
+<br>
+<a id="kakuuta"></a>
+<br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 各歌の問題解決 ========-->
+<h2>
+各歌の問題点と、解決案の概要
+</h2>
+    <div><!-- ==== begin 節 目次 ========-->
+<h3>
+目次
+</h3>
+<p id="kakuuta-source"><!-- == begin 段落 ==-->
+<a href="#kakuuta_9"  >額田王の莫囂圓隣歌　　　　（巻一・九）</a><br>
+<a href="#kakuuta_13" >中大兄の大和三山の歌　　　（巻一・十三～十五）</a><br>
+<a href="#kakuuta_17" >額田王と井戸王の三輪山の歌（巻一・十七～十九）</a><br>
+<a href="#kakuuta_156">高市皇子の三諸の歌　　　　（巻二・一五六）</a><br>
+<a href="#kakuuta_160">持統天皇の燃火と向南山の歌（巻二・一六〇、一六一）</a><br>
+</p><!--== end   段落 ==-->
+<!-- 各歌 目次ボタン 横書き用 -->
+<button id="kaku-btn" class="popup-btn btn-hori" data-target="kaku-popup">各歌</button>
+<div id="kaku-popup" class="popup-box">
+<b>各歌の問題点と、解決案の概要</b><br>
+<a href="#kakuuta"><b>目次</b></a><br>
+</div>
+<!-- 各歌 目次ボタン 縦書き用 -->
+<button id="kaku-btn-v" class="popup-btn btn-vert" data-target="kaku-popup-v">各歌</button>
+<div id="kaku-popup-v" class="popup-box">
+<b>各歌の問題点と、解決案の概要</b><br>
+<a href="#kakuuta"><b>目次</b></a><br>
+</div>
+    </div><!--==== end   節 目次 ========-->
+<br>
+<a id="kakuuta_9"></a>
+    <div><!-- ==== begin 節 莫囂 ========-->
+<h3>
+・<ruby>額田王<rt>ぬかたのおほきみ</rt></ruby><!--
+--><span class="copy" aria-hidden="true"><!--
+              -->(ぬかたのおほきみ)</span>の<!--
+--><ruby>莫囂圓隣歌<rt>ばくごうえんりんか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ばくごうえんりんか)</span>（巻一・九）
+</h3>
+      <div><!-- ====== begin 項 問題 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+問題：最初の二句『莫囂圓隣之　大相七兄爪湯氣』が難訓で、<br>
+諸説があり混乱しています。当然、詳細な意訳はありません。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 問題 ========-->
+      <div><!-- ====== begin 項 解決 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+解決：鍵となる『<!--
+--><ruby>表意<rt>ひょうい</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もじ)</span><!--
+-->』を提案します。<br>
+試訓と、「明確に意味が通る」、全文の意訳を提示します。<br>
+義訓（漢字の読みを無視して、意味で訓を付ける）は、<br>
+していません。<br>
+題詞に沿う、温泉の『<!--
+--><ruby>湯気<rt>ゆげ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ゆげ)</span><!--
+-->の文脈』で、<br>
+「<!--
+--><ruby>有間<rt>ありまの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ありまの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みこ)</span>の<!--
+--><ruby>亡<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span>き<!--
+--><ruby>面影<rt>おもかげ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おもかげ)</span><!--
+-->を、湯気に<!--
+--><ruby>映<rt>うつ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(うつ)</span>して、<!--
+-->昇天を想う歌」<br>
+であることが判明します。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 解決 ========-->
+    </div><!--==== end   節 莫囂 ========-->
+<br>
+<a id="kakuuta_13"></a>
+    <div><!-- ==== begin 節 三山 ========-->
+<h3>
+・<ruby>中大兄<rt>なかのおほえ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(なかのおほえ)</span>の<!--
+--><ruby>大和<rt>やまと</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やまと)</span><!--
+--><ruby>三山<rt>さんざん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(さんざん)</span><!--
+-->の歌（巻一・十三～十五）
+</h3>
+      <div><!-- ====== begin 項 問題 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+問題：三山を男女の色恋に<!--
+--><ruby>喩<rt>たと</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たと)</span><!--
+-->え、その性別論争が続いています。<br>
+また、第二<!--
+--><ruby>反歌<rt>はんか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はんか)</span><!--
+-->には『反歌に似ず』（似つかわしくない）の<br>
+注釈があり、<!--
+--><ruby>長歌<rt>ちょうか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ちょうか)</span><!--
+-->や第一反歌とは無関係だと思われています。<br>
+<ruby>反歌<rt>はんか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はんか)</span><!--
+-->とは、長歌の意を反復、補足、または要約する歌です。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 問題 ========-->
+      <div><!-- ====== begin 項 解決 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+解決：『高山』に『かぐやま』の訓が付けられたこと自体が、<br>
+「そもそもの間違い」だとし、素直に『たかやま』と読みます。<br>
+そこから「全て」が導き出され、性別と注釈の問題を解決し、<br>
+「全てに『整合性』が有る結論」を得ます。<br>
+　長年にわたり、三山の性別論争が続いてきたが、もしも本稿が<br>
+妥当ならば、この論争に「終止符」を打つことになるでしょう。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 解決 ========-->
+    </div><!--==== end   節 三山 ========-->
+<br>
+<a id="kakuuta_17"></a>
+    <div><!-- ==== begin 節 三輪山 ========-->
+<h3>
+・<ruby>額田王<rt>ぬかたのおほきみ</rt></ruby><!--
+--><span class="copy">(ぬかたのおほきみ)</span>と<!--
+--><ruby>井戸王<rt>ゐのへのおほきみ</rt></ruby><!--
+--><span class="copy">(ゐのへのおほきみ)</span>の<!--
+--><ruby>三輪<rt>みわ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわ)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
+-->の歌（巻一・十七～十九）
+</h3>
+      <div><!-- ====== begin 項 問題 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+問題：十九番歌の<!--
+--><ruby>和歌<rt>わか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(わか)</span>（<!--
+--><ruby>唱和<rt>しょうわ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しょうわ)</span>する歌、<!--
+--><ruby>応<rt>おう</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おう)</span>じる歌、<!--
+--><ruby>和<rt>こた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(こた)</span>ふる歌）<!--
+-->には、<br>
+『<!--
+--><ruby>和<rt>こた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(こた)</span>ふる歌に<!--
+--><ruby>似<rt>に</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(に)</span><!--
+-->ず』（唱和する歌として似つかわしくない）<br>
+の注釈があり、<!--
+--><ruby>長歌<rt>ちょうか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ちょうか)</span>や<!--
+--><ruby>反歌<rt>はんか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はんか)</span><!--
+-->とは無関係だと思われています。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 問題 ========-->
+      <div><!-- ====== begin 項 解決 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+解決：『<!--
+--><ruby>三輪<rt>みわの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわの)</span><!--
+--><ruby>根麻呂<rt>ねまろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ねまろ)</span><!--
+-->』の仮説を提案し、<!--
+--><ruby>陰<rt>いん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(いん)</span>の『<!--
+--><ruby>偲<rt>しの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しの)</span>ぶ文脈』を<br>
+導入します。長歌と反歌の、陰の意訳が重要な先導となります。<br>
+和歌に、陰の『三輪伝説の文脈、かつ<!--
+--><ruby>偲<rt>しの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しの)</span><!--
+-->ぶ文脈』を追加し、<br>
+末尾の「『<!--
+--><ruby>勢<rt>せ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(せ)</span><!--
+-->』<sup>[古]</sup>は『<!--
+--><ruby>姿<rt>すがた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(すがた)</span><!--
+-->』」とすることによって、<br>
+和歌が陽陰で明確に唱和します。つまり、<br>
+『<!--
+--><ruby>和<rt>こた</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(こた)</span>ふる歌に<!--
+--><ruby>似<rt>に</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(に)</span><!--
+-->ず』が否定され、明確に解決されます。<br>
+三首は陰に「<!--
+--><ruby>亡<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span>き<!--
+--><ruby>三輪<rt>みわの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわの)</span><!--
+--><ruby>根麻呂<rt>ねまろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ねまろ)</span>を<!--
+--><ruby>偲<rt>しの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しの)</span><!--
+-->ぶ歌」であることを示します。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 解決 ========-->
+    </div><!--==== end   節 三輪山 ========-->
+<br>
+<a id="kakuuta_156"></a>
+    <div><!-- ==== begin 節 三諸 ========-->
+<h3>
+・<!--
+--><ruby>高市<rt>たけちの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たけちの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みこ)</span>の<!--
+--><ruby>三諸<rt>みもろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みもろ)</span><!--
+-->の歌（巻二・一五六）
+</h3>
+      <div><!-- ====== begin 項 問題 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+問題：『已具耳矣　自得見監乍共』が難訓で、諸説があり、<br>
+混乱しています。当然、詳細な意訳は、ありません。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 問題 ========-->
+      <div><!-- ====== begin 項 解決 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+解決：人の死に際して「当たり前」の、「字義訓読」を示します。<br>
+「誤字の仮定」があり、『<!--
+--><ruby>已<rt>い</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(い)</span>』ではなく、『<!--
+--><ruby>己<rt>き</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(き)</span>』を使います。<br>
+目から<!--
+--><ruby>鱗<rt>うろこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(うろこ)</span><!--
+-->の訓読で、今まで誰も<!--
+--><ruby>言及<rt>げんきゅう</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(げんきゅう)</span><!--
+-->しなかったのが不思議です。<br>
+訓読を読み下し文にするべく、『<!--
+--><ruby>表意<rt>ひょうい</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうい)</span><!--
+--><ruby>兼<rt>けん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(けん)</span><!--
+--><ruby>表音<rt>ひょうおん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひょうおん)</span><!--
+--><ruby>文字<rt>もじ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もじ)</span>』を使うと、<br>
+難訓部分は、「驚異的」な「多重」の掛詞になっていて、<br>
+「<!--
+--><ruby>十市<rt>とをちの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(とをちの)</span><!--
+--><ruby>皇女<rt>ひめみこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひめみこ)</span><!--
+-->の自殺を<!--
+--><ruby>示唆<rt>しさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しさ)</span>」しており、<br>
+「<ruby>慟哭<rt>どうこく</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(どうこく)</span><!--
+-->の歌」であることが判明します。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 解決 ========-->
+    </div><!--==== end   節 三諸 ========-->
+<br>
+<a id="kakuuta_160"></a>
+    <div><!-- ==== begin 節 燃火、向南 ========-->
+<h3>
+・<ruby>持統<rt>ぢとう</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ぢとう)</span><!--
+--><ruby>天皇<rt>てんのう</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(てんのう)</span>の<!--
+--><ruby>燃<rt>もゆる</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もゆる)</span><!--
+--><ruby>火<rt>ひ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひ)</span>と<!--
+--><ruby>向<rt>むき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むき)</span><!--
+--><ruby>南<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
+-->の歌（巻二・一六〇、一六一）
+</h3>
+      <div><!-- ====== begin 項 問題 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+問題：『面智男雲』が難訓であり、歌の意味も「火を包んで袋に<br>
+入れる」で意味不明です。『向南山』にも定訓はありません。<br>
+『向南山』も『<!--
+--><ruby>星<rt>ほし</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ほし)</span>』も『<!--
+--><ruby>月<rt>つき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(つき)</span>』<!--
+-->も、真意が何なのか不明です。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 問題 ========-->
+      <div><!-- ====== begin 項 解決 ========-->
+<p class="f0s1 indent-1"><!-- == begin 段落 ==-->
+解決：『<!--
+--><ruby>八<rt>や</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(や)</span><!--
+--><ruby>面<rt>おも</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おも)</span><!--
+--><ruby>智<rt>ち</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ち)</span>』は、<!--
+--><ruby>天武<rt>てんむ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(てんむ)</span>天皇陵の『<!--
+--><ruby>八角<rt>はっかく</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はっかく)</span><!--
+--><ruby>墳<rt>ふん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ふん)</span>』<!--
+-->と仮定します。<br>
+『<!--
+--><ruby>向<rt>むき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むき)</span><!--
+--><ruby>南<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
+-->』は、『南向きの天皇陵』と仮定し、<br>
+天武天皇陵と<!--
+--><ruby>草壁<rt>くさかべの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(くさかべの)</span><!--
+--><ruby>皇子<rt>みこ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みこ)</span>の<!--
+--><ruby>岡宮<rt>おかのみや</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おかのみや)</span><!--
+-->天皇陵の、二つの<!--
+--><ruby>陵<rt>みささぎ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みささぎ)</span><!--
+-->とします。<br>
+<ruby>燃<rt>もゆる</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(もゆる)</span><!--
+--><ruby>火<rt>ひ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひ)</span><!--
+-->の歌は、『八角墳』に眠る天武天皇の<!--
+--><ruby>成仏<rt>じょうぶつ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(じょうぶつ)</span><!--
+-->を願った歌です。<br>
+<ruby>向<rt>むき</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むき)</span><!--
+--><ruby>南<rt>な</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(な)</span><!--
+--><ruby>山<rt>やま</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(やま)</span><!--
+-->の歌は、天武天皇を『星』に、草壁皇子を『月』に<!--
+--><ruby>喩<rt>たと</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たと)</span>え、<br>
+二人の成仏を天皇陵の『雲』（<!--
+--><ruby>霊<rt>れい</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(れい)</span><!--
+-->）に喩えた、別れの歌です。
+</p><!--== end   段落 ==-->
+      </div><!--====== end   項 解決 ========-->
+    </div><!--==== end   節 燃火、向南 ========-->
+  </div><!--== end   章 各歌の問題解決 ========-->
+<br>
+<a id="bakugo"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 論文 額田王の莫囂圓隣歌の試訓と意訳の提案 ========-->
+<h2>
+額田王の莫囂圓隣歌の試訓と意訳の提案
+</h2>
+<h3>
+A Proposed Trial Reading and Translation <br>
+of Nukata-no-Ōkimi’s “Bakugo-enrin-ka”
+</h3>
+  </div><!--== end   論文 額田王の莫囂圓隣歌の試訓と意訳の提案 ========-->
+<br>
+
+<a id="sanzan"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 論文 中大兄の大和三山の歌の別解釈の提案 ========-->
+<h2>
+中大兄の大和三山の歌の別解釈の提案
+</h2>
+<h3>
+A Proposed Alternative Interpretation <br>
+of Naka-no-Ōe’s Poems on the Three Mountains of Yamato
+</h3>
+  </div><!--== end   論文 中大兄の大和三山の歌の別解釈の提案 ========-->
+<br>
+
+<a id="miwa"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 論文 額田王と井戸王の三輪山の歌の別解釈の提案 ========-->
+<h2>
+額田王と井戸王の三輪山の歌の別解釈の提案
+</h2>
+<h3>
+A Proposed Alternative Interpretation <br>
+of the Miwa Mountain Poems <br>
+by Nukata-no-Ōkimi and Inoe-no-Ōkimi
+</h3>
+  </div><!--== end   論文 額田王と井戸王の三輪山の歌の別解釈の提案 ========-->
+<br>
+
+<a id="mimoro"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 論文 高市皇子の三諸の歌の試訓と意訳の提案 ========-->
+<h2>
+高市皇子の三諸の歌の試訓と意訳の提案
+</h2>
+<h3>
+A Proposed Trial Reading and Interpretation <br>
+of Prince Takechi’s Mimoro Poem
+</h3>
+  </div><!--== end   論文 高市皇子の三諸の歌の試訓と意訳の提案 ========-->
+<br>
+
+<a id="moyuru"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 論文 持統天皇の燃火と向南山の歌の試訓と意訳の提案 ========-->
+<h2>
+持統天皇の燃火と向南山の歌の試訓と意訳の提案
+</h2>
+<h3>
+A Proposed Trial Reading and Interpretation <br>
+of Empress Jitō’s Poems of Moyuruhi and Mukinayama
+</h3>
+  </div><!--== end   論文 持統天皇の燃火と向南山の歌の試訓と意訳の提案 ========-->
+<br>
+<a id="reference"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 【参考文献】References ========-->
+<h2>
+【参考文献】References
+</h2>
+    <div><!-- ==== begin 節 訳注釈本 ========-->
+<h3>
+・訳注釈本
+</h3>
+<p>[中西] 中西進『万葉集　全訳注原文付』講談社　　一九七八年</p>
+<p>[武田] 武田祐吉『増訂　萬葉集全註釋』角川書店　一九五六年</p>
+<p>[ＯＨ] <ruby>澤瀉<rt>おもだか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(おもだか)</span><!--
+--><ruby>久<rt>ひさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひさ)</span><!--
+--><ruby>孝<rt>たか</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たか)</span><!--
+-->『萬葉集注釋』中央公論社　一九五七年</p>
+    </div><!--==== end   節 訳注釈本 ========-->
+    <div><!-- ==== begin 節 原文 ========-->
+<h3>
+・原文
+</h3>
+<p>[元] 藤原行成筆『元暦校本万葉集』　二玄社　　　一九九四年</p>
+<p>[西] 『西本願寺本万葉集（普及版）』主婦の友社　一九九三年</p>
+<p>[Ｒ] 上田萬年　『類聚古集』　　　　臨川書店　　一九七四年</p>
+<p>[金] 藤原定信筆『金沢本万葉集』　　二玄社　　　二〇〇四年</p>
+    </div><!--==== end   節 原文  ========-->
+    <div><!-- ==== begin 節 記紀、文選 ========-->
+<h3>
+・記紀、文選
+</h3>
+<p>[記] 中村<ruby>啓<rt>ひろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひろ)</span><!--
+--><ruby>信<rt>とし</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(とし)</span><!--
+-->『古事記』角川学芸出版　二〇〇九年<br>
+　　　崇神天皇　美和の大物主神</p>
+<p>[紀] 井上光貞『日本書紀』　　　　　中央公論社　一九八七年<br>
+　　　巻第二十六　斉明三年九月～五年一月条（有間皇子）<br>
+　　　巻第二十七　天智天皇　斉明七年七月（斉明崩御、称制）<br>
+　　　　　　　　　　　　　　斉明七年九月条（<!--
+--><ruby>狭井<rt>さゐの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(さゐの)</span><!--
+--><ruby>連<rt>むらじ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(むらじ)</span><!--
+--><ruby>檳榔<rt>あぢまさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(あぢまさ)</span>）<br>
+　　　　　　　　　　　　　　天智二年三月条（<!--
+--><ruby>三輪<rt>みわの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(みわの)</span><!--
+--><ruby>君<rt>きみ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(きみ)</span><!--
+--><ruby>根麻呂<rt>ねまろ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ねまろ)</span>）<br>
+　　　　　　　　　　　　　　天智二年八月条（白村江の戦い）<br>
+　　　　　　　　　天智三年～天智六年十一月（各所の築城）<br>
+　　　　　　　　　天智七年一月条（即位）、五月条（大皇弟）<br>
+　　　巻第二十八　天武天皇　天智元年　　　　（東宮）<br>
+　　　　　　　　　　　　　　天武元年六月～七月（壬申の乱）<br>
+　　　巻第二十九　天武天皇　天武七年四月条　（十市皇女）<br>
+　　　　　　　　　　　　　　朱鳥元年　　（天武天皇の晩年）<br>
+　　　巻第三十　　朱鳥元年九月～持統三年四月（天武、草壁）</p>
+<p>[文] <!--
+--><ruby>潘安仁<rt>はんあんじん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はんあんじん)</span>「<!--
+--><ruby>悼亡<rt>たうばうの</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(たうばうの)</span><!--
+--><ruby>詩<rt>し</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(し)</span><!--
+--><ruby>三<rt>さん</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(さん)</span><!--
+--><ruby>首<rt>しゅ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(しゅ)</span>」<br>
+　　内田泉之助・網祐次『文選(詩篇)』明治書院 一九六三年 所収</p>
+    </div><!--==== end   節 記紀、文選 ========-->
+    <div><!-- ==== begin 節 書籍 ========-->
+<h3>
+・書籍
+</h3>
+<p>[上野] 上野誠『大和三山の古代』　　　講談社　　二〇〇八年</p>
+<p>[大浜] 大浜厳比古『新萬葉考』　　　　大地　　　一九七九年</p>
+<p>[虎尾] 虎尾達哉『苦悩の覇者 天武天皇』吉川弘文館 二〇二四年</p>
+<p>[天] 『「天皇陵」総覧』　　新人物往来社　　　　一九九四年</p>
+<p>[形] 宮内庁書陵部陵墓課『陵墓地形図集成』学生社 二〇一四年</p>
+<h3>
+[ＮＫ] 難訓歌考 書籍
+</h3>
+<p>[伊] 伊丹<ruby>末<rt>まつ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(まつ)</span><!--
+--><ruby>雄<rt>お</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(お)</span><!--
+-->『万葉集難訓考』国書刊行会　一九七〇年</p>
+<p>[間] 間宮厚司『万葉難訓歌の研究』法政大学出版局 二〇〇一年</p>
+<p>[生] 生田耕一『万葉集難語難訓攷(こう)』　春陽堂　一九三三年</p>
+<p>[永] 永井<ruby>津<rt>つ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(つ)</span><!--
+--><ruby>記<rt>ぎ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ぎ)</span><!--
+--><ruby>夫<rt>お</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(お)</span><!--
+-->『万葉難訓歌の解読』和泉書院　一九九二年</p>
+<p>[菊] 菊沢<ruby>季<rt>すえ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(すえ)</span><!--
+--><ruby>生<rt>お</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(お)</span><!--
+-->『菊沢季生国語学論集』第三巻<br>
+　　 『万葉集難訓歌考（上）』教育出版センター　一九八九年</p>
+<p>[上] 上野正彦『万葉集難訓歌　一三〇〇年の謎を解く』<br>
+　　　　　　　　　　　　　　　　学芸みらい社　二〇一六年</p>
+    </div><!--==== end   節 書籍 ========-->
+    <div><!-- ==== begin 節 論文、報告書 ========-->
+<h3>
+・論文、報告書
+</h3>
+<p>[長谷川] 長谷川千秋<br>
+　　 　　「「かな」と真仮名の連続と不連続を考えるために」<br>
+　　 内田<ruby>賢<rt>まさ</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(まさ)</span><!--
+--><ruby>德<rt>のり</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(のり)</span><!--
+-->、乾善彦『万葉仮名と平仮名　その連続・不連続』<br>
+　　　　　　　　　　　　　　　　　三省堂 二〇一九年 所収</p>
+<p>[徐] 徐一平『上代日本語の否定辞に関する研究』　一九八九年<br>
+　　　　　<a href ="https://hdl.handle.net/20.500.14094/D1000824" target="_blank" 
+rel="noopener noreferrer">https://hdl.handle.net/20.500.14094/D1000824</a></p>
+<p>[束] 河上邦彦『束明神古墳の研究』<br>
+　　 　　　　　　　　奈良県立橿原考古学研究所　一九九九年</p>
+<p>[身崎] 身崎<ruby>壽<rt>ひさし</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(ひさし)</span><!--
+-->「三輪山の歌　｜長歌と反歌と和歌と｜」<br>
+　　　　　稲岡耕二先生還暦記念『日本上代文学論集』<br>
+　　　　　　　　　　　　　　　<ruby>塙<rt>はなわ</rt></ruby><!--
+--><span class="copy">(はなわ)</span>書房　一九九〇年　所収</p>
+<p>[伊藤] 伊藤<!--
+--><ruby>博<rt>はく</rt></ruby><!--
+--><span class="copy" aria-hidden="true">(はく)</span>「豊旗雲に入日さし」<br>
+　　 　　『萬葉』第百七十一号　萬葉学会　一九九九年　所収</p>
+<p>[山口] 山口佳紀「「わたつみの豊旗雲に」の歌の解釈」<br>
+　　 　　『萬葉』第百八十号　　萬葉学会　二〇〇二年　所収</p>
+    </div><!--==== end   節 論文、報告書 ========-->
+    <div><!-- ==== begin 節 辞書、事典 ========-->
+<h3>
+・辞書、事典
+</h3>
+<p>[Ｅ] 中西進『万葉集事典』講談社　一九八五年</p>
+<p>[広] 『広辞苑　第五版』岩波書店</p>
+<p>[字] 『漢字源』学習研究社</p>
+<p>[古] 『全訳古語辞典　第三版』　旺文社</p>
+    </div><!--==== end   節 辞書、事典 ========-->
+  </div><!--== end   章 【参考文献】References ========-->
+<br>
+
+<a id="atogaki"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 あとがき ========-->
+<h2>
+あとがき
+</h2>
+<p><!-- == begin 段落 ==-->
+<br>
+　（論文の執筆経緯。省略。紙の書籍にだけ掲載。）<br>
+<br>
+</p><!--== end   段落 ==-->
+  </div><!--== end   章 あとがき ========-->
+<br>
+
+<a id="ryakureki"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 【著者略歴】Author Biography ========-->
+<h2>
+【著者略歴】Author Biography
+</h2>
+  </div><!--== end   章 【著者略歴】Author Biography ========-->
+<br>
+
+<a id="okuduke"></a>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　　
+　<a href="https://manyo-meikai.github.io/">公式サイト</a><br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+  <div><!-- == begin 章 【奥付】Colophon ========-->
+<h2>
+【奥付】Colophon
+</h2>
+    <div><!-- ==== begin 節 書名 ========-->
+<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
+書名　： 万葉集難訓歌を明快に解く！<br>
+著者　： 朝倉 慎一<br>
+　　　　 <a href="https://orcid.org/0009-0000-8893-4649" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://orcid.org/0009-0000-8893-4649</a><br>
+　　　　 <a href="https://researchmap.jp/asakura-shinichi" target="_blank" 
+             rel="noopener noreferrer" class="url"
+                 >https://researchmap.jp/asakura-shinichi</a><br>
+メール  ： manyo.meikai+web@gmail.com<br>
+著作権： © Shin'ichi ASAKURA 2025 All rights reserved.<br>
+所属　： 独立研究者<br>
+</p><!--== end   段落 ==-->
+    </div><!--==== end   節 書名 ========-->
+    <div><!-- ==== begin 節 バージョン ========-->
+　<b>ＨＴＭＬ版バージョン</b><br>
+<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
+<span class="version tcy"></span> ： <span class="tcy">2026</span>年<span 
+class="tcy"> 5</span>月<span class="tcy">26</span>日（試し読み版）<br>
+</p><!--== end   段落 ==-->
+<p class="f5s5 indent-5">
+底本から、誤記訂正と若干の加筆修正をし、<br>
+目次・抄録・奥付などを追加した改訂版。<br>
+実質的な内容は、底本と ほぼ同じ。<br>
+</p><!--== end   段落 ==-->
+    </div><!--==== end   節 バージョン ========-->
+  </div><!--== end   章 【奥付】Colophon ========-->
+
+<a id="original"></a>
+<br>
+  <div><!-- == begin 章 【底本】The original printed book ========-->
+<h2>
+【底本】The original printed book
+</h2>
+<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
+書名　：<span style="font-size: 120%"><b>万葉集難訓歌を<!--
+--><span class="kin-aka">明快</span>に解く！</b></span><br>
+発行日：<span class="tcy">2025</span>年<span class="tcy">10</span>月<span 
+class="tcy">21</span>日　初版第<span class="tcy">1</span>刷発行<br>
+著者　：朝倉慎一<br>
+発売元：株式会社 星雲社<br>
+発行所：銀河書籍<br>
+印刷所：有限会社ニシダ印刷製本<br>
+著作権：© Shin'ichi ASAKURA  2025  Printed in Japan<br>
+ISBN ：<a href="https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427"
+ target="_blank" rel="noopener noreferrer" class="url">978-4-434-36742-7</a> , C0192<br>
+NCID ：<a href="https://ci.nii.ac.jp/ncid/BD13589490"
+ target="_blank" rel="noopener noreferrer" class="url">BD13589490</a>（CiNii Books）
+</p><!--== end   段落 ==-->
+<img src="https://manyo-meikai.github.io/image/omote_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の表表紙" height=300>
+<img src="https://manyo-meikai.github.io/image/se_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の背表紙" height=300 loading="lazy">
+<img src="https://manyo-meikai.github.io/image/ura_hyousi.jpg" alt="『万葉集難訓歌を明快に解く！』の裏表紙" height=300 loading="lazy"><br>
+  </div><!--== end   章 【底本】The original printed book ========-->
+
+<a id="coi"></a>
+<br>
+  <div><!-- == begin 章 【利益相反に関する開示】COI Disclosure ========-->
+<h2>
+【利益相反に関する開示】COI Disclosure
+</h2>
+<p class="f2s2 indent-2"><!-- == begin 段落 ==-->
+本稿は、著者が既に出版した書籍の内容を一部含む。<br>
+著者は当該書籍の販売による収入を得ているが、<br>
+本研究の内容や結論に影響を与えるものではない。<br>
+</p><!--== end   段落 ==-->
+  </div><!--== end   章 【利益相反に関する開示】COI Disclosure ========-->
+<br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+　<a href="#top">総目次</a>　　
+　公式サイト（<a href="https://manyo-meikai.github.io/" class="url"
+                      >https://manyo-meikai.github.io/</a>）<br>
+<hr><!--=1=========2=========3=========4=========5=========6-->
+<br>
+</div><!-- end   全 書籍本文 ========-->
+<br>
+<!--==== begin SCRIPT ====-->
+<!-- 目次 ポップアップ -->
+<nav class="switcher">
+  <!-- 横書き用 -->
+  <button id="hori-btn" class="popup-btn btn-hori" data-target="hori-popup">横書</button>
+  <button id="vert-btn" class="popup-btn btn-hori" data-target="vert-popup">縦書</button>
+  <!-- 縦書き用 -->
+  <button id="hori-btn-v" class="popup-btn btn-vert" data-target="hori-popup-v">横書</button>
+  <button id="vert-btn-v" class="popup-btn btn-vert" data-target="vert-popup-v">縦書</button>
+</nav>
+
+<script>
+// 存在する ID だけ安全に複製する関数
+function copyIfExists(sourceId, targetId) {
+  const src = document.getElementById(sourceId);
+  const tgt = document.getElementById(targetId);
+  if (src && tgt) {
+    tgt.appendChild(src.cloneNode(true));
+  }
+}
+
+// 横書きポップアップへコピー
+copyIfExists("toc-source"    , "toc-popup");
+copyIfExists("kakuuta-source", "kaku-popup");
+copyIfExists("bakugo-source" , "baku-popup");
+copyIfExists("sanzan-source" , "sanzan-popup");
+copyIfExists("miwa-source"   , "miwa-popup");
+copyIfExists("mimoro-source" , "mimoro-popup");
+copyIfExists("moyuru-source" , "moyuru-popup");
+
+// 縦書きポップアップへコピー
+copyIfExists("toc-source", "toc-popup-v");
+copyIfExists("kakuuta-source", "kaku-popup-v");
+copyIfExists("bakugo-source", "baku-popup-v");
+copyIfExists("sanzan-source", "sanzan-popup-v");
+copyIfExists("miwa-source", "miwa-popup-v");
+copyIfExists("mimoro-source", "mimoro-popup-v");
+copyIfExists("moyuru-source", "moyuru-popup-v");
+
+document.getElementById("vert-btn").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+document.getElementById("vert-btn-v").onclick = function () {
+  document.body.classList.remove("horizontal");
+  document.body.classList.add("vertical");
+};
+
+document.getElementById("hori-btn").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+document.getElementById("hori-btn-v").onclick = function () {
+  document.body.classList.remove("vertical");
+  document.body.classList.add("horizontal");
+};
+
+document.querySelectorAll('.popup-btn').forEach(btn => {
+  btn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    const target = document.getElementById(this.dataset.target);
+
+    // 全ポップアップを閉じる
+    document.querySelectorAll('.popup-box').forEach(box => {
+      box.style.display = "none";
+      box.style.pointerEvents = "none";
+    });
+
+    // 対象だけ開く
+    target.style.display = "block";
+    target.style.pointerEvents = "auto";
+  });
+});
+
+// ポップアップ内クリックは閉じない
+document.querySelectorAll('.popup-box').forEach(box => {
+  box.addEventListener('click', e => e.stopPropagation());
+});
+
+// 画面クリックで閉じる
+document.body.addEventListener('click', () => {
+  document.querySelectorAll('.popup-box').forEach(box => {
+    box.style.display = "none";
+    box.style.pointerEvents = "none";
+  });
+});
+
+// 縦書き時のホイール横スクロール（Ctrl+ホイールは除外）
+window.addEventListener("wheel", function (e) {
+  if (document.body.classList.contains("vertical")) {
+
+    // Ctrl が押されているときはブラウザのズームを優先
+    if (e.ctrlKey) return;
+
+    // 通常の縦スクロールを無効化
+    e.preventDefault();
+
+    // 横スクロールに変換
+    window.scrollBy({
+      left: -e.deltaY * 1.2,
+      behavior: "auto"
+    });
+  }
+}, { passive: false });
+
+// バージョン表示
+// バージョン表示
+document.addEventListener("DOMContentLoaded", () => {
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  let bookVersion = null;
+  let articleVersion = null;
+
+  scripts.forEach(script => {
+    try {
+      const data = JSON.parse(script.textContent);
+      const graph = data["@graph"];
+      if (!graph) return;
+
+      graph.forEach(item => {
+        if (item["@type"] === "Book" && item.version) {
+          bookVersion = item.version;
+        }
+        if (item["@type"] === "ScholarlyArticle" && item.version) {
+          articleVersion = item.version;
+        }
+      });
+    } catch(e) {}
+  });
+
+  const finalVersion = articleVersion || bookVersion;
+
+  if (finalVersion) {
+    document.querySelectorAll(".version").forEach(el => {
+      el.textContent = finalVersion;
+    });
+  }
+});
+</script>
+<!--==== end   SCRIPT ====-->
+</body>
+<!--******** end BODY ********-->
+</html>
+<!--**** end HTML ********-->
+
