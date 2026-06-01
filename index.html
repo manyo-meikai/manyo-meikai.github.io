@@ -77,7 +77,7 @@ img { border: none;}
       "@type": "Person",
       "@id": "https://manyo-meikai.github.io/#person",
       "name": "朝倉 慎一",
-      "alternateName": ["Shin'ichi Asakura"],
+      "alternateName": "Shin'ichi Asakura",
       "sameAs": [
         "https://orcid.org/0009-0000-8893-4649",
         "https://researchmap.jp/asakura-shinichi",
@@ -87,7 +87,7 @@ img { border: none;}
         "@type": "ContactPoint",
         "contactType": "customer support",
         "email": "manyo.meikai+web@gmail.com",
-        "availableLanguage": ["ja"],
+        "availableLanguage": ["ja", "en"],
         "url": "https://manyo-meikai.github.io/"
       }
     },
@@ -105,18 +105,16 @@ img { border: none;}
       "publisher": {
         "@id": "https://manyo-meikai.github.io/#person"
       },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://manyo-meikai.github.io/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "description": "万葉集の難訓歌について、語義分析に基づく試訓と明快な意訳を、体系的に公開する学術サイト。主要な難訓歌の問題点を明確にし、独自の解釈と方法論を提示する。対象は、莫囂圓隣歌、三諸、燃火・向南山、大和三山、三輪山。 / This website systematically presents trial readings and clear interpretive translations of difficult poems of the Man’yōshū, based on semantic analysis. It clarifies the issues found in major difficult poems and offers original interpretations and methodological approaches. The poems examined include the Bakugo Enrin Poem, the Mimoro Poem, the Moyuruhi and Mukinayama Poems, the Yamato Sanzan Poems, and the Miwa Mountain Poems."
+      "description": "万葉集の難訓歌について、語義分析に基づく試訓と明快な意訳を、体系的に公開する学術サイト。主要な難訓歌の問題点を明確にし、独自の解釈と方法論を提示する。対象歌は、巻1-9、巻1-13～15、巻1-17～19、巻2-156、巻2-160～161。 / An academic website that systematically publishes tentative interpretations based on semantic analysis and clear, modern translations of difficult poems from the Man'yōshū. It identifies the key issues in these poems and presents original interpretations and methodologies. The poems covered are from Volumes 1-9, Volumes 1-13–15, Volumes 1-17–19, Volume 2-156, and Volumes 2-160–161."
     },
 
     {
       "@type": "WebPage",
       "@id": "https://manyo-meikai.github.io/#webpage",
       "url": "https://manyo-meikai.github.io/",
+      "mainEntity": {
+        "@id": "https://manyo-meikai.github.io/#org-book"
+      },
       "name": "万葉集難訓歌を明快に解く！ 公式サイトのトップページ",
       "inLanguage": ["ja", "en"],
       "isPartOf": {
@@ -126,37 +124,40 @@ img { border: none;}
         "@id": "https://manyo-meikai.github.io/#person"
       },
       "description": "紙の書籍 朝倉慎一『万葉集難訓歌を明快に解く！』の内容を紹介するページで、研究の概要と主要なリンクを提供する",
-      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+      "primaryImageOfPage": {
+         "@type": "ImageObject",
+         "url": "https://manyo-meikai.github.io/image/omote_hyousi.jpg"
+      },
       "about": [
         {
           "@type": "Book",
           "@id": "https://manyo-meikai.github.io/#org-book",
-          "name": "紙の書籍 『万葉集難訓歌を明快に解く！』の紹介と、それに収録してある5つの論文の紹介"
+          "name": "万葉集難訓歌を明快に解く！"
         },
         {
           "@type": "ScholarlyArticle",
           "@id": "https://manyo-meikai.github.io/book/bakugo.html",
-          "name": "論文 「額田王の莫囂圓隣歌の試訓と意訳の提案」の内容をWeb公開"
+          "name": "額田王の莫囂圓隣歌の試訓と意訳の提案"
         },
         {
           "@type": "ScholarlyArticle",
           "@id": "https://manyo-meikai.github.io/book/sanzan.html",
-          "name": "論文 「中大兄の大和三山の歌の別解釈の提案」の内容をWeb公開"
+          "name": "中大兄の大和三山の歌の別解釈の提案"
         },
         {
           "@type": "ScholarlyArticle",
           "@id": "https://manyo-meikai.github.io/book/miwa.html",
-          "name": "論文 「額田王と井戸王の三輪山の歌の別解釈の提案」の内容をWeb公開"
+          "name": "額田王と井戸王の三輪山の歌の別解釈の提案"
         },
         {
           "@type": "ScholarlyArticle",
           "@id": "https://manyo-meikai.github.io/book/mimoro.html",
-          "name": "論文 「高市皇子の三諸の歌の試訓と意訳の提案」の内容をWeb公開"
+          "name": "高市皇子の三諸の歌の試訓と意訳の提案"
         },
         {
           "@type": "ScholarlyArticle",
           "@id": "https://manyo-meikai.github.io/book/moyuru.html",
-          "name": "論文 「持統天皇の燃火と向南山の歌の試訓と意訳の提案」の内容をWeb公開"
+          "name": "持統天皇の燃火と向南山の歌の試訓と意訳の提案"
         }
       ]
     },
@@ -178,7 +179,9 @@ img { border: none;}
       "sameAs": [
         "https://ci.nii.ac.jp/ncid/BD13589490",
         "https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427",
-        "https://www.worldcat.org/oclc/1559113879"
+        "https://www.worldcat.org/oclc/1559113879",
+        "https://opac.nara-ni.ac.jp/opac/volume/1271474",
+        "https://manreki.opac.jp/opac/Holding_list?rgtn=13070"
       ],
       "publisher": {
         "@type": "Organization",
@@ -194,7 +197,7 @@ img { border: none;}
       "dateIssued": "2025-10-21",
       "copyrightYear": "2025",
       "copyrightHolder": { "@id": "https://manyo-meikai.github.io/#person" },
-      "bookEdition": "初版 第1刷(First Edition, First Printing)",
+      "bookEdition": "初版",
       "inLanguage": "ja",
       "bookFormat": "https://schema.org/Paperback",
       "numberOfPages": 159,
@@ -230,7 +233,8 @@ img { border: none;}
         }
       ],
 
-      "abstract": "万葉集の難訓歌に対し、客観的な語義的視点から、明快な解決案を提示する。・莫囂圓隣歌(9番歌)では、『表意兼表音文字』の導入によって難訓を解決し、題詞に沿う詳細な意訳を初めて示す。・大和三山(13～15番歌)では、『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに整合性が有る結論」を導き、反歌の左注問題と性別論争を解決する。・三輪山(17～19番歌)では、『三輪根麻呂』仮説により、和歌の左注問題を解決する。・三諸の歌(156番歌)では、字義の訓読を初めて示し、『表意兼表音文字』の導入によって難訓を解決し、題詞に沿う詳細な意訳を初めて示す。・燃火と向南山の歌(160～161番歌)では、天武天皇と草壁皇子を天皇陵の雲に喩え、成仏の文脈として、題詞に沿う詳細な意訳を初めて示す。 / This work presents clear and objective solutions to several difficult reading poems of the Man’yōshū. – For Bakugō Enrinka (Poem 9), the introduction of ideo-phonetic characters resolves the difficult reading, and a detailed translation aligned with the poem’s headnote is presented for the first time. – For the Yamato Three Mountains poems (Poems 13–15), reading “Takayama” straightforwardly as takayama rather than kaguyama yields a fully consistent interpretation, resolving both the left-note problem of the response poems and the long-standing debate over the mountains’ genders. – For the Miwa Mountain poems (Poems 17–19), the proposed “Miwa-no-Nemaro hypothesis” resolves the left-note problem. – For the Mimoro poem (Poem 156), a literal reading of the characters is presented for the first time; the introduction of ideo-phonetic characters resolves the difficult readings, and a detailed translation aligned with the headnote is offered. – For the Moyuruhi and Mukina-yama poems (Poems 160–161), Emperor Tenmu and Prince Kusakabe are metaphorically likened to clouds over their imperial tombs, and a detailed interpretation aligned with the headnote is presented for the first time within a Buddhist context of spiritual release.",
+      "description": "万葉集の難訓歌に対し、客観的な語義的視点から、明快な解決案を提示する研究書。 / A scholarly work that proposes clear solutions to the difficult poems in the Man'yōshū from an objective, lexical perspective.",
+      "abstract": "万葉集の難訓歌に対し、客観的な語義的視点から、明快な解決案を提示する。・莫囂圓隣歌(9番歌)では、『表意兼表音文字』の導入によって難訓を解決し、題詞に沿う詳細な意訳を初めて示す。・大和三山(13～15番歌)では、『高山』を『かぐやま』ではなく『たかやま』と読むことによって、「全てに整合性が有る結論」を導き、反歌の左注問題と性別論争を解決する。・三輪山(17～19番歌)では、『三輪根麻呂』仮説により、和歌の左注問題を解決する。・三諸の歌(156番歌)では、字義の訓読を初めて示し、『表意兼表音文字』の導入によって難訓を解決し、題詞に沿う詳細な意訳を初めて示す。・燃火と向南山の歌(160～161番歌)では、天武天皇と草壁皇子を天皇陵の雲に喩え、成仏の文脈として、題詞に沿う詳細な意訳を初めて示す。 / This work presents clear and objective solutions to several poems with difficult readings in the Man’yōshū. – For Bakugō Enrinka (Poem 9), the introduction of logographic–phonographic characters resolves the difficult reading, and a detailed translation aligned with the poem’s headnote is presented for the first time. – For the Yamato Three Mountains poems (Poems 13–15), reading “Takayama” straightforwardly as takayama rather than kaguyama produces a fully coherent interpretation, resolving both the left-note problem of the response poems and the long-standing debate over the mountains’ genders. – For the Miwa Mountain poems (Poems 17–19), the proposed “Miwa-no-Nemaro hypothesis” resolves the left-note problem. – For the Mimoro poem (Poem 156), a literal reading of the characters is presented for the first time; the introduction of logographic–phonographic characters resolves the difficult readings, and a detailed translation aligned with the headnote is presented. – For the Moyuruhi and Mukina-yama poems (Poems 160–161), Emperor Tenmu and Prince Kusakabe are metaphorically compared to the clouds above their imperial tombs, and a detailed interpretation aligned with the headnote is presented for the first time within a Buddhist context of spiritual release.",
 
       "hasPart": [
         {
@@ -238,8 +242,12 @@ img { border: none;}
           "@id"  : "https://manyo-meikai.github.io/#org-book-kakuuta",
           "name" : "各歌の問題点と、解決案の概要",
           "position": 10,
-          "abstract": "収録している5つの論文について、問題点と解決案の簡単なまとめ。"
+          "abstract": "収録している5つの論文について、問題点と解決案の簡単なまとめ。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         },
+
         {
           "@type": "Chapter",
           "@id"  : "https://manyo-meikai.github.io/#org-book-bakugo",
@@ -249,10 +257,21 @@ img { border: none;}
             "巻1-9",
             "https://doi.org/10.5281/zenodo.20420428"
           ],
-          "about": ["莫囂圓隣歌", "額田王", "万葉集", "難訓"],
+          "about": [
+            { "@type": "Book", "name": "万葉集" },
+            { "@type": "CreativeWork", "name": "巻1-9" },
+            { "@type": "CreativeWork", "name": "莫囂圓隣歌" },
+            { "@type": "Person", "name": "額田王" },
+            { "@type": "Person", "name": "有間皇子" },
+            { "@type": "Thing" ,  "name": "難訓" }
+          ],
           "keywords": ["万葉集", "難訓", "莫囂圓隣歌", "額田王"],
-          "abstract": "万葉集 巻1-9の額田王の難訓歌「莫囂圓隣歌」について、辞書に基づく客観的な試訓と全文意訳を提示する。"
+          "abstract": "万葉集 巻1-9の額田王の難訓歌「莫囂圓隣歌」について、辞書に基づく客観的な試訓と全文意訳を提示する。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         },
+
         {
           "@type": "Chapter",
           "@id"  : "https://manyo-meikai.github.io/#org-book-sanzan",
@@ -262,10 +281,24 @@ img { border: none;}
             "巻1-13～15",
             "https://doi.org/10.5281/zenodo.20436449"
           ],
-          "about": ["大和三山", "中大兄", "香具山", "畝傍山", "耳成山", "高山", "左注", "性別"],
+          "about": [
+            { "@type": "Book", "name": "万葉集" },
+            { "@type": "CreativeWork", "name": "巻1-13～15" },
+            { "@type": "CreativeWork", "name": "大和三山の歌" },
+            { "@type": "Person", "name": "中大兄皇子" },
+            { "@type": "Person", "name": "天智天皇" },
+            { "@type": "Thing" , "name": "左注" },
+            { "@type": "Thing" , "name": "性別" },
+            { "@type": "Place" , "name": "香具山" },
+            { "@type": "Thing" , "name": "高山" }
+          ],
           "keywords": ["大和三山", "中大兄", "香具山", "高山", "たかやま", "左注", "性別"],
-          "abstract": "万葉集 巻1-13〜15の大和三山歌について、左注問題と性別問題の明確な解決案を提示する。"
+          "abstract": "万葉集 巻1-13〜15の大和三山歌について、左注問題と性別問題の明確な解決案を提示する。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         },
+
         {
           "@type": "Chapter",
           "@id"  : "https://manyo-meikai.github.io/#org-book-miwa",
@@ -275,10 +308,22 @@ img { border: none;}
             "巻1-17～19",
             "https://doi.org/10.5281/zenodo.20439122"
           ],
-          "about": ["三輪山", "三輪根麻呂", "額田王", "難訓"],
+          "about": [
+            { "@type": "Book", "name": "万葉集" },
+            { "@type": "CreativeWork", "name": "巻1-17～19" },
+            { "@type": "CreativeWork", "name": "三輪山の歌" },
+            { "@type": "Person", "name": "額田王" },
+            { "@type": "Person", "name": "井戸王" },
+            { "@type": "Person", "name": "三輪根麻呂" },
+            { "@type": "Place" , "name": "三輪山" }
+          ],
           "keywords": ["三輪山", "三輪根麻呂", "万葉集", "難訓"],
-          "abstract": "万葉集 巻1-17〜19の三輪山歌について、「三輪根麻呂」仮説によって、3首が整合的に解釈できることを示す。"
+          "abstract": "万葉集 巻1-17〜19の三輪山歌について、「三輪根麻呂」仮説によって、3首が整合的に解釈できることを示す。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         },
+
         {
           "@type": "Chapter",
           "@id"  : "https://manyo-meikai.github.io/#org-book-mimoro",
@@ -288,10 +333,21 @@ img { border: none;}
             "巻2-156",
             "https://doi.org/10.5281/zenodo.20457271"
           ],
-          "about": ["三諸", "高市皇子", "十市皇女", "難訓"],
+          "about": [
+            { "@type": "Book", "name": "万葉集" },
+            { "@type": "CreativeWork", "name": "巻2-156" },
+            { "@type": "CreativeWork", "name": "三諸の歌" },
+            { "@type": "Person", "name": "高市皇子" },
+            { "@type": "Person", "name": "十市皇女" },
+            { "@type": "Thing" , "name": "難訓" }
+          ],
           "keywords": ["三諸", "高市皇子", "十市皇女", "自殺"],
-          "abstract": "万葉集 巻2-156の三諸の歌について、字義の訓読を示し、表意兼表音文字の導入により、十市皇女の死を暗示する歌として、整合的に解釈する。"
+          "abstract": "万葉集 巻2-156の三諸の歌について、字義の訓読を示し、表意兼表音文字の導入により、十市皇女の死を暗示する歌として、整合的に解釈する。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         },
+
         {
           "@type": "Chapter",
           "@id"  : "https://manyo-meikai.github.io/#org-book-moyuru",
@@ -301,9 +357,21 @@ img { border: none;}
             "巻2-160～161",
             "https://doi.org/10.5281/zenodo.20467348"
           ],
-          "about": ["燃火", "向南山", "持統天皇", "天武天皇", "難訓"],
+          "about": [
+            { "@type": "Book", "name": "万葉集" },
+            { "@type": "CreativeWork", "name": "巻2-160～161" },
+            { "@type": "CreativeWork", "name": "燃火の歌" },
+            { "@type": "CreativeWork", "name": "向南山の歌" },
+            { "@type": "Person", "name": "持統天皇" },
+            { "@type": "Person", "name": "天武天皇" },
+            { "@type": "Person", "name": "草壁皇子" },
+            { "@type": "Thing" , "name": "難訓" }
+          ],
           "keywords": ["燃火", "向南山", "持統天皇", "天武天皇", "難訓", "八角墳"],
-          "abstract": "万葉集 巻2-160〜161の燃火・向南山の歌について、天武天皇と草壁皇子への鎮魂歌として解釈する。"
+          "abstract": "万葉集 巻2-160〜161の燃火・向南山の歌について、天武天皇と草壁皇子への鎮魂歌として解釈する。",
+          "isPartOf": {
+            "@id": "https://manyo-meikai.github.io/#org-book"
+          }
         }
       ],
 
@@ -335,9 +403,7 @@ img { border: none;}
         "三諸", "燃火", "向南山", "高山", "たかやま", "隠", "雲", 
         "左注", "似ず", "性別", "難訓", "香具山", "表意", "表音", "陵"
       ]
-
     }
-
   ]
 }
 </script>
@@ -375,10 +441,8 @@ img { border: none;}
 <hr class="line"><!--========3=========4=========5=========6-->
 <br>
 　　<img src="https://manyo-meikai.github.io/image/omote_hyousi.jpg" ALT="『万葉集難訓歌を明快に解く！』の表表紙" height=300>
-<!--
 <img src="https://manyo-meikai.github.io/image/se_hyousi.jpg" ALT="『万葉集難訓歌を明快に解く！』の背表紙" height=300 loading="lazy">
 <img src="https://manyo-meikai.github.io/image/ura_hyousi.jpg" ALT="『万葉集難訓歌を明快に解く！』の裏表紙" height=300 loading="lazy"><br>
--->
 <!--===============================================-->
 <h2 id="book-info">【書籍情報】<span style="font-size: 80%">Book Information</span></h2>
 <p class="p2">
