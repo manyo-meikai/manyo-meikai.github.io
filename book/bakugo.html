@@ -240,10 +240,16 @@ p  { font-size: 1.0em; }
       "@type": "WebPage",
       "@id": "https://manyo-meikai.github.io/book/bakugo.html#webpage",
       "url": "https://manyo-meikai.github.io/book/bakugo.html",
+      "mainEntity": {
+        "@id": "https://manyo-meikai.github.io/book/bakugo.html"
+      },
       "name": "額田王の莫囂圓隣歌の試訓と意訳",
       "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
       "inLanguage": ["ja", "en"],
-      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+      "primaryImageOfPage": {
+         "@type": "ImageObject",
+         "url": "https://manyo-meikai.github.io/image/omote_hyousi.jpg"
+      },
       "description": "万葉集 巻1-9の額田王の難訓歌「莫囂圓隣歌」について、恣意的な誤字仮定や義訓を排し、「表意兼表音文字」の導入によって、辞書に基づく客観的な試訓と、題詞に沿う意訳の「全文」を、初めて提示する。 / For Nukata-no-Ōkimi’s difficult poem “Bakugo-enrin-ka” (Man’yōshū, Volume 1, Poem 9), this study eliminates arbitrary assumptions of scribal errors and speculative semantic readings, and introduces the concept of logographic–phonographic characters to present, for the first time, an objective trial reading based on dictionary evidence together with a complete interpretation consistent with the poem’s heading."
     },
 
@@ -251,7 +257,7 @@ p  { font-size: 1.0em; }
       "@type": "ScholarlyArticle",
       "@id"  : "https://manyo-meikai.github.io/book/bakugo.html",
       "mainEntityOfPage": {
-        "@id": "https://manyo-meikai.github.io/book/bakugo.html"
+        "@id": "https://manyo-meikai.github.io/book/bakugo.html#webpage"
       },
       "name": "額田王の莫囂圓隣歌の試訓と意訳の提案",
       "alternateName": "A Proposed Trial Reading and Translation of Nukata-no-Ōkimi’s “Bakugo-enrin-ka”",
@@ -279,30 +285,12 @@ p  { font-size: 1.0em; }
       ],
 
       "about": [
-        {
-          "@type": "Book",
-          "name": "万葉集"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "巻1-9"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "莫囂圓隣歌"
-        },
-        {
-          "@type": "Person",
-          "name": "額田王"
-        },
-        {
-          "@type": "Person",
-          "name": "有間皇子"
-        },
-        {
-          "@type": "Thing",
-          "name": "難訓"
-        }
+        { "@type": "Book", "name": "万葉集" },
+        { "@type": "CreativeWork", "name": "巻1-9" },
+        { "@type": "CreativeWork", "name": "莫囂圓隣歌" },
+        { "@type": "Person", "name": "額田王" },
+        { "@type": "Person", "name": "有間皇子" },
+        { "@type": "Thing" ,  "name": "難訓" }
       ],
 
       "keywords": [

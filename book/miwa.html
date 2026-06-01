@@ -237,10 +237,16 @@ p  { font-size: 1.0em; }
       "@type": "WebPage",
       "@id": "https://manyo-meikai.github.io/book/miwa.html#webpage",
       "url": "https://manyo-meikai.github.io/book/miwa.html",
+      "mainEntity": {
+        "@id": "https://manyo-meikai.github.io/book/miwa.html"
+      },
       "name": "額田王と井戸王の三輪山の歌の別解釈の提案",
       "isPartOf": { "@id": "https://manyo-meikai.github.io/#website" },
       "inLanguage": ["ja", "en"],
-      "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
+      "primaryImageOfPage": {
+         "@type": "ImageObject",
+         "url": "https://manyo-meikai.github.io/image/omote_hyousi.jpg"
+      },
       "description": "額田王と井戸王の三輪山の歌（万葉集 巻1-17～19）には、和歌の左注の問題がある。「三輪根麻呂」仮説を導入すると、和歌は明確に唱和し、左注は否定される。左注問題の明確な解決案を、初めて提示する。 / The Miwa Mountain poems by Nukata-no-Ōkimi and Inoe-no-Ōkimi (Man’yōshū, Volume 1, Poems 17–19) contain a long-standing problem concerning the left-note annotation. By introducing the “Miwa-no-Nemaro” hypothesis, the poems can be shown to form a coherent sequence, showing that the left note is untenable. This study presents, for the first time, a clear solution to the left-note problem."
     },
 
@@ -248,7 +254,7 @@ p  { font-size: 1.0em; }
       "@type": "ScholarlyArticle",
       "@id": "https://manyo-meikai.github.io/book/miwa.html",
       "mainEntityOfPage": {
-        "@id": "https://manyo-meikai.github.io/book/miwa.html"
+        "@id": "https://manyo-meikai.github.io/book/miwa.html#webpage"
       },
       "name": "額田王と井戸王の三輪山の歌の別解釈の提案",
       "alternateName": "A Proposed Alternative Interpretation of the Miwa Mountain Poems by Nukata-no-Ōkimi and Inoe-no-Ōkimi",
@@ -264,7 +270,7 @@ p  { font-size: 1.0em; }
       "position": 13,
       "image": "https://manyo-meikai.github.io/image/omote_hyousi.jpg",
 
-      "isBasedOn":     { "@id": "https://manyo-meikai.github.io/#org-book" },
+      "isBasedOn": { "@id": "https://manyo-meikai.github.io/#org-book" },
       "isPartOf": [
         { "@id": "https://manyo-meikai.github.io/#org-book-miwa" },
         { "@id": "https://doi.org/10.5281/zenodo.20439122" }
@@ -275,34 +281,13 @@ p  { font-size: 1.0em; }
       ],
 
       "about": [
-        {
-          "@type": "Book",
-          "name": "万葉集"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "巻1-17～19"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "三輪山の歌"
-        },
-        {
-          "@type": "Person",
-          "name": "額田王"
-        },
-        {
-          "@type": "Person",
-          "name": "井戸王"
-        },
-        {
-          "@type": "Person",
-          "name": "三輪根麻呂"
-        },
-        {
-          "@type": "Thing",
-          "name": "三輪山"
-        }
+        { "@type": "Book", "name": "万葉集" },
+        { "@type": "CreativeWork", "name": "巻1-17～19" },
+        { "@type": "CreativeWork", "name": "三輪山の歌" },
+        { "@type": "Person", "name": "額田王" },
+        { "@type": "Person", "name": "井戸王" },
+        { "@type": "Person", "name": "三輪根麻呂" },
+        { "@type": "Place" , "name": "三輪山" }
       ],
 
       "keywords": [
