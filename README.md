@@ -20,10 +20,14 @@ https://manyo-meikai.github.io/
 # 万葉集難訓歌を明快に解く！ (紙の書籍)
 
 ## NDL（ISBN）
-https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427
+https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427  
 
 ## CiNii（NCID）
-https://ci.nii.ac.jp/ncid/BD13589490
+https://ci.nii.ac.jp/ncid/BD13589490  
+
+## 正誤表 Errata
+https://doi.org/10.5281/zenodo.20710493  
+https://manyo-meikai.github.io/book/seigo.html  
 
 ---
 
