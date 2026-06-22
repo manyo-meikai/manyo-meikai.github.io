@@ -59,8 +59,8 @@ https://researchmap.jp/asakura-shinichi
 
 ---
 
-ライセンス：
-© 朝倉慎一. Licensed under CC BY 4.0 (表示‑非営利 4.0 国際). https://creativecommons.org/licenses/by/4.0/
-© Shin'ichi Asakura. Licensed under CC BY 4.0 (Attribution 4.0 International). https://creativecommons.org/licenses/by/4.0/
+# ライセンス
+© 朝倉慎一. Licensed under CC BY 4.0 (表示 4.0 国際). https://creativecommons.org/licenses/by/4.0/  
+© Shin'ichi Asakura. Licensed under CC BY 4.0 (Attribution 4.0 International). https://creativecommons.org/licenses/by/4.0/  
 
 
