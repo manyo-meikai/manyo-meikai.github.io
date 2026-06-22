@@ -37,19 +37,24 @@ https://manyo-meikai.github.io/book/manyo-meikai.pdf
 # 各論文 (電子化)
 
 ## 額田王の莫囂圓隣歌の試訓と意訳の提案
-https://manyo-meikai.github.io/book/bakugo.html
+https://doi.org/10.5281/zenodo.20420428  
+https://manyo-meikai.github.io/book/bakugo.html  
 
 ## 中大兄の大和三山の歌の別解釈の提案
-https://manyo-meikai.github.io/book/sanzan.html
+https://doi.org/10.5281/zenodo.20436449  
+https://manyo-meikai.github.io/book/sanzan.html  
 
 ## 額田王と井戸王の三輪山の歌の別解釈の提案
-https://manyo-meikai.github.io/book/miwa.html
+https://doi.org/10.5281/zenodo.20439122  
+https://manyo-meikai.github.io/book/miwa.html  
 
 ## 高市皇子の三諸の歌の試訓と意訳の提案
-https://manyo-meikai.github.io/book/mimoro.html
+https://doi.org/10.5281/zenodo.20457271  
+https://manyo-meikai.github.io/book/mimoro.html  
 
 ## 持統天皇の燃火と向南山の歌の試訓と意訳の提案
-https://manyo-meikai.github.io/book/moyuru.html
+https://doi.org/10.5281/zenodo.20467348  
+https://manyo-meikai.github.io/book/moyuru.html  
 
 ---
 
@@ -57,14 +62,13 @@ https://manyo-meikai.github.io/book/moyuru.html
 朝倉 慎一 (Shin'ichi Asakura)  
 
 https://orcid.org/0009-0000-8893-4649  
-
 https://researchmap.jp/asakura-shinichi  
 
 ---
 
 ライセンス：
-© 朝倉慎一. Licensed under CC BY‑NC‑ND 4.0 (表示‑非営利‑改変禁止 4.0 国際). https://creativecommons.org/licenses/by-nc-nd/4.0/
-© Shin'ichi Asakura. Licensed under CC BY‑NC‑ND 4.0 (Attribution‑NonCommercial‑NoDerivatives 4.0 International). https://creativecommons.org/licenses/by-nc-nd/4.0/
+© 朝倉慎一. Licensed under CC BY 4.0 (表示‑非営利 4.0 国際). https://creativecommons.org/licenses/by/4.0/
+© Shin'ichi Asakura. Licensed under CC BY 4.0 (Attribution‑NonCommercial‑NoDerivatives 4.0 International). https://creativecommons.org/licenses/by/4.0/
 
 注記: ページ内の一部非表示テキストは検索エンジン向けの語彙索引用であり、支援技術には公開していません。
 
