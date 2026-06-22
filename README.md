@@ -27,7 +27,7 @@ https://ci.nii.ac.jp/ncid/BD13589490
 
 ## 正誤表 Errata
 https://doi.org/10.5281/zenodo.20710493  
-https://manyo-meikai.github.io/book/seigo.html  
+https://manyo-meikai.github.io/seigo/seigo.html  
 
 ---
 
