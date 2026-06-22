@@ -27,13 +27,6 @@ https://ci.nii.ac.jp/ncid/BD13589490
 
 ---
 
-# 万葉集難訓歌を明快に解く！ (電子化書籍)
-https://manyo-meikai.github.io/book/manyo-meikai.html  
-
-https://manyo-meikai.github.io/book/manyo-meikai.pdf  
-
----
-
 # 各論文 (電子化)
 
 ## 額田王の莫囂圓隣歌の試訓と意訳の提案
@@ -70,5 +63,4 @@ https://researchmap.jp/asakura-shinichi
 © 朝倉慎一. Licensed under CC BY 4.0 (表示‑非営利 4.0 国際). https://creativecommons.org/licenses/by/4.0/
 © Shin'ichi Asakura. Licensed under CC BY 4.0 (Attribution‑NonCommercial‑NoDerivatives 4.0 International). https://creativecommons.org/licenses/by/4.0/
 
-注記: ページ内の一部非表示テキストは検索エンジン向けの語彙索引用であり、支援技術には公開していません。
 
