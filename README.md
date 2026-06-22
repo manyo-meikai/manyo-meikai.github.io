@@ -59,8 +59,8 @@ HTML: https://manyo-meikai.github.io/book/moyuru.html
 ---
 
 # Discussions（読者の自由投稿スペース）
-https://github.com/manyo-meikai/manyo-meikai.github.io/discussions/1  
-*反論・批判・質問・誤植報告・解釈メモ・議論** などを、自由に投稿できます。  
+HTML: https://github.com/manyo-meikai/manyo-meikai.github.io/discussions/1  
+*反論・批判・質問・誤植報告・解釈メモ・議論* などを、自由に投稿できます。  
 
 ---
 
