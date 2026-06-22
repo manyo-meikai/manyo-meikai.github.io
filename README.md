@@ -66,6 +66,6 @@ researchmap: https://researchmap.jp/asakura-shinichi
 ---
 
 # License
-© 朝倉慎一. Licensed under **CC BY 4.0**.  
+© 朝倉慎一 (Shin'ichi ASAKURA). Licensed under **CC BY 4.0**.  
 https://creativecommons.org/licenses/by/4.0/  
 
