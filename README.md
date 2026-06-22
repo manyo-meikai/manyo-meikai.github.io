@@ -1,74 +1,71 @@
-# 万葉集難訓歌を明快に解く！ 公式サイト
+# 万葉集難訓歌を明快に解く！ 公式サイト  
 https://manyo-meikai.github.io/
 
-本リポジトリは、書籍
-**『万葉集難訓歌を明快に解く！』**
-（朝倉慎一 著）の公式紹介サイトで、関連資料(論文)の管理を目的としています。
+本リポジトリは、書籍 **『万葉集難訓歌を明快に解く！』**（朝倉慎一 著）の  
+公式紹介サイトおよび関連論文（DOI 付）の公開・管理を目的としています。
 
-本プロジェクトは、日本最古の和歌集である**万葉集**に含まれる
-**難訓歌（読みや解釈が困難とされてきた歌）**を対象に、
-原文・訓読・語義・歴史的背景を照合しながら、
-客観的かつ具体的に解釈する研究・公開サイトです。
-
-額田王の**莫囂圓隣歌**、中大兄の**大和三山の歌**、
-三輪山・三諸・燃火と向南山の歌など、
-1300年以上も未解決とされてきた歌について、
-明確な解決案を提示しています。
+本研究は、日本最古の和歌集である **万葉集** に含まれる  
+**難訓歌（読みや解釈が困難とされてきた歌）** を対象に、  
+原文・訓読・語義・歴史的背景を照合し、  
+客観的かつ具体的に解釈することを目指すものです。
 
 ---
 
-# 万葉集難訓歌を明快に解く！ (紙の書籍)
+# 書籍情報（紙の書籍）
 
 ## NDL（ISBN）
-https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427  
+https://ndlsearch.ndl.go.jp/books/R100000137-I9784434367427
 
 ## CiNii（NCID）
-https://ci.nii.ac.jp/ncid/BD13589490  
+https://ci.nii.ac.jp/ncid/BD13589490
 
-## 書誌シート Bibliographic sheet
+## 書誌シート（Bibliographic sheet, non-DOI）
 https://manyo-meikai.github.io/pdf/info_shosi.pdf  
-https://manyo-meikai.github.io/pdf/bibliographic.pdf  
+https://manyo-meikai.github.io/pdf/bibliographic.pdf
 
-## 正誤表 Errata
-https://doi.org/10.5281/zenodo.20710493  
-https://manyo-meikai.github.io/seigo/seigohyou.html  
-
----
-
-# 各論文 (電子化)
-
-## 額田王の莫囂圓隣歌の試訓と意訳の提案
-https://doi.org/10.5281/zenodo.20420428  
-https://manyo-meikai.github.io/book/bakugo.html  
-
-## 中大兄の大和三山の歌の別解釈の提案
-https://doi.org/10.5281/zenodo.20436449  
-https://manyo-meikai.github.io/book/sanzan.html  
-
-## 額田王と井戸王の三輪山の歌の別解釈の提案
-https://doi.org/10.5281/zenodo.20439122  
-https://manyo-meikai.github.io/book/miwa.html  
-
-## 高市皇子の三諸の歌の試訓と意訳の提案
-https://doi.org/10.5281/zenodo.20457271  
-https://manyo-meikai.github.io/book/mimoro.html  
-
-## 持統天皇の燃火と向南山の歌の試訓と意訳の提案
-https://doi.org/10.5281/zenodo.20467348  
-https://manyo-meikai.github.io/book/moyuru.html  
+## 正誤表（Errata, DOI）
+DOI : https://doi.org/10.5281/zenodo.20710493  
+HTML: https://manyo-meikai.github.io/seigo/seigohyou.html
 
 ---
 
-# 著者
-朝倉 慎一 (Shin'ichi Asakura)  
+# 収録論文（電子公開・DOI 付）
 
-https://orcid.org/0009-0000-8893-4649  
-https://researchmap.jp/asakura-shinichi  
+## 1. 額田王の莫囂圓隣歌の試訓と意訳の提案  
+DOI: https://doi.org/10.5281/zenodo.20420428  
+HTML: https://manyo-meikai.github.io/book/bakugo.html  
+*表意兼表音文字の観点から難訓を解決し、題詞に沿う詳細な意訳を提示。*
+
+## 2. 中大兄の大和三山の歌の別解釈の提案  
+DOI: https://doi.org/10.5281/zenodo.20436449  
+HTML: https://manyo-meikai.github.io/book/sanzan.html  
+*「高山」を再検討し、反歌・左注・性別論争を整合的に解決。*
+
+## 3. 額田王と井戸王の三輪山の歌の別解釈の提案  
+DOI: https://doi.org/10.5281/zenodo.20439122  
+HTML: https://manyo-meikai.github.io/book/miwa.html  
+*「三輪根麻呂」仮説により左注問題を解決。*
+
+## 4. 高市皇子の三諸の歌の試訓と意訳の提案  
+DOI: https://doi.org/10.5281/zenodo.20457271  
+HTML: https://manyo-meikai.github.io/book/mimoro.html  
+*字義に基づく訓読を提示し、題詞に沿う意訳を提示。*
+
+## 5. 持統天皇の燃火と向南山の歌の試訓と意訳の提案  
+DOI: https://doi.org/10.5281/zenodo.20467348  
+HTML: https://manyo-meikai.github.io/book/moyuru.html  
+*天武・草壁を雲に喩える成仏の文脈を提示する新解釈。*
 
 ---
 
-# ライセンス
-© 朝倉慎一. Licensed under CC BY 4.0 (表示 4.0 国際). https://creativecommons.org/licenses/by/4.0/  
-© Shin'ichi Asakura. Licensed under CC BY 4.0 (Attribution 4.0 International). https://creativecommons.org/licenses/by/4.0/  
+# Author
+**朝倉 慎一 (Shin'ichi Asakura)**  
+ORCID: https://orcid.org/0009-0000-8893-4649  
+researchmap: https://researchmap.jp/asakura-shinichi  
 
+---
+
+# License
+© 朝倉慎一. Licensed under **CC BY 4.0**.  
+https://creativecommons.org/licenses/by/4.0/  
 
