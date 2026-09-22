@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>一時的テキストファイル</title>
+釈"> 
+<meta name="description" content="一時的テキストファイル">
+</head>
+<!--*****-->
+<body>
+In[1]:= (* Asa四元数_文字列版　2026/9/23 *)<br>
+In[2]:= (* プログラム開発状況コメント ----- *)<br>
+In[3]:= (* --- *)<br>
+In[4]:= (* 表記コメント --- *)<br>
+In[5]:= (* \[ScriptI] は ScriptI(ESC sci ESC), \[ScriptJ] , \[ScriptK] \
+も同様 *)<br>
+In[6]:= (* 記法 は主に文献[1]を踏襲した *)<br>
+In[7]:= (* 関数名の第1文字は、DoubleStruck になっている。第2文字からは通常文字。
+四元数の専用にして、通常関数の評価をさせないようにする為。
+作者には、通常の複素関数と統合させる技量が無い為、分離した。 *)<br>
+In[8]:= (* 例えば、スカラー \[DoubleStruckCapitalS] は、
+ \ [DoubleStruckCapitalS]
+\[UpArrow]のスペースを削除すると出てくる *)<br>
+In[9]:= (* Arc は、例えば、(\[DoubleStruckS]inh^-1)[q] の -1 は \
+Arcを意味するが、べき乗ではなく、ただの上付き文字 
+Superscript[\ [DoubleStruckS]inh,-1]
+ \[UpArrow]のスペースを削除すると出てくる
+ にした。数式評価する技量が無い為。 *)<br>
+In[10]:= (* 関数のコメントは、特に断らない限り、四元数を主体にして、「四元数の」という語句を省略 *)<br>
+In[11]:= (* 参考文献 Reference ----- *)<br>
+In[12]:= (*[1]「ハミルトンと四元数」堀源一郎 著（海鳴社） 
+但し、テンソルTを、モジュラスMに置き換える *)<br>
+In[13]:= (*[2]「四元数の発見」矢野忠 著（海鳴社）*)<br>
+In[14]:= (* 四元数 Quaternion の定義 Definition === *)<br>
+In[15]:= (* 変数クリア Clear ----- *)<br>
+In[16]:= Clear["Global`*"];<br>
+In[17]:= Off[General::spell];
+Off[General::spell1]; <br>
+In[19]:= (* 生成 Generate その1, \[DoubleStruckCapitalG][s,x,y,z] *)<br>
+In[20]:= \[DoubleStruckCapitalG][s_, x_, y_, z_] := 
+ s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[21]:= (* 生成 Generate その2, \[DoubleStruckCapitalG]SV[{s,{x,y,z}}] *)<br>
+In[22]:= \[DoubleStruckCapitalG]SV[{s_, {x_, y_, z_}}] := 
+ s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[23]:= (* 生成 Generate その3, \[DoubleStruckCapitalG]L4[{s,{x,y,z}}] *)<br>
+In[24]:= \[DoubleStruckCapitalG]L4[{s_, x_, y_, z_}] := 
+ s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[25]:= (* （3次元ベクトルリスト <- 四元数）変換 \[DoubleStruckCapitalL]istV3[q] *)<br>
+In[26]:= \[DoubleStruckCapitalL]istV3[q_] := Module[{x}, x = Expand[q];
+ {Expand[\[DoubleStruckCapitalC][x, \[ScriptI]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptJ]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptK]]]}]<br>
+In[27]:= (* リスト化 その1, \[DoubleStruckCapitalL]ist4[q] *)<br>
+In[28]:= \[DoubleStruckCapitalL]ist4[q_] := Module[{x}, x = Expand[q];
+ {Expand[\[DoubleStruckCapitalS][x]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptI]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptJ]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptK]]]}]<br>
+In[29]:= (* リスト化 その2, \[DoubleStruckCapitalL]istSV3[q] *)<br>
+In[30]:= \[DoubleStruckCapitalL]istSV3[q_] := 
+ Module[{x}, x = Expand[q];
+ {Expand[\[DoubleStruckCapitalS][
+ x]], {Expand[\[DoubleStruckCapitalC][x, \[ScriptI]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptJ]]], 
+ Expand[\[DoubleStruckCapitalC][x, \[ScriptK]]]}}]<br>
+In[31]:= (* （四元数ベクトル部 <- 3次元ベクトルリスト）変換 \
+\[DoubleStruckCapitalV]V3[{x,y,z}] *)<br>
+In[32]:= \[DoubleStruckCapitalV]V3[{x_, y_, z_}] := 
+ x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[33]:= (* ベクトル基底の係数 Coefficient , \[DoubleStruckCapitalC][q,base] *)<br>
+In[34]:= \[DoubleStruckCapitalC][q_, base_] := Coefficient[q, base]<br>
+In[35]:= (* ベクトル Vector, \[DoubleStruckCapitalV][q] *)<br>
+In[36]:= \[DoubleStruckCapitalV][
+ q_] := \[DoubleStruckCapitalC][
+ q, \[ScriptI]] \[ScriptI] + \[DoubleStruckCapitalC][
+ q, \[ScriptJ]] \[ScriptJ] + \[DoubleStruckCapitalC][
+ q, \[ScriptK]] \[ScriptK]<br>
+In[37]:= (* スカラー Scalar, \[DoubleStruckCapitalS][q]=q-\
+\[DoubleStruckCapitalV][q] *)<br>
+In[38]:= \[DoubleStruckCapitalS][q_] := q - \[DoubleStruckCapitalV][q]<br>
+In[39]:= (* 再構成 Reconstruction, \[DoubleStruckCapitalR][q]=\
+\[DoubleStruckCapitalS][q]+\[DoubleStruckCapitalV][q] *)<br>
+In[40]:= \[DoubleStruckCapitalR][
+ q_] := \[DoubleStruckCapitalS][q] + \[DoubleStruckCapitalV][q]<br>
+In[41]:= (* 共役 Conjugate, \[DoubleStruckCapitalK][q]=\
+\[DoubleStruckCapitalS][q]-\[DoubleStruckCapitalV][q] *)<br>
+In[42]:= \[DoubleStruckCapitalK][
+ q_] := \[DoubleStruckCapitalS][q] - \[DoubleStruckCapitalV][q]<br>
+In[43]:= (* ノルム Norm, \[DoubleStruckCapitalN][q]=s^2+x^2+y^2+z^2 *)<br>
+In[44]:= \[DoubleStruckCapitalN][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, s*s + x*x + y*y + z*z]<br>
+In[45]:= (* モジュラス Modulus, \[DoubleStruckCapitalM][q]=Sqrt[\
+\[DoubleStruckCapitalN][q]] *)<br>
+In[46]:= (* 文献[1]の、テンソルT を、モジュラスM に 呼称変更 *)<br>
+In[47]:= \[DoubleStruckCapitalM][q_] := 
+ Sqrt[\[DoubleStruckCapitalN][q]]<br>
+In[48]:= (* ベルサー, 単位四元数 \[DoubleStruckCapitalU][q]=q/\
+\[DoubleStruckCapitalM][q] *)<br>
+In[49]:= \[DoubleStruckCapitalU][q_] := 
+ Module[{M = \[DoubleStruckCapitalM][q]}, 
+ Which[(*　q=0　*)TrueQ[M == 0], 0,
+ (*　一般の四元数　*)True, q/M]]<br>
+In[50]:= (* ベクトル Vector \
+\[DoubleStruckV][q]=\[DoubleStruckCapitalV][q] *)<br>
+In[51]:= \[DoubleStruckV][q_] := \[DoubleStruckCapitalV][q]<br>
+In[52]:= (* ベクトルのノルム, \[DoubleStruckN][q]=\[DoubleStruckCapitalN][\
+\[DoubleStruckV][q]] *)<br>
+In[53]:= \[DoubleStruckN][q_] := 
+ Module[{x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, x*x + y*y + z*z]<br>
+In[54]:= (* ベクトルの大きさ モジュラス, \
+\[DoubleStruckM][q]=Sqrt[\[DoubleStruckN][q]] *)<br>
+In[55]:= \[DoubleStruckM][q_] := Sqrt[\[DoubleStruckN][q]]<br>
+In[56]:= (* ベクトルのベルサー 方向, 単位ベクトル \
+\[DoubleStruckU][q]=\[DoubleStruckV][q]/\[DoubleStruckM][q] *)<br>
+In[57]:= \[DoubleStruckU][q_] := 
+ Module[{m = \[DoubleStruckM][q]}, 
+ Which[(*　\[DoubleStruckM][q]=0　*)TrueQ[m == 0], \[DoubleStruckV][0],
+ (*　一般の四元数　*)True, \[DoubleStruckV][q]/m]]<br>
+In[58]:= (* 逆数 Inverse \[DoubleStruckCapitalI]nv[q]=\
+\[DoubleStruckCapitalK][q]/\[DoubleStruckCapitalN][q] *)<br>
+In[59]:= \[DoubleStruckCapitalI]nv[q_] := 
+ Module[{N = \[DoubleStruckCapitalN][q]}, 
+ Which[(*　N=0 つまり q=0 *)
+ TrueQ[N == 0], \[Infinity] (* \[Infinity]で演算継続が不可能であるが、一応、定義する *),
+ (*　一般の四元数　*)True, \[DoubleStruckCapitalK][q]/N]]<br>
+In[60]:= (* 乗法 Multiply \[CircleTimes] *)<br>
+In[61]:= a_ \[CircleTimes] b_ := 
+ Module[{as = \[DoubleStruckCapitalS][a], 
+ ax = \[DoubleStruckCapitalC][a, \[ScriptI]], 
+ ay = \[DoubleStruckCapitalC][a, \[ScriptJ]], 
+ az = \[DoubleStruckCapitalC][a, \[ScriptK]], 
+ bs = \[DoubleStruckCapitalS][b], 
+ bx = \[DoubleStruckCapitalC][b, \[ScriptI]], 
+ by = \[DoubleStruckCapitalC][b, \[ScriptJ]], 
+ bz = \[DoubleStruckCapitalC][
+ b, \[ScriptK]]}, \[DoubleStruckCapitalR][(as bs - ax bx - ay by -
+ az bz + (as bx + ax bs + ay bz - az by) \[ScriptI] + (as by - 
+ ax bz + ay bs + az bx) \[ScriptJ] + (as bz + ax by - ay bx + 
+ az bs) \[ScriptK])]]<br>
+In[62]:= (*多項の \[CircleTimes] を左から順に 2項に畳む*)<br>
+In[63]:= CircleTimes[a_, b_, rest__] := 
+ CircleTimes[CircleTimes[a, b], rest]<br>
+In[64]:= SetAttributes[CircleTimes, {OneIdentity}];<br>
+In[65]:= (* 除法 q2/q1 は、 q2 \[CircleTimes] \
+\[DoubleStruckCapitalI]nv[q1] とする *)<br>
+In[66]:= (* 四元数 内積 \[CircleDot] *)<br>
+In[67]:= q_ \[CircleDot] 
+ u_ := \[DoubleStruckCapitalS][q] \[DoubleStruckCapitalS][
+ u] + \[DoubleStruckCapitalC][
+ q, \[ScriptI]] \[DoubleStruckCapitalC][
+ u, \[ScriptI]] + \[DoubleStruckCapitalC][
+ q, \[ScriptJ]] \[DoubleStruckCapitalC][
+ u, \[ScriptJ]] + \[DoubleStruckCapitalC][
+ q, \[ScriptK]] \[DoubleStruckCapitalC][u, \[ScriptK]];<br>
+In[68]:= (* 平方根 \[DoubleStruckCapitalS]qrt[q] *)<br>
+In[69]:= (* \[DoubleStruckCapitalS]qrt[q_]:=Sqrt[(\
+\[DoubleStruckCapitalM][q]+\[DoubleStruckCapitalS][q])/2]+\
+\[DoubleStruckCapitalV][q]/Sqrt[2*(\[DoubleStruckCapitalM][q]+\
+\[DoubleStruckCapitalS][q])] *)<br>
+In[70]:= (* \[DoubleStruckCapitalS]qrt[q]=(s+\[ScriptI] x+\[ScriptJ] \
+y+\[ScriptK] z+Sqrt[s^2+x^2+y^2+z^2])/(Sqrt[2] \
+Sqrt[s+Sqrt[s^2+x^2+y^2+z^2]]) *)<br>
+In[71]:= \[DoubleStruckCapitalS]qrt[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ M = \[DoubleStruckCapitalM][q]}, Which[(* q=0 *)TrueQ[M == 0], 0,
+ (*負の純スカラー*)TrueQ[M == -s && s < 0], Sqrt[-s] \[ScriptI],(*一般の四元数*)
+ True, (q + M)/(Sqrt[2] Sqrt[s + M])]]<br>
+In[72]:= (* 角 Angle, \[Angle][q] *)<br>
+In[73]:= \[Angle][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ M = \[DoubleStruckCapitalM][q]}, Which[(*　q=0 *)TrueQ[M == 0], 0,
+ (*　一般の四元数　*)True, ArcCos[s/M]]]<br>
+In[74]:= (* 不採用 \[Angle][q_]:=ArcTan[\[DoubleStruckCapitalM][\
+\[DoubleStruckCapitalV][q]]/\[DoubleStruckCapitalS][q]]
+計算が合わない *)<br>
+In[75]:= (* 極形式 \[DoubleStruckCapitalP]olar[q] {ベクトルの軸,モジュラス,角} *)<br>
+In[76]:= (* \[DoubleStruckCapitalP]olar[q_] := {\[DoubleStruckU][q],\
+\[DoubleStruckCapitalM][q],\[Angle][q]} *) <br>
+In[77]:= \[DoubleStruckCapitalP]olar[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ M = \[DoubleStruckCapitalM][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　q=0　*)TrueQ[M == 0], {0, 0, 0},(* 
+ 純スカラー四元数の軸は 0 を採用 *)(*　純スカラー四元数　*)
+ TrueQ[m == 0], {0, M, If[TrueQ[s >= 0], 0, Pi]},
+ (*一般の四元数*)True, {\[DoubleStruckU][q], M, \[Angle][q]}]]<br>
+In[78]:= (* 通常形式 \[DoubleStruckCapitalO]rdinary[p] *)<br>
+In[79]:= \[DoubleStruckCapitalO]rdinary[{axis_, modulus_, angle_}] := 
+ modulus (Cos[angle] + axis Sin[angle])<br>
+In[80]:= (* ベクトルの分解, 共変成分, \[DoubleStruckCapitalR]covari[\[Rho],{\
+\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[81]:= (* \[Rho],\[Alpha],\[Beta],\[Gamma] は四元数のベクトル部を与えること *)<br>
+In[82]:= \[DoubleStruckCapitalR]covari[\[Rho]_, {\[Alpha]_, \[Beta]_, \
+\[Gamma]_}] := \[DoubleStruckCapitalV]V3[{\[DoubleStruckCapitalS][\
+\[Rho]\[CircleTimes]\[Alpha]]/\[DoubleStruckCapitalS][(\[Alpha]\
+\[CircleTimes]\[Beta])\[CircleTimes]\[Gamma]], \
+\[DoubleStruckCapitalS][\[Rho]\[CircleTimes]\[Beta]]/\
+\[DoubleStruckCapitalS][(\[Alpha]\[CircleTimes]\[Beta])\[CircleTimes]\
+\[Gamma]], \[DoubleStruckCapitalS][\[Rho]\[CircleTimes]\[Gamma]]/\
+\[DoubleStruckCapitalS][(\[Alpha]\[CircleTimes]\[Beta])\[CircleTimes]\
+\[Gamma]]}]<br>
+In[83]:= (* ベクトルの分解, 反変成分, \[DoubleStruckCapitalR]contra[\[Rho],{\
+\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[84]:= (* \[Rho],\[Alpha],\[Beta],\[Gamma] は四元数のベクトル部を与えること *)<br>
+In[85]:= \[DoubleStruckCapitalR]contra[\[Rho]_, {\[Alpha]_, \[Beta]_, \
+\[Gamma]_}] := \[DoubleStruckCapitalV]V3[{\[DoubleStruckCapitalS][(\
+\[Beta]\[CircleTimes]\[Gamma])\[CircleTimes]\[Rho]]/\
+\[DoubleStruckCapitalS][(\[Alpha]\[CircleTimes]\[Beta])\[CircleTimes]\
+\[Gamma]], \[DoubleStruckCapitalS][(\[Gamma]\[CircleTimes]\[Alpha])\
+\[CircleTimes]\[Rho]]/\[DoubleStruckCapitalS][(\[Alpha]\[CircleTimes]\
+\[Beta])\[CircleTimes]\[Gamma]], \[DoubleStruckCapitalS][(\[Alpha]\
+\[CircleTimes]\[Beta])\[CircleTimes]\[Rho]]/\[DoubleStruckCapitalS][(\
+\[Alpha]\[CircleTimes]\[Beta])\[CircleTimes]\[Gamma]]}]<br>
+In[86]:= (* ベクトルの合成, 共変成分, \
+\[DoubleStruckCapitalC]covari[Rc,{\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[87]:= (* Rc は、共変成分を与えること *)<br>
+In[88]:= \[DoubleStruckCapitalC]covari[
+ Rc_, {\[Alpha]_, \[Beta]_, \[Gamma]_}] := 
+ Coefficient[
+ Rc, \[ScriptI]] \[DoubleStruckCapitalV][\[Beta]\[CircleTimes]\
+\[Gamma]] + 
+ Coefficient[
+ Rc, \[ScriptJ]] \[DoubleStruckCapitalV][\[Gamma]\[CircleTimes]\
+\[Alpha]] + 
+ Coefficient[
+ Rc, \[ScriptK]] \[DoubleStruckCapitalV][\[Alpha]\[CircleTimes]\
+\[Beta]]<br>
+In[89]:= (* ベクトルの合成, 反変成分, \
+\[DoubleStruckCapitalC]contra[Rt,{\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[90]:= (* Rt は、反変成分を与えること *)<br>
+In[91]:= \[DoubleStruckCapitalC]contra[
+ Rt_, {\[Alpha]_, \[Beta]_, \[Gamma]_}] := 
+ Coefficient[Rt, \[ScriptI]] \[Alpha] + 
+ Coefficient[Rt, \[ScriptJ]] \[Beta] + 
+ Coefficient[Rt, \[ScriptK]] \[Gamma]<br>
+In[92]:= (* 四元数の分解 \[DoubleStruckCapitalR]quat[q,a] *)<br>
+In[93]:= \[DoubleStruckCapitalR]quat[q_, a_] := 
+ Which[(* q=0 && a=0 *)TrueQ[q == 0 && a == 0], Indeterminate,
+ (* q\[NotEqual]0 && a=0 *)TrueQ[q != 0 && a == 0], \[Infinity],(* q=
+ 0 && a\[NotEqual]0 *)TrueQ[q == 0 && a != 0], 0,(* 一般の四元数 *)
+ True, \[DoubleStruckCapitalS][
+ q\[CircleTimes]\[DoubleStruckCapitalI]nv[
+ a]] + \[DoubleStruckCapitalV][
+ q\[CircleTimes]\[DoubleStruckCapitalI]nv[a]]]<br>
+In[94]:= (* 四元数qを、四元数aの 平行成分,垂直成分 に分解 Resolve(//a and \[UpTee]a) *)<br>
+In[95]:= \[DoubleStruckCapitalR]quat[q_, a_] := 
+ Which[(*　q=0 && a=0 *)TrueQ[q == 0 && a == 0], 
+ Indeterminate,(*　q\[NotEqual]0 && a=0 *)
+ TrueQ[a == 0], \[Infinity],(*　q=0 && a\[NotEqual]0 *)TrueQ[q == 0], 
+ 0,
+ (*　一般の四元数　*)
+ True, \[DoubleStruckCapitalS][
+ q\[CircleTimes]\[DoubleStruckCapitalI]nv[
+ a]] + \[DoubleStruckCapitalV][
+ q\[CircleTimes]\[DoubleStruckCapitalI]nv[a]]]<br>
+In[96]:= (* 指数関数 \[DoubleStruckCapitalE]xp[q] *)<br>
+In[97]:= (* \
+\[DoubleStruckCapitalE]xp[q_]:=Exp[\[DoubleStruckCapitalS][q]]*(Cos[\
+\[DoubleStruckCapitalM][\[DoubleStruckCapitalV][q]]]+\
+\[DoubleStruckCapitalU][\[DoubleStruckCapitalV][q]]*Sin[\
+\[DoubleStruckCapitalM][\[DoubleStruckCapitalV][q]]]) *)<br>
+In[98]:= (* \[DoubleStruckCapitalE]xp[q]=\[ExponentialE]^s \
+(Cos[Sqrt[x^2+y^2+z^2]]+(Sin[Sqrt[x^2+y^2+z^2]] (\[ScriptI] x+\
+\[ScriptJ] y+\[ScriptK] z))/Sqrt[x^2+y^2+z^2]) *)<br>
+In[99]:= \[DoubleStruckCapitalE]xp[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], E^s,
+ (*　一般の四元数　*)True, 
+ E^s (Cos[m] + (Sin[m] \[DoubleStruckCapitalV][q])/m)]]<br>
+In[100]:= (* \[DoubleStruckCapitalE]xp[q_]:=Exp[\
+\[DoubleStruckCapitalS][q]]*(Cos[\[DoubleStruckCapitalM][\
+\[DoubleStruckCapitalV][q]]]+\[DoubleStruckCapitalV][q]*Sinc[\
+\[DoubleStruckCapitalM][\[DoubleStruckCapitalV][q]]]) *)<br>
+In[101]:= (* 対数関数 \[DoubleStruckCapitalL]og[q] *)<br>
+In[102]:= (* \[DoubleStruckCapitalL]og[q_]:=Log[\
+\[DoubleStruckCapitalM][q]]+\[DoubleStruckCapitalU][\
+\[DoubleStruckCapitalV][q]]*\[Angle][q] *)<br>
+In[103]:= (* \[DoubleStruckCapitalL]og[q]=1/2 \
+Log[s^2+x^2+y^2+z^2]+(ArcCos[s/Sqrt[s^2+x^2+y^2+z^2]] (\[ScriptI] x+\
+\[ScriptJ] y+\[ScriptK] z))/Sqrt[x^2+y^2+z^2] *)<br>
+In[104]:= \[DoubleStruckCapitalL]og[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ N = \[DoubleStruckCapitalN][q], m = \[DoubleStruckM][q]}, 
+ Which[(* N=0 *)TrueQ[N == 0], -\[Infinity],
+ (* m=0 && s>0 *)TrueQ[m == 0 && s > 0], Log[s],(* m=0 && s<0 *)
+ TrueQ[m == 0 && s < 0], Log[-s] + Pi*\[ScriptI],
+ (* m=0 && sの符号が未確定 *)TrueQ[m == 0], Log[s],(*一般の四元数*)True, 
+ 1/2 Log[N] + (\[Angle][q] \[DoubleStruckCapitalV][q])/m]]<br>
+In[105]:= (* べき乗 q^n , \[DoubleStruckCapitalB][q,n] *)<br>
+In[106]:= (* \
+\[DoubleStruckCapitalB][q_,n_]:=\[DoubleStruckCapitalM][q]^n*\
+\[DoubleStruckCapitalE]xp[\[DoubleStruckCapitalU][\
+\[DoubleStruckCapitalV][q]]*n*\[Angle][q]] *)<br>
+In[107]:= (* \
+\[DoubleStruckCapitalB][q,n]=1/Sqrt[x^2+y^2+z^2](s^2+x^2+y^2+z^2)^(n/\
+2) (Sin[n ArcCos[s/Sqrt[s^2+x^2+y^2+z^2]]] (\[ScriptI] x+\[ScriptJ] \
+y+\[ScriptK] z)+Cos[n ArcCos[s/Sqrt[s^2+x^2+y^2+z^2]]] \
+Sqrt[x^2+y^2+z^2]) *)<br>
+In[108]:= \[DoubleStruckCapitalB][q_, n_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], 
+ m = \[DoubleStruckCapitalM][q], a = \[Angle][q]}, 
+ Which[(* q=0 && n=0 *)TrueQ[q == 0 && n == 0], Indeterminate,(* m=
+ 0 && n<0 && s=0 *)TrueQ[m == 0 && n < 0 && s == 0], \[Infinity],
+ (* m=0 *)TrueQ[m == 0], s^n,
+ (* 一般の四元数 *)
+ True, (\[DoubleStruckCapitalN][q])^(n/
+ 2)*(Sin[n a] \[DoubleStruckCapitalV][q] + Cos[n a] m)]/m]<br>
+In[109]:= (* 双曲線関数 \[DoubleStruckS]inh[q], \[DoubleStruckC]osh[q], \
+\[DoubleStruckT]anh[q] *)<br>
+In[110]:= (* \[DoubleStruckS]inh[q_]:=(\[DoubleStruckCapitalE]xp[q]-\
+\[DoubleStruckCapitalE]xp[-q])/2 *)<br>
+In[111]:= (* \[DoubleStruckS]inh[q]=1/2 \[ExponentialE]^-s ((-1+\
+\[ExponentialE]^(2 s)) Cos[Sqrt[x^2+y^2+z^2]]+((1+\[ExponentialE]^(2 \
+s)) Sin[Sqrt[x^2+y^2+z^2]] (\[ScriptI] x+\[ScriptJ] y+\[ScriptK] \
+z))/Sqrt[x^2+y^2+z^2]) *)<br>
+In[112]:= \[DoubleStruckS]inh[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Sinh[s] ,
+ (*　一般の四元数　*)True, 
+ 1/2 E^-s ((-1 + E^(2 s)) Cos[m] + ((1 + E^(2 s)) Sin[
+ m] \[DoubleStruckCapitalV][q])/m)]]<br>
+In[113]:= (* \[DoubleStruckC]osh[q_]:=(\[DoubleStruckCapitalE]xp[q]+\
+\[DoubleStruckCapitalE]xp[-q])/2 *)<br>
+In[114]:= (* \[DoubleStruckC]osh[q]=1/2 \[ExponentialE]^-s ((1+\
+\[ExponentialE]^(2 s)) Cos[Sqrt[x^2+y^2+z^2]]+((-1+\[ExponentialE]^(2 \
+s)) Sin[Sqrt[x^2+y^2+z^2]] (\[ScriptI] x+\[ScriptJ] y+\[ScriptK] \
+z))/Sqrt[x^2+y^2+z^2]) *)<br>
+In[115]:= \[DoubleStruckC]osh[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Cosh[s] ,
+ (*　一般の四元数　*)True, 
+ 1/2 E^-s ((1 + E^(2 s)) Cos[m] + ((-1 + E^(2 s)) Sin[
+ m] \[DoubleStruckCapitalV][q])/m)]]<br>
+In[116]:= \[DoubleStruckT]anh[
+ q_] := \[DoubleStruckS]inh[
+ q]\[CircleTimes]\[DoubleStruckCapitalI]nv[\[DoubleStruckC]osh[q]]<br>
+In[117]:= (* \[DoubleStruckT]anh[q]=(2 \[ExponentialE]^(2 s) (Sin[2 \
+Sqrt[x^2+y^2+z^2]] (\[ScriptI] x+\[ScriptJ] y+\[ScriptK] z)+Sinh[2 s] \
+Sqrt[x^2+y^2+z^2]))/((1+\[ExponentialE]^(4 s)+2 \[ExponentialE]^(2 s) \
+Cos[2 Sqrt[x^2+y^2+z^2]]) Sqrt[x^2+y^2+z^2]) *)<br>
+In[118]:= \[DoubleStruckT]anh[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Tanh[s] ,
+ (*　一般の四元数　*)
+ True, (2 E^(
+ 2 s) (Sin[2 m] \[DoubleStruckCapitalV][q] + Sinh[2 s] m))/((1 + 
+ E^(4 s) + 2 E^(2 s) Cos[2 m]) m)]]<br>
+In[119]:= (* 逆双曲線関数 (\[DoubleStruckS]inh^-1)[q], \
+(\[DoubleStruckC]osh^-1)[q], (\[DoubleStruckT]anh^-1)[q] *)<br>
+In[120]:= (* (\[DoubleStruckS]inh^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckS]inh[q]] *)<br>
+In[121]:= (* (\[DoubleStruckS]inh^-1)[q]=-((2 \[ExponentialE]^s ((1+\
+\[ExponentialE]^(2 s)) \[ScriptI] Sin[Sqrt[x^2+y^2+z^2]] x+(1+\
+\[ExponentialE]^(2 s)) \[ScriptJ] Sin[Sqrt[x^2+y^2+z^2]] y+\[ScriptK] \
+Sin[Sqrt[x^2+y^2+z^2]] z+\[ExponentialE]^(2 s) \[ScriptK] \
+Sin[Sqrt[x^2+y^2+z^2]] z+Cos[Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]-\
+\[ExponentialE]^(2 s) Cos[Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]))/((1+\
+\[ExponentialE]^(4 s)-2 \[ExponentialE]^(2 s) Cos[2 \
+Sqrt[x^2+y^2+z^2]]) Sqrt[x^2+y^2+z^2])) *)<br>
+In[122]:= 
+Superscript[\[DoubleStruckS]inh,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcSinh[s] ,
+ (*　一般の四元数　*)
+ True, -((2 E^
+ s ((1 + E^(2 s)) \[ScriptI] Sin[
+ m] x + (1 + E^(2 s)) \[ScriptJ] Sin[m] y + \[ScriptK] Sin[
+ m] z + E^(2 s) \[ScriptK] Sin[m] z + Cos[m] m - 
+ E^(2 s) Cos[m] m))/((1 + E^(4 s) - 2 E^(2 s) Cos[2 m]) m))]]<br>
+In[123]:= (* (\[DoubleStruckC]osh^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckC]osh[q]] *)<br>
+In[124]:= (* (\[DoubleStruckC]osh^-1)[q]=(2 \[ExponentialE]^s (-(-1+\
+\[ExponentialE]^(2 s)) \[ScriptI] Sin[Sqrt[x^2+y^2+z^2]] x-(-1+\
+\[ExponentialE]^(2 s)) \[ScriptJ] Sin[Sqrt[x^2+y^2+z^2]] y+\[ScriptK] \
+Sin[Sqrt[x^2+y^2+z^2]] z-\[ExponentialE]^(2 s) \[ScriptK] \
+Sin[Sqrt[x^2+y^2+z^2]] z+Cos[Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]+\
+\[ExponentialE]^(2 s) Cos[Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]))/((1+\
+\[ExponentialE]^(4 s)+2 \[ExponentialE]^(2 s) Cos[2 \
+Sqrt[x^2+y^2+z^2]]) Sqrt[x^2+y^2+z^2]) *)<br>
+In[125]:= 
+Superscript[\[DoubleStruckC]osh,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcCosh[s],(*　一般の四元数　*)
+ True, (2 E^
+ s (-(-1 + E^(2 s)) \[ScriptI] Sin[
+ m] x - (-1 + E^(2 s)) \[ScriptJ] Sin[m] y + \[ScriptK] Sin[
+ m] z - E^(2 s) \[ScriptK] Sin[m] z + Cos[m] m + 
+ E^(2 s) Cos[m] m))/((1 + E^(4 s) + 2 E^(2 s) Cos[2 m]) m)]]<br>
+In[126]:= (* (\[DoubleStruckT]anh^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckT]anh[q]] *)<br>
+In[127]:= (* (\[DoubleStruckT]anh^-1)[q]=((-1+\[ExponentialE]^(4 s)) \
+x^2+(-1+\[ExponentialE]^(4 s)) y^2-2 \[ExponentialE]^(2 s) \[ScriptI] \
+Sin[2 Sqrt[x^2+y^2+z^2]] x Sqrt[x^2+y^2+z^2]-2 \[ExponentialE]^(2 s) \
+\[ScriptJ] Sin[2 Sqrt[x^2+y^2+z^2]] y Sqrt[x^2+y^2+z^2]+z ((-1+\
+\[ExponentialE]^(4 s)) z-2 \[ExponentialE]^(2 s) \[ScriptK] Sin[2 \
+Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]))/((1+\[ExponentialE]^(4 s)-2 \
+\[ExponentialE]^(2 s) Cos[2 Sqrt[x^2+y^2+z^2]]) (x^2+y^2+z^2)) *)<br>
+In[128]:= 
+Superscript[\[DoubleStruckT]anh,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcTanh[s],(*　一般の四元数　*)
+ True, ((-1 + E^(4 s)) x^2 + (-1 + E^(4 s)) y^2 - 
+ 2 E^(2 s) \[ScriptI] Sin[2 m] x m - 
+ 2 E^(2 s) \[ScriptJ] Sin[2 m] y m + 
+ z ((-1 + E^(4 s)) z - 2 E^(2 s) \[ScriptK] Sin[2 m] m))/((1 + 
+ E^(4 s) - 2 E^(2 s) Cos[2 m]) (x^2 + y^2 + z^2))]]<br>
+In[129]:= (* 三角関数 \[DoubleStruckS]in[q], \[DoubleStruckC]os[q], \
+\[DoubleStruckT]an[q] ---- *)<br>
+In[130]:= (* \[DoubleStruckS]in[q_]:=Sin[\[DoubleStruckCapitalS][q]] \
+Cosh[\[DoubleStruckCapitalM][\[DoubleStruckCapitalV][q]]]+\
+\[DoubleStruckCapitalU][\[DoubleStruckCapitalV][q]] Cos[\
+\[DoubleStruckCapitalS][q]] Sinh[\[DoubleStruckCapitalM][\
+\[DoubleStruckCapitalV][q]]] *)<br>
+In[131]:= (* \[DoubleStruckS]in[q]=Cosh[Sqrt[x^2+y^2+z^2]] \
+Sin[s]+(Cos[s] Sinh[Sqrt[x^2+y^2+z^2]] (\[ScriptI] x+\[ScriptJ] y+\
+\[ScriptK] z))/Sqrt[x^2+y^2+z^2] *)<br>
+In[132]:= \[DoubleStruckS]in[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Sin[s] ,(*　一般の四元数　*)True, 
+ Cosh[m] Sin[s] + (Cos[s] Sinh[m] \[DoubleStruckCapitalV][q])/m]]<br>
+In[133]:= (* \[DoubleStruckC]os[q_]:=Cos[\[DoubleStruckCapitalS][q]] \
+Cosh[\[DoubleStruckCapitalM][\[DoubleStruckCapitalV][q]]]-\
+\[DoubleStruckCapitalU][\[DoubleStruckCapitalV][q]] Sin[\
+\[DoubleStruckCapitalS][q]] Sinh[\[DoubleStruckCapitalM][\
+\[DoubleStruckCapitalV][q]]] *)<br>
+In[134]:= (* \[DoubleStruckC]os[q]=Cos[s] \
+Cosh[Sqrt[x^2+y^2+z^2]]-(Sin[s] Sinh[Sqrt[x^2+y^2+z^2]] (\[ScriptI] \
+x+\[ScriptJ] y+\[ScriptK] z))/Sqrt[x^2+y^2+z^2] *)<br>
+In[135]:= \[DoubleStruckC]os[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Cos[s] ,(*　一般の四元数　*)True, 
+ Cos[s] Cosh[m] - (Sin[s] Sinh[m] \[DoubleStruckCapitalV][q])/m]]<br>
+In[136]:= (* \[DoubleStruckT]an[q_]:=\[DoubleStruckS]in[q]\
+\[CircleTimes]\[DoubleStruckCapitalI]nv[\[DoubleStruckC]os[q]] *)<br>
+In[137]:= (* \[DoubleStruckT]an[q]=(Sinh[2 Sqrt[x^2+y^2+z^2]] (\
+\[ScriptI] x+\[ScriptJ] y+\[ScriptK] z)+Sin[2 s] \
+Sqrt[x^2+y^2+z^2])/((Cos[2 s]+Cosh[2 Sqrt[x^2+y^2+z^2]]) \
+Sqrt[x^2+y^2+z^2]) *)<br>
+In[138]:= \[DoubleStruckT]an[q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], Tan[s] ,(*　一般の四元数　*)
+ True, (Sinh[2 m] \[DoubleStruckCapitalV][q] + 
+ Sin[2 s] m)/((Cos[2 s] + Cosh[2 m]) m)]]<br>
+In[139]:= (* 逆三角関数 (\[DoubleStruckS]in^-1)[q], \
+(\[DoubleStruckC]os^-1)[q], (\[DoubleStruckT]an^-1)[q] --- *)<br>
+In[140]:= (* (\[DoubleStruckS]in^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckS]in[q]] *)<br>
+In[141]:= (* (\[DoubleStruckS]in^-1)[q]=(2 (\[ScriptI] Cos[s] \
+Sinh[Sqrt[x^2+y^2+z^2]] x+\[ScriptJ] Cos[s] Sinh[Sqrt[x^2+y^2+z^2]] \
+y+\[ScriptK] Cos[s] Sinh[Sqrt[x^2+y^2+z^2]] z-Cosh[Sqrt[x^2+y^2+z^2]] \
+Sin[s] Sqrt[x^2+y^2+z^2]))/((Cos[2 s]-Cosh[2 Sqrt[x^2+y^2+z^2]]) \
+Sqrt[x^2+y^2+z^2]) *)<br>
+In[142]:= 
+Superscript[\[DoubleStruckS]in,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcSin[s],(*　一般の四元数　*)
+ True, (2 (\[ScriptI] Cos[s] Sinh[m] x + \[ScriptJ] Cos[s] Sinh[
+ m] y + \[ScriptK] Cos[s] Sinh[m] z - 
+ Cosh[m] Sin[s] m))/((Cos[2 s] - Cosh[2 m]) m)]]<br>
+In[143]:= (* (\[DoubleStruckC]os^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckC]os[q]] *)<br>
+In[144]:= (* (\[DoubleStruckC]os^-1)[q]=(2 (\[ScriptI] Sin[s] \
+Sinh[Sqrt[x^2+y^2+z^2]] x+\[ScriptJ] Sin[s] Sinh[Sqrt[x^2+y^2+z^2]] \
+y+\[ScriptK] Sin[s] Sinh[Sqrt[x^2+y^2+z^2]] z+Cos[s] \
+Cosh[Sqrt[x^2+y^2+z^2]] Sqrt[x^2+y^2+z^2]))/((Cos[2 s]+Cosh[2 \
+Sqrt[x^2+y^2+z^2]]) Sqrt[x^2+y^2+z^2]) *)<br>
+In[145]:= 
+Superscript[\[DoubleStruckC]os,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcCos[s],(*　一般の四元数　*)
+ True, (2 (\[ScriptI] Sin[s] Sinh[m] x + \[ScriptJ] Sin[s] Sinh[
+ m] y + \[ScriptK] Sin[s] Sinh[m] z + 
+ Cos[s] Cosh[m] m))/((Cos[2 s] + Cosh[2 m]) m)]]<br>
+In[146]:= (* (\[DoubleStruckT]an^-1)[q_]:=\[DoubleStruckCapitalI]nv[\
+\[DoubleStruckT]an[q]] *)<br>
+In[147]:= (* (\[DoubleStruckT]an^-1)[q]=(\[ScriptI] Sinh[2 \
+Sqrt[x^2+y^2+z^2]] x+\[ScriptJ] Sinh[2 Sqrt[x^2+y^2+z^2]] \
+y+\[ScriptK] Sinh[2 Sqrt[x^2+y^2+z^2]] z-Sin[2 s] \
+Sqrt[x^2+y^2+z^2])/((Cos[2 s]-Cosh[2 Sqrt[x^2+y^2+z^2]]) \
+Sqrt[x^2+y^2+z^2]) *)<br>
+In[148]:= 
+Superscript[\[DoubleStruckT]an,-1][q_] := 
+ Module[{s = \[DoubleStruckCapitalS][q], m = \[DoubleStruckM][q], 
+ x = \[DoubleStruckCapitalC][q, \[ScriptI]], 
+ y = \[DoubleStruckCapitalC][q, \[ScriptJ]], 
+ z = \[DoubleStruckCapitalC][q, \[ScriptK]]}, 
+ Which[(*　m=0 *)TrueQ[m == 0], ArcTan[s],(*　一般の四元数　*)
+ True, (\[ScriptI] Sinh[2 m] x + \[ScriptJ] Sinh[
+ 2 m] y + \[ScriptK] Sinh[2 m] z - 
+ Sin[2 s] m)/((Cos[2 s] - Cosh[2 m]) m)]]<br>
+In[149]:= (***** End of Quaternion definition *****)<br>
+In[150]:= (* 各種変換　Translation ===== *)<br>
+In[151]:= (* 鏡映変換 \[DoubleStruckCapitalR]eflect[r,n] *)<br>
+In[152]:= (* rは対象ベクトル, nは鏡映面の法線ベクトルで、
+念のために\[DoubleStruckCapitalV]を作用させてある。
+nは\[DoubleStruckCapitalU]を作用させるので方向が合っていればよい。 *)<br>
+In[153]:= \[DoubleStruckCapitalR]eflect[r_, n_] := 
+ Module[{N = \[DoubleStruckCapitalU][\[DoubleStruckCapitalV][n]]},
+ N\[CircleTimes]r\[CircleTimes]N]<br>
+In[154]:= (* 空間回転 \[DoubleStruckCapitalR]ot[r,n,\[Theta]] *)<br>
+In[155]:= (* \[Theta]はn軸回りの回転角(rad) *)<br>
+In[156]:= \[DoubleStruckCapitalR]ot[r_, n_, \[Theta]_] := 
+ Module[{Q = 
+ Cos[\[Theta]/
+ 2] + \[DoubleStruckCapitalU][\[DoubleStruckCapitalV][
+ n]] Sin[\[Theta]/2]}, 
+ Q\[CircleTimes]r\[CircleTimes]\[DoubleStruckCapitalK][Q]]<br>
+In[157]:= (***** End of Translation definition *****)<br>
+In[158]:= (* 力学系 ===== *)<br>
+In[159]:= (* 汎用方向微分 \[DoubleStruckCapitalD]irection[expr,q,u] *)<br>
+In[160]:= \[DoubleStruckCapitalD]irection[expr_, q_, u_] := 
+ Module[{qs, us}, 
+ qs = {\[DoubleStruckCapitalS][q], \[DoubleStruckCapitalC][
+ q, \[ScriptI]], \[DoubleStruckCapitalC][
+ q, \[ScriptJ]], \[DoubleStruckCapitalC][q, \[ScriptK]]};
+ us = {\[DoubleStruckCapitalS][u], \[DoubleStruckCapitalC][
+ u, \[ScriptI]], \[DoubleStruckCapitalC][
+ u, \[ScriptJ]], \[DoubleStruckCapitalC][u, \[ScriptK]]};
+ Total[us Table[D[expr, qs[[i]]], {i, 4}]]];<br>
+In[161]:= (* 勾配 \[EmptyDownTriangle]q(EmptyDownTriangle), \
+\[Del](Del)ではない *)<br>
+In[162]:= \[EmptyDownTriangle]q[expr_, q_] := 
+ Module[{qs}, 
+ qs = {\[DoubleStruckCapitalS][q], \[DoubleStruckCapitalC][
+ q, \[ScriptI]], \[DoubleStruckCapitalC][
+ q, \[ScriptJ]], \[DoubleStruckCapitalC][q, \[ScriptK]]};
+ D[expr, qs[[1]]] + D[expr, qs[[2]]] \[ScriptI] + 
+ D[expr, qs[[3]]] \[ScriptJ] + D[expr, qs[[4]]] \[ScriptK]]<br>
+In[163]:= (* 力 \[DoubleStruckCapitalF]q[expr_,q_] *)<br>
+In[164]:= \[DoubleStruckCapitalF]q[expr_, 
+ q_] := -\[EmptyDownTriangle]q[expr, q];<br>
+In[165]:= (*　加速度 \[DoubleStruckCapitalA]q[expr_,q_,m_]　*)<br>
+In[166]:= \[DoubleStruckCapitalA]q[expr_, q_, m_] := 
+ Which[(*　m=0 *)TrueQ[m == 0], \[Infinity], 
+ True, \[DoubleStruckCapitalF]q[expr, q]/m];<br>
+In[167]:= (**************************************)<br>
+In[168]:= (* 関数名テンプレート Template ----- *)<br>
+In[169]:= (* データ生成,構造変換系：
+\[DoubleStruckCapitalG][] \[DoubleStruckCapitalG]SV[] \
+\[DoubleStruckCapitalG]L4[]　\[DoubleStruckCapitalL]istV3[] \
+\[DoubleStruckCapitalL]ist4[] \[DoubleStruckCapitalL]istSV3[] *)<br>
+In[170]:= (* 構造分解系：
+\[DoubleStruckCapitalV]V3[] \[DoubleStruckCapitalV][] \
+\[DoubleStruckCapitalC][,] \[DoubleStruckCapitalS][] \
+\[DoubleStruckCapitalR][] \[DoubleStruckCapitalN][] \
+\[DoubleStruckCapitalM][] \[DoubleStruckCapitalU][] \
+\[DoubleStruckN][] \[DoubleStruckM][] \[DoubleStruckU][] *)<br>
+In[171]:= (* 代数操作系：
+\[CircleTimes] \[DoubleStruckCapitalK][] \[DoubleStruckCapitalI]nv[] \
+\[CircleDot]　\[Angle][] \[DoubleStruckCapitalR]eflect[,]　\
+\[DoubleStruckCapitalR]ot[,,]　\[DoubleStruckCapitalR]covari[,{,,}] \
+\[DoubleStruckCapitalR]contra[,{,,}] \
+\[DoubleStruckCapitalC]covari[,{,,}] \
+\[DoubleStruckCapitalC]contra[,{,,}] \[DoubleStruckCapitalR]quat[,]　*)<br>
+In[172]:= (* 解析関数系：
+\[DoubleStruckCapitalS]qrt[] \[DoubleStruckCapitalE]xp[] \
+\[DoubleStruckCapitalL]og[q] \[DoubleStruckCapitalB][,] \
+\[DoubleStruckS]inh[] \[DoubleStruckC]osh[] \[DoubleStruckT]anh[] (\
+\[DoubleStruckS]inh^-1)[] (\[DoubleStruckC]osh^-1)[] \
+(\[DoubleStruckT]anh^-1)[] \[DoubleStruckS]in[] \[DoubleStruckC]os[] \
+\[DoubleStruckT]an[] (\[DoubleStruckS]in^-1)[] \
+(\[DoubleStruckC]os^-1)[] (\[DoubleStruckT]an^-1)[] \
+\[DoubleStruckCapitalP]olar[] \[DoubleStruckCapitalO]rdinary[] *)<br>
+In[173]:= (* 力学系：
+\[DoubleStruckCapitalD]irection[,,] \[EmptyDownTriangle]q[,] \
+\[DoubleStruckCapitalF]q[,] \[DoubleStruckCapitalA]q[,,] *)<br>
+In[174]:= (**************************************)<br>
+In[175]:= (* 例： 実数 Example ======== *)<br>
+In[176]:= (* 四元数の生成 Generate \[DoubleStruckCapitalG][s,x,y,z] *)<br>
+In[177]:= (* 四元数 q = s + \[ScriptI] x + \[ScriptJ] y + \[ScriptK] z *)<br>
+In[178]:= q = s + \[ScriptI] x + \[ScriptJ] y + \[ScriptK] z;
+q0 = s0 + \[ScriptI] x0 + \[ScriptJ] y0 + \[ScriptK] z0;
+q1 = s1 + \[ScriptI] x1 + \[ScriptJ] y1 + \[ScriptK] z1;
+q2 = s2 + \[ScriptI] x2 + \[ScriptJ] y2 + \[ScriptK] z2;
+q3 = s3 + \[ScriptI] x3 + \[ScriptJ] y3 + \[ScriptK] z3;<br>
+In[183]:= (* 四元数のベルサー U *)<br>
+In[184]:= U = \[DoubleStruckCapitalU][q];
+U0 = \[DoubleStruckCapitalU][q0];
+U1 = \[DoubleStruckCapitalU][q1];
+U2 = \[DoubleStruckCapitalU][q2];
+U3 = \[DoubleStruckCapitalU][q3];<br>
+In[189]:= (* ベクトル \[Alpha] = \[ScriptI] x + \[ScriptJ] y + \[ScriptK] \
+z *)<br>
+In[190]:= \[Alpha] = \[ScriptI] x + \[ScriptJ] y + \[ScriptK] z;
+\[Alpha]0 = \[ScriptI] x0 + \[ScriptJ] y0 + \[ScriptK] z0;
+\[Alpha]1 = \[ScriptI] x1 + \[ScriptJ] y1 + \[ScriptK] z1;
+\[Alpha]2 = \[ScriptI] x2 + \[ScriptJ] y2 + \[ScriptK] z2;
+\[Alpha]3 = \[ScriptI] x3 + \[ScriptJ] y3 + \[ScriptK] z3;<br>
+In[195]:= (* 実数変数の仮定 $Assumptions *)<br>
+In[196]:= $Assumptions = {s \[Element] Reals, s0 \[Element] Reals, 
+ s1 \[Element] Reals, s2 \[Element] Reals, s3 \[Element] Reals, 
+ x \[Element] Reals, x0 \[Element] Reals, x1 \[Element] Reals, 
+ x2 \[Element] Reals, x3 \[Element] Reals, y \[Element] Reals, 
+ y0 \[Element] Reals, y1 \[Element] Reals, y2 \[Element] Reals, 
+ y3 \[Element] Reals, z \[Element] Reals, z0 \[Element] Reals, 
+ z1 \[Element] Reals, z2 \[Element] Reals, z3 \[Element] Reals, 
+ s^2 + x^2 + y^2 + z^2 > 0, s0^2 + x0^2 + y0^2 + z0^2 > 0, 
+ s1^2 + x1^2 + y1^2 + z1^2 > 0, s2^2 + x2^2 + y2^2 + z2^2 > 0, 
+ s3^2 + x3^2 + y3^2 + z3^2 > 0, x^2 + y^2 + z^2 > 0, 
+ x0^2 + y0^2 + z0^2 > 0, x1^2 + y1^2 + z1^2 > 0, 
+ x2^2 + y2^2 + z2^2 > 0, x3^2 + y3^2 + z3^2 > 0};<br>
+In[197]:= \[ScriptI]\[CircleTimes]\[ScriptJ]<br>
+Out[197]= \[ScriptK]<br>
+In[198]:= \[ScriptJ]\[CircleTimes]\[ScriptK]<br>
+Out[198]= \[ScriptI]<br>
+In[199]:= \[ScriptK]\[CircleTimes]\[ScriptI]<br>
+Out[199]= \[ScriptJ]<br>
+In[200]:= \[ScriptI]\[CircleTimes](\[ScriptJ]\[CircleTimes]\[ScriptK])<br>
+Out[200]= -1<br>
+In[201]:= (\[ScriptI]\[CircleTimes]\[ScriptJ])\[CircleTimes]\[ScriptK]<br>
+Out[201]= -1<br>
+In[202]:= \[ScriptI]\[CircleTimes]\[ScriptJ]\[CircleTimes]\[ScriptK]<br>
+Out[202]= -1<br>
+In[203]:= (* 四元数リスト化 , \[DoubleStruckCapitalL]ist4[q] *)<br>
+In[204]:= \[DoubleStruckCapitalL]ist4[q]<br>
+Out[204]= {s, x, y, z}<br>
+In[205]:= (* 四元数リスト化 , \[DoubleStruckCapitalL]istSV3[q] *)<br>
+In[206]:= \[DoubleStruckCapitalL]istSV3[q]<br>
+Out[206]= {s, {x, y, z}}<br>
+In[207]:= (* スカラー Scalar \[DoubleStruckCapitalS][q] *)<br>
+In[208]:= \[DoubleStruckCapitalS][q]<br>
+Out[208]= s<br>
+In[209]:= (* ベクトル Vector \[DoubleStruckCapitalV][q] *)<br>
+In[210]:= \[DoubleStruckCapitalV][q]<br>
+Out[210]= x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[211]:= (* 共役 Conjugate \[DoubleStruckCapitalK][q] *)<br>
+In[212]:= \[DoubleStruckCapitalK][q]<br>
+Out[212]= s - x \[ScriptI] - y \[ScriptJ] - z \[ScriptK]<br>
+In[213]:= (* 四元数のノルム Norm, \[DoubleStruckCapitalN][q] *)<br>
+In[214]:= \[DoubleStruckCapitalN][q]<br>
+Out[214]= s^2 + x^2 + y^2 + z^2<br>
+In[215]:= (* 四元数のモジュラス Modulus \[DoubleStruckCapitalM][q] *)<br>
+In[216]:= (* 文献[1]のテンソルTを、モジュラスMに呼称変更 *)<br>
+In[217]:= \[DoubleStruckCapitalM][q]<br>
+Out[217]= Sqrt[s^2 + x^2 + y^2 + z^2]<br>
+In[218]:= (* 四元数のベルサー, 単位四元数 \[DoubleStruckCapitalU][q] *)<br>
+In[219]:= \[DoubleStruckCapitalU][0]<br>
+Out[219]= 0<br>
+In[220]:= \[DoubleStruckCapitalU][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[220]= s/Abs[s]<br>
+In[221]:= \[DoubleStruckCapitalU][\[DoubleStruckCapitalV][q]]<br>
+Out[221]= (
+x \[ScriptI] + y \[ScriptJ] + z \[ScriptK])/Sqrt[x^2 + y^2 + z^2]<br>
+In[222]:= \[DoubleStruckCapitalU][q]<br>
+Out[222]= (s + x \[ScriptI] + y \[ScriptJ] + 
+ z \[ScriptK])/Sqrt[s^2 + x^2 + y^2 + z^2]<br>
+In[223]:= (* ベクトルのノルム, \[DoubleStruckN][q] *)<br>
+In[224]:= \[DoubleStruckN][q]<br>
+Out[224]= x^2 + y^2 + z^2<br>
+In[225]:= (* ベクトルのモジュラス 大きさ半径 radius, \[DoubleStruckM][q] *)<br>
+In[226]:= \[DoubleStruckM][q]<br>
+Out[226]= Sqrt[x^2 + y^2 + z^2]<br>
+In[227]:= (* ベクトルのベルサー 単位ベクトル, \
+\[DoubleStruckU][q]=\[DoubleStruckV][q]/\[DoubleStruckM][q] *)<br>
+In[228]:= \[DoubleStruckU][0]<br>
+Out[228]= 0<br>
+In[229]:= \[DoubleStruckU][\[DoubleStruckCapitalS][q]]<br>
+Out[229]= 0<br>
+In[230]:= \[DoubleStruckU][\[DoubleStruckCapitalV][q]]<br>
+Out[230]= (
+x \[ScriptI] + y \[ScriptJ] + z \[ScriptK])/Sqrt[x^2 + y^2 + z^2]<br>
+In[231]:= \[DoubleStruckU][q]<br>
+Out[231]= (
+x \[ScriptI] + y \[ScriptJ] + z \[ScriptK])/Sqrt[x^2 + y^2 + z^2]<br>
+In[232]:= (* 逆数 Inverse \[DoubleStruckCapitalI]nv[q] *)<br>
+In[233]:= \[DoubleStruckCapitalI]nv[0]<br>
+Out[233]= \[Infinity]<br>
+In[234]:= \[DoubleStruckCapitalI]nv[\[DoubleStruckCapitalS][q]]<br>
+Out[234]= 1/s<br>
+In[235]:= \[DoubleStruckCapitalI]nv[\[DoubleStruckCapitalV][q]]<br>
+Out[235]= (-x \[ScriptI] - y \[ScriptJ] - 
+ z \[ScriptK])/(x^2 + y^2 + z^2)<br>
+In[236]:= \[DoubleStruckCapitalI]nv[q]<br>
+Out[236]= (s - x \[ScriptI] - y \[ScriptJ] - 
+ z \[ScriptK])/(s^2 + x^2 + y^2 + z^2)<br>
+In[237]:= q\[CircleTimes]\[DoubleStruckCapitalI]nv[q] // Simplify<br>
+Out[237]= 1<br>
+In[238]:= \[DoubleStruckCapitalI]nv[q]\[CircleTimes]q // Simplify<br>
+Out[238]= 1<br>
+In[239]:= 
+q2\[CircleTimes]\[DoubleStruckCapitalI]nv[
+ q1] - \[DoubleStruckCapitalI]nv[q1]\[CircleTimes]q2 // Simplify<br>
+Out[239]= (2 (-y2 z1 \[ScriptI] + y1 z2 \[ScriptI] + 
+ x2 z1 \[ScriptJ] - x1 z2 \[ScriptJ] - x2 y1 \[ScriptK] + 
+ x1 y2 \[ScriptK]))/(s1^2 + x1^2 + y1^2 + z1^2)<br>
+In[240]:= (* 交換法則 *)<br>
+In[241]:= (q1\[CircleTimes]q2 - q2\[CircleTimes] q1) // Simplify<br>
+Out[241]= 2 (-y2 z1 \[ScriptI] + y1 z2 \[ScriptI] + x2 z1 \[ScriptJ] -
+ x1 z2 \[ScriptJ] - x2 y1 \[ScriptK] + x1 y2 \[ScriptK])<br>
+In[242]:= (* 結合法則 *)<br>
+In[243]:= (q1\[CircleTimes]q2)\[CircleTimes] q3 == 
+ q1\[CircleTimes](q2\[CircleTimes] q3) // Simplify<br>
+Out[243]= True<br>
+In[244]:= (* 分配法則 *)<br>
+In[245]:= (q1 \[CircleTimes](q2 + 
+ q3) == (q1\[CircleTimes]q2) + (q1\[CircleTimes]q3)) // \
+FullSimplify<br>
+Out[245]= True<br>
+In[246]:= ((q1 + q2)\[CircleTimes] 
+ q3 == (q1\[CircleTimes]q3) + (q2\[CircleTimes]q3)) // FullSimplify<br>
+Out[246]= True<br>
+In[247]:= (* 絶対値の法則 *)<br>
+In[248]:= \[DoubleStruckCapitalN][
+ q1\[CircleTimes]q2] == \[DoubleStruckCapitalN][
+ q1] \[DoubleStruckCapitalN][q2] // Simplify<br>
+Out[248]= True<br>
+In[249]:= \[DoubleStruckCapitalN][q1\[CircleTimes]q2] // Simplify<br>
+Out[249]= (s1^2 + x1^2 + y1^2 + z1^2) (s2^2 + x2^2 + y2^2 + z2^2)<br>
+In[250]:= \[DoubleStruckCapitalN][q1] \[DoubleStruckCapitalN][q2]<br>
+Out[250]= (s1^2 + x1^2 + y1^2 + z1^2) (s2^2 + x2^2 + y2^2 + z2^2)<br>
+In[251]:= (* 除法 q2/q1 は、 q2 \[CircleTimes] \
+\[DoubleStruckCapitalI]nv[q1] とする *)<br>
+In[252]:= \[DoubleStruckCapitalI]nv[q]<br>
+Out[252]= (s - x \[ScriptI] - y \[ScriptJ] - 
+ z \[ScriptK])/(s^2 + x^2 + y^2 + z^2)<br>
+In[253]:= q2\[CircleTimes]\[DoubleStruckCapitalI]nv[q1] // FullSimplify<br>
+Out[253]= (x1 x2 + y1 y2 + z1 z2 - y2 z1 \[ScriptI] + 
+ y1 z2 \[ScriptI] + x2 z1 \[ScriptJ] - x1 z2 \[ScriptJ] - 
+ x2 y1 \[ScriptK] + x1 y2 \[ScriptK] - 
+ s2 (x1 \[ScriptI] + y1 \[ScriptJ] + z1 \[ScriptK]) + 
+ s1 (s2 + x2 \[ScriptI] + y2 \[ScriptJ] + z2 \[ScriptK]))/(s1^2 + 
+ x1^2 + y1^2 + z1^2)<br>
+In[254]:= \[DoubleStruckCapitalI]nv[q1]\[CircleTimes]q2 // FullSimplify<br>
+Out[254]= (x1 x2 + y1 y2 + z1 z2 + y2 z1 \[ScriptI] - 
+ y1 z2 \[ScriptI] - x2 z1 \[ScriptJ] + x1 z2 \[ScriptJ] + 
+ x2 y1 \[ScriptK] - x1 y2 \[ScriptK] - 
+ s2 (x1 \[ScriptI] + y1 \[ScriptJ] + z1 \[ScriptK]) + 
+ s1 (s2 + x2 \[ScriptI] + y2 \[ScriptJ] + z2 \[ScriptK]))/(s1^2 + 
+ x1^2 + y1^2 + z1^2)<br>
+In[255]:= 
+q2\[CircleTimes]\[DoubleStruckCapitalI]nv[
+ q1] == \[DoubleStruckCapitalI]nv[
+ q1]\[CircleTimes]q2 // FullSimplify<br>
+Out[255]= 
+y2 z1 \[ScriptI] + x1 z2 \[ScriptJ] + x2 y1 \[ScriptK] == 
+ y1 z2 \[ScriptI] + x2 z1 \[ScriptJ] + x1 y2 \[ScriptK]<br>
+In[256]:= \[DoubleStruckCapitalL]ist4[
+ q2\[CircleTimes]\[DoubleStruckCapitalI]nv[q1]] // Simplify<br>
+Out[256]= {(s1 s2 + x1 x2 + y1 y2 + z1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (-s2 x1 + s1 x2 - y2 z1 + y1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (-s2 y1 + s1 y2 + x2 z1 - x1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (-x2 y1 + x1 y2 - s2 z1 + s1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2)}<br>
+In[257]:= \[DoubleStruckCapitalL]ist4[\[DoubleStruckCapitalI]nv[
+ q1]\[CircleTimes]q2] // Simplify<br>
+Out[257]= {(s1 s2 + x1 x2 + y1 y2 + z1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (-s2 x1 + s1 x2 + y2 z1 - y1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (-s2 y1 + s1 y2 - x2 z1 + x1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2), (x2 y1 - x1 y2 - s2 z1 + s1 z2)/(
+ s1^2 + x1^2 + y1^2 + z1^2)}<br>
+In[258]:= (* 平方根 Sqrt, q^(1/2) , \[DoubleStruckCapitalS]qrt[q] *)<br>
+In[259]:= \[DoubleStruckCapitalS]qrt[0] // Simplify<br>
+Out[259]= 0<br>
+In[260]:= \[DoubleStruckCapitalS]qrt[\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[260]= \!\(
+TagBox[GridBox[{
+{"\[Piecewise]", GridBox[{
+{
+SqrtBox["s"], 
+RowBox[{"s", ">=", "0"}]},
+{"0", 
+TagBox["True",
+"PiecewiseDefault",
+AutoDelete->True]}
+},
+AllowedDimensions->{2, Automatic},
+Editable->True,
+GridBoxAlignment->{
+ "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+ "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxItemSize->{
+ "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+ "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.84]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}},
+Selectable->True]}
+},
+GridBoxAlignment->{
+ "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+ "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxItemSize->{
+ "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+ "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.35]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+"Piecewise",
+DeleteWithContents->True,
+Editable->False,
+SelectWithContents->True,
+Selectable->False]\)<br>
+In[261]:= \[DoubleStruckCapitalS]qrt[\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[261]= (Sqrt[x^2 + y^2 + z^2] + x \[ScriptI] + y \[ScriptJ] + 
+ z \[ScriptK])/(Sqrt[2] (x^2 + y^2 + z^2)^(1/4))<br>
+In[262]:= \[DoubleStruckCapitalS]qrt[q] // Simplify<br>
+Out[262]= (s + Sqrt[s^2 + x^2 + y^2 + z^2] + x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK])/(Sqrt[2] Sqrt[
+ s + Sqrt[s^2 + x^2 + y^2 + z^2]])<br>
+In[263]:= \[DoubleStruckCapitalS]qrt[-2] // Simplify<br>
+Out[263]= Sqrt[2] \[ScriptI]<br>
+In[264]:= \[DoubleStruckCapitalS]qrt[
+ q]\[CircleTimes]\[DoubleStruckCapitalS]qrt[q] // Simplify<br>
+Out[264]= s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[265]:= (* 角 Angle, \[Angle][q] *)<br>
+In[266]:= \[Angle][0]<br>
+Out[266]= 0<br>
+In[267]:= \[Angle][\[DoubleStruckCapitalS][q]]<br>
+Out[267]= ArcCos[s/Sqrt[s^2]]<br>
+In[268]:= \[Angle][\[DoubleStruckCapitalV][q]]<br>
+Out[268]= \[Pi]/2<br>
+In[269]:= \[Angle][q]<br>
+Out[269]= ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]<br>
+In[270]:= (* 極形式 \[DoubleStruckCapitalP]olar[q] *)<br>
+In[271]:= (* {Axis,Tensor,Angle} *)<br>
+In[272]:= \[DoubleStruckCapitalP]olar[q]<br>
+Out[272]= {(x \[ScriptI] + y \[ScriptJ] + z \[ScriptK])/Sqrt[
+ x^2 + y^2 + z^2], Sqrt[s^2 + x^2 + y^2 + z^2], 
+ ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]}<br>
+In[273]:= (* 通常形式 \[DoubleStruckCapitalO]rdinary[p] *)<br>
+In[274]:= \[DoubleStruckCapitalO]rdinary[\[DoubleStruckCapitalP]olar[
+ q]] // FullSimplify<br>
+Out[274]= s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[275]:= (* ベクトルの分解, 共変成分,\[DoubleStruckCapitalR]covari[\[Rho],{\
+\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[276]:= \[DoubleStruckCapitalR]covari[\[Alpha]0, {\[Alpha]1, \
+\[Alpha]2, \[Alpha]3}] // Simplify<br>
+Out[276]= (x0 (x1 \[ScriptI] + x2 \[ScriptJ] + x3 \[ScriptK]) + 
+ y0 (y1 \[ScriptI] + y2 \[ScriptJ] + y3 \[ScriptK]) + 
+ z0 (z1 \[ScriptI] + z2 \[ScriptJ] + z3 \[ScriptK]))/(-x3 y2 z1 + 
+ x2 y3 z1 + x3 y1 z2 - x1 y3 z2 - x2 y1 z3 + x1 y2 z3)<br>
+In[277]:= (* ベクトルの分解, 反変成分,
+\[DoubleStruckCapitalR]contra[\[Rho],{\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[278]:= \[DoubleStruckCapitalR]contra[\[Alpha]0, {\[Alpha]1, \
+\[Alpha]2, \[Alpha]3}] // Simplify<br>
+Out[278]= (-x0 y3 z2 \[ScriptI] + x0 y2 z3 \[ScriptI] - 
+ x1 y3 z0 \[ScriptJ] + x0 y3 z1 \[ScriptJ] + x1 y0 z3 \[ScriptJ] - 
+ x0 y1 z3 \[ScriptJ] + 
+ x3 (-y2 z0 \[ScriptI] + y0 z2 \[ScriptI] + y1 z0 \[ScriptJ] - 
+ y0 z1 \[ScriptJ]) + x1 y2 z0 \[ScriptK] - x0 y2 z1 \[ScriptK] - 
+ x1 y0 z2 \[ScriptK] + x0 y1 z2 \[ScriptK] + 
+ x2 (y3 z0 \[ScriptI] - y0 z3 \[ScriptI] - y1 z0 \[ScriptK] + 
+ y0 z1 \[ScriptK]))/(-x3 y2 z1 + x2 y3 z1 + x3 y1 z2 - x1 y3 z2 -
+ x2 y1 z3 + x1 y2 z3)<br>
+In[279]:= (* ベクトルの合成, 共変成分,
+\[DoubleStruckCapitalC]covari[Rc,{\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[280]:= \
+\[DoubleStruckCapitalC]covari[\[DoubleStruckCapitalR]covari[\[Alpha]0,\
+ {\[Alpha]1, \[Alpha]2, \[Alpha]3}], {\[Alpha]1, \[Alpha]2, \
+\[Alpha]3}] // Simplify<br>
+Out[280]= x0 \[ScriptI] + y0 \[ScriptJ] + z0 \[ScriptK]<br>
+In[281]:= (* ベクトルの合成, 反変成分,
+\[DoubleStruckCapitalC]contra[\[Rho],{\[Alpha],\[Beta],\[Gamma]}] *)<br>
+In[282]:= \
+\[DoubleStruckCapitalC]contra[\[DoubleStruckCapitalR]contra[\[Alpha]0,\
+ {\[Alpha]1, \[Alpha]2, \[Alpha]3}], {\[Alpha]1, \[Alpha]2, \
+\[Alpha]3}] // Simplify<br>
+Out[282]= x0 \[ScriptI] + y0 \[ScriptJ] + z0 \[ScriptK]<br>
+In[283]:= (* 四元数の分解 \[DoubleStruckCapitalR]quat[q,a] *)<br>
+In[284]:= \[DoubleStruckCapitalR]quat[q0, q1] // Simplify<br>
+Out[284]= (y0 y1 + z0 z1 + y1 z0 \[ScriptI] - y0 z1 \[ScriptI] + 
+ s1 y0 \[ScriptJ] - x1 z0 \[ScriptJ] + x1 y0 \[ScriptK] + 
+ s1 z0 \[ScriptK] + 
+ x0 (x1 + s1 \[ScriptI] + z1 \[ScriptJ] - y1 \[ScriptK]) + 
+ s0 (s1 - x1 \[ScriptI] - y1 \[ScriptJ] - z1 \[ScriptK]))/(s1^2 + 
+ x1^2 + y1^2 + z1^2)<br>
+In[285]:= \[DoubleStruckCapitalR]quat[q0, 
+ q1]\[CircleTimes]q1 // Simplify<br>
+Out[285]= s0 + x0 \[ScriptI] + y0 \[ScriptJ] + z0 \[ScriptK]<br>
+In[286]:= (* 指数関数 \[DoubleStruckCapitalE]xp[q] ---- *)<br>
+In[287]:= \[DoubleStruckCapitalE]xp[0]<br>
+Out[287]= 1<br>
+In[288]:= \[DoubleStruckCapitalE]xp[\[DoubleStruckCapitalS][q]]<br>
+Out[288]= E^s<br>
+In[289]:= \[DoubleStruckCapitalE]xp[\[DoubleStruckCapitalV][q]]<br>
+Out[289]= 
+Cos[Sqrt[x^2 + y^2 + 
+ z^2]] + ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[290]:= \[DoubleStruckCapitalE]xp[q] // Simplify<br>
+Out[290]= E^s (Cos[Sqrt[
+ x^2 + y^2 + 
+ z^2]] + ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[291]:= (* 対数関数 \[DoubleStruckCapitalL]og[q] ---- *)<br>
+In[292]:= \[DoubleStruckCapitalL]og[0]<br>
+Out[292]= -\[Infinity]<br>
+In[293]:= \[DoubleStruckCapitalL]og[1]<br>
+Out[293]= 0<br>
+In[294]:= \[DoubleStruckCapitalL]og[\[DoubleStruckCapitalS][q]]<br>
+Out[294]= Log[s]<br>
+In[295]:= \[DoubleStruckCapitalL]og[\[DoubleStruckCapitalV][q]]<br>
+Out[295]= (\[Pi] (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]))/(
+ 2 Sqrt[x^2 + y^2 + z^2]) + 1/2 Log[x^2 + y^2 + z^2]<br>
+In[296]:= \[DoubleStruckCapitalL]og[q] // FullSimplify<br>
+Out[296]= ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) ArcCos[s/Sqrt[
+ s^2 + x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2] + 
+ 1/2 Log[s^2 + x^2 + y^2 + z^2]<br>
+In[297]:= \[DoubleStruckCapitalL]og[\[DoubleStruckCapitalE]xp[
+ q]] // FullSimplify<br>
+Out[297]= s - (1/Sqrt[x^2 + y^2 + z^2])
+ I (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) ArcCosh[
+ Cos[Sqrt[x^2 + y^2 + z^2]]] Sign[Sin[Sqrt[x^2 + y^2 + z^2]]]<br>
+In[298]:= \[DoubleStruckCapitalE]xp[\[DoubleStruckCapitalL]og[
+ q]] // FullSimplify<br>
+Out[298]= s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]<br>
+In[299]:= (* べき乗 q^t , \[DoubleStruckCapitalB][q,t] ---- *)<br>
+In[300]:= \[DoubleStruckCapitalB][0, 0]<br>
+\:8A55\:4FA1\:4E2D\:FF1AIn[300]:= Power::infy: 無限式1/0が見付かりました．<br>
+Out[300]= Indeterminate<br>
+In[301]:= \[DoubleStruckCapitalB][0, n]<br>
+\:8A55\:4FA1\:4E2D\:FF1AIn[301]:= Power::infy: 無限式1/0が見付かりました．<br>
+Out[301]= ComplexInfinity<br>
+In[302]:= \[DoubleStruckCapitalB][0, -n]<br>
+\:8A55\:4FA1\:4E2D\:FF1AIn[302]:= Power::infy: 無限式1/0が見付かりました．<br>
+Out[302]= ComplexInfinity<br>
+In[303]:= \[DoubleStruckCapitalB][q, -n]<br>
+Out[303]= (s^2 + x^2 + y^2 + z^2)^(-(1/2) - n/
+ 2) (Sqrt[s^2 + x^2 + y^2 + z^2]
+ Cos[n ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]] - (x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK]) Sin[
+ n ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]])<br>
+In[304]:= \[DoubleStruckCapitalB][q, -n]<br>
+Out[304]= (s^2 + x^2 + y^2 + z^2)^(-(1/2) - n/
+ 2) (Sqrt[s^2 + x^2 + y^2 + z^2]
+ Cos[n ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]] - (x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK]) Sin[
+ n ArcCos[s/Sqrt[s^2 + x^2 + y^2 + z^2]]])<br>
+In[305]:= 
+q\[CircleTimes]q\[CircleTimes]q == \[DoubleStruckCapitalB][q, 
+ 3] // FullSimplify<br>
+Out[305]= (-3 s^2 + x^2 + y^2 + z^2) (-1 + Sqrt[
+ 1 - s^2/(s^2 + x^2 + y^2 + z^2)]) (x \[ScriptI] + y \[ScriptJ] + 
+ z \[ScriptK]) == 0<br>
+In[306]:= (* 三角関数 \[DoubleStruckS]in[q], \[DoubleStruckC]os[q], \
+\[DoubleStruckT]an[q] ---- *)<br>
+In[307]:= \[DoubleStruckS]in[0] // FullSimplify<br>
+Out[307]= 0<br>
+In[308]:= \[DoubleStruckS]in[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[308]= Sin[s]<br>
+In[309]:= \[DoubleStruckS]in[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[309]= ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sinh[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[310]:= \[DoubleStruckS]in[q] // FullSimplify<br>
+Out[310]= 
+Cosh[Sqrt[x^2 + y^2 + z^2]] Sin[
+ s] + ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Cos[s] Sinh[
+ Sqrt[x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[311]:= \[DoubleStruckC]os[0] // FullSimplify<br>
+Out[311]= 1<br>
+In[312]:= \[DoubleStruckC]os[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[312]= Cos[s]<br>
+In[313]:= \[DoubleStruckC]os[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[313]= Cosh[Sqrt[x^2 + y^2 + z^2]]<br>
+In[314]:= \[DoubleStruckC]os[q] // FullSimplify<br>
+Out[314]= 
+Cos[s] Cosh[Sqrt[
+ x^2 + y^2 + z^2]] - ((x \[ScriptI] + y \[ScriptJ] + 
+ z \[ScriptK]) Sin[s] Sinh[Sqrt[x^2 + y^2 + z^2]])/Sqrt[
+ x^2 + y^2 + z^2]<br>
+In[315]:= \[DoubleStruckS]in[q]\[CircleTimes]\[DoubleStruckS]in[
+ q] + \[DoubleStruckC]os[q]\[CircleTimes]\[DoubleStruckC]os[
+ q] // Simplify<br>
+Out[315]= 1<br>
+In[316]:= \[DoubleStruckT]an[0] // FullSimplify<br>
+Out[316]= 0<br>
+In[317]:= \[DoubleStruckT]an[Pi/2] // FullSimplify<br>
+Out[317]= ComplexInfinity<br>
+In[318]:= \[DoubleStruckT]an[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[318]= Tan[s]<br>
+In[319]:= \[DoubleStruckT]an[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[319]= ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Tanh[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[320]:= \[DoubleStruckT]an[q] // FullSimplify<br>
+Out[320]= (
+Sqrt[x^2 + y^2 + z^2]
+ Sin[2 s] + (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sinh[
+ 2 Sqrt[x^2 + y^2 + z^2]])/(Sqrt[
+ x^2 + y^2 + z^2] (Cos[2 s] + Cosh[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[321]:= (* 逆三角関数 (\[DoubleStruckS]in^-1)[q], \
+(\[DoubleStruckC]os^-1)[q], (\[DoubleStruckT]an^-1)[q] ---- *)<br>
+In[322]:= Superscript[\[DoubleStruckS]in,-1][0] // Simplify<br>
+Out[322]= 0<br>
+In[323]:= 
+Superscript[\[DoubleStruckS]in,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[323]= ArcSin[s]<br>
+In[324]:= 
+Superscript[\[DoubleStruckS]in,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[324]= -(((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Csch[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[325]:= Superscript[\[DoubleStruckS]in,-1][q] // Simplify<br>
+Out[325]= (-2 Sqrt[x^2 + y^2 + z^2]
+ Cosh[Sqrt[x^2 + y^2 + z^2]] Sin[s] + 
+ 2 (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Cos[s] Sinh[Sqrt[
+ x^2 + y^2 + z^2]])/(Sqrt[
+ x^2 + y^2 + z^2] (Cos[2 s] - Cosh[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[326]:= \[DoubleStruckS]in[
+ q]\[CircleTimes]Superscript[\[DoubleStruckS]in,-1][q] // Simplify<br>
+Out[326]= 1<br>
+In[327]:= Superscript[\[DoubleStruckC]os,-1][0] // Simplify<br>
+Out[327]= \[Pi]/2<br>
+In[328]:= 
+Superscript[\[DoubleStruckC]os,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[328]= ArcCos[s]<br>
+In[329]:= 
+Superscript[\[DoubleStruckC]os,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[329]= Sech[Sqrt[x^2 + y^2 + z^2]]<br>
+In[330]:= Superscript[\[DoubleStruckC]os,-1][q] // Simplify<br>
+Out[330]= (2 (Sqrt[x^2 + y^2 + z^2]
+ Cos[s] Cosh[Sqrt[
+ x^2 + y^2 + z^2]] + (x \[ScriptI] + y \[ScriptJ] + 
+ z \[ScriptK]) Sin[s] Sinh[Sqrt[x^2 + y^2 + z^2]]))/(Sqrt[
+ x^2 + y^2 + z^2] (Cos[2 s] + Cosh[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[331]:= \[DoubleStruckC]os[
+ q]\[CircleTimes]Superscript[\[DoubleStruckC]os,-1][
+ q] // FullSimplify<br>
+Out[331]= 1<br>
+In[332]:= Superscript[\[DoubleStruckT]an,-1][0] // Simplify<br>
+Out[332]= 0<br>
+In[333]:= 
+Superscript[\[DoubleStruckT]an,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[333]= ArcTan[s]<br>
+In[334]:= 
+Superscript[\[DoubleStruckT]an,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[334]= -(((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Coth[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[335]:= Superscript[\[DoubleStruckT]an,-1][q] // Simplify<br>
+Out[335]= (-Sqrt[x^2 + y^2 + z^2] Sin[
+ 2 s] + (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sinh[
+ 2 Sqrt[x^2 + y^2 + z^2]])/(Sqrt[
+ x^2 + y^2 + z^2] (Cos[2 s] - Cosh[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[336]:= \[DoubleStruckT]an[
+ q]\[CircleTimes]Superscript[\[DoubleStruckT]an,-1][q] // Simplify<br>
+Out[336]= 1<br>
+In[337]:= (* 双曲線関数 \[DoubleStruckS]inh[q], \[DoubleStruckC]osh[q], \
+\[DoubleStruckT]anh[q] ---- *)<br>
+In[338]:= \[DoubleStruckS]inh[0] // FullSimplify<br>
+Out[338]= 0<br>
+In[339]:= \[DoubleStruckS]inh[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[339]= Sinh[s]<br>
+In[340]:= \[DoubleStruckS]inh[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[340]= ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[341]:= \[DoubleStruckS]inh[q] // FullSimplify<br>
+Out[341]= 1/2 E^-s ((-1 + E^(2 s)) Cos[Sqrt[
+ x^2 + y^2 + z^2]] + ((1 + E^(2 s)) (x \[ScriptI] + y \[ScriptJ] +
+ z \[ScriptK]) Sin[Sqrt[x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[342]:= \[DoubleStruckC]osh[0] // FullSimplify<br>
+Out[342]= 1<br>
+In[343]:= \[DoubleStruckC]osh[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[343]= Cosh[s]<br>
+In[344]:= \[DoubleStruckC]osh[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[344]= Cos[Sqrt[x^2 + y^2 + z^2]]<br>
+In[345]:= \[DoubleStruckC]osh[q] // FullSimplify<br>
+Out[345]= 1/2 E^-s ((1 + E^(2 s)) Cos[Sqrt[
+ x^2 + y^2 + z^2]] + ((-1 + E^(2 s)) (x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[x^2 + y^2 + z^2]])/Sqrt[
+ x^2 + y^2 + z^2])<br>
+In[346]:= \[DoubleStruckT]anh[0] // FullSimplify<br>
+Out[346]= 0<br>
+In[347]:= \[DoubleStruckT]anh[\[DoubleStruckCapitalS][
+ q]] // FullSimplify<br>
+Out[347]= Tanh[s]<br>
+In[348]:= \[DoubleStruckT]anh[\[DoubleStruckCapitalV][
+ q]] // FullSimplify<br>
+Out[348]= ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Tan[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2]<br>
+In[349]:= \[DoubleStruckT]anh[q] // FullSimplify<br>
+Out[349]= (2 E^(
+ 2 s) ((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sin[
+ 2 Sqrt[x^2 + y^2 + z^2]] + 
+ Sqrt[x^2 + y^2 + z^2] Sinh[2 s]))/(Sqrt[
+ x^2 + y^2 + 
+ z^2] (1 + E^(4 s) + 2 E^(2 s) Cos[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[350]:= \[DoubleStruckS]inh[q]\[CircleTimes]\[DoubleStruckS]inh[
+ q] - \[DoubleStruckC]osh[q]\[CircleTimes]\[DoubleStruckC]osh[
+ q] // Simplify<br>
+Out[350]= -1<br>
+In[351]:= (* 逆双曲線関数 (\[DoubleStruckS]inh^-1)[q], \
+(\[DoubleStruckC]osh^-1)[q], (\[DoubleStruckT]anh^-1)[q] ---- *)<br>
+In[352]:= Superscript[\[DoubleStruckS]inh,-1][0] // Simplify<br>
+Out[352]= 0<br>
+In[353]:= 
+Superscript[\[DoubleStruckS]inh,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[353]= ArcSinh[s]<br>
+In[354]:= 
+Superscript[\[DoubleStruckS]inh,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[354]= -(((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Csc[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[355]:= Superscript[\[DoubleStruckS]inh,-1][q] // Simplify<br>
+Out[355]= (2 E^
+ s ((-1 + E^(2 s)) Sqrt[x^2 + y^2 + z^2]
+ Cos[Sqrt[
+ x^2 + y^2 + z^2]] - (1 + E^(2 s)) (x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[
+ x^2 + y^2 + z^2]]))/(Sqrt[
+ x^2 + y^2 + 
+ z^2] (1 + E^(4 s) - 2 E^(2 s) Cos[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[356]:= \[DoubleStruckS]inh[
+ q]\[CircleTimes]Superscript[\[DoubleStruckS]inh,-1][q] // Simplify<br>
+Out[356]= 1<br>
+In[357]:= Superscript[\[DoubleStruckC]osh,-1][0] // Simplify<br>
+Out[357]= (I \[Pi])/2<br>
+In[358]:= 
+Superscript[\[DoubleStruckC]osh,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[358]= ArcCosh[s]<br>
+In[359]:= 
+Superscript[\[DoubleStruckC]osh,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[359]= Sec[Sqrt[x^2 + y^2 + z^2]]<br>
+In[360]:= Superscript[\[DoubleStruckC]osh,-1][q] // Simplify<br>
+Out[360]= (2 E^
+ s ((1 + E^(2 s)) Sqrt[x^2 + y^2 + z^2]
+ Cos[Sqrt[
+ x^2 + y^2 + z^2]] - (-1 + E^(2 s)) (x \[ScriptI] + 
+ y \[ScriptJ] + z \[ScriptK]) Sin[Sqrt[
+ x^2 + y^2 + z^2]]))/(Sqrt[
+ x^2 + y^2 + 
+ z^2] (1 + E^(4 s) + 2 E^(2 s) Cos[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[361]:= \[DoubleStruckC]osh[
+ q]\[CircleTimes]Superscript[\[DoubleStruckC]osh,-1][
+ q] // FullSimplify<br>
+Out[361]= 1<br>
+In[362]:= Superscript[\[DoubleStruckT]anh,-1][0] // Simplify<br>
+Out[362]= 0<br>
+In[363]:= 
+Superscript[\[DoubleStruckT]anh,-1][\[DoubleStruckCapitalS][
+ q]] // Simplify<br>
+Out[363]= ArcTanh[s]<br>
+In[364]:= 
+Superscript[\[DoubleStruckT]anh,-1][\[DoubleStruckCapitalV][
+ q]] // Simplify<br>
+Out[364]= -(((x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Cot[Sqrt[
+ x^2 + y^2 + z^2]])/Sqrt[x^2 + y^2 + z^2])<br>
+In[365]:= Superscript[\[DoubleStruckT]anh,-1][q] // Simplify<br>
+Out[365]= ((-1 + E^(4 s)) (x^2 + y^2 + z^2) - 
+ 2 E^(2 s) Sqrt[
+ x^2 + y^2 + z^2] (x \[ScriptI] + y \[ScriptJ] + z \[ScriptK]) Sin[
+ 2 Sqrt[x^2 + y^2 + z^2]])/((x^2 + y^2 + z^2) (1 + E^(4 s) - 
+ 2 E^(2 s) Cos[2 Sqrt[x^2 + y^2 + z^2]]))<br>
+In[366]:= \[DoubleStruckT]anh[
+ q]\[CircleTimes]Superscript[\[DoubleStruckT]anh,-1][q] // Simplify<br>
+Out[366]= 1<br>
+In[367]:= (* 鏡映変換 Reflection \[DoubleStruckCapitalR]eflect[r,n] --- *)<br>
+In[368]:= r1 = \[Alpha]0;
+n1 = \[Alpha]1;
+\[DoubleStruckCapitalR]eflect[r1, n1] // FullSimplify
+\[DoubleStruckCapitalR]eflect[\[DoubleStruckCapitalR]eflect[r1, n1], 
+ n1] // FullSimplify<br>
+Out[370]= (1/(x1^2 + y1^2 + z1^2))(-2 x1 (y0 y1 + z0 z1) \[ScriptI] - 
+ y0 y1^2 \[ScriptJ] - 2 y1 z0 z1 \[ScriptJ] + y0 z1^2 \[ScriptJ] + 
+ y1^2 z0 \[ScriptK] - 2 y0 y1 z1 \[ScriptK] - z0 z1^2 \[ScriptK] + 
+ x1^2 (y0 \[ScriptJ] + z0 \[ScriptK]) + 
+ x0 (-x1^2 \[ScriptI] + (y1^2 + z1^2) \[ScriptI] - 
+ 2 x1 (y1 \[ScriptJ] + z1 \[ScriptK])))<br>
+Out[371]= x0 \[ScriptI] + y0 \[ScriptJ] + z0 \[ScriptK]<br>
+In[372]:= (* 空間回転 Rotation \[DoubleStruckCapitalR]ot[r,n,\[Theta]] \
+--- *)<br>
+In[373]:= r1 = \[Alpha]0;
+n1 = \[Alpha]1;
+\[DoubleStruckCapitalR]ot[r1, n1, -\[Pi]/2] // FullSimplify
+\[DoubleStruckCapitalR]ot[\[DoubleStruckCapitalR]ot[r1, n1, -\[Pi]/2],
+ n1, \[Pi]/2] // FullSimplify<br>
+Out[375]= (1/(x1^2 + y1^2 + z1^2))(x1 (y0 y1 + z0 z1) \[ScriptI] - 
+ y1 z0 Sqrt[x1^2 + y1^2 + z1^2] \[ScriptI] + 
+ y0 z1 Sqrt[x1^2 + y1^2 + z1^2] \[ScriptI] + 
+ x1 z0 Sqrt[x1^2 + y1^2 + z1^2] \[ScriptJ] - 
+ x1 y0 Sqrt[
+ x1^2 + y1^2 + 
+ z1^2] \[ScriptK] + (y0 y1 + z0 z1) (y1 \[ScriptJ] + 
+ z1 \[ScriptK]) + 
+ x0 (x1^2 \[ScriptI] + 
+ Sqrt[x1^2 + y1^2 + z1^2] (-z1 \[ScriptJ] + y1 \[ScriptK]) + 
+ x1 (y1 \[ScriptJ] + z1 \[ScriptK])))<br>
+Out[376]= x0 \[ScriptI] + y0 \[ScriptJ] + z0 \[ScriptK]<br>
+In[377]:= (* --- End of Example --- *)<br>
+In[378]:= (**************************************)<br>
+In[379]:= (* 四元数と3次元ベクトルとの対応 ------ *)<br>
+In[380]:= \[DoubleStruckCapitalS][\[Alpha]1\[CircleTimes]\[Alpha]2] \
+== - \[DoubleStruckCapitalL]istV3[\[Alpha]1]. \
+\[DoubleStruckCapitalL]istV3[\[Alpha]2] // Simplify<br>
+Out[380]= True<br>
+In[381]:= \
+\[DoubleStruckCapitalL]istV3[\[Alpha]1\[CircleTimes]\[Alpha]2] == \
+\[DoubleStruckCapitalL]istV3[\[Alpha]1]\[Cross]\[DoubleStruckCapitalL]\
+istV3[\[Alpha]2] // Simplify<br>
+Out[381]= True<br>
+In[382]:= \[Alpha]1\[CircleTimes]\[Alpha]2 == - \
+\[DoubleStruckCapitalL]istV3[\[Alpha]1]. \
+\[DoubleStruckCapitalL]istV3[\[Alpha]2] + \[DoubleStruckCapitalV]V3[\
+\[DoubleStruckCapitalL]istV3[\[Alpha]1]\[Cross]\[DoubleStruckCapitalL]\
+istV3[\[Alpha]2]] // Simplify<br>
+Out[382]= True<br>
+In[383]:= (* ベクトル三重積 -------- *)<br>
+In[384]:= (* ベクトル三重積 1 -----*)<br>
+In[385]:= \[DoubleStruckCapitalV][\[Alpha]1\[CircleTimes]\[Alpha]2\
+\[CircleTimes]\[Alpha]3] == (\[Alpha]1 \[DoubleStruckCapitalS][\
+\[Alpha]2\[CircleTimes]\[Alpha]3] - \[Alpha]2 \
+\[DoubleStruckCapitalS][\[Alpha]1\[CircleTimes]\[Alpha]3] + \[Alpha]3 \
+\[DoubleStruckCapitalS][\[Alpha]1\[CircleTimes]\[Alpha]2]) // Simplify<br>
+Out[385]= True<br>
+In[386]:= (* ベクトル三重積 2 ----- *)<br>
+In[387]:= \[DoubleStruckCapitalS][\[Alpha]1\[CircleTimes]\[Alpha]2\
+\[CircleTimes]\[Alpha]3] == \[DoubleStruckCapitalS][\[Alpha]1\
+\[CircleTimes] \
+\[DoubleStruckCapitalV][\[Alpha]2\[CircleTimes]\[Alpha]3]] // Simplify<br>
+Out[387]= True<br>
+In[388]:= (* ベクトル三重積 3 ----- *)<br>
+In[389]:= \[DoubleStruckCapitalS][\[Alpha]1\[CircleTimes]\[Alpha]2\
+\[CircleTimes]\[Alpha]3] == \[DoubleStruckCapitalS][\
+\[DoubleStruckCapitalV][\[Alpha]1\[CircleTimes]\[Alpha]2]\
+\[CircleTimes]\[Alpha]3] // Simplify<br>
+Out[389]= True<br>
+In[390]:= (* ベクトル公式 -------- *)<br>
+In[391]:= (* \[Cross] は Cross[] 、\[Times] は Times[] の違いに注意 *)<br>
+In[392]:= (* ベクトル公式 1 *)<br>
+In[393]:= \[DoubleStruckCapitalL]istV3[\[Alpha]1]\[Cross](\
+\[DoubleStruckCapitalL]istV3[\[Alpha]2]\[Cross]\[DoubleStruckCapitalL]\
+istV3[\[Alpha]3]) == (\[DoubleStruckCapitalL]istV3[\[Alpha]1].\
+\[DoubleStruckCapitalL]istV3[\[Alpha]3]) \
+\[DoubleStruckCapitalL]istV3[\[Alpha]2] - \
+(\[DoubleStruckCapitalL]istV3[\[Alpha]1].\[DoubleStruckCapitalL]istV3[\
+\[Alpha]2]) \[DoubleStruckCapitalL]istV3[\[Alpha]3] // Simplify<br>
+Out[393]= True<br>
+In[394]:= (* ベクトル公式 2 *)<br>
+In[395]:= (\[DoubleStruckCapitalL]istV3[\[Alpha]1]\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Alpha]2])\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Alpha]3] == \
+(\[DoubleStruckCapitalL]istV3[\[Alpha]1].\[DoubleStruckCapitalL]istV3[\
+\[Alpha]3]) \[DoubleStruckCapitalL]istV3[\[Alpha]2] - (\
+\[DoubleStruckCapitalL]istV3[\[Alpha]2].\[DoubleStruckCapitalL]istV3[\
+\[Alpha]3]) \[DoubleStruckCapitalL]istV3[\[Alpha]1] // Simplify<br>
+Out[395]= True<br>
+In[396]:= (* ベクトル公式 3 *)<br>
+In[397]:= (\[DoubleStruckCapitalL]istV3[\[Alpha]]\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Beta]]).(\[DoubleStruckCapitalL]istV3[\
+\[Gamma]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]]) == (\
+\[DoubleStruckCapitalL]istV3[\[Alpha]].\[DoubleStruckCapitalL]istV3[\
+\[Gamma]]) (\[DoubleStruckCapitalL]istV3[\[Beta]].\
+\[DoubleStruckCapitalL]istV3[\[Delta]]) - \
+(\[DoubleStruckCapitalL]istV3[\[Alpha]].\[DoubleStruckCapitalL]istV3[\
+\[Delta]]) (\[DoubleStruckCapitalL]istV3[\[Beta]].\
+\[DoubleStruckCapitalL]istV3[\[Gamma]]) // Simplify<br>
+Out[397]= True<br>
+In[398]:= (* ベクトル公式 4 *)<br>
+In[399]:= (\[DoubleStruckCapitalL]istV3[\[Alpha]]\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Beta]])\[Cross](\[DoubleStruckCapitalL]\
+istV3[\[Gamma]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]]) == (\
+\[DoubleStruckCapitalL]istV3[\[Alpha]].(\[DoubleStruckCapitalL]istV3[\
+\[Gamma]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]])) \
+\[DoubleStruckCapitalL]istV3[\[Beta]] - \
+(\[DoubleStruckCapitalL]istV3[\[Beta]].(\[DoubleStruckCapitalL]istV3[\
+\[Gamma]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]]) \
+\[DoubleStruckCapitalL]istV3[\[Alpha]]) // Simplify<br>
+Out[399]= True<br>
+In[400]:= (* ベクトル公式 5 *)<br>
+In[401]:= (\[DoubleStruckCapitalL]istV3[\[Alpha]]\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Beta]])\[Cross](\[DoubleStruckCapitalL]\
+istV3[\[Gamma]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]]) == (\
+\[DoubleStruckCapitalL]istV3[\[Alpha]].(\[DoubleStruckCapitalL]istV3[\
+\[Beta]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Delta]])) \
+\[DoubleStruckCapitalL]istV3[\[Gamma]] - \
+(\[DoubleStruckCapitalL]istV3[\[Alpha]].(\[DoubleStruckCapitalL]istV3[\
+\[Beta]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Gamma]]) \
+\[DoubleStruckCapitalL]istV3[\[Delta]]) // Simplify<br>
+Out[401]= True<br>
+In[402]:= (* ベクトル公式 6 *)<br>
+In[403]:= (\[DoubleStruckCapitalL]istV3[\[Alpha]]\[Cross]\
+\[DoubleStruckCapitalL]istV3[\[Beta]]).((\[DoubleStruckCapitalL]istV3[\
+\[Beta]]\[Cross]\[DoubleStruckCapitalL]istV3[\[Gamma]])\[Cross](\
+\[DoubleStruckCapitalL]istV3[\[Gamma]]\[Cross]\[DoubleStruckCapitalL]\
+istV3[\[Alpha]])) == (\[DoubleStruckCapitalL]istV3[\[Alpha]].(\
+\[DoubleStruckCapitalL]istV3[\[Beta]]\[Cross]\[DoubleStruckCapitalL]\
+istV3[\[Gamma]]))^2 // Simplify<br>
+Out[403]= True<br>
+In[404]:= -\[DoubleStruckCapitalS][\[DoubleStruckCapitalV][\[Alpha]\
+\[CircleTimes]\[Beta]]\[CircleTimes](\[DoubleStruckCapitalV][\[Beta]\
+\[CircleTimes]\[Gamma]]\[CircleTimes]\[DoubleStruckCapitalV][\[Gamma]\
+\[CircleTimes]\[Alpha]])] == \[DoubleStruckCapitalS][\[Alpha]\
+\[CircleTimes]\[Beta]\[CircleTimes]\[Gamma]]^2 // Simplify<br>
+Out[404]= True<br>
+In[405]:= (**************************************)<br>
+In[406]:= \[DoubleStruckCapitalD]irection[q, q, u]<br>
+Out[406]= u<br>
+In[407]:= \[DoubleStruckCapitalD]irection[q\[CircleTimes]q, q, u]<br>
+Out[407]= u (2 s + 2 x \[ScriptI] + 2 y \[ScriptJ] + 2 z \[ScriptK])<br>
+In[408]:= \[DoubleStruckCapitalD]irection[a\[CircleTimes]q, q, u]<br>
+Out[408]= a u<br>
+In[409]:= \[DoubleStruckCapitalD]irection[q\[CircleTimes]a, q, 
+ u] // Simplify<br>
+Out[409]= a u<br>
+In[410]:= \[DoubleStruckCapitalD]irection[
+ q\[CircleTimes]q\[CircleTimes]q, q, u]<br>
+Out[410]= u (3 s^2 - 3 x^2 - 3 y^2 - 3 z^2 + 6 s x \[ScriptI] + 
+ 6 s y \[ScriptJ] + 6 s z \[ScriptK])<br>
+In[411]:= \[DoubleStruckCapitalD]irection[q\[CircleTimes]q, q, 
+ u] // Simplify<br>
+Out[411]= 2 u (s + x \[ScriptI] + y \[ScriptJ] + z \[ScriptK])<br>
+In[412]:= 
+expr = \[DoubleStruckCapitalD]irection[q\[CircleTimes]q, q, u];<br>
+{\[DoubleStruckCapitalS][expr], \[DoubleStruckCapitalC][
+ expr, \[ScriptI]], \[DoubleStruckCapitalC][
+ expr, \[ScriptJ]], \[DoubleStruckCapitalC][expr, \[ScriptK]]}<br>
+Out[413]= {-2 u x \[ScriptI] - 2 u y \[ScriptJ] - 2 u z \[ScriptK] + 
+ u (2 s + 2 x \[ScriptI] + 2 y \[ScriptJ] + 2 z \[ScriptK]), 2 u x, 
+ 2 u y, 2 u z}<br>
+In[414]:= {Expand[\[DoubleStruckCapitalS][
+ expr]], \[DoubleStruckCapitalC][
+ expr, \[ScriptI]], \[DoubleStruckCapitalC][
+ expr, \[ScriptJ]], \[DoubleStruckCapitalC][expr, \[ScriptK]]}<br>
+Out[414]= {2 s u, 2 u x, 2 u y, 2 u z}<br>
+In[415]:= f = q;
+\[EmptyDownTriangle]q[f, q]<br>
+Out[416]= 1 + \[ScriptI]^2 + \[ScriptJ]^2 + \[ScriptK]^2<br>
+In[417]:= \[EmptyDownTriangle]q[q\[CircleTimes]q, q] // Expand<br>
+Out[417]= 2 s + 2 s \[ScriptI]^2 + 2 s \[ScriptJ]^2 + 2 s \[ScriptK]^2<br>
+In[418]:= grad = \[EmptyDownTriangle]q[q\[CircleTimes]q, q] // Simplify<br>
+Out[418]= 2 s (1 + \[ScriptI]^2 + \[ScriptJ]^2 + \[ScriptK]^2)<br>
+In[419]:= (* ポテンシャル *)<br>
+In[420]:= 
+Vq = \[DoubleStruckCapitalS][q]^2 + \[DoubleStruckCapitalC][
+ q, \[ScriptI]]^2 + \[DoubleStruckCapitalC][
+ q, \[ScriptJ]]^2 + \[DoubleStruckCapitalC][q, \[ScriptK]]^2;<br>
+In[421]:= (* 勾配 \[EmptyDownTriangle](EmptyDownTriangle) *)<br>
+In[422]:= \[EmptyDownTriangle]q[Vq, q]<br>
+Out[422]= 2 s + 2 x \[ScriptI] + 2 y \[ScriptJ] + 2 z \[ScriptK]<br>
+In[423]:= (* 汎用方向微分 \[DoubleStruckCapitalD]irection[expr,q,u] *)<br>
+In[424]:= \[DoubleStruckCapitalD]irection[Vq, q, u]<br>
+Out[424]= 2 s u<br>
+In[425]:= (* 四元数 内積 \[CircleDot] *)<br>
+In[426]:= q \[CircleDot] u<br>
+Out[426]= s u<br>
+In[427]:= Simplify[\[DoubleStruckCapitalD]irection[Vq, q, 
+ u] - (\[EmptyDownTriangle]q[Vq, q] \[CircleDot] u)]<br>
+Out[427]= 0<br>
+In[428]:= (* 力 \[DoubleStruckCapitalF]q[expr_,q_] *)<br>
+In[429]:= \[DoubleStruckCapitalF]q[Vq, q]<br>
+Out[429]= -2 s - 2 x \[ScriptI] - 2 y \[ScriptJ] - 2 z \[ScriptK]<br>
+In[430]:= Simplify[\[DoubleStruckCapitalD]irection[Vq, q, 
+ u] + (\[DoubleStruckCapitalF]q[Vq, q]\[CircleDot]u)]<br>
+Out[430]= 0<br>
+In[431]:= (*　加速度 \[DoubleStruckCapitalA]q[expr_,q_,m_]　*)<br>
+In[432]:= \[DoubleStruckCapitalA]q[Vq, q, m]<br>
+Out[432]= (-2 s - 2 x \[ScriptI] - 2 y \[ScriptJ] - 2 z \[ScriptK])/m<br>
+In[433]:= (* 時間依存 qt[t] *)<br>
+In[434]:= 
+qt[t_] := \[DoubleStruckCapitalG][qt0[t], qt1[t], qt2[t], qt3[t]]<br>
+In[435]:= (* 2階 時間微分 *)<br>
+In[436]:= qt''[t]<br>
+Out[436]= (qt0^\[Prime]\[Prime])[
+ t] + \[ScriptI] (qt1^\[Prime]\[Prime])[t] + \[ScriptJ] (
+ qt2^\[Prime]\[Prime])[t] + \[ScriptK] (qt3^\[Prime]\[Prime])[t]<br>
+In[437]:= (* 力 Fqt[t] *)<br>
+In[438]:= Fqt[t_] := -2 qt[t];<br>
+In[439]:= Fqt[t]<br>
+Out[439]= -2 (qt0[
+ t] + \[ScriptI] qt1[t] + \[ScriptJ] qt2[t] + \[ScriptK] qt3[t])<br>
+In[440]:= (* 運動方程式 *)<br>
+In[441]:= eqF = m qt''[t] == Fqt[t]<br>
+Out[441]= 
+m ((qt0^\[Prime]\[Prime])[
+ t] + \[ScriptI] (qt1^\[Prime]\[Prime])[t] + \[ScriptJ] (
+ qt2^\[Prime]\[Prime])[t] + \[ScriptK] (qt3^\[Prime]\[Prime])[
+ t]) == -2 (qt0[
+ t] + \[ScriptI] qt1[t] + \[ScriptJ] qt2[t] + \[ScriptK] qt3[t])<br>
+In[442]:= eqF0 := m qt''[t] - Fqt[t];<br>
+In[443]:= eqF0<br>
+Out[443]= 
+2 (qt0[t] + \[ScriptI] qt1[t] + \[ScriptJ] qt2[t] + \[ScriptK] qt3[
+ t]) + m ((qt0^\[Prime]\[Prime])[
+ t] + \[ScriptI] (qt1^\[Prime]\[Prime])[t] + \[ScriptJ] (
+ qt2^\[Prime]\[Prime])[t] + \[ScriptK] (qt3^\[Prime]\[Prime])[t])<br>
+In[444]:= (* リスト化 *)<br>
+In[445]:= \[DoubleStruckCapitalL]ist4[eqF0]<br>
+Out[445]= {2 qt0[t] + m (qt0^\[Prime]\[Prime])[t], 
+ 2 qt1[t] + m (qt1^\[Prime]\[Prime])[t], 
+ 2 qt2[t] + m (qt2^\[Prime]\[Prime])[t], 
+ 2 qt3[t] + m (qt3^\[Prime]\[Prime])[t]}<br>
+In[446]:= (* \[Equal]0 で リスト化 *)<br>
+In[447]:= eqs = Thread[\[DoubleStruckCapitalL]ist4[eqF0] == 0];
+eqs<br>
+Out[448]= {2 qt0[t] + m (qt0^\[Prime]\[Prime])[t] == 0, 
+ 2 qt1[t] + m (qt1^\[Prime]\[Prime])[t] == 0, 
+ 2 qt2[t] + m (qt2^\[Prime]\[Prime])[t] == 0, 
+ 2 qt3[t] + m (qt3^\[Prime]\[Prime])[t] == 0}<br>
+In[449]:= (* 解 *)<br>
+In[450]:= solF = DSolve[eqs, {qt0, qt1, qt2, qt3}, t]<br>
+Out[450]= {{qt0 -> 
+ Function[{t}, 
+ C[1] Cos[(Sqrt[2] t)/Sqrt[m]] + C[2] Sin[(Sqrt[2] t)/Sqrt[m]]], 
+ qt1 -> Function[{t}, 
+ C[3] Cos[(Sqrt[2] t)/Sqrt[m]] + C[4] Sin[(Sqrt[2] t)/Sqrt[m]]], 
+ qt2 -> Function[{t}, 
+ C[5] Cos[(Sqrt[2] t)/Sqrt[m]] + C[6] Sin[(Sqrt[2] t)/Sqrt[m]]], 
+ qt3 -> Function[{t}, 
+ C[7] Cos[(Sqrt[2] t)/Sqrt[m]] + C[8] Sin[(Sqrt[2] t)/Sqrt[m]]]}}<br>
+In[451]:= qt0[t] /. solF[[1]]<br>
+Out[451]= C[1] Cos[(Sqrt[2] t)/Sqrt[m]] + C[2] Sin[(Sqrt[2] t)/Sqrt[m]]<br>
+In[452]:= (* 初期条件 *)<br>
+In[453]:= 
+ics = {qt0[0] == qt00, qt0'[0] == v00, qt1[0] == qt10, qt1'[0] == v10,
+ qt2[0] == qt20, qt2'[0] == v20, qt3[0] == qt30, qt3'[0] == v30};<br>
+solFic = DSolve[Join[eqs, ics], {qt0, qt1, qt2, qt3}, t]<br>
+Out[454]= {{qt0 -> 
+ Function[{t}, 
+ 1/2 (2 qt00 Cos[(Sqrt[2] t)/Sqrt[m]] + 
+ Sqrt[2] Sqrt[m] v00 Sin[(Sqrt[2] t)/Sqrt[m]])], 
+ qt1 -> Function[{t}, 
+ 1/2 (2 qt10 Cos[(Sqrt[2] t)/Sqrt[m]] + 
+ Sqrt[2] Sqrt[m] v10 Sin[(Sqrt[2] t)/Sqrt[m]])], 
+ qt2 -> Function[{t}, 
+ 1/2 (2 qt20 Cos[(Sqrt[2] t)/Sqrt[m]] + 
+ Sqrt[2] Sqrt[m] v20 Sin[(Sqrt[2] t)/Sqrt[m]])], 
+ qt3 -> Function[{t}, 
+ 1/2 (2 qt30 Cos[(Sqrt[2] t)/Sqrt[m]] + 
+ Sqrt[2] Sqrt[m] v30 Sin[(Sqrt[2] t)/Sqrt[m]])]}}
+</body>
+</html>
