@@ -58,9 +58,10 @@ https://ci.nii.ac.jp/ncid/BD13589490
 
 # 書籍情報（紙の書籍）
 
-## 書誌シート（Bibliographic PDF sheet）
+## 書誌シート（Bibliographic sheet）
 https://manyo-meikai.github.io/shosi/shosi-sheet.pdf  
 https://manyo-meikai.github.io/shosi/bibliographic.pdf  
+https://manyo-meikai.github.io/shosi/shosi.html  
 
 ## 正誤表 初版第1刷（Errata for 1st edition 1st printing）
 DOI : https://doi.org/10.5281/zenodo.20710492  
