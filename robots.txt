@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private/
+
+Sitemap: https://manyo-meikai.github.io/sitemap.xml

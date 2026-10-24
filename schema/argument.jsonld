@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@version": 1.1,
+
+    "argument": "https://manyo-meikai.github.io/schema/argument/#",
+
+    "claimPackages": {
+      "@id": "argument:claimPackages",
+      "@container": "@list"
+    },
+
+    "claim": {
+      "@id": "argument:claim"
+    },
+
+    "subClaims": {
+      "@id": "argument:subClaims",
+      "@container": "@list"
+    },
+
+    "evidence": {
+      "@id": "argument:evidence",
+      "@container": "@list"
+    },
+
+    "counterarguments": {
+      "@id": "argument:counterarguments",
+      "@container": "@list"
+    },
+
+    "supports": {
+      "@id": "argument:supports",
+      "@type": "@id"
+    },
+
+    "refutes": {
+      "@id": "argument:refutes",
+      "@type": "@id"
+    },
+
+    "locatedIn": {
+      "@id": "argument:locatedIn",
+      "@container": "@set"
+    }
+  }
+}
