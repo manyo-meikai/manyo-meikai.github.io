@@ -49,8 +49,10 @@ researchmap： https://researchmap.jp/asakura-shinichi
 ## ISBN
 978-4-434-36742-7 , C0192  
 ## 国立国会図書館 National Diet Library  
-初版第1刷： https://ndlsearch.ndl.go.jp/books/R100000002-I034340718  
-初版第2刷： https://ndlsearch.ndl.go.jp/books/R100000002-I034955200  
+### 初版第1刷
+https://ndlsearch.ndl.go.jp/books/R100000002-I034340718  
+### 初版第2刷
+https://ndlsearch.ndl.go.jp/books/R100000002-I034955200  
 ## CiNii Books
 https://ci.nii.ac.jp/ncid/BD13589490  
 
