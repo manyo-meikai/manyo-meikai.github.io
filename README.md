@@ -15,13 +15,20 @@ https://manyo-meikai.github.io/
 本節に掲げるリンクは、『万葉集難訓歌を明快に解く！』 および関連研究成果の公式参照先です。  
 ## 公式サイト Official Website
 https://manyo-meikai.github.io/  
+
 ## Git Repository
 本研究成果の公開・管理・長期保存のための 一次保管場所（primary repository）です。  
 https://github.com/manyo-meikai/manyo-meikai.github.io  
+
+## アーカイブ Internet Archive
+https://archive.org/details/manyo-meikai  
+
 ## ORCID
 https://orcid.org/0009-0000-8893-4649  
+
 ## researchmap
 https://researchmap.jp/asakura-shinichi  
+
 ## Zenodo DOI
 ### 額田王の莫囂圓隣歌の試訓と意訳の提案
 https://doi.org/10.5281/zenodo.20420427  
@@ -60,7 +67,9 @@ https://ci.nii.ac.jp/ncid/BD13589490
 
 ## 書誌シート（Bibliographic PDF sheet）
 https://manyo-meikai.github.io/shosi/shosi-sheet.pdf  
+https://archive.org/download/manyo-meikai/10_shosi-sheet.pdf  
 https://manyo-meikai.github.io/shosi/bibliographic.pdf  
+https://archive.org/download/manyo-meikai/11_bibliographic.pdf  
 
 ## 正誤表 初版第1刷（Errata for 1st edition 1st printing）
 DOI : https://doi.org/10.5281/zenodo.20710492  
@@ -74,6 +83,7 @@ HTML: https://manyo-meikai.github.io/seigo/seigohyou.html
 DOI : https://doi.org/10.5281/zenodo.20420427  
 HTML: https://manyo-meikai.github.io/book/bakugo.html  
 PDF : https://manyo-meikai.github.io/book/bakugo_1.3_site.pdf  
+IA  : https://archive.org/download/manyo-meikai/bakugo_1.3_ia.pdf  
 *『表意兼表音文字』の導入によって難訓を解決し、辞書に基づく試訓と、  
 題詞「温泉」に沿う詳細な意訳を初めて示す。*
 
@@ -81,6 +91,7 @@ PDF : https://manyo-meikai.github.io/book/bakugo_1.3_site.pdf
 DOI : https://doi.org/10.5281/zenodo.20436448  
 HTML: https://manyo-meikai.github.io/book/sanzan.html  
 PDF : https://manyo-meikai.github.io/book/sanzan_1.3_site.pdf  
+IA  : https://archive.org/download/manyo-meikai/sanzan_1.3_ia.pdf  
 *『高山』を、『かぐやま』ではなく、『たかやま』と読むことによって、
 「全てに整合性が有る結論」を導き、反歌の左注問題と性別論争を解決する。*
 
@@ -88,12 +99,14 @@ PDF : https://manyo-meikai.github.io/book/sanzan_1.3_site.pdf
 DOI : https://doi.org/10.5281/zenodo.20439121  
 HTML: https://manyo-meikai.github.io/book/miwa.html  
 PDF : https://manyo-meikai.github.io/book/miwa_1.3_site.pdf  
+IA  : https://archive.org/download/manyo-meikai/miwa_1.3_ia.pdf  
 *『三輪根麻呂』仮説により、和歌の左注問題を解決する。*
 
 ## 4. 高市皇子の三諸の歌の試訓と意訳の提案  
 DOI : https://doi.org/10.5281/zenodo.20457270  
 HTML: https://manyo-meikai.github.io/book/mimoro.html  
 PDF : https://manyo-meikai.github.io/book/mimoro_1.3_site.pdf  
+IA  : https://archive.org/download/manyo-meikai/mimoro_1.3_ia.pdf  
 *字義の訓読を初めて示し、『表意兼表音文字』の導入によって難訓を解決し、  
 題詞「薨(かむさ)り」に沿う詳細な意訳を初めて示す。*
 
@@ -101,6 +114,7 @@ PDF : https://manyo-meikai.github.io/book/mimoro_1.3_site.pdf
 DOI : https://doi.org/10.5281/zenodo.20467347  
 HTML: https://manyo-meikai.github.io/book/moyuru.html  
 PDF : https://manyo-meikai.github.io/book/moyuru_0.1_site.pdf  
+IA  :   
 *天武天皇と草壁皇子を天皇陵の雲に喩え、成仏の文脈として、  
 題詞「崩(かむあが)り」に沿う詳細な意訳を初めて示す。*
 
